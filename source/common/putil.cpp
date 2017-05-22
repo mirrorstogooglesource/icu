@@ -850,7 +850,7 @@ static const char* remapShortTimeZone(const char *stdID, const char *dstID, int3
 }
 #endif
 
-#ifdef SEARCH_TZFILE
+#if defined(SEARCH_TZFILE) && !defined(DEBUG_SKIP_SEARCH_TZFILE)
 #define MAX_READ_SIZE 512
 
 typedef struct DefaultTZInfo {
@@ -1144,7 +1144,7 @@ uprv_tzname(int n)
             }
 #endif
         } else {
-#if defined(SEARCH_TZFILE)
+#if defined(SEARCH_TZFILE) && !defined(DEBUG_SKIP_SEARCH_TZFILE)
             DefaultTZInfo* tzInfo = (DefaultTZInfo*)uprv_malloc(sizeof(DefaultTZInfo));
             if (tzInfo != NULL) {
                 tzInfo->defaultTZBuffer = NULL;
@@ -1244,7 +1244,7 @@ static UBool U_CALLCONV putil_cleanup(void)
     gTimeZoneFilesDirectory = NULL;
     gTimeZoneFilesInitOnce.reset();
 
-#ifdef SEARCH_TZFILE
+#if defined(SEARCH_TZFILE) && !defined(DEBUG_SKIP_SEARCH_TZFILE)
     delete gSearchTZFileResult;
     gSearchTZFileResult = NULL;
 #endif
