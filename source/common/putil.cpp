@@ -773,7 +773,7 @@ static const struct OffsetZoneMapping OFFSET_ZONE_MAPPINGS[] = {
     {-43200, 1, "ANAT", "ANAST", "Asia/Anadyr"},
     {-39600, 1, "MAGT", "MAGST", "Asia/Magadan"},
     {-37800, 2, "LHST", "LHST", "Australia/Lord_Howe"},
-    {-36000, 2, "EST", "EST", "Australia/Sydney"},
+    {-36000, 2, "AEST", "AEDT", "Australia/Sydney"},
     {-36000, 1, "SAKT", "SAKST", "Asia/Sakhalin"},
     {-36000, 1, "VLAT", "VLAST", "Asia/Vladivostok"},
     {-34200, 2, "CST", "CST", "Australia/South"},
@@ -850,7 +850,7 @@ static const char* remapShortTimeZone(const char *stdID, const char *dstID, int3
 }
 #endif
 
-#ifdef SEARCH_TZFILE
+#if defined(SEARCH_TZFILE) && !defined(DEBUG_SKIP_SEARCH_TZFILE)
 #define MAX_READ_SIZE 512
 
 typedef struct DefaultTZInfo {
@@ -1144,7 +1144,7 @@ uprv_tzname(int n)
             }
 #endif
         } else {
-#if defined(SEARCH_TZFILE)
+#if defined(SEARCH_TZFILE) && !defined(DEBUG_SKIP_SEARCH_TZFILE)
             DefaultTZInfo* tzInfo = (DefaultTZInfo*)uprv_malloc(sizeof(DefaultTZInfo));
             if (tzInfo != NULL) {
                 tzInfo->defaultTZBuffer = NULL;
@@ -1244,7 +1244,7 @@ static UBool U_CALLCONV putil_cleanup(void)
     gTimeZoneFilesDirectory = NULL;
     gTimeZoneFilesInitOnce.reset();
 
-#ifdef SEARCH_TZFILE
+#if defined(SEARCH_TZFILE) && !defined(DEBUG_SKIP_SEARCH_TZFILE)
     delete gSearchTZFileResult;
     gSearchTZFileResult = NULL;
 #endif
