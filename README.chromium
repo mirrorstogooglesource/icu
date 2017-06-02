@@ -1,15 +1,15 @@
 Name: icu
 URL: http://site.icu-project.org/
-Version: 58.1
+Version: 59.1
 License: MIT
 Security Critical: yes
 
 Description:
-This directory contains the source code of ICU 58.1 for C/C++.
+This directory contains the source code of ICU 59.1 for C/C++.
 
 A. How to update ICU
 
-1. Run "scripts/update.sh <version>" (e.g. 58-1).
+1. Run "scripts/update.sh <version>" (e.g. 59-1).
    This will download ICU from the upstream svn repository.
    It does preserve Chrome-specific build files (*local.mk) and
    converter files. (see section C)
@@ -80,26 +80,56 @@ Pre-built data files are generated and checked in with the following steps
      android/icudtl.dat
 
   j. Run
-       ${CHROME_ICU_TREE_TOP}/ios/patch_locale.sh
+       ${CHROME_ICU_TREE_TOP}/android/remove_collation_data.sh
 
-     Further cuts the data size for iOS.
+     On top of path_locale.sh to remove the collation tables from
+     the ICU data file configuration.
 
   k. Run
        ${CHROME_ICU_TREE_TOP}/scripts/make_data.sh
 
-     This makes icudt${version}l.dat for iOS.
+     This makes icudt${version}l_nocoll.dat for Android.
+     This is a smaller variant of the data file that doesn't
+     contain data tables.
 
   l. Run
-       ${CHROME_ICU_TREE_TOP}/scripts/copy_data.sh ios
+       ${CHROME_ICU_TREE_TOP}/scripts/copy_data.sh android
+
+     This copies the icu data file for Android to the following location:
+
+     android/icudtl_nocoll.dat
+
+     Note that the scripts will detect that remove_collation_data.sh
+     was called previously, and change the name of the destination
+     accordingly.
 
   m. Run
+       ${CHROME_ICU_TREE_TOP}/android/restore_collation_data.sh
+
+     To undo the changes in j. This is *critical* if you want to
+     generate the iOS data file too.
+
+  n. Run
+       ${CHROME_ICU_TREE_TOP}/ios/patch_locale.sh
+
+     Further cuts the data size for iOS.
+
+  o. Run
+       ${CHROME_ICU_TREE_TOP}/scripts/make_data.sh
+
+     This makes icudt${version}l.dat for iOS.
+
+  p. Run
+       ${CHROME_ICU_TREE_TOP}/scripts/copy_data.sh ios
+
+  q. Run
        ${CHROME_ICU_TREE_TOP}/scripts/clean_up_data_source.sh
 
      This reverts the result of trim_data.sh and patch_locale.sh and
      make the tree ready for committing updated ICU data files for
      non-Android and Android platforms.
 
-  n. Whenever data is updated (e.g timezone update), follow d ~ m as long
+  r. Whenever data is updated (e.g timezone update), follow d ~ q as long
   as the ICU build directory used in a ~ c is kept. Besides, icudt.dll for
   Windows has to be udpated following the procedure described below.
 
@@ -115,14 +145,14 @@ Pre-built data files are generated and checked in with the following steps
     $ svn export --native-eol LF http://source.icu-project.org/repos/icu/icu/tags/release-58-1 ${SEPARATE_ICU_ROOT}/icu58
 
   b. copy ${CHROME_ICU_ROOT}/common/icudtl.dat to
-     ${SEPARATE_ICU_ROOT}/source/data/in/icudt58l.dat
+     ${SEPARATE_ICU_ROOT}/source/data/in/icudt59l.dat
   c. copy ${CHROME_ICU_ROOT}/source/data/makedata.mak to
      ${SEPARATE_ICU_ROOT}/source/data/makedata.mak
   c. In Visual Studio, open source/allinone/allinone.sln solution
      in ${SEPARATE_ICU_ROOT}
   d. Build 'makedata' target
-  e. icudt58.dll will be generated in ${SEPARATE_ICU_ROOT}/bin
-  f. Copy that icudt58.dll to ${CHROME_ICU_ROOT}/windows/icudt.dll
+  e. icudt59.dll will be generated in ${SEPARATE_ICU_ROOT}/bin
+  f. Copy that icudt59.dll to ${CHROME_ICU_ROOT}/windows/icudt.dll
      and check that in.
 
 3. Note on the locale data customization
