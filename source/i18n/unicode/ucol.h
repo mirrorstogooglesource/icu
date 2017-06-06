@@ -12,14 +12,14 @@
 
 #include "unicode/utypes.h"
 
-#if !UCONFIG_NO_COLLATION
-
 #include "unicode/unorm.h"
 #include "unicode/localpointer.h"
 #include "unicode/parseerr.h"
 #include "unicode/uloc.h"
 #include "unicode/uset.h"
 #include "unicode/uscript.h"
+
+#if !UCONFIG_NO_COLLATION
 
 /**
  * \file
@@ -57,7 +57,13 @@ struct UCollator;
  */
 typedef struct UCollator UCollator;
 
+#endif /* #if !UCONFIG_NO_COLLATION */
 
+/* NOTE: The following enum declarations must be provided if:
+ * - UCONFIG_NO_COLLATION is 0
+ * - UCONFIG_NO_COLLATION is 1, and UCONFIG_SYSTEM_COLLATION is 1
+ */
+#if !UCONFIG_NO_COLLATION || UCONFIG_SYSTEM_COLLATION
 /**
  * UCOL_LESS is returned if source string is compared to be less than target
  * string in the ucol_strcoll() method.
@@ -370,6 +376,10 @@ typedef enum {
    */
   UCOL_FULL_RULES 
 } UColRuleOption ;
+
+#endif /* #if !UCONFIG_NO_COLLATION || UCONFIG_SYSTEM_COLLATION */
+
+#if !UCONFIG_NO_COLLATION
 
 /**
  * Open a UCollator for comparing strings.
