@@ -1,0 +1,111 @@
+"System collation" is a custom Chrome-for-Android build configuration of
+the ICU library, used to reduce the size of the library and its data file
+by about 1.5 MiB.
+
+The main idea is to build a version of ICU that implements collation
+services by using the Android system version of the library. This allows
+us to reduce the size of the library, and more significantly, of the data
+file that is embedded inside the Chrome APK. I.e. this saves about 1.5 MiB.
+
+This is controlled by a new build flag named "icu_enable_system_collation"
+in config.gni. Which is disabled by default.
+
+When the flag is enabled the following will happen:
+
+   - UCONFIG_NO_COLLATION will be defined when building the library.
+     This prevents original collation-related code from being compiled
+     entirely into libi18n.so (both the C and C++ APIs).
+
+   - UCONFIG_SYSTEM_COLLATION will be defined when building and also
+     using the library.
+
+   - The prebuilt android/icudat_nocoll.dat ICU data file will be used,
+     instead of android/icudat.dat.
+
+     The icudat_nocoll.dat variant doesn't contain collation tables, except
+     the bare minimum (which will be ignored by the library), and is
+     currently actually 1.4 MiB smaller. Since this is stored uncompressed
+     within the APK, this is significant saving in disk size.
+
+     To learn how to rebuild the file, see below.
+
+   - android/system_collation/system_collation.cpp will be compiled.
+     This provides an implementation of the C-based collation APIs used
+     by Chrome (i.e. a subset of the functions normally declared by
+     unicode/ucol.h and unicode/usearch.h).
+
+     These are implemented by redirecting each call to the corresponding
+     entry point from the Android system's ICU library.
+
+  - android/system_collation/system_icu_loader.cpp will be compiled.
+    This implements a class that handles the gory details of finding
+    the system ICU library, the corresponding version, and the correct
+    entry point address for a suffix-less name like "ucol_open", based
+    on the platform version.
+
+  - android/system_collation/collator.cpp will be compiled too.
+    This provides an icu::Collator implementation that simply wraps an
+    opaque C-based UCollator pointer, and calls to the corresponding
+    ucol_xxx() functions (which are actually provided
+    by system_collation.cpp).
+
+    This is necessary because C++ ABIs are not stable, and thus none of
+    the C++ entry points from the system library can be used.
+
+  - Client code that uses either the C or C++ based collation APIs don't
+    have to be modified, except that UCONFIG_SYSTEM_COLLATION must be
+    defined to 1 at compile time.
+
+    If client code requires a new entry point that isn't supported yet,
+    doing so should be very easy by modifying a macro list in
+    android/system_collation/system_collation.cpp. Look at the comments
+    in this source file to understand how.
+
+  - For C++ code, the icu::Collator class is normally declared by
+    source/i18n/unicode/coll.h, but setting UCONFIG_SYSTEM_COLLATION
+    will force this header to include android/system_collation/collator.h
+    instead.
+
+    This header contains an alternative icu::Collator implementation that
+    wraps an opaque C-based UCollator pointer instead (and calls the
+    corresponding ucol_xxx() functions).
+
+    NOTE: The wrapper icu::Collator class only implements the few
+    methods required by the Chromium and V8 code. But more can be
+    added as needed. This is not a full re-implementation of the
+    whole icu::Collator class.
+
+
+  - When running ICU collation tests, many additionnal ICU entry points are
+    needed. To avoid bloating the Chrome binary with these, their wrappers
+    are implemented in android/system_collation/system_collation_for_tests.cpp
+    which defines a weakly-defined symbol table.
+
+    This means that the symbols will be resolved at library initialization
+    time, only if system_collation_for_tests.o is linked into the final
+    binary. Hence, they will not be part of the regular Chromium shared
+    library.
+
+    Running the test from the command-line requires setting the ICU_DATA
+    environment variable to a directory that contains a _versioned_ ICU
+    data file first. For example, on Linux:
+
+      mkdir -p /tmp/icu-data
+      cp common/icudtl.dat /tmp/icu-data/icudt59l.dat
+      ICU_DATA=/tmp/icu-data out/Release/icu_collation_tests
+
+    And on Android:
+
+      adb push out/Release/icu_collation_tests /data/local/tmp/
+      adb push android/icudtl.dat /data/local/tmp/icudt59l.dat
+      adb shell 'ICU_DATA=/data/local/tmp /data/local/tmp/icu_collation_tests'
+
+README.chromium has been updated with instructions on how to regenerate
+the icudat_nocoll.dat file. This requires two new scripts:
+
+  android/remove_collation_data.sh
+  android/restore_collation_data.sh
+
+Also, scripts/copy_data.sh has been updated to detect the no-collation
+case and will automatically copy newly-built data files to either
+android/icudat.dat or android/icudat_nocoll.dat appropriately.

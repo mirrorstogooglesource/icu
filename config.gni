@@ -13,4 +13,12 @@ declare_args() {
   # TODO(GYP) We'll probably need to enhance this logic to set the value to
   # true or false in similar circumstances.
   icu_use_data_file = true
+
+  # Control whether collation support should be compiled in the ICU library.
+  # If this is to true, then the generated ICU library and data files will
+  # be smaller because they will not include collation services and tables.
+  #
+  # This should only be enabled when building the library for Android
+  # with API level >= 25.
+  icu_enable_system_collation = false
 }

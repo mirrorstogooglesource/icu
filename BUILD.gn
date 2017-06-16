@@ -58,6 +58,10 @@ config("icu_config") {
   } else {
     defines += [ "UCHAR_TYPE=uint16_t" ]
   }
+
+  if (is_android && icu_enable_system_collation) {
+    defines += [ "UCONFIG_SYSTEM_COLLATION=1" ]
+  }
 }
 
 # Config used only by ICU code.
@@ -105,6 +109,17 @@ config("icu_code") {
       # ICU uses its own deprecated functions.
       "-Wno-deprecated-declarations",
     ]
+  }
+  if (is_android && icu_enable_system_collation) {
+    # Don't build collation services into the library. Note that this in
+    # 'icu_code' and not 'icu_config' because we want the ICU headers like
+    # <i18n/unicode/ucol.h> and <i18n/unicode/usearch.h> to continue declaring
+    # the C-based collation APIs. This requires this not to be in the
+    # public_configs of the icu components.
+    #
+    # This is Android-specific because V8 needs the full ICU library
+    # for its clang_x86_v8_arm snapshot program that runs at build time.
+    defines += [ "UCONFIG_NO_COLLATION" ]
   }
 }
 
@@ -549,6 +564,23 @@ component("icui18n") {
 
   configs += [ ":icu_code" ]
   public_configs = [ ":icu_config" ]
+
+  if (is_android && icu_enable_system_collation) {
+    sources += [
+      "android/system_collation/collator.cpp",
+      "android/system_collation/collator.h",
+      "android/system_collation/logging.cpp",
+      "android/system_collation/logging.h",
+      "android/system_collation/system_collation.cpp",
+      "android/system_collation/system_collation.h",
+      "android/system_collation/system_collation_entries.h",
+      "android/system_collation/system_collation_wrappers.h",
+      "android/system_collation/system_icu_loader.cpp",
+      "android/system_collation/system_icu_loader.h",
+    ]
+    cflags_cc = [ "-Wno-attributes" ]
+    libs = [ "log"]
+  }
 }
 
 component("icuuc") {
@@ -989,18 +1021,27 @@ if (current_cpu == "mips" || current_cpu == "mips64" ||
 } else {
   data_bundle_prefix = "icudtl"
 }
+
 data_bundle = "${data_bundle_prefix}.dat"
+data_bundle_src = "$data_bundle"
+if (is_android && icu_enable_system_collation) {
+  # This is Android-specific because V8 needs to build its Linux-specific
+  # clang_x86_v8_arm snapshot program that runs on the build machine
+  # and generates a snapshot of ARM machine code. The program must be
+  # linked against the full ICU library and its data file.
+  data_bundle_src = "${data_bundle_prefix}_nocoll.dat"
+}
 
 # TODO(GYP) support use_system_icu.
 if (icu_use_data_file) {
   if (is_ios) {
     bundle_data("icudata") {
-      sources = [ "$data_dir/$data_bundle" ]
+      sources = [ "$data_dir/$data_bundle_src" ]
       outputs = [ "{{bundle_resources_dir}}/{{source_file_part}}" ]
     }
   } else {
     copy("icudata") {
-      sources = [ "$data_dir/$data_bundle" ]
+      sources = [ "$data_dir/$data_bundle_src" ]
       outputs = [ "$root_out_dir/$data_bundle" ]
       data = [ "$root_out_dir/$data_bundle" ]
     }
@@ -1040,4 +1081,77 @@ if (icu_use_data_file) {
       deps = [ ":make_data_assembly", ]
     }
   }
+}
+
+executable("icu_collation_tests") {
+  configs += [ ":icu_config" ]
+
+  include_dirs = [
+    "source/tools/ctestfw",
+    "source/tools/toolutil",
+  ]
+
+  defines = [
+    "U_ATTRIBUTE_DEPRECATED=",
+  ]
+
+  # Avoid adding -Werror which prevents compilation on Linux.
+  configs -= [
+    "//build/config/compiler:chromium_code",
+  ]
+  configs += [
+    "//build/config/compiler:no_chromium_code",
+  ]
+
+  sources = [
+    "source/tools/ctestfw/ctest.c",
+    "source/tools/toolutil/udbgutil.cpp",
+    "source/tools/toolutil/uoptions.cpp",
+    "source/tools/toolutil/uoptions.h",
+    "source/tools/toolutil/uparse.cpp",
+    "source/tools/toolutil/uparse.h",
+    "source/test/cintltst/capitst.c",
+    "source/test/cintltst/capitst.h",
+    "source/test/cintltst/callcoll.c",
+    "source/test/cintltst/callcoll.h",
+    "source/test/cintltst/calldata.h",
+    "source/test/cintltst/calltest.c",
+    "source/test/cintltst/ccolltst.c",
+    "source/test/cintltst/ccolltst.h",
+    "source/test/cintltst/ccurrtst.c",
+    "source/test/cintltst/ccurrtst.h",
+    "source/test/cintltst/cdetst.c",
+    "source/test/cintltst/cdetst.h",
+    "source/test/cintltst/cestst.c",
+    "source/test/cintltst/cestst.h",
+    "source/test/cintltst/cfintst.c",
+    "source/test/cintltst/cfintst.h",
+    "source/test/cintltst/cfrtst.c",
+    "source/test/cintltst/cfrtst.h",
+    "source/test/cintltst/cg7coll.c",
+    "source/test/cintltst/cg7coll.h",
+    "source/test/cintltst/cintltst.c",
+    "source/test/cintltst/cintltst.h",
+    "source/test/cintltst/citertst.c",
+    "source/test/cintltst/citertst.h",
+    "source/test/cintltst/cjaptst.c",
+    "source/test/cintltst/cjaptst.h",
+    "source/test/cintltst/cmsccoll.c",
+    "source/test/cintltst/cnormtst.c",
+    "source/test/cintltst/cnormtst.h",
+    "source/test/cintltst/cturtst.c",
+    "source/test/cintltst/cturtst.h",
+    "source/test/cintltst/encoll.c",
+    "source/test/cintltst/encoll.h",
+    "source/test/cintltst/usrchtst.c",
+  ]
+  if (is_android && icu_enable_system_collation) {
+    sources += [ "android/system_collation/system_collation_for_tests.cpp" ]
+  }
+
+  deps = [
+    ":icuuc",
+    ":icui18n",
+    ":icudata",
+  ]
 }
