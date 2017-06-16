@@ -232,6 +232,14 @@
 #   define UCONFIG_NO_REGULAR_EXPRESSIONS 1
 #endif
 
+/**
+ * \def UCONFIG_SYSTEM_COLLATION
+ * See android/system_collation/README for details.
+ */
+#ifndef UCONFIG_SYSTEM_COLLATION
+#   define UCONFIG_SYSTEM_COLLATION 0
+#endif
+
 /* common library switches -------------------------------------------------- */
 
 /**
