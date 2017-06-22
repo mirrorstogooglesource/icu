@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "89441741_8ba4729e",
+        "filename": "android/system_collation/system_collation.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2017-06-22T08:05:48Z",
+      "side": 1,
+      "message": "Currently, Chrome with ICU 59 defines UChar to be |uint16_t| on Android for external callers and to be |char16_t| inside ICU. \n\nSee http://crbug.com/693640 and https://bugs.chromium.org/p/v8/issues/detail?id\u003d6062\n(making it char16_t everywhere is  more complicated: see http://crbug.com/732026 )\n\nNow, I\u0027m trying to understand the implication of doing this (if any).\n\nOk. This and other system_coll* files are built with \u0027U_I18N_IMPLEMENTATION\u0027 so that this should be fine. (well, it\u0027s empirically shown that it\u0027s ok by your building and testing :-) ).",
+      "range": {
+        "startLine": 46,
+        "startChar": 55,
+        "endLine": 46,
+        "endChar": 67
+      },
+      "revId": "5f59fd69204e78efc73db6c60d10aafc73366b58",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
