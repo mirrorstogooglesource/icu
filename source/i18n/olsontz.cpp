@@ -396,7 +396,7 @@ void OlsonTimeZone::getOffset(UDate date, UBool local, int32_t& rawoff,
     if (finalZone != NULL && date >= finalStartMillis) {
         finalZone->getOffset(date, local, rawoff, dstoff, ec);
     } else {
-        getHistoricalOffset(date, local, kFormer, kLatter, rawoff, dstoff);
+        getHistoricalOffset(date, local, kFormer, kFormer, rawoff, dstoff);
     }
 }
 

@@ -400,7 +400,7 @@ RuleBasedTimeZone::getOffset(uint8_t era, int32_t year, int32_t month, int32_t d
 void
 RuleBasedTimeZone::getOffset(UDate date, UBool local, int32_t& rawOffset,
                              int32_t& dstOffset, UErrorCode& status) const {
-    getOffsetInternal(date, local, kFormer, kLatter, rawOffset, dstOffset, status);
+    getOffsetInternal(date, local, kFormer, kFormer, rawOffset, dstOffset, status);
 }
 
 void

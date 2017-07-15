@@ -920,7 +920,10 @@ inline void SimpleTimeZone::setEndRule(int32_t month, int32_t dayOfMonth, int32_
 inline void
 SimpleTimeZone::getOffset(UDate date, UBool local, int32_t& rawOffsetRef,
                           int32_t& dstOffsetRef, UErrorCode& ec) const {
-    TimeZone::getOffset(date, local, rawOffsetRef, dstOffsetRef, ec);
+    if (local)
+      getOffsetFromLocal(date, kFormer, kFormer, rawOffsetRef, dstOffsetRef, ec);
+    else
+      TimeZone::getOffset(date, FALSE, rawOffsetRef, dstOffsetRef, ec);
 }
 
 U_NAMESPACE_END
