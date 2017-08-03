@@ -291,3 +291,9 @@ D. Local Modifications
    - patches/collator_range.patch
    - patches/fuchsia.patch
    - patches/uloc_buffer_overrun.patch
+
+9. Add DST abbreviation for Australia/Lord_Howe zone
+
+   http://bugs.icu-project.org/trac/ticket/13296
+
+  - patches/tzdbname.patch

@@ -428,6 +428,7 @@ tzdbNames{
         }
         "meta:Lord_Howe"{
             ss{"LHST"}
+            sd{"LHDT"}
         }
         "meta:Macau"{
             sd{"MOST"}
