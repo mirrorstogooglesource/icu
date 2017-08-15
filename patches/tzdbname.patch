@@ -13,3 +13,16 @@ index 5adf0f4f..ac6bf899 100644
          "meta:Qyzylorda"{
              sd{"QYZST"}
              ss{"QYZT"}
+diff --git a/source/i18n/tznames_impl.cpp b/source/i18n/tznames_impl.cpp
+index 1b263186..a4d3a774 100644
+--- a/source/i18n/tznames_impl.cpp
++++ b/source/i18n/tznames_impl.cpp
+@@ -2186,7 +2186,7 @@ TZDBTimeZoneNames::getMetaZoneDisplayName(const UnicodeString& mzID,
+ 
+     UErrorCode status = U_ZERO_ERROR;
+     const TZDBNames *tzdbNames = TZDBTimeZoneNames::getMetaZoneNames(mzID, status);
+-    if (U_SUCCESS(status)) {
++    if (U_SUCCESS(status) && tzdbNames != nullptr) {
+         const UChar *s = tzdbNames->getName(type);
+         if (s != NULL) {
+             name.setTo(TRUE, s, -1);

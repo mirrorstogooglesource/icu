@@ -292,7 +292,8 @@ D. Local Modifications
    - patches/fuchsia.patch
    - patches/uloc_buffer_overrun.patch
 
-9. Add timezone abbreviations for Australia/Lord_Howe and Asia/Pyongyang
+9. Add timezone abbreviations for Australia/Lord_Howe and Asia/Pyongyang and enable
+   a graceful fallback when a metazone does not have an abbreviated name.
 
    http://bugs.icu-project.org/trac/ticket/13296
    http://bugs.icu-project.org/trac/ticket/13312
