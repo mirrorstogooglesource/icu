@@ -465,8 +465,14 @@ ucol_prepareShortStringOpen( const char *definition,
     UResourceBundle *collElem = NULL;
     char keyBuffer[256];
     // if there is a keyword, we pick it up and try to get elements
-    if(!uloc_getKeywordValue(buffer, "collation", keyBuffer, 256, status)) {
-      // no keyword. we try to find the default setting, which will give us the keyword value
+    int32_t keyLen = uloc_getKeywordValue(buffer, "collation", keyBuffer, sizeof(keyBuffer) - 1, status);
+    if(U_SUCCESS(*status) && keyLen > 0) {
+      keyBuffer[keyLen] = 0;
+    } else {
+      // no keyword or keyvalue is too long.
+      // we try to find the default setting, which will give us the keyword value
+      if (*status == U_BUFFER_OVERFLOW_ERROR)
+        *status = U_ZERO_ERROR;
       UResourceBundle *defaultColl = ures_getByKeyWithFallback(collations, "default", NULL, status);
       if(U_SUCCESS(*status)) {
         int32_t defaultKeyLen = 0;
