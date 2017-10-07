@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e9072ff_3262043f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1174099
+      },
+      "writtenOn": "2017-10-07T02:56:59Z",
+      "side": 1,
+      "message": "Two blank lines where you only need one.",
+      "revId": "b5d5d60f6d34e0e152d16650ca2adfa7b42f0373",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "48302c02_bdbf91e4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1174099
+      },
+      "writtenOn": "2017-10-07T02:56:59Z",
+      "side": 1,
+      "message": "We should be using\n\nBug: 770452\nTest: See the bug\n\nnow.",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 16
+      },
+      "revId": "b5d5d60f6d34e0e152d16650ca2adfa7b42f0373",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "78e5566b_b1f6386a",
+        "filename": "README.chromium",
+        "patchSetId": 3
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 1174099
+      },
+      "writtenOn": "2017-10-07T02:56:59Z",
+      "side": 1,
+      "message": "Since these are inaccessible (to me) and I’m not sure when they’ll open up, perhaps leave a link to the Chrome bug here too.",
+      "revId": "b5d5d60f6d34e0e152d16650ca2adfa7b42f0373",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
