@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9c2dbeb3_06551387",
+        "filename": "source/common/putil.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 679,
+      "author": {
+        "id": 1174099
+      },
+      "writtenOn": "2017-10-10T23:20:48Z",
+      "side": 1,
+      "message": "Note (for upstream): this should say Linux, not Linus.",
+      "revId": "99341d7b32fcee5b496c82c95ad9e71769796be8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
