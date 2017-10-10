@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "10cc8857_f89ff835",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2017-10-10T16:47:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e9072ff_3262043f",
+      "revId": "b5d5d60f6d34e0e152d16650ca2adfa7b42f0373",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "48302c02_bdbf91e4",
         "filename": "/COMMIT_MSG",
         "patchSetId": 3
@@ -42,6 +60,30 @@
     },
     {
       "key": {
+        "uuid": "92e14f1c_07b5afb5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2017-10-10T16:47:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "48302c02_bdbf91e4",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 16
+      },
+      "revId": "b5d5d60f6d34e0e152d16650ca2adfa7b42f0373",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "78e5566b_b1f6386a",
         "filename": "README.chromium",
         "patchSetId": 3
@@ -53,6 +95,24 @@
       "writtenOn": "2017-10-07T02:56:59Z",
       "side": 1,
       "message": "Since these are inaccessible (to me) and I’m not sure when they’ll open up, perhaps leave a link to the Chrome bug here too.",
+      "revId": "b5d5d60f6d34e0e152d16650ca2adfa7b42f0373",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7958290b_a241cfde",
+        "filename": "README.chromium",
+        "patchSetId": 3
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2017-10-10T16:47:09Z",
+      "side": 1,
+      "message": "Done. Also changed to https://ssl",
+      "parentUuid": "78e5566b_b1f6386a",
       "revId": "b5d5d60f6d34e0e152d16650ca2adfa7b42f0373",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
