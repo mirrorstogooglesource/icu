@@ -54,6 +54,17 @@ fuzzer_test("icu_number_format_fuzzer") {
   libfuzzer_options = [ "max_len=10240" ]
 }
 
+fuzzer_test("icu_date_format_fuzzer") {
+  sources = [
+    "icu_date_format_fuzzer.cc",
+    "intl-objects.cc",
+  ]
+  deps = [
+    ":fuzzer_support",
+  ]
+  libfuzzer_options = [ "max_len=10240" ]
+}
+
 fuzzer_test("icu_break_iterator_fuzzer") {
   sources = [
     "icu_break_iterator_fuzzer.cc",
