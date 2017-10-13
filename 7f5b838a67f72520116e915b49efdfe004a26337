@@ -1,0 +1,211 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d7149041_379810a2",
+        "filename": "fuzzers/BUILD.gn",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2017-10-13T17:44:11Z",
+      "side": 1,
+      "message": "If you specify this, we will always run the fuzzer with -max_len\u003d10240. If you don\u0027t specify this option, we will be running the fuzzer with random -max_len value in range from 0 to 10,000. I would recommend not specify this unless it\u0027s critical for the target format.",
+      "range": {
+        "startLine": 65,
+        "startChar": 25,
+        "endLine": 65,
+        "endChar": 38
+      },
+      "revId": "7f5b838a67f72520116e915b49efdfe004a26337",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9ecabc9f_62f73031",
+        "filename": "fuzzers/icu_date_format_fuzzer.cc",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2017-10-13T17:44:11Z",
+      "side": 1,
+      "message": "2017",
+      "range": {
+        "startLine": 1,
+        "startChar": 13,
+        "endLine": 1,
+        "endChar": 17
+      },
+      "revId": "7f5b838a67f72520116e915b49efdfe004a26337",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9fc2e730_5f13a19b",
+        "filename": "fuzzers/icu_date_format_fuzzer.cc",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2017-10-13T17:44:11Z",
+      "side": 1,
+      "message": "Is this really needed?",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 23
+      },
+      "revId": "7f5b838a67f72520116e915b49efdfe004a26337",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "664cb91a_f3623b04",
+        "filename": "fuzzers/icu_date_format_fuzzer.cc",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2017-10-13T17:44:11Z",
+      "side": 1,
+      "message": "Please remove the comment",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 33
+      },
+      "revId": "7f5b838a67f72520116e915b49efdfe004a26337",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e3991abd_d940f917",
+        "filename": "fuzzers/icu_date_format_fuzzer.cc",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2017-10-13T17:44:11Z",
+      "side": 1,
+      "message": "can you use \"data\" and \"size\" names please?",
+      "range": {
+        "startLine": 25,
+        "startChar": 38,
+        "endLine": 25,
+        "endChar": 72
+      },
+      "revId": "7f5b838a67f72520116e915b49efdfe004a26337",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6b7f6504_cdd5bac2",
+        "filename": "fuzzers/icu_date_format_fuzzer.cc",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2017-10-13T17:44:11Z",
+      "side": 1,
+      "message": "The proper format would be:\n\nif (!size)\n  return 0;",
+      "range": {
+        "startLine": 27,
+        "startChar": 4,
+        "endLine": 27,
+        "endChar": 24
+      },
+      "revId": "7f5b838a67f72520116e915b49efdfe004a26337",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ab098acc_802f9201",
+        "filename": "fuzzers/icu_date_format_fuzzer.cc",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2017-10-13T17:44:11Z",
+      "side": 1,
+      "message": "please use reinterpret_cast instead of C-style type cast",
+      "range": {
+        "startLine": 33,
+        "startChar": 30,
+        "endLine": 33,
+        "endChar": 43
+      },
+      "revId": "7f5b838a67f72520116e915b49efdfe004a26337",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "22e8a4fa_92c60f5d",
+        "filename": "fuzzers/icu_date_format_fuzzer.cc",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2017-10-13T17:44:11Z",
+      "side": 1,
+      "message": "Please remove these debug code",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 6
+      },
+      "revId": "7f5b838a67f72520116e915b49efdfe004a26337",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4082ebab_35584950",
+        "filename": "fuzzers/icu_date_format_fuzzer.cc",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2017-10-13T17:44:11Z",
+      "side": 1,
+      "message": "Please use std::unique_ptr instead of raw pointer and manual deallocation",
+      "range": {
+        "startLine": 40,
+        "startChar": 4,
+        "endLine": 40,
+        "endChar": 26
+      },
+      "revId": "7f5b838a67f72520116e915b49efdfe004a26337",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
