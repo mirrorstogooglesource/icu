@@ -22,6 +22,30 @@
       "revId": "5f59fd69204e78efc73db6c60d10aafc73366b58",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "19cf8e1c_9902d6c6",
+        "filename": "android/system_collation/system_collation.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1001352
+      },
+      "writtenOn": "2017-10-26T17:00:08Z",
+      "side": 1,
+      "message": "I don\u0027t think there will be any. Both types are designed to be bit-compatible as far as I understand.",
+      "parentUuid": "89441741_8ba4729e",
+      "range": {
+        "startLine": 46,
+        "startChar": 55,
+        "endLine": 46,
+        "endChar": 67
+      },
+      "revId": "5f59fd69204e78efc73db6c60d10aafc73366b58",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
     }
   ]
 }
