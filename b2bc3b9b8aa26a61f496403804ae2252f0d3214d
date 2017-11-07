@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bfd720ee_84eba9f1",
+        "filename": "README.chromium",
+        "patchSetId": 9
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1174099
+      },
+      "writtenOn": "2017-11-07T18:25:01Z",
+      "side": 1,
+      "message": "There’s an extra space here.",
+      "range": {
+        "startLine": 91,
+        "startChar": 37,
+        "endLine": 91,
+        "endChar": 39
+      },
+      "revId": "b2bc3b9b8aa26a61f496403804ae2252f0d3214d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5bf9fb5a_2ea3f69d",
+        "filename": "README.chromium",
+        "patchSetId": 9
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1174099
+      },
+      "writtenOn": "2017-11-07T18:25:01Z",
+      "side": 1,
+      "message": "There are too many “icu”s here.",
+      "range": {
+        "startLine": 94,
+        "startChar": 69,
+        "endLine": 94,
+        "endChar": 76
+      },
+      "revId": "b2bc3b9b8aa26a61f496403804ae2252f0d3214d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "657f2c7c_8361bd16",
+        "filename": "icu.gyp",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1174099
+      },
+      "writtenOn": "2017-11-07T18:25:01Z",
+      "side": 1,
+      "message": "Is this file (and icu.gypi) still necessary now that Chromium’s on GN?",
+      "revId": "b2bc3b9b8aa26a61f496403804ae2252f0d3214d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}

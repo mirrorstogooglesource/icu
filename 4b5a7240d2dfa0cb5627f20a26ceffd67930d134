@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4f0be696_9c802c54",
+        "filename": "README.chromium",
+        "patchSetId": 9
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 1174099
+      },
+      "writtenOn": "2017-11-07T18:25:01Z",
+      "side": 0,
+      "message": "It’s great that all of this went upstream!",
+      "revId": "4b5a7240d2dfa0cb5627f20a26ceffd67930d134",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
