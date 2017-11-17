@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "74b29b46_dde0c979",
+        "filename": "cast/patch_locale.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1202434
+      },
+      "writtenOn": "2017-11-17T00:07:18Z",
+      "side": 1,
+      "message": "Rather than copying the Android code, can we do one of the following:\n1. patch the output of the Android script\n2. Invoke android script and patch output\n3. Move common code to another script",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 9
+      },
+      "revId": "378c543861b23c9448ed251949cf655296cde716",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}

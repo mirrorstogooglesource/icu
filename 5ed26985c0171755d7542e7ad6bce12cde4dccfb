@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4211a9b8_2a87055a",
+        "filename": "android/patch_locale.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1202434
+      },
+      "writtenOn": "2017-11-17T00:07:18Z",
+      "side": 0,
+      "message": "This file shouldn\u0027t be modified.",
+      "revId": "5ed26985c0171755d7542e7ad6bce12cde4dccfb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
