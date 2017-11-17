@@ -16,6 +16,24 @@
       "revId": "5ed26985c0171755d7542e7ad6bce12cde4dccfb",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "30912a11_f0c060be",
+        "filename": "android/patch_locale.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1232445
+      },
+      "writtenOn": "2017-11-17T00:18:55Z",
+      "side": 0,
+      "message": "No it should. My mistake was not updating README.chromium which shows the generation instructions.\n\nEsentially trim_data.sh runs first, and the common icudtl.dat is generated, then android patch_locale.sh is run on top of that, then android icudtl.dat is generated, then ios patch_locale.sh is run on top of that, etc. So they all form a dependency tree.\n\nThe cast generation put itself at the beginning, because it removes everything android removes, except the java stuff.",
+      "parentUuid": "4211a9b8_2a87055a",
+      "revId": "5ed26985c0171755d7542e7ad6bce12cde4dccfb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     }
   ]
 }

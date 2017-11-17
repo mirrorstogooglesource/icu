@@ -22,6 +22,30 @@
       "revId": "378c543861b23c9448ed251949cf655296cde716",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8a13ec65_36825cd0",
+        "filename": "cast/patch_locale.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1232445
+      },
+      "writtenOn": "2017-11-17T00:18:55Z",
+      "side": 1,
+      "message": "dito.",
+      "parentUuid": "74b29b46_dde0c979",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 9
+      },
+      "revId": "378c543861b23c9448ed251949cf655296cde716",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
     }
   ]
 }
