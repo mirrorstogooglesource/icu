@@ -93,3 +93,33 @@ fuzzer_test("icu_converter_fuzzer") {
   ]
   libfuzzer_options = [ "max_len=10240" ]
 }
+
+fuzzer_test("icu_date_format_fuzzer") {
+  sources = [
+    "icu_date_format_fuzzer.cc",
+    "icu_fuzzer_common.cc",
+  ]
+  deps = [
+    ":fuzzer_support",
+  ]
+}
+
+fuzzer_test("icu_number_format_locale_fuzzer") {
+  sources = [
+    "icu_number_format_locale_fuzzer.cc",
+    "icu_fuzzer_common.cc",
+  ]
+  deps = [
+    ":fuzzer_support",
+  ]
+}
+
+fuzzer_test("icu_collator_compare_fuzzer") {
+  sources = [
+    "icu_collator_compare_fuzzer.cc",
+    "icu_fuzzer_common.cc",
+  ]
+  deps = [
+    ":fuzzer_support",
+  ]
+}
