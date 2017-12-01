@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e7d9abfc_f34d1389",
+        "filename": "fuzzers/icu_collator_compare_fuzzer.cc",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2017-12-01T16:32:54Z",
+      "side": 1,
+      "message": "the comment copied from https://chromium-review.googlesource.com/c/chromium/src/+/720462/4/testing/libfuzzer/fuzzers/icu_collator_compare_fuzzer.cc:\n\n\nMost of the above code is not necessary. They\u0027re just the result of writing this fuzzer as if it\ns a part of v8. \n\nSee other fuzzers in third_party/icu.",
+      "range": {
+        "startLine": 26,
+        "startChar": 2,
+        "endLine": 41,
+        "endChar": 3
+      },
+      "revId": "d260ff177899780f86491614dad2dfb3a706ca5f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
