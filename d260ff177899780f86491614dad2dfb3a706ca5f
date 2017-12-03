@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "78ed1545_0adeb5a9",
+        "filename": "fuzzers/icu_collator_compare_fuzzer.cc",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2017-12-03T06:27:06Z",
+      "side": 1,
+      "message": "Same comment as elsewhere. Let\u0027s start with GetRandomLocale() here.\n\nIf necessary, we can expand GetRandomLocale() later.",
+      "range": {
+        "startLine": 26,
+        "startChar": 2,
+        "endLine": 29,
+        "endChar": 13
+      },
+      "revId": "d260ff177899780f86491614dad2dfb3a706ca5f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f8bf42ae_8a72af9c",
+        "filename": "fuzzers/icu_collator_compare_fuzzer.cc",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2017-12-03T06:27:06Z",
+      "side": 1,
+      "message": "No reason to use a wrapper taken from v8 here. Why don\u0027t you just use ICU API directly here?",
+      "range": {
+        "startLine": 32,
+        "startChar": 2,
+        "endLine": 32,
+        "endChar": 64
+      },
+      "revId": "d260ff177899780f86491614dad2dfb3a706ca5f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "e7d9abfc_f34d1389",
         "filename": "fuzzers/icu_collator_compare_fuzzer.cc",
         "patchSetId": 1
@@ -18,6 +64,99 @@
         "startChar": 2,
         "endLine": 41,
         "endChar": 3
+      },
+      "revId": "d260ff177899780f86491614dad2dfb3a706ca5f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aeaa71f0_9c84a9c3",
+        "filename": "fuzzers/icu_collator_compare_fuzzer.cc",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2017-12-03T06:27:06Z",
+      "side": 1,
+      "message": "Yeah... UnicodeStringFromUtf8 or UnicodeStringFromUTF32 can be used here, instead.",
+      "parentUuid": "e7d9abfc_f34d1389",
+      "range": {
+        "startLine": 26,
+        "startChar": 2,
+        "endLine": 41,
+        "endChar": 3
+      },
+      "revId": "d260ff177899780f86491614dad2dfb3a706ca5f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3a21884f_3734eff7",
+        "filename": "fuzzers/icu_date_format_fuzzer.cc",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2017-12-03T06:27:06Z",
+      "side": 1,
+      "message": "Why don\u0027t you directly use ICU API here instead of wrapper? You did that for NumberFormat.",
+      "range": {
+        "startLine": 32,
+        "startChar": 5,
+        "endLine": 32,
+        "endChar": 72
+      },
+      "revId": "d260ff177899780f86491614dad2dfb3a706ca5f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ff94fe15_8cfdee21",
+        "filename": "fuzzers/icu_number_format_locale_fuzzer.cc",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2017-12-03T06:27:06Z",
+      "side": 1,
+      "message": "I\u0027d suggest you use GetRandomLocale in fuzzer_utils.h. \n\nIf you want to check how icu\u0027s Locale class deals with a random locale id, you\u0027d better\nhave a separate fuzzer test for Locale id handling.",
+      "range": {
+        "startLine": 26,
+        "startChar": 2,
+        "endLine": 29,
+        "endChar": 13
+      },
+      "revId": "d260ff177899780f86491614dad2dfb3a706ca5f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "71353e6b_bae989b2",
+        "filename": "fuzzers/icu_number_format_locale_fuzzer.cc",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2017-12-03T06:27:06Z",
+      "side": 1,
+      "message": "Again, just directly use ICU API fro NumberFormat.",
+      "range": {
+        "startLine": 31,
+        "startChar": 2,
+        "endLine": 32,
+        "endChar": 72
       },
       "revId": "d260ff177899780f86491614dad2dfb3a706ca5f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
