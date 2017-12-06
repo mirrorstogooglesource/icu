@@ -250,6 +250,11 @@ D. Local Modifications
 
 5. Fix ScriptExtensions property for 5 characters
 
-  - patches/script_extension.patch 
+  - patches/script_extension.patch
     upstream bug: https://ssl.icu-project.org/trac/ticket/13462
     (fixed in 60maint branch)
+
+6. Calendar class initialization bug
+
+  - patches/calendar.patch
+  - upstream fix: https://ssl.icu-project.org/trac/changeset/40670
