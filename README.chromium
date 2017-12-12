@@ -248,8 +248,17 @@ D. Local Modifications
       Put ICU_DATA_ENTRY_POINT(icudtXX_dat) in common when we use
       the icu data file or icudt.dll
 
-5. Fix ScriptExtensions property for 5 characters
+5. Cherry-pick fixes in ICU 60.2
 
-  - patches/script_extension.patch 
+  Fix ScriptExtensions property for 5 characters
+  - patches/script_extension.patch
     upstream bug: https://ssl.icu-project.org/trac/ticket/13462
     (fixed in 60maint branch)
+
+  Calendar class initialization bug
+  - patches/calendar.patch
+  - upstream fix: https://ssl.icu-project.org/trac/changeset/40670
+
+  UTF8 to UTF8 conversion bug
+  - patches/u8tou8.patch
+  - upstream bug: https://ssl.icu-project.org/trac/ticket/13489 
