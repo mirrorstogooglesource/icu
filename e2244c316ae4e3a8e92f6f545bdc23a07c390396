@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8c254851_c17928f4",
+        "filename": "README.chromium",
+        "patchSetId": 1
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 1174099
+      },
+      "writtenOn": "2017-12-13T18:13:20Z",
+      "side": 1,
+      "message": "This is the release bug for 60.2. The bug for the specific issue is https://ssl.icu-project.org/trac/ticket/13510.",
+      "range": {
+        "startLine": 264,
+        "startChar": 18,
+        "endLine": 264,
+        "endChar": 63
+      },
+      "revId": "e2244c316ae4e3a8e92f6f545bdc23a07c390396",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
