@@ -22,6 +22,30 @@
       "revId": "e2244c316ae4e3a8e92f6f545bdc23a07c390396",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f5ddaa54_0b3e5dda",
+        "filename": "README.chromium",
+        "patchSetId": 1
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2017-12-13T21:07:07Z",
+      "side": 1,
+      "message": "You\u0027re right. I thought I had updated the bug reference to 13510 in README.chromium, but apparently I didn\u0027t. I\u0027ll update it.",
+      "parentUuid": "8c254851_c17928f4",
+      "range": {
+        "startLine": 264,
+        "startChar": 18,
+        "endLine": 264,
+        "endChar": 63
+      },
+      "revId": "e2244c316ae4e3a8e92f6f545bdc23a07c390396",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
     }
   ]
 }
