@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "bafc4b91_ff772afc",
+        "filename": "README.chromium",
+        "patchSetId": 1
+      },
+      "lineNbr": 283,
+      "author": {
+        "id": 1000046
+      },
+      "writtenOn": "2017-12-20T19:46:33Z",
+      "side": 1,
+      "message": "It\u0027s actually 16+32 kiB since you removed both tables. :)  Here\u0027s the sizes from nm on libmonochrome.so:\n\n02913c3c 00004000 r gDigitCount\n02917c3c 00008000 r gDigits",
+      "revId": "b40e0ad5cc727550119e8ce4360bd24dcc4e9df5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0e4a46e0_84f2f3ca",
         "filename": "source/i18n/smallintformatter.cpp",
         "patchSetId": 1
