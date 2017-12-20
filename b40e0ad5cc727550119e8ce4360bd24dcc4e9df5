@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e4a46e0_84f2f3ca",
+        "filename": "source/i18n/smallintformatter.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1000046
+      },
+      "writtenOn": "2017-12-20T19:44:16Z",
+      "side": 1,
+      "message": "We have a number of spots using this constant now. It may be worth pulling out that to `constexpr static int kMaxDigits \u003d 4;` and using that everywhere?",
+      "revId": "b40e0ad5cc727550119e8ce4360bd24dcc4e9df5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
