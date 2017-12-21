@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "ed268b17_84afb7a3",
+        "filename": "README.chromium",
+        "patchSetId": 1
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 1000805
+      },
+      "writtenOn": "2017-12-21T01:05:44Z",
+      "side": 1,
+      "message": "Can we file an upstream bug for this as well?  If Chromium would benefit, likely other consumers would too, and we don\u0027t want to carry CHromium-side patches to third-party code indefinitely.",
+      "revId": "b40e0ad5cc727550119e8ce4360bd24dcc4e9df5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0e4a46e0_84f2f3ca",
         "filename": "source/i18n/smallintformatter.cpp",
         "patchSetId": 1
