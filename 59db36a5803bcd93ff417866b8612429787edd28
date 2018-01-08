@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0145b0cd_f8a732bb",
+        "filename": "source/i18n/smallintformatter.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000046
+      },
+      "writtenOn": "2018-01-08T21:29:16Z",
+      "side": 1,
+      "message": "Okay, that\u0027s kinda awesome.",
+      "revId": "59db36a5803bcd93ff417866b8612429787edd28",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
