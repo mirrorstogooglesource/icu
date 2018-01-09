@@ -108,6 +108,24 @@
     },
     {
       "key": {
+        "uuid": "9f6193e6_870f4c65",
+        "filename": "README.chromium",
+        "patchSetId": 1
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2018-01-09T05:58:03Z",
+      "side": 1,
+      "message": "Thanks, Shane ! \n\nYes, the binary size is always an issue (the smaller the better). If we can reduce 40 KiB with a minimal perf impact, we should all go for it.  \n\nWould you take this patch in the upstream and start your refactoring/etc with this CL applied?",
+      "parentUuid": "896ba0a0_45de63f8",
+      "revId": "b40e0ad5cc727550119e8ce4360bd24dcc4e9df5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0e4a46e0_84f2f3ca",
         "filename": "source/i18n/smallintformatter.cpp",
         "patchSetId": 1
