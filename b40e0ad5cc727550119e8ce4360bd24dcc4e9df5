@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "5f09be99_3a0f3cb0",
+        "filename": "README.chromium",
+        "patchSetId": 1
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2018-01-09T01:11:58Z",
+      "side": 1,
+      "message": "Did I this CL ? If so, sorry for that. \n\nAnyway, I agree with Peter. I\u0027d rather file an upstream bug now rather than later to see what upstream thinks of this kind of change.  BTW, the upstream has a shiny new API for NumberFormat which may or may not have this issue.",
+      "parentUuid": "64a6643a_21f408b3",
+      "revId": "b40e0ad5cc727550119e8ce4360bd24dcc4e9df5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0e4a46e0_84f2f3ca",
         "filename": "source/i18n/smallintformatter.cpp",
         "patchSetId": 1
