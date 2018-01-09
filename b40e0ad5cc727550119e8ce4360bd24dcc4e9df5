@@ -144,6 +144,24 @@
     },
     {
       "key": {
+        "uuid": "4e584e85_db41c150",
+        "filename": "README.chromium",
+        "patchSetId": 1
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 1181561
+      },
+      "writtenOn": "2018-01-09T19:59:41Z",
+      "side": 1,
+      "message": "FYI, it appears that this issue was also noticed by Chrome 18 months ago:\nhttp://bugs.icu-project.org/trac/ticket/12390\nThere is more discussion in that ticket.  I closed Jungshik\u0027s new ticket as a duplicate.\n\nMore context: this file, smallintformatter.cpp, was introduced specifically as a fastpath for small ints in DecimalFormat.  Travis (who wrote the file) did extensive benchmarking.  I wasn\u0027t around at the time so I don\u0027t know if he considered the for-loop option.",
+      "parentUuid": "4fe40277_26362f6b",
+      "revId": "b40e0ad5cc727550119e8ce4360bd24dcc4e9df5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0e4a46e0_84f2f3ca",
         "filename": "source/i18n/smallintformatter.cpp",
         "patchSetId": 1
