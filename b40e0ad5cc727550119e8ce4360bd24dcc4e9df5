@@ -126,6 +126,24 @@
     },
     {
       "key": {
+        "uuid": "4fe40277_26362f6b",
+        "filename": "README.chromium",
+        "patchSetId": 1
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 1000046
+      },
+      "writtenOn": "2018-01-09T19:39:51Z",
+      "side": 1,
+      "message": "@Shane: Yup. I was examining the largest symbols in the chromium binary and this showed up near the top. During some internal discussion, we started to question whether or not have a 40kb lookup table with the implied hit on dcache locality would even end up being actually faster than a small function.\n\nNo mircobenchmarks were done, but with modern processors, it\u0027s hard to a short bounded loop being significant...",
+      "parentUuid": "9f6193e6_870f4c65",
+      "revId": "b40e0ad5cc727550119e8ce4360bd24dcc4e9df5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0e4a46e0_84f2f3ca",
         "filename": "source/i18n/smallintformatter.cpp",
         "patchSetId": 1
