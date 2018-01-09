@@ -90,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "896ba0a0_45de63f8",
+        "filename": "README.chromium",
+        "patchSetId": 1
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 1181561
+      },
+      "writtenOn": "2018-01-09T01:37:43Z",
+      "side": 1,
+      "message": "Thanks for copying me on this, Jungshik :)\n\nCan I have more context for the reasoning behind this CL?  How was this issue discovered?  Is there an effort in Chromium to reduce binary file size?\n\nFYI: This file is an internal optimization for ICU4C DecimalFormat introduced a few versions ago.  I have been working on this code lately, and although I haven\u0027t addressed this piece of it yet, it is not unlikely that I will be touching and/or majorly refactoring this same piece of code in the next ICU release.  If binary size is an issue, I\u0027ll try to shy away from putting large data structures in the code.",
+      "parentUuid": "5f09be99_3a0f3cb0",
+      "revId": "b40e0ad5cc727550119e8ce4360bd24dcc4e9df5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0e4a46e0_84f2f3ca",
         "filename": "source/i18n/smallintformatter.cpp",
         "patchSetId": 1
