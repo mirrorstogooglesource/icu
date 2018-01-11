@@ -180,6 +180,24 @@
     },
     {
       "key": {
+        "uuid": "a36fc26c_374703ef",
+        "filename": "README.chromium",
+        "patchSetId": 1
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2018-01-11T17:43:14Z",
+      "side": 1,
+      "message": "Thanks, Shane. \n\nIn the meantime, David, please feel free to land this CL locally if you wish to. It may be\nshort-lived until May/ICU 61 (or it may be incorporated in the upstream with/without a change). Whichever it may be, it\u0027s unprecedented to apply a local change first and reconcile later.",
+      "parentUuid": "3e30cbc3_c51c3bce",
+      "revId": "b40e0ad5cc727550119e8ce4360bd24dcc4e9df5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0e4a46e0_84f2f3ca",
         "filename": "source/i18n/smallintformatter.cpp",
         "patchSetId": 1
