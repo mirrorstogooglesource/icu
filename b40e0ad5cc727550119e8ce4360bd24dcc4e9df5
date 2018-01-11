@@ -162,6 +162,24 @@
     },
     {
       "key": {
+        "uuid": "3e30cbc3_c51c3bce",
+        "filename": "README.chromium",
+        "patchSetId": 1
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 1181561
+      },
+      "writtenOn": "2018-01-11T03:05:13Z",
+      "side": 1,
+      "message": "I will take the patch and run benchmarks when I start dissecting this code as part of the ICU4C DecimalFormat overhaul.",
+      "parentUuid": "4e584e85_db41c150",
+      "revId": "b40e0ad5cc727550119e8ce4360bd24dcc4e9df5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0e4a46e0_84f2f3ca",
         "filename": "source/i18n/smallintformatter.cpp",
         "patchSetId": 1
