@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0633d92d_6b40e7b5",
+        "filename": "source/i18n/smallintformatter.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000046
+      },
+      "writtenOn": "2018-01-17T19:27:51Z",
+      "side": 1,
+      "message": "ternary expression is best expression.\n\ngrrr...gcc....\n\nThinking more on this, I\u0027m curious why this wasn\u0027t just a chain of expressions? It seems like we\u0027re trading a conditional for fewer comparisons?\n\nHappy to leave as is since it\u0027s the same logic as previously, but if it\u0027s easy, it\u0027d be good to document the optimization rationale.",
+      "revId": "7015efa7f4d039a2ec491b6f06852ded8720919b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
