@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "5e747fa3_ac870bf2",
+        "filename": "README.chromium",
+        "patchSetId": 1
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2018-01-18T19:41:58Z",
+      "side": 1,
+      "message": "Please, add a reference to the upstream bug:\n\nhttps://ssl.icu-project.org/trac/ticket/12390 .\n\nThanks",
+      "range": {
+        "startLine": 287,
+        "startChar": 1,
+        "endLine": 287,
+        "endChar": 44
+      },
+      "revId": "7015efa7f4d039a2ec491b6f06852ded8720919b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0633d92d_6b40e7b5",
         "filename": "source/i18n/smallintformatter.cpp",
         "patchSetId": 1
