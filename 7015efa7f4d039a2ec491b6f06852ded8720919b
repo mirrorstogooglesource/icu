@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "119cf5a7_8e31a58f",
+        "filename": "README.chromium",
+        "patchSetId": 1
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 1001352
+      },
+      "writtenOn": "2018-01-23T11:52:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5e747fa3_ac870bf2",
+      "range": {
+        "startLine": 287,
+        "startChar": 1,
+        "endLine": 287,
+        "endChar": 44
+      },
+      "revId": "7015efa7f4d039a2ec491b6f06852ded8720919b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0633d92d_6b40e7b5",
         "filename": "source/i18n/smallintformatter.cpp",
         "patchSetId": 1
@@ -54,6 +78,24 @@
       "side": 1,
       "message": "Yeah... I have the same question.",
       "parentUuid": "0633d92d_6b40e7b5",
+      "revId": "7015efa7f4d039a2ec491b6f06852ded8720919b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3bc85216_8a07deaa",
+        "filename": "source/i18n/smallintformatter.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1001352
+      },
+      "writtenOn": "2018-01-23T11:52:47Z",
+      "side": 1,
+      "message": "Ah yes, I should have added a comment. I simply looked at the disassembled binary code: this is what generates the smallest and fastest code, surprisingly. At least for 32-bit ARM.\n\nDon\u0027t judge me, I know I have strange hobbies...",
+      "parentUuid": "1b20ec4c_6f145c15",
       "revId": "7015efa7f4d039a2ec491b6f06852ded8720919b",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
