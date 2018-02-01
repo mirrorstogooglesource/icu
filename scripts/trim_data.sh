@@ -78,6 +78,7 @@ function abridge_locale_data_for_non_ui_languages {
   echo Creating minimum locale data in ${localedatapath}
   for lang in ${EXTRA_LANGUAGES}
   do
+    [ ${lang} == 'nn' ] && { continue; }
     target=${localedatapath}/${lang}.txt
     [  -e ${target} ] || { echo "missing ${lang}"; continue; }
     echo Overwriting ${target} ...
