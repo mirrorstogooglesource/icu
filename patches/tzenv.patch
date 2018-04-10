@@ -1,0 +1,116 @@
+diff --git a/README.chromium b/README.chromium
+index d716617c..58e75cfc 100644
+--- a/README.chromium
++++ b/README.chromium
+@@ -285,7 +285,13 @@ D. Local Modifications
+ 9. Reduce size of SmallIntFormatter implementation
+ 
+   - patches/simplify_smallintformatter.patch
+-    upstream bug: https://ssl.icu-project.org/trac/ticket/12390 
++    upstream bug: https://ssl.icu-project.org/trac/ticket/12390
+ 
+   Reduce the size of the binary by about 16 kiB on Android,
+   without noticeable performance change.
++
++10. Add support for TZ=:/path/to/zone/file when detecting the default timezone.
++
++  - patches/tzenv.patch
++
++    crbug.com/811403
+diff --git a/patches/tzenv.patch b/patches/tzenv.patch
+new file mode 100644
+index 00000000..e69de29b
+diff --git a/source/common/putil.cpp b/source/common/putil.cpp
+index 83f08ac0..3c0debac 100644
+--- a/source/common/putil.cpp
++++ b/source/common/putil.cpp
+@@ -713,6 +713,7 @@ static char *gTimeZoneBufferPtr = NULL;
+ 
+ #if !U_PLATFORM_USES_ONLY_WIN32_API
+ #define isNonDigit(ch) (ch < '0' || '9' < ch)
++// TODO: This check is too loose. It need to be tightened a lot.
+ static UBool isValidOlsonID(const char *id) {
+     int32_t idx = 0;
+ 
+@@ -1032,6 +1033,28 @@ static char* searchForTZFile(const char* path, DefaultTZInfo* tzInfo) {
+ }
+ #endif
+ 
++#if defined(CHECK_LOCALTIME_LINK) && !defined(DEBUG_SKIP_LOCALTIME_LINK)
++static bool extractOlsonIdFromPath(const char* path, int len) {
++    U_ASSERT(gTimeZoneBufferPtr == nullptr);
++    int32_t tzZoneInfoTailLen = uprv_strlen(TZZONEINFOTAIL);
++    if (len > 0) {
++      len = (len > PATH_MAX - 1) ? (PATH_MAX - 1) : len;
++      strncpy(gTimeZoneBuffer, path, len);
++    } else {
++      len = -len;
++    }
++    gTimeZoneBuffer[len] = 0;
++    char* tzZoneInfoTailPtr = uprv_strstr(gTimeZoneBuffer, TZZONEINFOTAIL);
++    if (tzZoneInfoTailPtr != nullptr &&
++        isValidOlsonID(tzZoneInfoTailPtr + tzZoneInfoTailLen))
++    {
++        gTimeZoneBufferPtr = tzZoneInfoTailPtr + tzZoneInfoTailLen;
++        return true;
++    }
++    return false;
++}
++#endif
++
+ U_CAPI void U_EXPORT2
+ uprv_tzname_clear_cache()
+ {
+@@ -1120,13 +1143,28 @@ uprv_tzname(int n)
+         && uprv_strcmp(tzid, TZ_ENV_CHECK) != 0
+ #endif
+     ) {
+-        /* The colon forces tzset() to treat the remainder as zoneinfo path */ 
+-        if (tzid[0] == ':') { 
+-            tzid++; 
+-        } 
+-        /* This might be a good Olson ID. */
++        /* The colon forces tzset() to treat the remainder as zoneinfo path. At
++         * least some versions of glibc does not care about the presence of a
++         * colon. So, no check is added here.*/
++        if (tzid[0] == ':') {
++            tzid++;
++        }
++        /* This might be a good Olson ID or it can be a full file path to a
++         * zoneinfo file or TZDEFAULT that is a symlink to a zoneinfo file or
++         * contains the actual zoneinfo rules. The last case need not be handled
++         * here. */
+         skipZoneIDPrefix(&tzid);
+-        return tzid;
++#if defined(CHECK_LOCALTIME_LINK) && !defined(DEBUG_SKIP_LOCALTIME_LINK)
++        if (isValidOlsonID(tzid) && tzid[0] != '/')
++#endif
++          return tzid;
++#if defined(CHECK_LOCALTIME_LINK) && !defined(DEBUG_SKIP_LOCALTIME_LINK)
++        /* Caller must handle threading issues */
++        else if (gTimeZoneBufferPtr != nullptr ||
++                 extractOlsonIdFromPath(tzid, uprv_strlen(tzid))) {
++          return gTimeZoneBufferPtr;
++        }
++#endif
+     }
+     /* else U_TZNAME will give a better result. */
+ #endif
+@@ -1141,15 +1179,8 @@ uprv_tzname(int n)
+         */
+         int32_t ret = (int32_t)readlink(TZDEFAULT, gTimeZoneBuffer, sizeof(gTimeZoneBuffer)-1);
+         if (0 < ret) {
+-            int32_t tzZoneInfoTailLen = uprv_strlen(TZZONEINFOTAIL);
+-            gTimeZoneBuffer[ret] = 0;
+-            char *  tzZoneInfoTailPtr = uprv_strstr(gTimeZoneBuffer, TZZONEINFOTAIL);
+-            
+-            if (tzZoneInfoTailPtr != NULL
+-                && isValidOlsonID(tzZoneInfoTailPtr + tzZoneInfoTailLen))
+-            {
+-                return (gTimeZoneBufferPtr = tzZoneInfoTailPtr + tzZoneInfoTailLen);
+-            }
++            if (extractOlsonIdFromPath(gTimeZoneBuffer, -ret))
++                return gTimeZoneBufferPtr;
+         } else {
+ #if defined(SEARCH_TZFILE)
+             DefaultTZInfo* tzInfo = (DefaultTZInfo*)uprv_malloc(sizeof(DefaultTZInfo));
