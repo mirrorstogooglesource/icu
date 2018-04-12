@@ -312,3 +312,9 @@ D. Local Modifications
 
   - patches/number_ub.patch
   - upstream bug: https://ssl.icu-project.org/trac/ticket/13550
+
+14. Add support for TZ=:/path/to/zone/file when detecting the default timezone.
+
+  - patches/tzenv.patch
+    upstream bug: https://ssl.icu-project.org/trac/ticket/13694
+    crbug.com/811403
