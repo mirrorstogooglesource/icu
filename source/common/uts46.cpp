@@ -311,7 +311,7 @@ UTS46::process(const UnicodeString &src,
         return dest;
     }
     const UChar *srcArray=src.getBuffer();
-    if(&dest==&src || srcArray==NULL) {
+    if(&dest==&src || srcArray==NULL || src.length() > (isLabel ? 63 : 253)) {
         errorCode=U_ILLEGAL_ARGUMENT_ERROR;
         dest.setToBogus();
         return dest;
