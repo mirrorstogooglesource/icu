@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ab6ac7f_ca250f02",
+        "filename": "source/common/putil.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 1036,
+      "author": {
+        "id": 1129576
+      },
+      "writtenOn": "2018-04-18T11:12:35Z",
+      "side": 1,
+      "message": "Not sure why you need to include Linux here--if this is on Linux, but the rest of the condition is false, then extractOlsonIdFromPath will not be called.",
+      "revId": "82c2ed9afe088d97f517a72d30c6c63246b0d963",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "496a140f_9d5994ef",
+        "filename": "source/common/putil.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 1156,
+      "author": {
+        "id": 1129576
+      },
+      "writtenOn": "2018-04-18T11:12:35Z",
+      "side": 1,
+      "message": "I\u0027m curious, what if this new logic were implemented in skipZoneIDPrefix? Would that benefit the other callers, or do something that we don\u0027t want? Seems like extractOlsonIdFromPath is always returning a suffix anyway.",
+      "revId": "82c2ed9afe088d97f517a72d30c6c63246b0d963",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
