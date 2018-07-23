@@ -32,7 +32,7 @@ GENRB_SOURCE =\
  ar_QA.txt ar_SA.txt ar_SD.txt ar_SO.txt ar_SS.txt\
  ar_SY.txt ar_TD.txt ar_TN.txt ar_YE.txt\
  bg.txt\
- bn.txt\
+ bn.txt bn_BD.txt bn_IN.txt\
  ca.txt\
  cs.txt\
  da.txt\
@@ -100,14 +100,15 @@ GENRB_SOURCE =\
  pt.txt pt_AO.txt pt_BR.txt pt_CH.txt pt_CV.txt\
  pt_GQ.txt pt_GW.txt pt_LU.txt pt_MO.txt pt_MZ.txt\
  pt_PT.txt pt_ST.txt pt_TL.txt\
- ro.txt\
+ ro.txt ro_MD.txt ro_RO.txt\
  ru.txt ru_BY.txt ru_KG.txt ru_KZ.txt ru_MD.txt ru_RU.txt ru_UA.txt\
  sk.txt\
  sl.txt\
- sr.txt\
- sv.txt\
- sw.txt\
- ta.txt\
+ sr.txt sr_Cyrl.txt sr_Cyrl_BA.txt sr_Cyrl_ME.txt sr_Cyrl_RS.txt\
+ sr_Cyrl_XK.txt\
+ sv.txt sv_AX.txt sv_FI.txt sv_SE.txt\
+ sw.txt sw_CD.txt sw_KE.txt sw_TZ.txt sw_UG.txt\
+ ta.txt ta_IN.txt ta_LK.txt ta_MY.txt ta_SG.txt\
  te.txt\
  th.txt\
  tr.txt\
@@ -149,7 +150,7 @@ GENRB_SOURCE =\
  mg.txt\
  mk.txt\
  mn.txt\
- mo.txt ro_MD.txt\
+ mo.txt\
  mt.txt\
  my.txt\
  ne.txt\
