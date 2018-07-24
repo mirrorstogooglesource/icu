@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "071d04ac_619d3df8",
+        "filename": "BUILD.gn",
+        "patchSetId": 3
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2018-07-24T19:55:34Z",
+      "side": 1,
+      "message": "Perhaps, this has to be filed as a bug in the upstream. Could you tell me exactly where and what variable has this issue? Then, I\u0027ll file an upstream bug.",
+      "range": {
+        "startLine": 99,
+        "startChar": 5,
+        "endLine": 100,
+        "endChar": 29
+      },
+      "revId": "48fe46a23fb9edf75d5f7202888206c69851983f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
