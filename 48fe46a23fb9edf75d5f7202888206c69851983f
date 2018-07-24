@@ -22,6 +22,30 @@
       "revId": "48fe46a23fb9edf75d5f7202888206c69851983f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9c2f92f4_3fb435db",
+        "filename": "BUILD.gn",
+        "patchSetId": 3
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1161854
+      },
+      "writtenOn": "2018-07-24T20:18:51Z",
+      "side": 1,
+      "message": "The variable is datadir_path_buffer [1]. Looks like the ifdefs around declaring the variable and using it are inconsistent. A few lines above the variable declaration is a check looking for TARGET_IPHONE_SIMULATOR that causes the unused problem for us on iPhone Simulators.\n\n[1] https://chromium.googlesource.com/chromium/deps/icu/+/master/source/common/putil.cpp#1379",
+      "parentUuid": "071d04ac_619d3df8",
+      "range": {
+        "startLine": 99,
+        "startChar": 5,
+        "endLine": 100,
+        "endChar": 29
+      },
+      "revId": "48fe46a23fb9edf75d5f7202888206c69851983f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     }
   ]
 }
