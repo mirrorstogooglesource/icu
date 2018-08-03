@@ -16,6 +16,24 @@
       "revId": "c70754a14b66a6e2d299c211f4f4ebb50ab4cea6",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "253e2428_6121c8c8",
+        "filename": "flutter/patch_brkitr.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1161854
+      },
+      "writtenOn": "2018-08-03T22:15:57Z",
+      "side": 1,
+      "message": "This makes it sound like {} are fine:\nhttps://www.gnu.org/software/bash/manual/html_node/Command-Grouping.html#Command-Grouping\n\nAnd it is also consistent with other scripts in this repo:\nhttps://chromium.googlesource.com/chromium/deps/icu/+/master/cast/patch_locale.sh#10",
+      "parentUuid": "f180c742_ed0bc726",
+      "revId": "c70754a14b66a6e2d299c211f4f4ebb50ab4cea6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     }
   ]
 }
