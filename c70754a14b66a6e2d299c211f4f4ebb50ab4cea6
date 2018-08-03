@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f180c742_ed0bc726",
+        "filename": "flutter/patch_brkitr.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2018-08-03T22:06:40Z",
+      "side": 1,
+      "message": "Shouldn\u0027t that be:\npatch -p1 \u003c flutter/brkitr.patch || ( echo \"failed to patch\" \u003e\u00262; exit 1; )\n\n(with parens instead of curly braces?)",
+      "revId": "c70754a14b66a6e2d299c211f4f4ebb50ab4cea6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
