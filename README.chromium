@@ -290,3 +290,12 @@ D. Local Modifications
     https://unicode-org.atlassian.net/browse/ICU-20140
   - fix: https://github.com/unicode-org/icu/pull/136
 
+15. Cherry pick an upstream patch for Windows timezone detection
+
+  - patches/wintz_detection.patch
+  - upstream bug:
+    https://unicode-org.atlassian.net/browse/ICU-13842
+  - fix: https://github.com/unicode-org/icu/pull/55
+
+
+
