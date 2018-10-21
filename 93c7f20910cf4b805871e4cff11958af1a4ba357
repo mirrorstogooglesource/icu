@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e501de8f_8b92b8c3",
+        "filename": "scripts/update_tz.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2018-10-21T11:29:04Z",
+      "side": 1,
+      "message": "I\u0027ll delete this line",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 10
+      },
+      "revId": "93c7f20910cf4b805871e4cff11958af1a4ba357",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
