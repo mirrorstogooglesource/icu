@@ -466,45 +466,10 @@ typedef struct CanonicalizationMap {
  * different semantic kinds of transformations.
  */
 static const CanonicalizationMap CANONICALIZE_MAP[] = {
-    { "",               "en_US_POSIX", NULL, NULL }, /* .NET name */
     { "c",              "en_US_POSIX", NULL, NULL }, /* POSIX name */
     { "posix",          "en_US_POSIX", NULL, NULL }, /* POSIX name (alias of C) */
     { "art_LOJBAN",     "jbo", NULL, NULL }, /* registered name */
-    { "az_AZ_CYRL",     "az_Cyrl_AZ", NULL, NULL }, /* .NET name */
-    { "az_AZ_LATN",     "az_Latn_AZ", NULL, NULL }, /* .NET name */
-    { "ca_ES_PREEURO",  "ca_ES", "currency", "ESP" },
-    { "de__PHONEBOOK",  "de", "collation", "phonebook" }, /* Old ICU name */
-    { "de_AT_PREEURO",  "de_AT", "currency", "ATS" },
-    { "de_DE_PREEURO",  "de_DE", "currency", "DEM" },
-    { "de_LU_PREEURO",  "de_LU", "currency", "LUF" },
-    { "el_GR_PREEURO",  "el_GR", "currency", "GRD" },
-    { "en_BE_PREEURO",  "en_BE", "currency", "BEF" },
-    { "en_IE_PREEURO",  "en_IE", "currency", "IEP" },
-    { "es__TRADITIONAL", "es", "collation", "traditional" }, /* Old ICU name */
-    { "es_ES_PREEURO",  "es_ES", "currency", "ESP" },
-    { "eu_ES_PREEURO",  "eu_ES", "currency", "ESP" },
-    { "fi_FI_PREEURO",  "fi_FI", "currency", "FIM" },
-    { "fr_BE_PREEURO",  "fr_BE", "currency", "BEF" },
-    { "fr_FR_PREEURO",  "fr_FR", "currency", "FRF" },
-    { "fr_LU_PREEURO",  "fr_LU", "currency", "LUF" },
-    { "ga_IE_PREEURO",  "ga_IE", "currency", "IEP" },
-    { "gl_ES_PREEURO",  "gl_ES", "currency", "ESP" },
-    { "hi__DIRECT",     "hi", "collation", "direct" }, /* Old ICU name */
-    { "it_IT_PREEURO",  "it_IT", "currency", "ITL" },
-    { "ja_JP_TRADITIONAL", "ja_JP", "calendar", "japanese" }, /* Old ICU name */
     { "nb_NO_NY",       "nn_NO", NULL, NULL },  /* "markus said this was ok" :-) */
-    { "nl_BE_PREEURO",  "nl_BE", "currency", "BEF" },
-    { "nl_NL_PREEURO",  "nl_NL", "currency", "NLG" },
-    { "pt_PT_PREEURO",  "pt_PT", "currency", "PTE" },
-    { "sr_SP_CYRL",     "sr_Cyrl_RS", NULL, NULL }, /* .NET name */
-    { "sr_SP_LATN",     "sr_Latn_RS", NULL, NULL }, /* .NET name */
-    { "sr_YU_CYRILLIC", "sr_Cyrl_RS", NULL, NULL }, /* Linux name */
-    { "th_TH_TRADITIONAL", "th_TH", "calendar", "buddhist" }, /* Old ICU name */
-    { "uz_UZ_CYRILLIC", "uz_Cyrl_UZ", NULL, NULL }, /* Linux name */
-    { "uz_UZ_CYRL",     "uz_Cyrl_UZ", NULL, NULL }, /* .NET name */
-    { "uz_UZ_LATN",     "uz_Latn_UZ", NULL, NULL }, /* .NET name */
-    { "zh_CHS",         "zh_Hans", NULL, NULL }, /* .NET name */
-    { "zh_CHT",         "zh_Hant", NULL, NULL }, /* .NET name */
     { "zh_GAN",         "gan", NULL, NULL }, /* registered name */
     { "zh_GUOYU",       "zh", NULL, NULL }, /* registered name */
     { "zh_HAKKA",       "hak", NULL, NULL }, /* registered name */
@@ -512,18 +477,6 @@ static const CanonicalizationMap CANONICALIZE_MAP[] = {
     { "zh_WUU",         "wuu", NULL, NULL }, /* registered name */
     { "zh_XIANG",       "hsn", NULL, NULL }, /* registered name */
     { "zh_YUE",         "yue", NULL, NULL }, /* registered name */
-};
-
-typedef struct VariantMap {
-    const char *variant;          /* input ID */
-    const char *keyword;     /* keyword, or NULL if none */
-    const char *value;       /* keyword value, or NULL if kw==NULL */
-} VariantMap;
-
-static const VariantMap VARIANT_MAP[] = {
-    { "EURO",   "currency", "EUR" },
-    { "PINYIN", "collation", "pinyin" }, /* Solaris variant */
-    { "STROKE", "collation", "stroke" }  /* Solaris variant */
 };
 
 /* ### BCP47 Conversion *******************************************/
@@ -1476,50 +1429,6 @@ _getVariant(const char *localeID,
     return _getVariantEx(localeID, prev, variant, variantCapacity, FALSE);
 }
 
-/**
- * Delete ALL instances of a variant from the given list of one or
- * more variants.  Example: "FOO_EURO_BAR_EURO" => "FOO_BAR".
- * @param variants the source string of one or more variants,
- * separated by '_'.  This will be MODIFIED IN PLACE.  Not zero
- * terminated; if it is, trailing zero will NOT be maintained.
- * @param variantsLen length of variants
- * @param toDelete variant to delete, without separators, e.g.  "EURO"
- * or "PREEURO"; not zero terminated
- * @param toDeleteLen length of toDelete
- * @return number of characters deleted from variants
- */
-static int32_t
-_deleteVariant(char* variants, int32_t variantsLen,
-               const char* toDelete, int32_t toDeleteLen)
-{
-    int32_t delta = 0; /* number of chars deleted */
-    for (;;) {
-        UBool flag = FALSE;
-        if (variantsLen < toDeleteLen) {
-            return delta;
-        }
-        if (uprv_strncmp(variants, toDelete, toDeleteLen) == 0 &&
-            (variantsLen == toDeleteLen ||
-             (flag=(variants[toDeleteLen] == '_')) != 0))
-        {
-            int32_t d = toDeleteLen + (flag?1:0);
-            variantsLen -= d;
-            delta += d;
-            if (variantsLen > 0) {
-                uprv_memmove(variants, variants+d, variantsLen);
-            }
-        } else {
-            char* p = _strnchr(variants, variantsLen, '_');
-            if (p == NULL) {
-                return delta;
-            }
-            ++p;
-            variantsLen -= (int32_t)(p - variants);
-            variants = p;
-        }
-    }
-}
-
 /* Keyword enumeration */
 
 typedef struct UKeywordsContext {
@@ -1866,20 +1775,6 @@ _canonicalize(const char* localeID,
 
         /* Handle generic variants first */
         if (variant) {
-            for (j=0; j<UPRV_LENGTHOF(VARIANT_MAP); j++) {
-                const char* variantToCompare = VARIANT_MAP[j].variant;
-                int32_t n = (int32_t)uprv_strlen(variantToCompare);
-                int32_t variantLen = _deleteVariant(variant, uprv_min(variantSize, (nameCapacity-len)), variantToCompare, n);
-                len -= variantLen;
-                if (variantLen > 0) {
-                    if (len > 0 && name[len-1] == '_') { /* delete trailing '_' */
-                        --len;
-                    }
-                    addKeyword = VARIANT_MAP[j].keyword;
-                    addValue = VARIANT_MAP[j].value;
-                    break;
-                }
-            }
             if (len > 0 && len <= nameCapacity && name[len-1] == '_') { /* delete trailing '_' */
                 --len;
             }
