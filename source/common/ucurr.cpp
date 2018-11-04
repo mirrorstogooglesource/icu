@@ -85,29 +85,14 @@ static const char CURRENCY_MAP[] = "CurrencyMap";
 // Tag for default meta-data, in CURRENCY_META
 static const char DEFAULT_META[] = "DEFAULT";
 
-// Variant for legacy pre-euro mapping in CurrencyMap
-static const char VAR_PRE_EURO[] = "PREEURO";
-
-// Variant for legacy euro mapping in CurrencyMap
-static const char VAR_EURO[] = "EURO";
-
 // Variant delimiter
 static const char VAR_DELIM = '_';
-static const char VAR_DELIM_STR[] = "_";
 
-// Variant for legacy euro mapping in CurrencyMap
-//static const char VAR_DELIM_EURO[] = "_EURO";
-
-#define VARIANT_IS_EMPTY    0
-#define VARIANT_IS_EURO     0x1
-#define VARIANT_IS_PREEURO  0x2
 
 // Tag for localized display names (symbols) of currencies
 static const char CURRENCIES[] = "Currencies";
 static const char CURRENCIES_NARROW[] = "Currencies%narrow";
 static const char CURRENCYPLURALS[] = "CurrencyPlurals";
-
-static const UChar EUR_STR[] = {0x0045,0x0055,0x0052,0};
 
 // ISO codes mapping table
 static const UHashtable* gIsoCodes = NULL;
@@ -360,30 +345,10 @@ _findMetaData(const UChar* currency, UErrorCode& ec) {
 
 // -------------------------------------
 
-/**
- * @see VARIANT_IS_EURO
- * @see VARIANT_IS_PREEURO
- */
-static uint32_t
-idForLocale(const char* locale, char* countryAndVariant, int capacity, UErrorCode* ec)
+void
+idForLocale(const char* locale, char* country, int capacity, UErrorCode* ec)
 {
-    uint32_t variantType = 0;
-    // !!! this is internal only, assumes buffer is not null and capacity is sufficient
-    // Extract the country name and variant name.  We only
-    // recognize two variant names, EURO and PREEURO.
-    char variant[ULOC_FULLNAME_CAPACITY];
-    ulocimp_getRegionForSupplementalData(locale, FALSE, countryAndVariant, capacity, ec);
-    uloc_getVariant(locale, variant, sizeof(variant), ec);
-    if (variant[0] != 0) {
-        variantType = (uint32_t)(0 == uprv_strcmp(variant, VAR_EURO))
-                   | ((uint32_t)(0 == uprv_strcmp(variant, VAR_PRE_EURO)) << 1);
-        if (variantType)
-        {
-            uprv_strcat(countryAndVariant, VAR_DELIM_STR);
-            uprv_strcat(countryAndVariant, variant);
-        }
-    }
-    return variantType;
+    ulocimp_getRegionForSupplementalData(locale, FALSE, country, capacity, ec);
 }
 
 // ------------------------------------------
@@ -566,9 +531,9 @@ ucurr_forLocale(const char* locale,
         return u_terminateUChars(buff, buffCapacity, resLen, ec);
     }
 
-    // get country or country_variant in `id'
+    // get country in `id'
     char id[ULOC_FULLNAME_CAPACITY];
-    uint32_t variantType = idForLocale(locale, id, UPRV_LENGTHOF(id), ec);
+    idForLocale(locale, id, UPRV_LENGTHOF(id), ec);
     if (U_FAILURE(*ec)) {
         return 0;
     }
@@ -602,20 +567,6 @@ ucurr_forLocale(const char* locale,
         UResourceBundle *countryArray = ures_getByKey(rb, id, cm, &localStatus);
         UResourceBundle *currencyReq = ures_getByIndex(countryArray, 0, NULL, &localStatus);
         s = ures_getStringByKey(currencyReq, "id", &resLen, &localStatus);
-
-        // Get the second item when PREEURO is requested, and this is a known Euro country.
-        // If the requested variant is PREEURO, and this isn't a Euro country,
-        // assume that the country changed over to the Euro in the future.
-        // This is probably an old version of ICU that hasn't been updated yet.
-        // The latest currency is probably correct.
-        if (U_SUCCESS(localStatus)) {
-            if ((variantType & VARIANT_IS_PREEURO) && u_strcmp(s, EUR_STR) == 0) {
-                currencyReq = ures_getByIndex(countryArray, 1, currencyReq, &localStatus);
-                s = ures_getStringByKey(currencyReq, "id", &resLen, &localStatus);
-            } else if ((variantType & VARIANT_IS_EURO)) {
-                s = EUR_STR;
-            }
-        }
         ures_close(currencyReq);
         ures_close(countryArray);
     }
@@ -2304,8 +2255,8 @@ ucurr_countCurrencies(const char* locale,
         char id[ULOC_FULLNAME_CAPACITY];
         uloc_getKeywordValue(locale, "currency", id, ULOC_FULLNAME_CAPACITY, &localStatus);
 
-        // get country or country_variant in `id'
-        /*uint32_t variantType =*/ idForLocale(locale, id, sizeof(id), ec);
+        // get country in `id'
+        idForLocale(locale, id, sizeof(id), ec);
 
         if (U_FAILURE(*ec))
         {
@@ -2420,8 +2371,8 @@ ucurr_forLocaleAndDate(const char* locale,
             char id[ULOC_FULLNAME_CAPACITY];
             resLen = uloc_getKeywordValue(locale, "currency", id, ULOC_FULLNAME_CAPACITY, &localStatus);
 
-            // get country or country_variant in `id'
-            /*uint32_t variantType =*/ idForLocale(locale, id, sizeof(id), ec);
+            // get country
+            idForLocale(locale, id, sizeof(id), ec);
             if (U_FAILURE(*ec))
             {
                 return 0;
