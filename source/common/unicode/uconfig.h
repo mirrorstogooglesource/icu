@@ -1,6 +1,6 @@
 // © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
-/*  
+/*
 **********************************************************************
 *   Copyright (C) 2002-2016, International Business Machines
 *   Corporation and others.  All Rights Reserved.
@@ -76,7 +76,7 @@
 #endif
 
 /**
- * Determines whether to enable auto cleanup of libraries. 
+ * Determines whether to enable auto cleanup of libraries.
  * @internal
  */
 #ifndef UCLN_NO_AUTO_CLEANUP
@@ -232,6 +232,17 @@
 #   define UCONFIG_NO_REGULAR_EXPRESSIONS 1
 #endif
 
+/**
+ * \def UCONFIG_SYSTEM_COLLATION
+ * This switch turns off collation using the system ICU library.
+ * See android/system_collation/README for details.
+ *
+ * @stable ICU 2.4
+ */
+#ifndef UCONFIG_SYSTEM_COLLATION
+#   define UCONFIG_SYSTEM_COLLATION 0
+#endif
+
 /* common library switches -------------------------------------------------- */
 
 /**
@@ -256,7 +267,7 @@
 #   define UCONFIG_NO_FILE_IO 0
 #endif
 
-#if UCONFIG_NO_FILE_IO && defined(U_TIMEZONE_FILES_DIR) 
+#if UCONFIG_NO_FILE_IO && defined(U_TIMEZONE_FILES_DIR)
 #   error Contradictory file io switches in uconfig.h.
 #endif
 

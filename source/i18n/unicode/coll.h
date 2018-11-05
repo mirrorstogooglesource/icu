@@ -54,7 +54,11 @@
 
 #include "unicode/utypes.h"
 
-#if !UCONFIG_NO_COLLATION
+#if UCONFIG_SYSTEM_COLLATION
+
+#include "../../android/system_collation/collator.h"
+
+#elif !UCONFIG_NO_COLLATION
 
 #include "unicode/uobject.h"
 #include "unicode/ucol.h"

@@ -61,6 +61,10 @@ config("icu_config") {
   } else {
     defines += [ "UCHAR_TYPE=uint16_t" ]
   }
+
+  if (is_android && icu_enable_system_collation) {
+    defines += [ "UCONFIG_SYSTEM_COLLATION=1" ]
+  }
 }
 
 # Config used only by ICU code.
@@ -108,6 +112,18 @@ config("icu_code") {
       # ICU uses its own deprecated functions.
       "-Wno-deprecated-declarations",
     ]
+  }
+
+  if (is_android && icu_enable_system_collation) {
+    # Don't build collation services into the library. Note that this is
+    # 'icu_code' and not 'ocu_config' because we want the ICU headers like
+    # <i18n/unicode/ucol.h> and <i18n/unicode/usearch.h> to continue
+    # declaring the C-based collation APIs. This requires this not to be in
+    # the public_configs of the ICU components.
+    #
+    # This is Android-specific because V8 needs the full ICU library
+    # for its clang_x86_v8_arm snapshot program that runs at build time.
+    defines += [ "UCONFIG_NO_COLLATION" ]
   }
 }
 
@@ -622,6 +638,23 @@ component("icui18n") {
   configs += [ ":icu_code" ]
   public_configs = [ ":icu_config" ]
 
+  if (is_android && icu_enable_system_collation) {
+    sources += [
+      "android/system_collation/collator.cpp",
+      "android/system_collation/collator.h",
+      "android/system_collation/logging.cpp",
+      "android/system_collation/logging.h",
+      "android/system_collation/system_collation.cpp",
+      "android/system_collation/system_collation.h",
+      "android/system_collation/system_collation_entries.h",
+      "android/system_collation/system_collation_wrappers.h",
+      "android/system_collation/system_icu_loader.cpp",
+      "android/system_collation/system_icu_loader.h",
+    ]
+    cflags_cc = [ "-Wno-attributes" ]
+    libs = [ "log"]
+  }
+
   if (is_fuchsia) {
     # Fuchsia puts its own libicui18n.so in /system/lib where we need to put our
     # .so when doing component builds, so we need to give this a different name.
@@ -1090,17 +1123,25 @@ if (current_cpu == "mips" || current_cpu == "mips64" ||
   data_bundle_prefix = "icudtl"
 }
 data_bundle = "${data_bundle_prefix}.dat"
+data_bundle_src = "$data_bundle"
+if (is_android && icu_enable_system_collation) {
+  # This is Android-specific because V8 needs to build the Linux specific
+  # clang_x86_v8_arm snapshot program that runs on the build machine
+  # and generates a snapshot of ARM machine code. The program must be
+  # linked against the full ICU library and its data.
+  data_bundle_src = "${data_bundle_prefix}_nocoll.dat"
+}
 
 # TODO(GYP) support use_system_icu.
 if (icu_use_data_file) {
   if (is_ios) {
     bundle_data("icudata") {
-      sources = [ "$data_dir/$data_bundle" ]
+      sources = [ "$data_dir/$data_bundle_src" ]
       outputs = [ "{{bundle_resources_dir}}/{{source_file_part}}" ]
     }
   } else {
     copy("icudata") {
-      sources = [ "$data_dir/$data_bundle" ]
+      sources = [ "$data_dir/$data_bundle_src" ]
       outputs = [ "$root_out_dir/$data_bundle" ]
       data = [ "$root_out_dir/$data_bundle" ]
     }
@@ -1141,3 +1182,5 @@ if (icu_use_data_file) {
     }
   }
 }
+
+# TODO(digit): Add ICU collation tests

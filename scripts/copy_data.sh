@@ -35,9 +35,20 @@ function copy_common {
 function copy_android_ios {
   echo "Copying icudtl.dat for $1"
 
-  cp "data/out/tmp/icudt${VERSION}l.dat" "${TOPSRC}/$2/icudtl.dat"
+  # If android/remove_collation_data.sh was called, then collocal.mk
+  # contains the string EMPTY_CONFIGURATION to indicate that the
+  # data file doesn't contain collation tables.
+  if grep -F EMPTY_CONFIGURATION "${TOPSRC}"/source/data/coll/collocal.mk; then
+    DST_FILE=icudtl_nocoll.dat
+    TAG="no-collation "
+  else
+    DST_FILE=icudtl.dat
+    TAG=""
+  fi
 
-  echo "Done with copying pre-built ICU data file for $1."
+  cp "data/out/tmp/icudt${VERSION}l.dat" "${TOPSRC}/$2/$DST_FILE"
+
+  echo "Done with copying pre-built $TAG ICU data file for $1."
 }
 
 function copy_cast {

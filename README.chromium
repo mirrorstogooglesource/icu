@@ -70,7 +70,8 @@ Pre-built data files are generated and checked in with the following steps
        On top of trim_data.sh (step d), further cuts the data entries for
        Android.
 
-     vii) Repeat ii) and iii) for Android to get android/icudtl.dat
+     vii) Repeat ii) and iii) for Android to get android/icudtl.dat and
+          android/icudtl_nocoll.dat.
 
      viii) ios/patch_locale.sh
        Further cuts the data size for iOS.

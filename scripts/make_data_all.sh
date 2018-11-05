@@ -13,6 +13,10 @@ $ICUROOT/scripts/copy_data.sh cast
 $ICUROOT/android/patch_locale.sh
 $ICUROOT/scripts/make_data.sh
 $ICUROOT/scripts/copy_data.sh android
+$ICUROOT/android/remove_collation_data.sh
+$ICUROOT/scripts/make_data.sh
+$ICUROOT/scripts/copy_data.sh android
+$ICUROOT/android/restore_collation_data.sh
 $ICUROOT/ios/patch_locale.sh
 $ICUROOT/scripts/make_data.sh
 $ICUROOT/scripts/copy_data.sh ios
