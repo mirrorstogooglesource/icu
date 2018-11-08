@@ -123,13 +123,18 @@ for i in locales/*.txt; do
       EXTRA_CAL='hebrew'
       ;;
     ar)
-      EXTRA_CAL='arabic'
+      EXTRA_CAL='islamic'
       ;;
     fa)
-      EXTRA_CAL='persian'
+      EXTRA_CAL='persian|islamic'
       ;;
     ja)
       EXTRA_CAL='japanese'
+      ;;
+    # When adding other Indian locales for Android,
+    # add 'indian' calendar to them as well.
+    hi)
+      EXTRA_CAL='indian'
       ;;
     *)
       EXTRA_CAL=''
