@@ -113,9 +113,6 @@ for i in locales/*.txt; do
     zh)
       EXTRA_CAL='chinese'
       ;;
-    ko)
-      EXTRA_CAL='dangi'
-      ;;
     am)
       EXTRA_CAL='ethiopic'
       ;;
@@ -123,13 +120,24 @@ for i in locales/*.txt; do
       EXTRA_CAL='hebrew'
       ;;
     ar)
-      EXTRA_CAL='arabic'
+      # Other Islamic calendar formats are not in locales other than root.
+      # ar-SA's default is islamic-umalqura, but its format entries are
+      # specified in root via aliases.
+      EXTRA_CAL='islamic'
       ;;
     fa)
-      EXTRA_CAL='persian'
+      EXTRA_CAL='persian|islamic'
       ;;
     ja)
       EXTRA_CAL='japanese'
+      ;;
+    # When adding other Indian locales for Android,
+    # add 'indian' calendar to them as well.
+    hi)
+      EXTRA_CAL='indian'
+      ;;
+    root)
+      EXTRA_CAL='buddhist|chinese|roc|ethiopic|japanese|hebrew|islamic|islamic-umalqura|persian|indian'
       ;;
     *)
       EXTRA_CAL=''
@@ -151,5 +159,17 @@ for i in locales/*.txt; do
             d
           }' -i $i
 done
+
+# Delete Japanese era display names in root. 'ja' has Japanese era names
+# so that root does not need them.
+# The same is true of eras and monthNames for Islamic calendar.
+sed -r -i \
+  '/^        japanese\{$/,/^        \}$/ {
+     /^            eras\{/,/^            \}$/d
+   }
+   /^        islamic\{$/,/^        \}$/ {
+     /^            eras\{/,/^            \}$/d
+     /^            monthNames\{/,/^            \}$/d
+   }'  locales/root.txt
 
 echo DONE.
