@@ -347,6 +347,8 @@ sr.res
 sr_Latn.res
 sv.res
 sw.res
+sw_CD.res
+sw_KE.res
 ta.res
 te.res
 tg.res
