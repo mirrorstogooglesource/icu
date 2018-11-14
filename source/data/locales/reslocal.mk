@@ -106,7 +106,7 @@ GENRB_SOURCE =\
  sl.txt\
  sr.txt\
  sv.txt\
- sw.txt\
+ sw.txt sw_CD.txt sw_KE.txt\
  ta.txt\
  te.txt\
  th.txt\
