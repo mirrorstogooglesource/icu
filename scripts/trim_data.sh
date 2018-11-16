@@ -142,8 +142,9 @@ function filter_currency_data {
     echo "Overwriting $i for $locale"
     sed -n -r -i \
       '1, /^'${locale}'\{$/ p
-       /^    "%%ALIAS"\{/p
-       /^    %%Parent\{/p
+       /^    "%%ALIAS"\{/ p
+       /^    ___\{..\}$/ p
+       /^    %%Parent\{/ p
        /^    Currencies\{$/, /^    \}$/ {
          /^    Currencies\{$/ p
          /^        '$KEEPLIST'\{$/, /^        \}$/ p
