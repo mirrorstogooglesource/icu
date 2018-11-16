@@ -104,9 +104,11 @@ GENRB_SOURCE =\
  ru.txt ru_BY.txt ru_KG.txt ru_KZ.txt ru_MD.txt ru_RU.txt ru_UA.txt\
  sk.txt\
  sl.txt\
- sr.txt\
+ sr.txt sr_BA.txt sr_CS.txt sr_RS.txt sr_XK.txt\
+ sr_Cyrl.txt sr_Cyrl_BA.txt sr_Cyrl_CS.txt sr_Cyrl_RS.txt\
+ sr_Cyrl_XK.txt\
  sv.txt\
- sw.txt\
+ sw.txt sw_CD.txt sw_KE.txt\
  ta.txt\
  te.txt\
  th.txt\
