@@ -1,0 +1,27 @@
+# Copyright 2018 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+# Base it on the desktop setup.
+import("icu_data.gni")
+
+# Region data is fetched from the Android API on Android. We only need
+# en.txt.
+icu_data_region_res_sources = []
+icu_data_region_res_sources = [ "source/data/region/en.txt" ]
+icu_data_region_res_generated = []
+icu_data_region_res_generated = [ "region/en.res" ]
+icu_data_region_alias_res_sources = []
+icu_data_region_alias_res_generated = []
+
+# Too big to include.
+icu_data_brkitr_dict_sources -= [ "source/data/brkitr/cjdict.txt" ]
+icu_data_brkitr_dict_generated -= [ "brkitr/cjdict.dict" ]
+has_cjdict = false
+# Since we skip cjdict.dict, we need the better word break in word_ja.txt
+icu_data_brkitr_brk_sources += [ "source/data/brkitr/rules/word_ja.txt" ]
+icu_data_brkitr_brk_generated += [ "brkitr/word_ja.brk" ]
+# Need to fix it so that it doesn't use cjdict.dict
+icu_data_brkitr_res_sources -= [ "source/data/brkitr/ja.txt" ]
+icu_data_brkitr_res_raw_sources += [ "brkitr/ja.txt" ]
+icu_data_brkitr_res_filtered_sources += [ "brkitr/ja.txt" ]
