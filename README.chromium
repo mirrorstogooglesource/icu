@@ -49,7 +49,6 @@ Pre-built data files are generated and checked in with the following steps
      i) scripts/trim_data.sh
        The full locale data for Chrome's UI languages and their select variants
        and the bare minimum locale data for other locales will be kept.
-
      ii) scripts/make_data.sh
        This makes icudt${version}l.dat.
 
@@ -100,15 +99,7 @@ Pre-built data files are generated and checked in with the following steps
          (big5han/gb2312han) that don't make any sense and nobdoy uses.
 
   - android/patch_locale.sh
-      a. Make changes to source/data/{region,lang} to exclude these data
-         except the language and script names of zh_Hans and zh_Hant.
-      b. Remove exemplar cities in timezone data (data/zone).
-      c. Keep only the minimal calendar data in data/locales.
-      d. Include currency display names for a smaller subset of currencies.
-      e. Minimize the locale data for 9 locales to which Chrome on Android
-         is not localized.
       f. Also apply android/brkitr.patch
-
   - android/brkitr.patch
       Do not use the C+J dictionary for Chinese/Japanese segmentation
       to reduce the data size. Adjust word.txt and a few other files.
@@ -266,3 +257,67 @@ D. Local Modifications
   - Fix:
     https://github.com/unicode-org/icu/pull/265
     https://github.com/unicode-org/icu/pull/278
+General information for maintenance
+-----------------------------------
+
+ * Build system in gyp/gn + ninja to generate the data packages:
+   We build the necessary tools (genrb, makeconv, icupkg, ...) and then
+   run those tools on all data files we want to generate.
+
+   This process is slightly complicated because some data files we want to
+   modify (shrink) before the build them. This is implemented with a filter
+   program that takes files that we want to modify and put them in a modified
+   shape in a special directory.
+
+   The whole chain is (dir names can vary):
+   source/data/*                 <- raw/pure data
+       out/gen/tmp_icudt54l/*    <- filtered/stripped data
+           out/gen/icudt54l/*    <- compiled data
+              out/icudt54l.dat   <- packaged data
+
+   This multi step chain means that files are named twice or three times in
+   the build system with different paths (this might change if we can drop
+   gyp) so to add or remove one data chunk it will have to be removed
+   from these lists in icu_data.gypi:
+     *_raw_source
+     *_filtered_source
+     *_generated
+   where * is something like icu_curr_res or icu_lang_res.
+
+   Some special files are also handled specifically in the filtering system
+   and in the build system.
+
+ * Build system for tools: makeconv, pkgdata, icupkg, genrb, gendict,
+   genbrk, ...
+
+   These are pretty straight forward. ICU is built as a static lib and used by
+   the tools that often are just a single file implementing main() and some
+   utility code. Whatever works for building the rest of ICU typically works
+   for building the data tools.
+
+ * Filtering tool (filter_data_for_size.py):
+   Based on:
+   - android/patch_locale.sh (to be run for Android build only):
+      a. Make changes to source/data/{region,lang} to exclude these data
+         except the language and script names of zh_Hans and zh_Hant.
+      b. Remove exemplar cities in timezone data (data/zone).
+      c. Keep only the minimal calendar data in data/locales.
+      d. Include currency display names for a smaller subset of currencies.
+      e. Minimize the locale data for 9 locales to which Chrome on Android
+         is not localized.
+
+   - android/brkitr.patch (to be applied for Android build only) :
+       Do not use the C+J dictionary for Chinese/Japanese segmentation
+       to reduce the data size. Adjust word.txt and a few other files.
+
+   - source/data/brkitr/word_ja.txt (used only on Android)
+       Added for Japanese-specific word-breaking without the C+J dictionary.
+
+ * The build system is not warning clean. In particular:
+   - ICU tools warn about empty input files. - Check --quiet flags?
+   - The gyp Makefile generator generates duplicate rules (affects
+     v8-standalone) - Reported as gyp issue 484.
+
+ * Updating to a newer ICU: Diff all Makefile.* and *.mk files before
+   and after and mimic necessary changes (if any) in BUILD.gn, icu_data.gyp
+   and icu_data.gypi.

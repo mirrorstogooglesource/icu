@@ -1,0 +1,50 @@
+# Copyright 2018 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+# Base it on the desktop setup.
+import("icu_data.gni")
+
+# Keep info about the top 75 currencies. TODO: Move them into these files?
+currency_keep_list = "android/currencies.list"
+
+_unnecessary_languages = [
+  # From EXTRA_LANGUAGES in cast/patch_locale.sh
+  "gu",
+  "kn",
+  "ml",
+  "mr",
+  "ms",
+  "ta",
+  "te"
+]
+
+extra_languages_to_minimize = ""
+foreach(lang, _unnecessary_languages) {
+  # Locales files will stay but be emptied.
+  if (extra_languages_to_minimize != "") {
+    extra_languages_to_minimize += ","
+  }
+  extra_languages_to_minimize += lang
+
+  # For currencies, time zones and units we drop all.
+  icu_curr_prefiltered_sources -= ["source/data/curr/$lang.txt"]
+  icu_curr_filtered_sources -= ["curr/$lang.txt"]
+  icu_curr_generated -= ["curr/$lang.res"]
+
+  icu_zone_prefiltered_sources -= ["source/data/zone/$lang.txt"]
+  icu_zone_filtered_sources -= ["zone/$lang.txt"]
+  icu_zone_generated -= ["zone/$lang.res"]
+
+  icu_unit_prefiltered_sources -= ["source/data/unit/$lang.txt"]
+  icu_unit_filtered_sources -= ["unit/$lang.txt"]
+  icu_unit_generated -= ["unit/$lang.res"]
+}
+
+
+# TODO: Remove exemple cities from timezone data. (Isn't this enabled
+# by default?)
+
+# TODO: # Delete Japanese era display names in root. 'ja' has Japanese era names
+# so that root does not need them.
+# The same is true of eras and monthNames for Islamic calendar.
