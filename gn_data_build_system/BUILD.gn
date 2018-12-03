@@ -1,0 +1,1125 @@
+# Copyright 2018 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//build/config/chromecast_build.gni")
+
+make_ios_data_file = is_ios  # Variable to make it easier to test
+make_android_data_file = is_android  # Variable to make it easier to test
+make_cast_data_file = is_chromecast  # Variable to make it easier to test
+
+assert(!(make_cast_data_file && make_android_data_file))
+assert(!(make_cast_data_file && make_ios_data_file))
+assert(!(make_android_data_file && make_ios_data_file))
+
+if (make_android_data_file) {
+  import("../icu_data_android.gni")
+} else if (make_cast_data_file) {
+  import("../icu_data_cast.gni")
+} else if (make_ios_data_file) {
+  import("../icu_data_ios.gni")
+} else {
+  # Full Chromium desktop data file.
+  import("../icu_data.gni")
+}
+
+icu_gen_dir = "$target_gen_dir/icudt${ICU_VER}l"
+icu_gen_tmp_dir = "$target_gen_dir/tmp_icudt${ICU_VER}l"
+
+tool_dir = get_label_info("../gn_tool_build_system:genrb($host_toolchain)",
+                          "root_out_dir")  # They are all in the same dir.
+genrb_exe = rebase_path("$tool_dir/genrb")
+gencnval_exe = rebase_path("$tool_dir/gencnval")
+icupkg_exe = rebase_path("$tool_dir/icupkg")
+makeconv_exe = rebase_path("$tool_dir/makeconv")
+gendict_exe = rebase_path("$tool_dir/gendict")
+genbrk_exe = rebase_path("$tool_dir/genbrk")
+if (include_confusables) {
+  gencfu_exe = rebase_path("$tool_dir/gencfu")
+}
+pkgdata_exe = rebase_path("$tool_dir/pkgdata")
+
+# TODO: Big or little endian? Controlled by -tl/-tb to icupkg (and other places?)
+
+# Would be nice to gGenerate by getting outputs from all targets, but
+# it is not possible to get outputs from action_foreach right now. It will
+# require changes to gn.
+icu_data_file_contents = rebase_path(
+  # Coll
+  [
+    "coll/root.res",
+    "coll/res_index.res",
+  ] + icu_coll_generated +
+
+  # Brk_brk
+  icu_brkitr_brk_generated +
+
+  # Brk_res
+  [
+    "brkitr/root.res",
+    "brkitr/res_index.res",
+  ] + icu_brkitr_res_generated +
+
+  # Brk_dict
+  icu_brkitr_dict_generated +
+
+  # Locales
+  [
+    "root.res",
+    "res_index.res",
+    "pool.res",
+  ] + icu_locales_generated +
+
+  # Misc
+  icu_misc_generated +
+
+  # Lang
+  [
+    "lang/root.res",
+    "lang/res_index.res",
+    "lang/pool.res",
+  ] + icu_lang_generated +
+
+  # Region
+  [
+    "region/root.res",
+    "region/res_index.res",
+    "region/pool.res",
+  ] + icu_region_generated +
+
+  # Zone
+  [
+    "zone/root.res",
+    "zone/res_index.res",
+    "zone/pool.res",
+  ] + icu_zone_generated +
+
+  # Unit (root.res added conditionally below)
+  icu_unit_generated +
+
+  # Random data
+  [ "cnvalias.icu" ] + [ "coll/ucadata.icu" ] + icu_nrm_generated +
+
+  # Converters
+  icu_ucm_generated +
+
+  # Currency (root.res added conditionally below)
+  icu_curr_generated +
+
+  # RBNF
+  [ "rbnf/res_index.res" ] +
+
+  # Translit (note root_subset.txt -> root.res)
+  [ "translit/root.res" ],
+  ".",
+  icu_gen_dir)
+
+if (include_confusables) {
+  icu_data_file_contents += rebase_path(
+    # Confusables
+    [ "confusables.cfu" ],
+    ".",
+    icu_gen_dir)
+}
+
+if (icu_curr_generated != []) {
+  icu_data_file_contents += rebase_path(
+    [
+      "curr/root.res",
+      "curr/res_index.res",
+      "curr/pool.res",
+    ] + icu_curr_supplemental_generated,
+    ".", icu_gen_dir)
+}
+
+if (icu_unit_generated != []) {
+  icu_data_file_contents += rebase_path(
+    [
+      "unit/root.res",
+      "unit/res_index.res",
+      "unit/pool.res",
+    ],
+    ".", icu_gen_dir)
+}
+
+icu_resource_files_file = "$icu_gen_tmp_dir/icu_data_resource_list.tmp"
+write_file(icu_resource_files_file, icu_data_file_contents)  # This doesn't get rewritten always. gn bug?
+
+group("icu_cnv_base_files") {
+  public_deps = [
+    ":icu_cnvalias",
+    ":icu_icupkg_nrm",
+    ":icu_ucadata_icu",
+  ]
+}
+
+action_foreach("icu_icupkg_nrm") {
+  script = "run.py"
+  sources = rebase_path(icu_nrm_sources, ".", "..")
+  inputs = [
+    icupkg_exe,
+  ]
+  outputs = [
+    "$icu_gen_dir/{{source_file_part}}",
+  ]
+  deps = [
+    "../gn_tool_build_system:icupkg($host_toolchain)",
+  ]
+  args = [
+    icupkg_exe,
+    "-tl",
+    "{{source}}",
+    rebase_path("$icu_gen_dir/{{source_file_part}}"),
+  ]
+}
+
+action("icu_cnvalias") {
+  script = "run.py"
+  inputs = [
+    gencnval_exe,
+    "../source/data/mappings/convrtrs.txt",
+  ]
+  outputs = [
+    "$icu_gen_dir/cnvalias.icu",
+  ]
+  deps = [
+    "../gn_tool_build_system:gencnval($host_toolchain)",
+  ]
+  args = [
+    gencnval_exe,
+    "-d",
+    rebase_path(icu_gen_dir),
+    rebase_path("../source/data/mappings/convrtrs.txt"),
+  ]
+}
+
+action("icu_ucadata_icu") {
+  script = "run.py"
+  inputs = [
+    icupkg_exe,
+    "../source/data/in/coll/ucadata-implicithan.icu",
+  ]
+  outputs = [
+    "$icu_gen_dir/coll/ucadata.icu",
+  ]
+  deps = [
+    "../gn_tool_build_system:icupkg($host_toolchain)",
+  ]
+
+  args = [
+    icupkg_exe,
+    "-tl",
+    rebase_path("../source/data/in/coll/ucadata-implicithan.icu"),
+    rebase_path("$icu_gen_dir/coll/ucadata.icu"),
+  ]
+}
+
+action_foreach("icu_cnv_ucm_files") {
+  script = "run.py"
+  sources = rebase_path(icu_ucm_sources, ".", "..")
+  inputs = [
+    makeconv_exe,
+  ]
+  outputs = [
+    "$icu_gen_dir/{{source_name_part}}.cnv",
+  ]
+  deps = [
+    "../gn_tool_build_system:makeconv($host_toolchain)",
+  ]
+  args = [
+    makeconv_exe,
+    "-c",
+    "-d",
+    rebase_path(icu_gen_dir),
+    "{{source}}",
+  ]
+}
+
+action("icu_filtered_for_size_files") {
+  script = "../build_tools/filter_data_for_size.py"
+  inputs = [
+             # Order here is important. See indexing below.
+             "../source/data/brkitr/rules/word.txt",
+             "../source/data/brkitr/root.txt",
+             "../source/data/brkitr/ja.txt",
+           ] +
+           rebase_path(["source/data/curr/root.txt"] +
+                       icu_curr_prefiltered_sources +
+                       icu_curr_alias_prefiltered_sources +
+                       icu_curr_supplemental_prefiltered_sources +
+                       ["source/data/locales/root.txt"] +
+                       icu_locales_prefiltered_sources +
+                       icu_locales_alias_prefiltered_sources +
+                       ["source/data/lang/root.txt"] +
+                       icu_lang_prefiltered_sources +
+                       icu_lang_alias_prefiltered_sources +
+                       ["source/data/region/root.txt"] +
+                       icu_region_prefiltered_sources +
+                       icu_region_alias_prefiltered_sources +
+                       ["source/data/coll/root.txt"] +
+                       icu_coll_prefiltered_sources +
+                       icu_coll_alias_prefiltered_sources +
+                       ["source/data/unit/root.txt"] +
+                       icu_unit_prefiltered_sources +
+                       icu_unit_alias_prefiltered_sources +
+                       ["source/data/zone/root.txt"] +
+                       icu_zone_prefiltered_sources +
+                       icu_zone_alias_prefiltered_sources,
+                       ".", "..")
+
+  outputs = []
+  foreach(input_file, inputs) {
+    # Strip "../source/data"
+    stripped_input_file_name = rebase_path(input_file, "../source/data")
+    outputs += [ "$icu_gen_tmp_dir/$stripped_input_file_name" ]
+  }
+
+  # And inputs that don't correspond to an output:
+  inputs += [
+    "../scripts/chrome_ui_languages.list",
+    "../scripts/accept_lang.list",
+  ]
+
+  # TODO: Split into different steps for different parts of the data
+  # since having one step work on all files at once and then spliiting
+  # up into multiple steps complicates the build system.
+  args = [
+    "--strip-locales",  # Always(?)
+    "--strip-languages",  # Always(?)
+    "--strip-units",  # Always(?)
+    "--strip-legacy-chinese-collation",  # Always(?)
+    "--strip-regions",  # Always(?)
+    "--in-word-txt",
+    rebase_path(inputs[0]),
+    "--out-word-txt",
+    rebase_path(outputs[0]),
+    "--in-brkitr-root-txt",
+    rebase_path(inputs[1]),
+    "--out-brkitr-root-txt",
+    rebase_path(outputs[1]),
+    "--in-brkitr-ja-txt",
+    rebase_path(inputs[2]),
+    "--out-brkitr-ja-txt",
+    rebase_path(outputs[2]),
+    "--strip-currencies",  # Always, just different currency keep files
+    "--currency-keep-list",
+    rebase_path(rebase_path(currency_keep_list, ".", "..")),
+    "--in-curr-dir",
+    rebase_path("../source/data/curr"),
+    "--out-curr-dir",
+    rebase_path("$icu_gen_tmp_dir/curr"),
+    "--in-unit-dir",
+    rebase_path("../source/data/unit"),
+    "--out-unit-dir",
+    rebase_path("$icu_gen_tmp_dir/unit"),
+    "--in-locales-dir",
+    rebase_path("../source/data/locales"),
+    "--out-locales-dir",
+    rebase_path("$icu_gen_tmp_dir/locales"),
+    "--in-lang-dir",
+    rebase_path("../source/data/lang"),
+    "--out-lang-dir",
+    rebase_path("$icu_gen_tmp_dir/lang"),
+    "--in-region-dir",
+    rebase_path("../source/data/region"),
+    "--out-region-dir",
+    rebase_path("$icu_gen_tmp_dir/region"),
+    "--in-coll-dir",
+    rebase_path("../source/data/coll"),
+    "--out-coll-dir",
+    rebase_path("$icu_gen_tmp_dir/coll"),
+    "--in-zone-dir",
+    rebase_path("../source/data/zone"),
+    "--out-zone-dir",
+    rebase_path("$icu_gen_tmp_dir/zone"),
+    "--ui-languages-list-file",
+    rebase_path("../scripts/chrome_ui_languages.list"),
+    "--accept-languages-list-file",
+    rebase_path("../scripts/accept_lang.list"),
+  ]
+
+  if (extra_languages_to_minimize != "") {
+    args += [
+      "--minimize-language-list",
+      extra_languages_to_minimize,
+    ]
+  }
+
+  if (!has_cjdict && added_word_ja_to_replace_cjdict) {
+    args += [ "--replace-cjdict-with-word_ja" ]
+  }
+
+  if (strip_rare_calendars) {
+    args += [ "--strip-rare-calendars" ]
+  }
+
+  if (strip_almost_all_calendars) {
+    args += [ "--strip-almost-all-calendars" ]
+  }
+
+  if (remove_language_names_already_in_android) {
+    args += [
+      "--remove-data-already-existing-in-android",
+    ]
+  }
+
+  if (remove_duplicate_root_eras) {
+    args += [
+      "--strip-duplicate-root-eras",
+    ]
+  }
+
+  if (!is_chromeos) {
+    # Saves 400 KB (100 KB post 7z) but is needed in ChromeOS.
+    args += [ "--strip-zone-example-cities" ]
+  }
+}
+
+dicts_with_transform = [
+  ["burmesedict", "0x1000"],
+  ["khmerdict", "0x1780"],
+  ["thaidict", "0xe00"],
+  ["laodict", "0xe80"],
+]
+
+if (has_cjdict) {
+  dicts_with_transform += [["cjdict", ""]]
+}
+
+foreach(dict_with_transform, dicts_with_transform) {
+  dict_to_compile = dict_with_transform[0]
+  dict_transform_offset = dict_with_transform[1]
+
+  action("icu_dict_" + dict_to_compile) {
+    script = "run.py"
+    inputs = [
+      gendict_exe,
+      "../source/data/brkitr/dictionaries/$dict_to_compile.txt",
+    ]
+    outputs = [
+      "$icu_gen_dir/brkitr/$dict_to_compile.dict",
+    ]
+    deps = [
+      "../gn_tool_build_system:gendict($host_toolchain)",
+    ]
+
+    if (dict_transform_offset == "") {
+      target_args = [ "--uchars" ]
+    } else {
+      target_args = [
+        "--bytes",
+        "--transform",
+        "offset-$dict_transform_offset",
+      ]
+    }
+    args = [ gendict_exe ] + target_args + [
+             "-c",
+             "-i",
+             rebase_path(icu_gen_dir),
+             rebase_path(inputs[1]),
+             rebase_path(outputs[0]),
+           ]
+  }
+}
+
+group("icu_dicts") {
+  public_deps = []
+  foreach(dict_with_transform, dicts_with_transform) {
+    dict_to_compile = dict_with_transform[0]
+    public_deps += [ ":icu_dict_" + dict_to_compile ]
+  }
+}
+
+action_foreach("icu_brk_files") {
+  script = "run.py"
+  deps = [
+    ":icu_cnv_base_files",
+    ":icu_filtered_for_size_files",
+    "../gn_tool_build_system:genbrk($host_toolchain)",
+  ]
+  inputs = [
+    genbrk_exe,
+  ]
+  sources = rebase_path(icu_brkitr_brk_sources, ".", "..") +
+            [ "$icu_gen_tmp_dir/brkitr/rules/word.txt" ]
+
+  outputs = [
+    "$icu_gen_dir/brkitr/{{source_name_part}}.brk",
+  ]
+  args = [
+    genbrk_exe,
+    "--quiet",
+    "-c",
+    "-i",
+    rebase_path(icu_gen_dir),
+    "-r",
+    "{{source}}",
+    "-o",
+    rebase_path("$icu_gen_dir/brkitr/{{source_name_part}}.brk"),
+  ]
+}
+
+action_foreach("icu_misc_res_files") {
+  script = "run.py"
+  deps = [
+    ":icu_cnv_base_files",
+    "../gn_tool_build_system:genrb($host_toolchain)",
+  ]
+  inputs = [
+    genrb_exe,
+  ]
+  sources = rebase_path(icu_misc_sources, ".", "..")
+
+  outputs = [
+    "$icu_gen_dir/{{source_name_part}}.res",
+  ]
+  args = [
+    genrb_exe,
+    "-k",
+    "-R",
+    "-q",
+    "-i",
+    rebase_path(icu_gen_dir),
+    "-s",
+    rebase_path("../source/data/misc"),
+    "-d",
+    rebase_path(icu_gen_dir),
+    "{{source_file_part}}",
+  ]
+}
+
+copy("icu_zone_extras") {
+  # Since all files need to be in the same folder for pool.res
+  # generation to work well (or the files will become larger), we need
+  # to copy this to icu_gen_tmp_dir.
+  source_file = icu_zone_extra_sources[0]
+  target_file = rebase_path(source_file, "source/data")
+  sources = [ rebase_path(source_file, ".", "..") ]
+  outputs = [ "$icu_gen_tmp_dir/" + target_file ]
+}
+
+res_data = [
+  # Format:
+  #
+  # In-dir, out-dir,
+  # source-name-list (excluding aliases),
+  # prefiltered-source-name-list (excluding aliases),
+  # generate_res_and_pool_files (true/false),
+  # all_non_filtered_source_files (including aliases),
+  # all_prefiltered_source_files (including aliases),
+  # is_filtered (true/false).
+  ["locales", "",
+   [], icu_locales_prefiltered_sources,
+   true,
+   [],
+   ["source/data/locales/root.txt"] + icu_locales_prefiltered_sources +
+   icu_locales_alias_prefiltered_sources,
+   true,
+  ],
+
+  ["curr", "curr",
+   [], icu_curr_prefiltered_sources,
+   true,
+   [],
+   ["source/data/curr/root.txt"] + icu_curr_supplemental_prefiltered_sources +
+   icu_curr_prefiltered_sources +icu_curr_alias_prefiltered_sources,
+   true,
+  ],
+
+  ["lang", "lang",
+   [], icu_lang_prefiltered_sources,
+   true,
+   [],
+   ["source/data/lang/root.txt"] + icu_lang_prefiltered_sources +
+   icu_lang_alias_prefiltered_sources,
+   true,
+  ],
+
+  ["region", "region",
+   [], icu_region_prefiltered_sources,
+   true,
+   [],
+   ["source/data/region/root.txt"] + icu_region_prefiltered_sources +
+   icu_region_alias_prefiltered_sources,
+   true,
+  ],
+
+  ["zone", "zone",
+   [], icu_zone_prefiltered_sources,
+   true,
+   [],
+   ["source/data/zone/root.txt"] + icu_zone_prefiltered_sources +
+   icu_zone_alias_prefiltered_sources + icu_zone_extra_sources,
+   true
+  ],
+
+  ["unit", "unit",
+   [], icu_unit_prefiltered_sources,
+   true,
+   [],
+   ["source/data/unit/root.txt"] + icu_unit_prefiltered_sources +
+   icu_unit_alias_prefiltered_sources,
+   true,
+  ],
+
+  ["coll", "coll",
+   [], icu_coll_prefiltered_sources,
+   false,
+   [],
+   [],
+   true,
+  ],
+
+  ["brkitr", "brkitr",
+   icu_brkitr_res_sources, icu_brkitr_res_prefiltered_sources,
+   false,
+   [],
+   [],
+   true,
+  ],
+
+  ["rbnf", "rbnf",
+   [], [],
+   false,
+   [],
+   [],
+   true,
+  ],
+]
+
+foreach(res_data_block, res_data) {
+  res_index_dir = res_data_block[0]
+  res_index_output_dir = res_data_block[1]
+  res_index_sources = []
+  res_index_sources = res_data_block[2]
+  res_index_prefiltered_sources = []
+  res_index_prefiltered_sources = res_data_block[3]
+  res_index_generate_res_and_pool = res_data_block[4]
+  res_index_all_nonfiltered_sources = []
+  res_index_all_nonfiltered_sources = res_data_block[5]
+  res_index_all_prefiltered_sources = []
+  res_index_all_prefiltered_sources = res_data_block[6]
+  # If sources are in source/data (false) or icu_gen_tmp_dir (true)
+  res_index_is_filtered = res_data_block[7]
+
+  res_index_all_sources = []
+  res_index_all_sources = res_index_all_nonfiltered_sources + rebase_path(rebase_path(res_index_all_prefiltered_sources, "source/data"), ".", icu_gen_tmp_dir)
+
+  res_source_deps = []
+  if (res_index_is_filtered) {
+    res_source_deps += [
+      ":icu_filtered_for_size_files",
+    ]
+    if (res_index_dir == "zone") {
+      res_source_deps += [
+        ":icu_zone_extras"
+      ]
+    }
+  }
+
+  action("icu_write_${res_index_dir}_res_index_txt") {
+    script = "../build_tools/write_res_index.py"
+    inputs = [
+      # Only using file names, not file contents of source files.
+    ]
+    outputs = [
+      "$icu_gen_tmp_dir/$res_index_output_dir/res_index.txt",
+    ]
+    args = []
+    if (res_index_dir == "locales") {
+      args += [
+        "--cldr-version",
+        CLDR_VER,
+      ]
+    }
+
+    args += [
+      "--outfile",
+      rebase_path(outputs[0]),
+    ]
+    # TODO: Weird paths here, rebase somewhere?
+    args +=
+        rebase_path(res_index_sources, ".", "..") + res_index_prefiltered_sources
+  }
+
+  action("icu_${res_index_dir}_res_index_res") {
+    script = "run.py"
+    deps = [
+      ":icu_write_${res_index_dir}_res_index_txt",
+      "../gn_tool_build_system:genrb($host_toolchain)",
+
+      # Simple resources, do not need anything from icu_cnv_base_files.
+      # ":icu_cnv_base_files",
+    ]
+    inputs = [
+      genrb_exe,
+      "$icu_gen_tmp_dir/$res_index_output_dir/res_index.txt",
+    ]
+    outputs = [
+      "$icu_gen_dir/$res_index_output_dir/res_index.res",
+    ]
+
+    args = [
+      genrb_exe,
+      "--quiet",  # Chromium addition to silence warnings.
+      "-k",
+      "-R",
+      "-i",
+      rebase_path(icu_gen_dir),
+      "-d",
+      rebase_path("$icu_gen_dir/$res_index_output_dir"),
+      rebase_path(inputs[1]),
+    ]
+  }
+
+  if (res_index_generate_res_and_pool) {
+    if (res_index_is_filtered) {
+      source_dir = icu_gen_tmp_dir
+    } else {
+      source_dir = "../source/data"
+    }
+    action("optimize_icu_${res_index_dir}_pool_res") {
+      script = "../build_tools/optimize_pool_res.py"
+      inputs = [
+        genrb_exe,
+      ] + res_index_all_sources  # Or should aliases not be here?
+
+      deps = [
+        "../gn_tool_build_system:genrb($host_toolchain)",
+      ] + res_source_deps
+
+      outputs = [
+        "$icu_gen_tmp_dir/$res_index_dir/pool.res",
+      ]
+
+      args = [
+        "--genrb-binary",
+        genrb_exe,
+        "--genrb-source-dir",
+        rebase_path("$source_dir/$res_index_dir"),
+        "--genrb-include-dir",
+        rebase_path(icu_gen_dir),
+        "--pool-destination",
+        rebase_path("$icu_gen_tmp_dir/$res_index_dir/pool.res"),
+      ] + rebase_path(res_index_all_sources)
+    }
+
+    action("icu_${res_index_dir}_pool_res") {
+      script = "run.py"
+      inputs = [
+        icupkg_exe,
+        "$icu_gen_tmp_dir/$res_index_dir/pool.res",
+      ]
+      outputs = [
+        "$icu_gen_dir/$res_index_output_dir/pool.res",
+      ]
+      deps = [
+        ":optimize_icu_${res_index_dir}_pool_res",
+        "../gn_tool_build_system:icupkg($host_toolchain)",
+      ]
+      args = [
+        icupkg_exe,
+        "-tl",
+        rebase_path(inputs[1]),
+        rebase_path(outputs[0]),
+      ]
+    }
+
+    if (res_index_is_filtered) {
+      source_dir = icu_gen_tmp_dir
+    } else {
+      source_dir = "../source/data"
+    }
+
+    action_foreach("icu_${res_index_dir}_res_files") {
+      script = "run.py"
+      deps = [
+        ":icu_cnv_base_files",
+        "../gn_tool_build_system:genrb($host_toolchain)",
+        ":optimize_icu_${res_index_dir}_pool_res",
+      ] + res_source_deps
+
+      inputs = [
+        genrb_exe,
+        "$icu_gen_tmp_dir/$res_index_dir/pool.res",
+      ]
+      sources = res_index_all_sources
+
+      outputs = [
+        "$icu_gen_dir/$res_index_output_dir/{{source_name_part}}.res",
+      ]
+      args = [
+        genrb_exe,
+        "--quiet",
+        "--usePoolBundle",
+        rebase_path("$icu_gen_tmp_dir/$res_index_dir"),
+        "-k",
+        "-R",
+        "-i",
+        rebase_path(icu_gen_dir),
+        "-s",
+        rebase_path("$source_dir/$res_index_dir"),
+        "-d",
+        rebase_path("$icu_gen_dir/$res_index_output_dir"),
+        "{{source_file_part}}",
+      ]
+    }
+  }
+}
+
+# START COLL
+
+copy("icu_coll_dependencies") {
+  # Since we've filtered collation files (at least one of them) and
+  # moved them to the build directory, we also need to move the files
+  # that the collation files depend on.
+  sources = [ "../source/data/unidata/UCARules.txt" ]
+  outputs = [ "$icu_gen_tmp_dir/unidata/UCARules.txt" ]
+}
+
+action_foreach("icu_coll_res_files") {
+  # TODO: Check if this can be put in the loop with the others? It's
+  # different (no pool bundle, special dependencies), but how
+  # different?
+  script = "run.py"
+  deps = [
+    ":icu_cnv_base_files",
+    ":icu_misc_res_files",  # Specifically keyTypeData for sr_Latn.txt
+    "../gn_tool_build_system:genrb($host_toolchain)",
+    ":icu_filtered_for_size_files",
+    ":icu_coll_dependencies",
+  ]
+  section_dir = "coll"
+  inputs = [
+    genrb_exe,
+    "$icu_gen_dir/keyTypeData.res",
+  ]
+  filtered_sources = rebase_path(icu_coll_prefiltered_sources +
+                                 icu_coll_alias_prefiltered_sources,
+                                 "source/data")
+  sources = [ "$icu_gen_tmp_dir/$section_dir/root.txt"
+            ] + rebase_path(filtered_sources, ".", icu_gen_tmp_dir)
+
+  outputs = [
+    "$icu_gen_dir/$section_dir/{{source_name_part}}.res",
+  ]
+  args = [
+    genrb_exe,
+    "-k",
+    "-R",
+    "-i",
+    rebase_path(icu_gen_dir),
+    "-s",
+    rebase_path("$icu_gen_tmp_dir/$section_dir"),
+    "-d",
+    rebase_path("$icu_gen_dir/$section_dir"),
+    "{{source_file_part}}",
+  ]
+}
+
+# END COLL
+
+# START BRKITR
+action_foreach("icu_brkitr_res_files") {
+  # icu_brkitr_res_filtered_files is the same except that -s (source
+  # dir) is icu_gen_tmp_dir in that action.
+  script = "run.py"
+  deps = [
+    ":icu_brk_files",
+    ":icu_cnv_base_files",
+    ":icu_dicts",
+    "../gn_tool_build_system:genrb($host_toolchain)",
+  ]
+  section_dir = "brkitr"
+  inputs = [ genrb_exe ] + rebase_path(
+               rebase_path(icu_brkitr_dict_generated, ".", icu_gen_dir)) +
+           get_target_outputs(":icu_brk_files")
+
+  sources = rebase_path(icu_brkitr_res_sources, ".", "..")
+
+  outputs = [
+    "$icu_gen_dir/$section_dir/{{source_name_part}}.res",
+  ]
+  args = [
+    genrb_exe,
+    "-k",
+    "-R",
+    "-i",
+    rebase_path(icu_gen_dir),
+    "-s",
+    rebase_path("../source/data/$section_dir"),
+    "-d",
+    rebase_path("$icu_gen_dir/$section_dir"),
+    "{{source_file_part}}",
+  ]
+}
+
+action_foreach("icu_brkitr_res_filtered_files") {
+  # Same as icu_brkitr_res_files except that -s (source dir) is
+  # icu_gen_tmp_dir.
+  script = "run.py"
+  deps = [
+    ":icu_brkitr_res_files",
+    ":icu_cnv_base_files",
+    ":icu_dicts",
+    ":icu_filtered_for_size_files",
+    "../gn_tool_build_system:genrb($host_toolchain)",
+  ]
+  section_dir = "brkitr"
+  filtered_sources = rebase_path(icu_brkitr_res_prefiltered_sources,
+                                 "source/data")
+  inputs = ([ genrb_exe ] +
+            rebase_path(icu_brkitr_dict_generated, ".", icu_gen_dir) +
+            rebase_path(filtered_sources, ".", icu_gen_tmp_dir))
+
+  sources = rebase_path(["brkitr/root.txt"] + filtered_sources,
+                        ".", icu_gen_tmp_dir)
+
+  outputs = [
+    "$icu_gen_dir/$section_dir/{{source_name_part}}.res",
+  ]
+  args = [
+    genrb_exe,
+    "-k",
+    "-R",
+    "-i",
+    rebase_path(icu_gen_dir),
+    "-s",
+    rebase_path("$icu_gen_tmp_dir/$section_dir"),
+    "-d",
+    rebase_path("$icu_gen_dir/$section_dir"),
+    "{{source_file_part}}",
+  ]
+}
+
+# END BRKITR
+
+# START RBNF
+# END RBNF
+
+# START TRANSLIT
+action("icu_data_translit") {
+  script = "run.py"
+  deps = [
+    ":icu_cnv_base_files",
+    "../gn_tool_build_system:genrb($host_toolchain)",
+  ]
+  section_dir = "translit"
+  inputs = [
+    genrb_exe,
+    "../source/data/$section_dir/root_subset.txt",
+  ]
+  outputs = [
+    "$icu_gen_dir/$section_dir/root.res",
+  ]
+  args = [
+    genrb_exe,
+    "-k",
+    "-R",
+    "-i",
+    rebase_path(icu_gen_dir),
+    "-s",
+    rebase_path("../source/data/$section_dir"),
+    "-d",
+    rebase_path("$icu_gen_dir/$section_dir"),
+    "root_subset.txt",
+  ]
+}
+
+# END TRANSLIT
+
+if (include_confusables) {
+  # START CONFUSABLES
+  action("icu_data_confusables") {
+    script = "run.py"
+    inputs = [
+      gencfu_exe,
+      "$icu_gen_dir/cnvalias.icu",
+      "../source/data/unidata/confusables.txt",
+      "../source/data/unidata/confusablesWholeScript.txt",
+    ]
+    outputs = [
+      "$icu_gen_dir/confusables.cfu",
+    ]
+    deps = [
+      ":icu_cnvalias",
+      "../gn_tool_build_system:gencfu($host_toolchain)",
+    ]
+
+    args = [
+      gencfu_exe,
+      "-c",
+      "-i",
+      rebase_path(icu_gen_dir),
+      "-r",
+      rebase_path("../source/data/unidata/confusables.txt"),
+      "-w",
+      rebase_path("../source/data/unidata/confusablesWholeScript.txt"),
+      "-o",
+      rebase_path(outputs[0]),
+    ]
+  }
+
+  # END CONFUSABLES
+}  # if (include_confusables)
+
+# START icudata.lst/icupkg.inc/icudtl.dat
+action("icu_write_icupkg_inc") {
+  script = "../build_tools/write_icupkg_inc.py"
+  outputs = [
+    "$icu_gen_tmp_dir/icupkg.inc",
+  ]
+
+  args = [
+    "--outfile",
+    rebase_path(outputs[0]),
+    "--ver",
+    ICU_VER,
+    "--icu-dir",
+    rebase_path(".."),
+  ]
+}
+
+import("//third_party/icu/config.gni")
+
+write_file("$icu_gen_tmp_dir/icudata.lst",
+           rebase_path(icu_data_file_contents, icu_gen_dir))
+
+action("icu_pkgdata") {
+  script = "run.py"
+  inputs = [
+    pkgdata_exe,
+    "$icu_gen_tmp_dir/icudata.lst",  # To handle file removal since gn/ninja will not notice that we depend on the non-existance of a file. Maybe we should move this to a python script?
+    "$icu_gen_tmp_dir/icupkg.inc",
+  ] + icu_data_file_contents
+
+  deps = [
+    ":icu_brk_files",
+    ":icu_brkitr_res_files",
+    ":icu_brkitr_res_filtered_files",
+    ":icu_brkitr_res_index_res",
+    ":icu_cnv_ucm_files",
+    ":icu_cnvalias",
+    ":icu_coll_res_files",
+    ":icu_coll_res_index_res",
+    ":icu_curr_pool_res",
+    ":icu_curr_res_files",
+    ":icu_curr_res_index_res",
+    ":icu_data_translit",
+    ":icu_dicts",
+    ":icu_icupkg_nrm",
+    ":icu_lang_pool_res",
+    ":icu_lang_res_files",
+    ":icu_lang_res_index_res",
+    ":icu_locales_pool_res",
+    ":icu_locales_res_files",
+    ":icu_locales_res_index_res",
+    ":icu_misc_res_files",
+    ":icu_rbnf_res_index_res",
+    ":icu_region_pool_res",
+    ":icu_region_res_files",
+    ":icu_region_res_index_res",
+    ":icu_ucadata_icu",
+    ":icu_unit_pool_res",
+    ":icu_unit_res_files",
+    ":icu_unit_res_index_res",
+    ":icu_write_icupkg_inc",
+    ":icu_zone_pool_res",
+    ":icu_zone_res_files",
+    ":icu_zone_res_index_res",
+    "../gn_tool_build_system:pkgdata($host_toolchain)",
+  ]
+
+  if (include_confusables) {
+    deps += [
+      ":icu_data_confusables",
+    ]
+  }
+
+  if (icu_use_data_file) {
+    pkgdata_args = [
+      "-m",  # Mode
+      "common",
+    ]
+    outputs = [
+      "$icu_gen_tmp_dir/result/icudt${ICU_VER}l.dat",
+    ]
+  } else {
+    pkgdata_args = [
+      "-m",  # Mode
+      "dll",
+      "-e",  # Entry point
+      "icudt${ICU_VER}",
+      "-L",  # Lib name
+      "icudata",
+      "-T" + icu_gen_tmp_dir,
+    ]
+
+    if (is_win) {
+      outputs = [
+        "$icu_gen_dir/icudt${ICU_VER}l.dll",
+      ]
+    } else {
+      pkgdata_args += [
+        "-O",
+        "$icu_gen_tmp_dir/icupkg.inc",
+      ]
+      outputs = [
+        "$icu_gen_dir/libicudata.so.${ICU_VER}.1",
+      ]
+    }
+  }
+  args = [ pkgdata_exe ] + pkgdata_args + [
+           "-q",  # Quiet
+           "-c",  # Default copyright
+           "-s",  # Source
+           rebase_path(icu_gen_dir),
+           "-d",  # Destination
+           rebase_path(icu_gen_tmp_dir + "/result"),
+           "-T",  # Temporary directory
+           rebase_path(icu_gen_tmp_dir),
+           "-p",  # Data name
+           "icudt${ICU_VER}l",
+           "-r",  # Revision
+           "${ICU_VER}.1",
+           rebase_path("$icu_gen_tmp_dir/icudata.lst"),
+         ]
+}
+
+if (icu_use_data_file && is_ios) {
+  # TODO(GYP): Support mac resource bundle shown below.
+  # 'link_settings': {
+  #   'mac_bundle_resources': [
+  #     "$icu_gen_tmp_dir/icudt${ICU_VER}l.dat",
+  #   ],
+  # }
+} else if (icu_use_data_file || is_win) {
+  copy("icu_data") {
+    if (icu_use_data_file) {
+      sources = [
+        "$icu_gen_tmp_dir/result/icudt${ICU_VER}l.dat",
+      ]
+      outputs = [
+        "$root_out_dir/icudtl.dat",
+      ]
+      deps = [
+        ":icu_pkgdata",
+      ]
+    } else {
+      sources = [
+        "$icu_gen_dir/icud${ICU_VER}.dll",
+      ]
+      outputs = [
+        "$root_out_dir/icudt.dll",
+      ]
+    }
+  }
+} else {
+  source_set("icu_data") {
+    sources = [
+      "$icu_gen_tmp_dir/icudt${ICU_VER}l_dat.S",
+    ]
+  }
+  defines = [ "U_HIDE_DATA_SYMBOL" ]
+}
+# END icudata.lst/icudtl.dat
