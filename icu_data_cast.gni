@@ -1,0 +1,462 @@
+# Copyright 2018 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+# Base it on the desktop setup.
+import("icu_data_shared_cast_android.gni")
+
+include_confusables = false
+# Too big to include.
+icu_brkitr_dict_sources -= [ "source/data/brkitr/cjdict.txt" ]
+icu_brkitr_dict_generated -= [ "brkitr/cjdict.dict" ]
+has_cjdict = false  # Can't see how it was removed but it's not in the data file, and it's still used by brkitr/root.res - or is it?
+added_word_ja_to_replace_cjdict = false
+
+# TODO: Also remove everything in scripts/cast-removed-resources.txt but those should not be removed from android!
+
+# postalCodeData.res should be removed but it's not included
+
+icu_misc_sources -= [ "source/data/misc/currencyNumericCodes.txt" ]
+icu_misc_generated -= [ "currencyNumericCodes.res" ]
+
+icu_misc_sources -= [ "source/data/misc/windowsZones.txt" ]
+icu_misc_generated -= [ "windowsZones.res" ]
+
+_remove_coll = [
+  "am",
+  "ar",
+  "bg",
+  "bn",
+  "ca",
+  "cs",
+  "de_AT",
+  "de",
+  "el",
+  "en",
+  "en_US",
+  "es",
+  "et",
+  "fa",
+  "fil",
+  "fi",
+  "fr_CA",
+  "fr",
+  "gu",
+  "he",
+  "hi",
+  "hr",
+  "hu",
+  "id",
+  "it",
+  "ja",
+  "kn",
+  "ko",
+  "lt",
+  "lv",
+  "ml",
+  "mr",
+  "ms",
+  "nb",
+  "nn",
+  "pl",
+  "pt",
+  "ro",
+  "ru",
+  "sk",
+  "sl",
+  "sr",
+  "sr_Latn",
+  "sv",
+  "sw",
+  "ta",
+  "te",
+  "th",
+  "tr",
+  "uk",
+  "vi",
+  "zh",
+  "zh_Hant",
+]
+
+foreach(coll_lang, _remove_coll) {
+  # TODO: Wouldn't this be easier with a white list?
+  icu_coll_prefiltered_sources -= [ "source/data/coll/$coll_lang.txt" ]
+  icu_coll_generated -= [ "coll/$coll_lang.res" ]
+}
+
+_remove_coll_alias = [
+  "de_",
+  "de__PHONEBOOK",
+  "es_",
+  "es__TRADITIONAL",
+  "he_IL",
+  "id_ID",
+  "in",
+  "in_ID",
+  "iw",
+  "iw_IL",
+  "mo",
+  "nb_NO",
+  "no",
+  "no_NO",
+  "ro_MD",
+  "sh",
+  "sh_BA",
+  "sh_CS",
+  "sh_YU",
+  "sr_BA",
+  "sr_Cyrl",
+  "sr_Cyrl_BA",
+  "sr_Cyrl_ME",
+  "sr_Cyrl_RS",
+  "sr_Latn_BA",
+  "sr_Latn_RS",
+  "sr_ME",
+  "sr_RS",
+  "zh_CN",
+  "zh_HK",
+  "zh_Hans",
+  "zh_Hans_CN",
+  "zh_Hans_SG",
+  "zh_Hant_HK",
+  "zh_Hant_MO",
+  "zh_Hant_TW",
+  "zh_MO",
+  "zh_SG",
+  "zh_TW",
+]
+
+foreach(coll_lang, _remove_coll_alias) {
+  icu_coll_alias_prefiltered_sources -= [ "source/data/coll/$coll_lang.txt" ]
+  icu_coll_generated -= [ "coll/$coll_lang.res" ]
+}
+
+_remove_brkitr_res = [
+  "de",
+  "el",
+  "en",
+  "en_US",
+  "es",
+#  "fi",  # This isn't included so it does not need to be removed.
+  "fr",
+  "it",
+  "ja",
+  "pt",
+#  "res_index",  # TODO: Should not be generated if the list is empty. TODO: Should we just empty these lists?
+  "ru",
+]
+
+foreach(brkitr_lang, _remove_brkitr_res) {
+  # TODO: Nothing left? Why not whitelist instead
+  icu_brkitr_res_sources -= [ "source/data/brkitr/$brkitr_lang.txt" ]
+  icu_brkitr_res_generated -= [ "brkitr/$brkitr_lang.res" ]
+}
+
+_remove_brkitr_brk = [
+  "sent_el",
+#  "word_ja",  # This isn't included so it does not need to be removed.
+]
+
+foreach(brkitr_lang, _remove_brkitr_brk) {
+  icu_brkitr_brk_sources -= [ "source/data/brkitr/rules/$brkitr_lang.txt" ]
+  icu_brkitr_brk_generated -= [ "brkitr/$brkitr_lang.brk" ]
+}
+
+# Drop all currency information
+icu_curr_prefiltered_sources = []
+icu_curr_alias_prefiltered_sources = []
+icu_curr_generated = []
+
+# Drop all unit information
+icu_unit_prefiltered_sources = []
+icu_unit_alias__prefiltered_sources = []
+icu_unit_generated = []
+
+_remove_lang = [
+  "ar_EG",
+  "ar_LY",
+  "ar_SA",
+  "de_AT",
+  "de_CH",
+  "en_001",
+  "en_AU",
+  "en_CA",
+  "en_IN",
+  "en_NZ",
+  "fr_CA",
+  "fr_CH",
+]
+
+foreach(lang, _remove_lang) {
+  # TODO: Nothing left? Why not whitelist instead
+  icu_lang_prefiltered_sources -= [ "source/data/lang/$lang.txt" ]
+  icu_lang_generated -= [ "lang/$lang.res" ]
+}
+
+# Remove Canadian French from the region data. TODO: Why just Canadian
+# French? A very large resource?
+icu_region_prefiltered_sources -= [ "source/data/region/fr_CA.txt" ]
+icu_region_generated -= [ "region/fr_CA.res" ]
+
+_remove_locale = [
+  "ar_001",
+  "ar_AE",
+  "ar_BH",
+  "ar_DJ",
+  "ar_DZ",
+  "ar_EG",
+  "ar_EH",
+  "ar_ER",
+  "ar_IL",
+  "ar_IQ",
+  "ar_JO",
+  "ar_KM",
+  "ar_KW",
+  "ar_LB",
+  "ar_LY",
+  "ar_MA",
+  "ar_MR",
+  "ar_OM",
+  "ar_PS",
+  "ar_QA",
+  "ar_SA",
+  "ar_SD",
+  "ar_SO",
+  "ar_SS",
+  "ar_SY",
+  "ar_TD",
+  "ar_TN",
+  "ar_YE",
+  "de_AT",
+  "de_BE",
+  "de_CH",
+  "de_IT",
+  "de_LI",
+  "de_LU",
+  "en_AG",
+  "en_AI",
+  "en_AS",
+  "en_AT",
+  "en_BB",
+  "en_BE",
+  "en_BI",
+  "en_BM",
+  "en_BS",
+  "en_BW",
+  "en_BZ",
+  "en_CC",
+  "en_CH",
+  "en_CK",
+  "en_CM",
+  "en_CX",
+  "en_CY",
+  "en_DE",
+  "en_DG",
+  "en_DK",
+  "en_DM",
+  "en_ER",
+  "en_FI",
+  "en_FJ",
+  "en_FK",
+  "en_FM",
+  "en_GD",
+  "en_GG",
+  "en_GH",
+  "en_GI",
+  "en_GM",
+  "en_GU",
+  "en_GY",
+  "en_HK",
+  "en_IE",
+  "en_IL",
+  "en_IM",
+  "en_IO",
+  "en_JE",
+  "en_JM",
+  "en_KE",
+  "en_KI",
+  "en_KN",
+  "en_KY",
+  "en_LC",
+  "en_LR",
+  "en_LS",
+  "en_MG",
+  "en_MH",
+  "en_MO",
+  "en_MP",
+  "en_MS",
+  "en_MT",
+  "en_MU",
+  "en_MW",
+  "en_MY",
+  "en_NA",
+  "en_NF",
+  "en_NG",
+  "en_NL",
+  "en_NR",
+  "en_NU",
+  "en_NZ",
+  "en_PG",
+  "en_PH",
+  "en_PK",
+  "en_PN",
+  "en_PR",
+  "en_PW",
+  "en_RW",
+  "en_SB",
+  "en_SC",
+  "en_SD",
+  "en_SE",
+  "en_SG",
+  "en_SH",
+  "en_SI",
+  "en_SL",
+  "en_SS",
+  "en_SX",
+  "en_SZ",
+  "en_TC",
+  "en_TK",
+  "en_TO",
+  "en_TT",
+  "en_TV",
+  "en_TZ",
+  "en_UG",
+  "en_UM",
+  "en_US_POSIX",
+  "en_VC",
+  "en_VG",
+  "en_VI",
+  "en_VU",
+  "en_WS",
+  "en_ZA",
+  "en_ZM",
+  "en_ZW",
+  "es_BO",
+  "es_BR",
+  "es_BZ",
+  "es_CL",
+  "es_CO",
+  "es_CR",
+  "es_CU",
+  "es_DO",
+  "es_EA",
+  "es_EC",
+  "es_GQ",
+  "es_GT",
+  "es_HN",
+  "es_IC",
+  "es_NI",
+  "es_PA",
+  "es_PE",
+  "es_PH",
+  "es_PR",
+  "es_PY",
+  "es_SV",
+  "es_UY",
+  "es_VE",
+  "fr_BE",
+  "fr_BF",
+  "fr_BI",
+  "fr_BJ",
+  "fr_BL",
+  "fr_CA",
+  "fr_CD",
+  "fr_CF",
+  "fr_CG",
+  "fr_CH",
+  "fr_CI",
+  "fr_CM",
+  "fr_DJ",
+  "fr_DZ",
+  "fr_FR",
+  "fr_GA",
+  "fr_GF",
+  "fr_GN",
+  "fr_GP",
+  "fr_GQ",
+  "fr_HT",
+  "fr_KM",
+  "fr_LU",
+  "fr_MA",
+  "fr_MC",
+  "fr_MF",
+  "fr_MG",
+  "fr_ML",
+  "fr_MQ",
+  "fr_MR",
+  "fr_MU",
+  "fr_NC",
+  "fr_NE",
+  "fr_PF",
+  "fr_PM",
+  "fr_RE",
+  "fr_RW",
+  "fr_SC",
+  "fr_SN",
+  "fr_SY",
+  "fr_TD",
+  "fr_TG",
+  "fr_TN",
+  "fr_VU",
+  "fr_WF",
+  "fr_YT",
+  "nl_AW",
+  "nl_BE",
+  "nl_BQ",
+  "nl_CW",
+  "nl_NL",
+  "nl_SR",
+  "nl_SX",
+  "pt_AO",
+  "pt_CH",
+  "pt_CV",
+  "pt_GQ",
+  "pt_GW",
+  "pt_LU",
+  "pt_MO",
+  "pt_MZ",
+  "pt_ST",
+  "pt_TL",
+  "ru_BY",
+  "ru_KG",
+  "ru_KZ",
+  "ru_MD",
+  "ru_RU",
+  "ru_UA",
+  "sr_Latn",
+  "sr_BA",
+  "sr_CS",
+  "sr_ME",
+  "sr_RS",
+  "sr_XK",
+  "sr_Cyrl_BA",
+  "sr_Cyrl_CS",
+  "sr_Cyrl_ME",
+  "sr_Cyrl_RS",
+  "sr_Cyrl_XK",
+  "sr_Latn_BA",
+  "sr_Latn_CS",
+  "sr_Latn_ME",
+  "sr_Latn_RS",
+  "sr_Latn_XK",
+  "sw_CD",
+  "sw_KE",
+]
+
+foreach(locale, _remove_locale) {
+  # TODO: Doesn't seem to be much left after this so why not a whitelist instead?
+  icu_locales_prefiltered_sources -= [ "source/data/locales/$locale.txt" ]
+  icu_locales_generated -= [ "$locale.res" ]
+}
+
+_remove_locale_aliases = [
+  "sh",
+]
+
+foreach(locale, _remove_locale_aliases) {
+  # TODO: Doesn't seem to be much left after this so why not a whitelist instead?
+  icu_locales_alias_prefiltered_sources -= [ "source/data/locales/$locale.txt" ]
+  icu_locales_generated -= [ "$locale.res" ]
+}
+
+
