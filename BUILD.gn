@@ -1063,6 +1063,16 @@ component("icuuc") {
   }
 }
 
+build_data_file = true
+
+if (build_data_file) {
+  group("icudata") {
+    deps = [
+      "data_build:icu_data"
+    ]
+  }
+}
+
 if (is_android && enable_java_templates) {
   android_assets("icu_assets") {
     if (icu_use_data_file) {
@@ -1091,6 +1101,10 @@ if (current_cpu == "mips" || current_cpu == "mips64" ||
 }
 data_bundle = "${data_bundle_prefix}.dat"
 
+if (build_data_file) {
+  not_needed(["data_bundle", "data_dir"])
+}
+
 # TODO(GYP) support use_system_icu.
 if (icu_use_data_file) {
   if (is_ios) {
@@ -1099,10 +1113,14 @@ if (icu_use_data_file) {
       outputs = [ "{{bundle_resources_dir}}/{{source_file_part}}" ]
     }
   } else {
-    copy("icudata") {
-      sources = [ "$data_dir/$data_bundle" ]
-      outputs = [ "$root_out_dir/$data_bundle" ]
-      data = [ "$root_out_dir/$data_bundle" ]
+    if (!build_data_file) {
+      copy("icudata") {
+        sources = [ "$data_dir/$data_bundle" ]
+        outputs = [ "$root_out_dir/$data_bundle" ]
+        data = [ "$root_out_dir/$data_bundle" ]
+      }
+    } else {
+      # Generated in the right place by data_build:icu_data
     }
   }
 } else {
@@ -1112,10 +1130,14 @@ if (icu_use_data_file) {
     # error.
     data_bundle = "icudt.dll"
     data_dir = "windows"
-    copy("icudata") {
-      sources = [ "$data_dir/$data_bundle" ]
-      outputs = [ "$root_out_dir/$data_bundle" ]
-      data = outputs
+    if (!build_data_file) {
+      copy("icudata") {
+        sources = [ "$data_dir/$data_bundle" ]
+        outputs = [ "$root_out_dir/$data_bundle" ]
+        data = outputs
+      }
+    } else {
+      # Generated in the right place by data_build:icu_data
     }
   } else {
     data_assembly = "$target_gen_dir/${data_bundle_prefix}_dat.S"
@@ -1134,10 +1156,14 @@ if (icu_use_data_file) {
       }
     }
 
-    source_set("icudata") {
-      sources = [ "$data_assembly" ]
-      defines = [ "U_HIDE_DATA_SYMBOL" ]
-      deps = [ ":make_data_assembly", ]
+    if (!build_data_file) {
+      source_set("icudata") {
+        sources = [ "$data_assembly" ]
+        defines = [ "U_HIDE_DATA_SYMBOL" ]
+        deps = [ ":make_data_assembly", ]
+      }
+    } else {
+      # Generated into the right place by data_build:icu_data
     }
   }
 }
