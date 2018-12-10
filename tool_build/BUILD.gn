@@ -1,0 +1,149 @@
+# Copyright (c) 2015 The Chromium Authors. All rights reserved.
+
+
+if (host_toolchain == current_toolchain) {
+
+if (false) {
+icu_tools_vars = exec_script("//build/gypi_to_gn.py",
+                             [
+                                 rebase_path("../icu_tools.gypi")
+                             ],
+                             "scope",
+                             [ "../icu_tools.gypi" ])
+
+
+icu_vars = exec_script("//build/gypi_to_gn.py",
+                       [
+                           rebase_path("../icu.gypi")
+                       ],
+                       "scope",
+                       [ "../icu.gypi" ])
+} else {
+  import("../icu_tools.gni")
+  import("../icu.gni")
+}
+
+config("icu_tools_config") {
+    # TODO: Make the tools always compile optimized to make
+    # compilation (especially of gendict+cjdict.txt) be faster.
+    cflags = []
+
+    # Always optimize so that generation isn't slow in Debug.
+    if (is_win) {
+        cflags += [ "/Os" ]
+    } else {
+        cflags += [ "-O2" ]
+    }
+
+    if (is_win) {
+        # Disable some compiler warnings.
+        cflags += [
+            "/wd4005",  # Macro redefinition.
+            "/wd4068",  # Unknown pragmas.
+            "/wd4267",  # Conversion from size_t on 64-bits.
+            "/wd4996",  # Deprecated functions.
+            "/wd4310",  # cast truncates constant value (only visible in gn? Does gyp also use /W4?)
+            "/wd4189",  # local variable is initialized but not referenced (only visible in gn? Does gyp also use /W4?)
+            "/wd4706",  # assignment within conditional expression (only visible in gn? Does gyp also use /W4?)
+        ]
+        if (is_clang) {
+          cflags += [
+            "-Wno-parentheses",
+            "-Wno-writable-strings",  # pkgdata.cpp assigns to a char*.
+          ]
+        }
+    } else if (is_linux) {
+        cflags += [
+            # Since ICU wants to internally use its own deprecated APIs, don't
+            # complain about it.
+            "-Wno-deprecated-declarations",
+            "-Wno-unused-function",
+            "-Wno-sign-compare", # For makeconv at the very least.
+        ]
+    }
+    if (is_clang) {
+        cflags += [
+            "-Wno-deprecated-declarations",
+            "-Wno-logical-op-parentheses",
+            "-Wno-tautological-compare",
+            "-Wno-switch",
+            "-Wno-sign-compare",
+        ]
+    }
+
+    include_dirs = [
+        "../source/common",
+        "../source/tools/toolutil",
+        "../source/i18n",
+    ]
+
+    defines = [
+        "U_STATIC_IMPLEMENTATION",
+        "U_USING_ICU_NAMESPACE=0",
+        "U_HAVE_ELF_H=1",
+        # Without U_DEBUG=0 genrb will freak out on sr_Latn.txt because
+        # it cannot find a Seqence in sr.txt which will result in a NULL
+        # importRules which will fail a "validMemory" check.
+        "U_DEBUG=0",
+    ]
+}
+
+static_library("icu_tools_common")
+{
+    sources = rebase_path(icuuc_sources, ".", "..")
+    sources += rebase_path(icui18n_sources, ".", "..")
+    sources += [ "../source/stubdata/stubdata.cpp" ]
+    sources += rebase_path(icutoolutil_sources, ".", "..")
+
+    defines = [
+        "U_I18N_IMPLEMENTATION",
+        "U_COMMON_IMPLEMENTATION",
+        "U_STATIC_IMPLEMENTATION",
+        "U_TOOLUTIL_IMPLEMENTATION",
+        "HAVE_DLOPEN=0",
+    ]
+    # ICU uses RTTI, replace the default "no rtti" config.
+    configs -= [
+        "//build/config/compiler:no_rtti",  # ICU uses RTTI.
+        "//build/config/compiler:chromium_code",
+    ]
+    configs += [
+        "//build/config/compiler:rtti",
+        "//build/config/compiler:no_chromium_code",
+    ]
+    configs += [
+        ":icu_tools_config"
+    ]
+
+}
+
+tools_to_build = [
+    ["genbrk", genbrk_sources],
+    ["gencfu", gencfu_sources],
+    ["gencnval", gencnval_sources],
+    ["gendict", gendict_sources],
+    ["genrb", genrb_sources],
+    ["icupkg", icupkg_sources],
+    ["makeconv", makeconv_sources],
+    ["pkgdata", pkgdata_sources],
+]
+
+foreach(tool_to_build, tools_to_build) {
+    tool_name = tool_to_build[0]
+    tool_sources = tool_to_build[1]
+
+    executable(tool_name) {
+        deps = [
+            ":icu_tools_common"
+        ]
+        configs -= [ "//build/config/compiler:chromium_code" ]
+        configs += [ "//build/config/compiler:no_chromium_code" ]
+        configs += [
+            ":icu_tools_config"
+        ]
+        sources = rebase_path(tool_sources, ".", "..")
+    }
+    tool_name = ""
+    tool_sources = []
+}
+}  # end if (host_toolchain == current_toolchain)
