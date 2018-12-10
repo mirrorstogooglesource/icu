@@ -99,7 +99,7 @@ Pre-built data files are generated and checked in with the following steps
       c. Remove the legacy Chinese character set-based collation
          (big5han/gb2312han) that don't make any sense and nobdoy uses.
 
-  - android/patch_locale.sh
+  - cast/patch_locale.sh + android/patch_locale.sh
       a. Make changes to source/data/{region,lang} to exclude these data
          except the language and script names of zh_Hans and zh_Hant.
       b. Remove exemplar cities in timezone data (data/zone).
@@ -108,7 +108,6 @@ Pre-built data files are generated and checked in with the following steps
       e. Minimize the locale data for 9 locales to which Chrome on Android
          is not localized.
       f. Also apply android/brkitr.patch
-
   - android/brkitr.patch
       Do not use the C+J dictionary for Chinese/Japanese segmentation
       to reduce the data size. Adjust word.txt and a few other files.
@@ -266,3 +265,52 @@ D. Local Modifications
   - Fix:
     https://github.com/unicode-org/icu/pull/265
     https://github.com/unicode-org/icu/pull/278
+
+The new gn build system for the data file
+-----------------------------------------
+
+ * Build system in gn + ninja to generate the data packages:
+   We build the necessary tools (genrb, makeconv, icupkg, ...) and then
+   run those tools on all data files we want to generate.
+
+   This process is slightly complicated because some data files we want to
+   modify (shrink) before the build them. This is implemented with a filter
+   program that takes files that we want to modify and put them in a modified
+   shape in a special directory.
+
+   The whole chain is (dir names can vary):
+   source/data/*                 <- raw/pure data
+       out/gen/tmp_icudt54l/*    <- filtered/stripped data
+           out/gen/icudt54l/*    <- compiled data
+              out/icudt54l.dat   <- packaged data
+
+   This multi step chain means that files are named several times with
+   different paths (it was worse with gyp).
+
+   All of the file lists and filteresting flags are set in icu_data.gni,
+   but they are later patched in icu_data_shared_cast_android.gni,
+   icu_data_cast.gni, icu_data_android.gni and icu_data_ios.gni depending
+   on what product is building.
+
+ * Build system for tools: makeconv, pkgdata, icupkg, genrb, gendict,
+   genbrk, ...
+
+   These are pretty straight forward. ICU is built as a static lib and used by
+   the tools that often are just a single file implementing main() and some
+   utility code. Whatever works for building the rest of ICU typically works
+   for building the data tools.
+
+ * Filtering tool (filter_data_for_size.py):
+   Based on patches and sed programs and shell scripts used previously
+   (see above)
+
+ * The build system is not warning clean. In particular:
+   - ICU tools warn about empty input files. - Check --quiet flags?
+   - The gyp Makefile generator generates duplicate rules (affects
+     v8-standalone) - Reported as gyp issue 484.
+
+ * Updating to a newer ICU: Diff all Makefile.* and *.mk files before
+   and after and mimic necessary changes (if any) in BUILD.gn. There might
+   be nothing to do for the data file. When upgrading from early 2015 to
+   late 2018 (4 years), only some tool source files had changed name,
+   beyond what the Chromium project itself had done.
