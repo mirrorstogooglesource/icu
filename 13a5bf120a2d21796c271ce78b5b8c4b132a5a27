@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d4e1b3d5_4238c4f3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1232445
+      },
+      "writtenOn": "2019-01-17T01:30:00Z",
+      "side": 1,
+      "message": "Please add the size before/after.",
+      "revId": "13a5bf120a2d21796c271ce78b5b8c4b132a5a27",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
