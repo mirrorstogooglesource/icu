@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2d899a14_b8dd1479",
+        "filename": "scripts/trim_data.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-02-28T07:42:14Z",
+      "side": 0,
+      "message": "Gee... I\u0027m aware of this, but on purpose I didn\u0027t bring this up. I\u0027d keep this and drop long names in units.",
+      "range": {
+        "startLine": 243,
+        "startChar": 0,
+        "endLine": 247,
+        "endChar": 23
+      },
+      "revId": "960f195aa87acaec46e6104ec93a596da7ae0843",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}

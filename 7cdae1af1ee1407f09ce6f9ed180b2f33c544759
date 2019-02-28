@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bb272408_7d9a7bec",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-02-28T07:42:14Z",
+      "side": 1,
+      "message": "This is not so informative. Please, be more specific.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 15
+      },
+      "revId": "7cdae1af1ee1407f09ce6f9ed180b2f33c544759",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8a3c0b72_59f24d0d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-02-28T07:42:14Z",
+      "side": 1,
+      "message": "ChromeOS does not need \u0027BE\u0027 data files. Even ARM is LE for Chrome OS, I believe.\nBE data file is only for some v8 embedders.",
+      "range": {
+        "startLine": 9,
+        "startChar": 3,
+        "endLine": 9,
+        "endChar": 32
+      },
+      "revId": "7cdae1af1ee1407f09ce6f9ed180b2f33c544759",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9d0026f3_4f59e5a6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-02-28T07:42:14Z",
+      "side": 1,
+      "message": "I\u0027d not trim it for now. And, if you want to trim \u0027ec\u0027 names, please be more specific so that others will know what\u0027s changed without viewing diffs.",
+      "range": {
+        "startLine": 11,
+        "startChar": 3,
+        "endLine": 11,
+        "endChar": 38
+      },
+      "revId": "7cdae1af1ee1407f09ce6f9ed180b2f33c544759",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "68d9ef8f_dbfb79c6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-02-28T07:42:14Z",
+      "side": 1,
+      "message": "List what you trim here.\n\nAnd, please, list the sizes before and after in the CL description.",
+      "range": {
+        "startLine": 12,
+        "startChar": 3,
+        "endLine": 12,
+        "endChar": 17
+      },
+      "revId": "7cdae1af1ee1407f09ce6f9ed180b2f33c544759",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9464ef58_bde95211",
+        "filename": "scripts/trim_data.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-02-28T07:42:14Z",
+      "side": 1,
+      "message": "I\u0027d drop long names as well. Those long names seem almost totally useless in practice even though they may be required by the spec.",
+      "range": {
+        "startLine": 199,
+        "startChar": 0,
+        "endLine": 204,
+        "endChar": 6
+      },
+      "revId": "7cdae1af1ee1407f09ce6f9ed180b2f33c544759",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
