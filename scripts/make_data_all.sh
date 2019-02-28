@@ -6,6 +6,9 @@ ICUROOT="$(dirname "$0")/.."
 
 $ICUROOT/scripts/trim_data.sh
 $ICUROOT/scripts/make_data.sh
+$ICUROOT/scripts/copy_data.sh chromeos
+$ICUROOT/scripts/trim_exemplar_cities.sh
+$ICUROOT/scripts/make_data.sh
 $ICUROOT/scripts/copy_data.sh common
 $ICUROOT/cast/patch_locale.sh
 $ICUROOT/scripts/make_data.sh
@@ -16,6 +19,7 @@ $ICUROOT/scripts/copy_data.sh android
 $ICUROOT/ios/patch_locale.sh
 $ICUROOT/scripts/make_data.sh
 $ICUROOT/scripts/copy_data.sh ios
+$ICUROOT/scripts/trim_unit_data.sh
 $ICUROOT/flutter/patch_brkitr.sh
 $ICUROOT/scripts/make_data.sh
 $ICUROOT/scripts/copy_data.sh flutter

@@ -13,13 +13,18 @@ function filter_locale_data {
     echo Overwriting ${langpath} ...
     sed -r -i \
       '/^    characterLabel\{$/,/^    \}$/d
+       /^    delimiters\{$/, /^    \}$/d
+       /^    measurementSystemNames\{$/, /^    \}$/d
        /^    AuxExemplarCharacters\{.*\}$/d
        /^    AuxExemplarCharacters\{$/, /^    \}$/d
+       /^    Ellipsis\{$/, /^    \}$/d
        /^    ExemplarCharacters\{.*\}$/d
        /^    ExemplarCharacters\{$/, /^    \}$/d
        /^    ExemplarCharactersNumbers\{.*\}$/d
+       /^    ExemplarCharactersIndex\{.*\}$/d
        /^    ExemplarCharactersPunctuation\{.*\}$/d
        /^    ExemplarCharactersPunctuation\{$/, /^    \}$/d
+       /^    Version\{.*\}$/d
        /^        (mon|tue|wed|thu|fri|sat|sun)(|-short|-narrow)\{$/, /^        \}$/d
        /^        (mon|tue|wed|thu|fri|sat|sun)(|-short|-narrow)\{.*\}$/d
        /^        (mon|tue|wed|thu|fri|sat|sun)-(short|narrow):alias\{.*\}$/d' ${langpath}
@@ -180,50 +185,23 @@ function filter_region_data {
   sed -i  '/[0-35-9][0-9][0-9]{/ d' ${dataroot}/region/*.txt
 }
 
-# This assumes that exemplar city ("ec") is only present in
-# non-meta zones and that meta zones are listed after non-meta
-# zones.
-function remove_exemplar_cities {
-  for i in ${dataroot}/zone/*.txt
-  do
-    [ $i != "${dataroot}/zone/root.txt" ] && \
-    sed -i '/^    zoneStrings/, /^        "meta:/ {
-      /^    zoneStrings/ p
-      /^        "meta:/ p
-      d
-    }' $i
-  done
-}
-
-# Keep only duration and compound in units* sections.
-function filter_unit_data {
-  for i in ${dataroot}/unit/*.txt
-  do
-    echo Overwriting $i ...
-    sed -r -i \
-      '/^    units(|Narrow|Short)\{$/, /^    \}$/ {
-         /^    units(|Narrow|Short)\{$/ p
-         /^        (duration|compound)\{$/, /^        \}$/ p
-         /^    \}$/ p
-         d
-       }' ${i}
-
-    # Delete empty units,units{Narrow|Short} block. Otherwise, locale fallback
-    # fails. See crbug.com/707515.
-    sed -r -i \
-      '/^    units(|Narrow|Short)\{$/ {
-         N
-         /^    units(|Narrow|Short)\{\n    \}/ d
-      }' ${i}
-  done
-}
-
 # big5han and gb2312han collation do not make any sense and nobody uses them.
 function remove_legacy_chinese_codepoint_collation {
   echo "Removing Big5 / GB2312 / UniHan collation data from Chinese locale"
   target="${dataroot}/coll/zh.txt"
   echo "Overwriting ${target}"
   sed -r -i '/^        (uni|big5|gb2312)han\{$/,/^        \}$/ d' ${target}
+}
+
+#
+# Only remove dname from unit.
+function filter_dnam_in_unit_data {
+  for i in ${dataroot}/unit/*.txt
+  do
+    echo Overwriting $i ...
+    sed -r -i \
+      '/^                dnam\{.*\}$/d' ${i}
+  done
 }
 
 treeroot="$(dirname "$0")/.."
@@ -238,10 +216,4 @@ abridge_locale_data_for_non_ui_languages
 filter_currency_data
 filter_region_data
 remove_legacy_chinese_codepoint_collation
-filter_unit_data
-
-# Chromium OS needs exemplar cities for timezones, but not Chromium.
-# It'll save 400kB (uncompressed), but the size difference in
-# 7z compressed installer is <= 100kB.
-# TODO(jshin): Make separate data files for CrOS and Chromium.
-#remove_exemplar_cities
+filter_dnam_in_unit_data

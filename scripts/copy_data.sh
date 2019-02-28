@@ -9,7 +9,7 @@
 
 if [ $# -lt 1 ];
 then
-  echo "Usage: "$0" (common|android|ios)" >&2
+  echo "Usage: "$0" (android|cast|chromeos|common|flutter|ios)" >&2
   exit 1
 fi
 
@@ -30,6 +30,21 @@ function copy_common {
   done
 
   echo "Done with copying pre-built ICU data files."
+}
+
+function copy_chromeos {
+  DATA_PREFIX="data/out/tmp/icudt${VERSION}"
+
+  echo "Generating the big endian data bundle"
+  LD_LIBRARY_PATH=lib bin/icupkg -tb "${DATA_PREFIX}l.dat" "${DATA_PREFIX}b.dat"
+
+  echo "Copying icudtl.dat and icudtlb.dat"
+  for endian in l b
+  do
+    cp "${DATA_PREFIX}${endian}.dat" "${TOPSRC}/chromeos/icudt${endian}.dat"
+  done
+
+  echo "Done with copying pre-built ICU data files for chromeos."
 }
 
 function copy_android_ios {
@@ -70,6 +85,9 @@ function copy_flutter {
 }
 
 case "$1" in
+  "chromeos")
+    copy_chromeos
+    ;;
   "common")
     copy_common
     ;;
