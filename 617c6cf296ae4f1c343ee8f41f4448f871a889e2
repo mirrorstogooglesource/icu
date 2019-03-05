@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "80a2a028_3889e6bc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1162439
+      },
+      "writtenOn": "2019-03-05T09:27:46Z",
+      "side": 1,
+      "message": "Q: why did we do this? Because of the different MASM asm dialect?",
+      "revId": "617c6cf296ae4f1c343ee8f41f4448f871a889e2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7c0d8a85_68e20beb",
+        "filename": "BUILD.gn",
+        "patchSetId": 1
+      },
+      "lineNbr": 1109,
+      "author": {
+        "id": 1162439
+      },
+      "writtenOn": "2019-03-05T09:27:46Z",
+      "side": 1,
+      "message": "nit: reindent this block -2 spaces.",
+      "revId": "617c6cf296ae4f1c343ee8f41f4448f871a889e2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "92047eee_6a237aae",
+        "filename": "BUILD.gn",
+        "patchSetId": 1
+      },
+      "lineNbr": 1128,
+      "author": {
+        "id": 1162439
+      },
+      "writtenOn": "2019-03-05T09:27:46Z",
+      "side": 1,
+      "message": "Do we need to worry about windows MSVC builds / does this work there?",
+      "revId": "617c6cf296ae4f1c343ee8f41f4448f871a889e2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b23355d8_1bd4ffdb",
+        "filename": "scripts/make_data_assembly.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1162439
+      },
+      "writtenOn": "2019-03-05T09:27:46Z",
+      "side": 1,
+      "message": "afaik the symbol name needs a \u0027_\u0027 prefix on 32-bit windows.",
+      "revId": "617c6cf296ae4f1c343ee8f41f4448f871a889e2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "30d3f656_f6174c97",
+        "filename": "scripts/make_data_assembly.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1162439
+      },
+      "writtenOn": "2019-03-05T09:27:46Z",
+      "side": 1,
+      "message": "Careful, this is .rdata on windows. See https://crbug.com/919180.",
+      "revId": "617c6cf296ae4f1c343ee8f41f4448f871a889e2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fc43e523_f7c33534",
+        "filename": "scripts/make_data_assembly.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1162439
+      },
+      "writtenOn": "2019-03-05T09:27:46Z",
+      "side": 1,
+      "message": "Which #if does this close?",
+      "revId": "617c6cf296ae4f1c343ee8f41f4448f871a889e2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
