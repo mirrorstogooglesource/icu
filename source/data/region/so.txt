@@ -2,36 +2,6 @@
 // License & terms of use: http://www.unicode.org/copyright.html#License
 so{
     Countries{
-        001{"Dunida"}
-        002{"Afrika"}
-        003{"Waqooyi Ameerika"}
-        005{"Koonfur Ameerika"}
-        009{"Osheeniya"}
-        011{"Galbeeka Afrika"}
-        013{"Bartamaha Ameerika"}
-        014{"Afrikada Bari"}
-        015{"Waqooyiga Afrika"}
-        017{"Afrikada Dhexe"}
-        018{"Afrikada Koonfureed"}
-        019{"Ameerikaas"}
-        021{"Waqooyiga Ameerika"}
-        029{"Karibiyaan"}
-        030{"Aasiyada Bari"}
-        034{"Aasiyada Koonfureed"}
-        035{"Aasiyada Koonfur-galbeed"}
-        039{"Yurubta Koonfureed"}
-        053{"Austraalaasiya"}
-        054{"Melaneesiya"}
-        057{"Gobolka Aasiyada yar"}
-        061{"Booliyneesiya"}
-        142{"Aasiya"}
-        143{"Bartamaha Aasiya"}
-        145{"Aasiyada Galbeed"}
-        150{"Yurub"}
-        151{"Yurubta Bari"}
-        154{"Yurubta Waqooyi"}
-        155{"Yurubta Galbeed"}
-        202{"Afrikada ka hooseysa Saxaraha"}
         419{"Laatiin Ameerika"}
         AC{"Jasiiradda Asensiyoon"}
         AD{"Andora"}

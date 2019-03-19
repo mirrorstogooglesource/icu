@@ -41,7 +41,6 @@ ZONE_SOURCE =\
  fi.txt\
  fil.txt\
  fr.txt fr_CA.txt\
- gu.txt\
  he.txt\
  hi.txt\
  hr.txt\
@@ -49,13 +48,9 @@ ZONE_SOURCE =\
  id.txt\
  it.txt\
  ja.txt\
- kn.txt\
  ko.txt\
  lt.txt\
  lv.txt\
- ml.txt\
- mr.txt\
- ms.txt\
  nb.txt\
  nl.txt\
  pl.txt\
@@ -67,8 +62,6 @@ ZONE_SOURCE =\
  sr.txt\
  sv.txt\
  sw.txt\
- ta.txt\
- te.txt\
  th.txt\
  tr.txt\
  uk.txt\

@@ -2,20 +2,5 @@
 // License & terms of use: http://www.unicode.org/copyright.html#License
 pt_CV{
     %%Parent{"pt_PT"}
-    Currencies{
-        CVE{
-            "​",
-            "escudo cabo-verdiano",
-            {
-                "#,##0.00 ¤",
-                "$",
-                " ",
-            }
-        }
-        PTE{
-            "​PTE",
-            "Escudo português",
-        }
-    }
     Version{"2.1.39.12"}
 }
