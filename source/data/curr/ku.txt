@@ -20,9 +20,6 @@ ku{
         EUR{"€"}
         TRY{"₺"}
     }
-    Currencies%variant{
-        TRY{"TL"}
-    }
     CurrencyPlurals{
         EUR{
             one{"ewro"}

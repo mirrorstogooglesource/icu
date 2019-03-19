@@ -2,11 +2,5 @@
 // License & terms of use: http://www.unicode.org/copyright.html#License
 es_PY{
     %%Parent{"es_419"}
-    Currencies{
-        PYG{
-            "Gs.",
-            "guaraní paraguayo",
-        }
-    }
     Version{"2.1.43.65"}
 }
