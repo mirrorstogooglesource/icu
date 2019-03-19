@@ -3,20 +3,12 @@
 en_IN{
     %%Parent{"en_001"}
     Currencies{
-        VEF{
-            "VEF",
-            "Venezuelan Bolívar",
-        }
         VES{
             "VES",
             "VES",
         }
     }
     CurrencyPlurals{
-        VEF{
-            one{"Venezuelan bolívar"}
-            other{"Venezuelan bolívars"}
-        }
         VES{
             one{"VES"}
             other{"VES"}

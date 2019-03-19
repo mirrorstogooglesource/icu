@@ -3,7 +3,3 @@
 rw{
     Version{"2.1.44.88"}
     zoneStrings{
-        gmtFormat{"GMT{0}"}
-        hourFormat{"+HH:mm;-HH:mm"}
-    }
-}
