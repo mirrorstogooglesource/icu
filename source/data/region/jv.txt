@@ -2,32 +2,6 @@
 // License & terms of use: http://www.unicode.org/copyright.html#License
 jv{
     Countries{
-        001{"Donya"}
-        002{"Afrika"}
-        005{"Amérika Kidul"}
-        009{"Oséania"}
-        011{"Afrika Kulon"}
-        013{"Amérika Tengah"}
-        014{"Afrika Wétan"}
-        018{"Afrika Sisih Kidul"}
-        019{"Amérika"}
-        021{"Amérika Sisih Lor"}
-        029{"Karibia"}
-        030{"Asia Wétan"}
-        034{"Asia Kidul"}
-        035{"Asia Kidul-wétan"}
-        039{"Éropah Kidul"}
-        053{"Australasia"}
-        054{"Melanesia"}
-        057{"Daerah Mikronesia"}
-        061{"Polinesia"}
-        142{"Asia"}
-        143{"Asia Tengah"}
-        145{"Asia Kulon"}
-        150{"Éropah"}
-        151{"Éropah Wétan"}
-        155{"Éropah Kulon"}
-        202{"Afrika Kidule Sahara"}
         419{"Amérika Latin"}
         AC{"Pulo Ascension"}
         AD{"Andora"}

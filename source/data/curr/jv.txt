@@ -118,10 +118,6 @@ jv{
             "CLP",
             "Peso Chili",
         }
-        CNH{
-            "CNH",
-            "Yuan Cina (Jaban Rangkah)",
-        }
         CNY{
             "CN¥",
             "Yuan Cina",
@@ -362,10 +358,6 @@ jv{
             "MOP",
             "Pataca Macau",
         }
-        MRO{
-            "MRO",
-            "Ouguiya Mauritania (1973 - 2017)",
-        }
         MRU{
             "MRU",
             "Ouguiya Mauritania",
@@ -582,10 +574,6 @@ jv{
             "UZS",
             "Som Usbekistan",
         }
-        VEF{
-            "VEF",
-            "Bolivar Venezuela (2008 - 2018)",
-        }
         VES{
             "VES",
             "Bolivar Venezuela",
@@ -617,10 +605,6 @@ jv{
         XPF{
             "CFPF",
             "Franc CFP",
-        }
-        XXX{
-            "¤",
-            "Dhuwit Ora Dikenali",
         }
         YER{
             "YER",
@@ -725,14 +709,10 @@ jv{
         UAH{"₴"}
         USD{"$"}
         UYU{"$"}
-        VEF{"Bs"}
         VND{"₫"}
         XCD{"$"}
         ZAR{"R"}
         ZMW{"ZK"}
-    }
-    Currencies%variant{
-        TRY{"TL"}
     }
     CurrencyPlurals{
         AED{
@@ -821,9 +801,6 @@ jv{
         }
         CLP{
             other{"Peso Chili"}
-        }
-        CNH{
-            other{"Yuan Cina (Jaban Rangkah)"}
         }
         CNY{
             other{"Yuan Cina"}
@@ -1005,9 +982,6 @@ jv{
         MOP{
             other{"MOP"}
         }
-        MRO{
-            other{"Ouguiya Mauritania (1973 - 2017)"}
-        }
         MRU{
             other{"Ouguiya Mauritania"}
         }
@@ -1170,9 +1144,6 @@ jv{
         UZS{
             other{"Som Usbekistan"}
         }
-        VEF{
-            other{"Bolivar Venezuela (2008 - 2018)"}
-        }
         VES{
             other{"Bolivar Venezuela"}
         }
@@ -1196,9 +1167,6 @@ jv{
         }
         XPF{
             other{"Franc CFP"}
-        }
-        XXX{
-            other{"Dhuwit Ora Dikenali"}
         }
         YER{
             other{"Rial Yaman"}

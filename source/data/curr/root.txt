@@ -85,10 +85,6 @@ root{
             "CFPF",
             "XPF",
         }
-        XXX{
-            "¤",
-            "XXX",
-        }
     }
     Currencies%narrow{
         AOA{"Kz"}
@@ -116,7 +112,6 @@ root{
         DKK{"kr"}
         DOP{"$"}
         EGP{"E£"}
-        ESP{"₧"}
         EUR{"€"}
         FJD{"$"}
         FKP{"£"}
@@ -146,8 +141,6 @@ root{
         LBP{"L£"}
         LKR{"Rs"}
         LRD{"$"}
-        LTL{"Lt"}
-        LVL{"Ls"}
         MGA{"Ar"}
         MMK{"K"}
         MNT{"₮"}
@@ -166,7 +159,6 @@ root{
         PYG{"₲"}
         RON{"lei"}
         RUB{"₽"}
-        RUR{"р."}
         RWF{"RF"}
         SBD{"$"}
         SEK{"kr"}
@@ -184,14 +176,10 @@ root{
         UAH{"₴"}
         USD{"$"}
         UYU{"$"}
-        VEF{"Bs"}
         VND{"₫"}
         XCD{"$"}
         ZAR{"R"}
         ZMW{"ZK"}
-    }
-    Currencies%variant{
-        TRY{"TL"}
     }
     CurrencyUnitPatterns{
         other{"{0} {1}"}

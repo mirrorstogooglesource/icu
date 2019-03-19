@@ -31,10 +31,6 @@ en_AU{
             "CAD",
             "Canadian Dollar",
         }
-        CNH{
-            "CNH",
-            "CNH",
-        }
         CNY{
             "CNY",
             "Chinese Yuan",
@@ -147,10 +143,6 @@ en_AU{
             one{"boliviano"}
             other{"bolivianos"}
         }
-        CNH{
-            one{"CNH"}
-            other{"CNH"}
-        }
         EUR{
             one{"euro"}
             other{"euro"}
@@ -197,10 +189,6 @@ en_AU{
         UZS{
             one{"Uzbekistani som"}
             other{"Uzbekistani soms"}
-        }
-        VEF{
-            one{"Venezuelan bolívar"}
-            other{"Venezuelan bolívars"}
         }
         VND{
             one{"Vietnamese dong"}

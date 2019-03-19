@@ -34,10 +34,6 @@ es_419{
             "UZS",
             "som uzbeko",
         }
-        VEF{
-            "VEF",
-            "bolívar venezolano",
-        }
         VES{
             "VES",
             "VES",
@@ -64,15 +60,11 @@ es_419{
         FKP{"FK£"}
         SSP{"SD£"}
         SYP{"S£"}
-        VEF{"BsF"}
     }
     CurrencyPlurals{
         BGN{
             one{"lev búlgaro"}
             other{"leva búlgaros"}
-        }
-        LVL{
-            one{"lats letón"}
         }
         MYR{
             one{"ringgit malayo"}
@@ -86,10 +78,6 @@ es_419{
             one{"som uzbeko"}
             other{"soms uzbekos"}
         }
-        VEF{
-            one{"bolívar venezolano"}
-            other{"bolívares venezolanos"}
-        }
         VES{
             one{"VES"}
             other{"VES"}
@@ -101,10 +89,6 @@ es_419{
         XOF{
             one{"franco CFA BCEAO"}
             other{"francos CFA BCEAO"}
-        }
-        XXX{
-            one{"(unidad de moneda desconocida)"}
-            other{"(moneda desconocida)"}
         }
         ZMW{
             one{"kuacha zambiano"}
