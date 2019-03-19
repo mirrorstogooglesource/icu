@@ -178,10 +178,6 @@ fr_CA{
             "XPF",
             "franc CFP",
         }
-        XXX{
-            "¤",
-            "Devise inconnue",
-        }
         YER{
             "YER",
             "rial yéménite",
@@ -193,9 +189,6 @@ fr_CA{
         KMF{"CF"}
         NIO{"C$"}
         ZMW{"ZK"}
-    }
-    Currencies%variant{
-        TRY{"TL"}
     }
     CurrencyPlurals{
         AZN{
@@ -260,10 +253,6 @@ fr_CA{
         WST{
             one{"tala"}
             other{"talas"}
-        }
-        XXX{
-            one{"(devise inconnue)"}
-            other{"(devise inconnue)"}
         }
         YER{
             one{"rial yéménite"}

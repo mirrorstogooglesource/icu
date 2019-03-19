@@ -98,10 +98,6 @@ uz{
             "BYN",
             "Belarus rubli",
         }
-        BYR{
-            "BYR",
-            "Belarus rubli (2000–2016)",
-        }
         BZD{
             "BZD",
             "Beliz dollari",
@@ -121,10 +117,6 @@ uz{
         CLP{
             "CLP",
             "Chili pesosi",
-        }
-        CNH{
-            "CNH",
-            "CNH",
         }
         CNY{
             "CN¥",
@@ -334,14 +326,6 @@ uz{
             "LRD",
             "Liberiya dollari",
         }
-        LTL{
-            "LTL",
-            "Litva liti",
-        }
-        LVL{
-            "LVL",
-            "Latviya lati",
-        }
         LYD{
             "LYD",
             "Liviya dinori",
@@ -373,10 +357,6 @@ uz{
         MOP{
             "MOP",
             "Makao patakasi",
-        }
-        MRO{
-            "MRO",
-            "Mavritaniya uqiyasi (1973–2017)",
         }
         MRU{
             "MRU",
@@ -526,10 +506,6 @@ uz{
             "SSP",
             "Janubiy Sudan funti",
         }
-        STD{
-            "STD",
-            "San-Tome va Prinsipi dobrasi (1977–2017)",
-        }
         STN{
             "STN",
             "San-Tome va Prinsipi dobrasi",
@@ -598,10 +574,6 @@ uz{
             "soʻm",
             "O‘zbekiston so‘mi",
         }
-        VEF{
-            "VEF",
-            "Venesuela bolivari (2008–2018)",
-        }
         VES{
             "VES",
             "Venesuela bolivari",
@@ -633,10 +605,6 @@ uz{
         XPF{
             "CFPF",
             "Fransuz Polineziyasi franki",
-        }
-        XXX{
-            "¤",
-            "Noma’lum valyuta",
         }
         YER{
             "YER",
@@ -741,15 +709,10 @@ uz{
         UAH{"₴"}
         USD{"$"}
         UYU{"$"}
-        VEF{"Bs"}
         VND{"₫"}
         XCD{"$"}
         ZAR{"R"}
         ZMW{"ZK"}
-    }
-    Currencies%variant{
-        GEL{"₾"}
-        TRY{"TL"}
     }
     CurrencyPlurals{
         AED{
@@ -848,10 +811,6 @@ uz{
             one{"Belarus rubli"}
             other{"Belarus rubli"}
         }
-        BYR{
-            one{"Belarus rubli (2000–2016)"}
-            other{"Belarus rubli (2000–2016)"}
-        }
         BZD{
             one{"Beliz dollari"}
             other{"Beliz dollari"}
@@ -871,10 +830,6 @@ uz{
         CLP{
             one{"Chili pesosi"}
             other{"Chili pesosi"}
-        }
-        CNH{
-            one{"CNH"}
-            other{"CNH"}
         }
         CNY{
             one{"Xitoy yuani"}
@@ -1084,14 +1039,6 @@ uz{
             one{"Liberiya dollari"}
             other{"Liberiya dollari"}
         }
-        LTL{
-            one{"Litva liti"}
-            other{"Litva liti"}
-        }
-        LVL{
-            one{"Latviya lati"}
-            other{"Latviya lati"}
-        }
         LYD{
             one{"Liviya dinori"}
             other{"Liviya dinori"}
@@ -1123,10 +1070,6 @@ uz{
         MOP{
             one{"Makao patakasi"}
             other{"Makao patakasi"}
-        }
-        MRO{
-            one{"Mavritaniya uqiyasi (1973–2017)"}
-            other{"Mavritaniya uqiyasi (1973–2017)"}
         }
         MRU{
             one{"Mavritaniya uqiyasi"}
@@ -1276,10 +1219,6 @@ uz{
             one{"Janubiy Sudan funti"}
             other{"Janubiy Sudan funti"}
         }
-        STD{
-            one{"San-Tome va Prinsipi dobrasi (1977–2017)"}
-            other{"San-Tome va Prinsipi dobrasi (1977–2017)"}
-        }
         STN{
             one{"San-Tome va Prinsipi dobrasi"}
             other{"San-Tome va Prinsipi dobrasi"}
@@ -1348,10 +1287,6 @@ uz{
             one{"O‘zbekiston so‘mi"}
             other{"O‘zbekiston so‘mi"}
         }
-        VEF{
-            one{"Venesuela bolivari (2008–2018)"}
-            other{"Venesuela bolivari (2008–2018)"}
-        }
         VES{
             one{"Venesuela bolivari"}
             other{"Venesuela bolivari"}
@@ -1383,10 +1318,6 @@ uz{
         XPF{
             one{"Fransuz Polineziyasi franki"}
             other{"Fransuz Polineziyasi franki"}
-        }
-        XXX{
-            one{"(noma’lum valyuta)"}
-            other{"(noma’lum valyuta)"}
         }
         YER{
             one{"Yaman riyoli"}

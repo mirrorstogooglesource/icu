@@ -45,7 +45,6 @@ es_US{
         RON{"lei"}
         SSP{"£"}
         SYP{"£"}
-        VEF{"Bs"}
     }
     CurrencyPlurals{
         KGS{
