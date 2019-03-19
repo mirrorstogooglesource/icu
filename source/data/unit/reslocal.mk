@@ -56,7 +56,6 @@ UNIT_SOURCE =\
  fi.txt\
  fil.txt\
  fr.txt fr_CA.txt fr_HT.txt\
- gu.txt\
  he.txt\
  hi.txt\
  hr.txt\
@@ -64,13 +63,9 @@ UNIT_SOURCE =\
  id.txt\
  it.txt\
  ja.txt\
- kn.txt\
  ko.txt\
  lt.txt\
  lv.txt\
- ml.txt\
- mr.txt\
- ms.txt\
  nb.txt\
  nl.txt\
  pl.txt\
@@ -86,8 +81,6 @@ UNIT_SOURCE =\
  sr_Latn.txt sr_Latn_BA.txt sr_Latn_CS.txt sr_Latn_ME.txt sr_Latn_RS.txt\
  sv.txt\
  sw.txt\
- ta.txt\
- te.txt\
  th.txt\
  tr.txt\
  uk.txt\

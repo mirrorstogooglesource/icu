@@ -11,18 +11,6 @@ en_AU{
             "BAM",
             "Bosnia-Herzegovina Convertible Marka",
         }
-        BBD{
-            "BBD",
-            "Barbados Dollar",
-        }
-        BMD{
-            "BMD",
-            "Bermuda Dollar",
-        }
-        BOB{
-            "BOB",
-            "Boliviano",
-        }
         BRL{
             "BRL",
             "Brazilian Real",
@@ -30,10 +18,6 @@ en_AU{
         CAD{
             "CAD",
             "Canadian Dollar",
-        }
-        CNH{
-            "CNH",
-            "CNH",
         }
         CNY{
             "CNY",
@@ -79,14 +63,6 @@ en_AU{
             "QAR",
             "Qatari Riyal",
         }
-        SCR{
-            "Rs",
-            "Seychellois Rupee",
-        }
-        SRD{
-            "SRD",
-            "Suriname Dollar",
-        }
         TWD{
             "TWD",
             "New Taiwan Dollar",
@@ -95,61 +71,20 @@ en_AU{
             "USD",
             "US Dollar",
         }
-        UYU{
-            "UYU",
-            "Peso Uruguayo",
-        }
         VND{
             "VND",
             "Vietnamese Dong",
         }
-        XAF{
-            "XAF",
-            "Central African CFA Franc",
-        }
-        XCD{
-            "XCD",
-            "East Caribbean Dollar",
-        }
-        XOF{
-            "XOF",
-            "West African CFA Franc",
-        }
-        XPF{
-            "CFP",
-            "CFP Franc",
-        }
     }
     Currencies%narrow{
         BDT{"Tk"}
-        BOB{"$b"}
-        CUP{"₱"}
         EGP{"£"}
-        ISK{"Kr"}
-        PYG{"Gs"}
         SEK{"Kr"}
-        UYU{"$U"}
     }
     CurrencyPlurals{
         BAM{
             one{"Bosnia-Herzegovina convertible marka"}
             other{"Bosnia-Herzegovina convertible marka"}
-        }
-        BBD{
-            one{"Barbados dollar"}
-            other{"Barbados dollars"}
-        }
-        BMD{
-            one{"Bermuda dollar"}
-            other{"Bermuda dollars"}
-        }
-        BOB{
-            one{"boliviano"}
-            other{"bolivianos"}
-        }
-        CNH{
-            one{"CNH"}
-            other{"CNH"}
         }
         EUR{
             one{"euro"}
@@ -171,44 +106,17 @@ en_AU{
             one{"Laotian kip"}
             other{"Laotian kip"}
         }
-        MGA{
-            one{"Malagasy ariary"}
-        }
-        MKD{
-            one{"Macedonian denar"}
-            other{"Macedonian denar"}
-        }
-        PGK{
-            one{"Papua New Guinean kina"}
-            other{"Papua New Guinean kinas"}
-        }
         QAR{
             one{"Qatari riyal"}
             other{"Quatari riyals"}
-        }
-        SRD{
-            one{"Suriname dollar"}
-            other{"Suriname dollars"}
         }
         TRY{
             one{"Turkish lira"}
             other{"Turkish lire"}
         }
-        UZS{
-            one{"Uzbekistani som"}
-            other{"Uzbekistani soms"}
-        }
-        VEF{
-            one{"Venezuelan bolívar"}
-            other{"Venezuelan bolívars"}
-        }
         VND{
             one{"Vietnamese dong"}
             other{"Vietnamese dongs"}
-        }
-        WST{
-            one{"Samoan tala"}
-            other{"Samoan talas"}
         }
     }
     Version{"2.1.44.18"}
