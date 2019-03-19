@@ -2,23 +2,6 @@
 // License & terms of use: http://www.unicode.org/copyright.html#License
 ku{
     Countries{
-        001{"Cîhan"}
-        002{"Afrîka"}
-        003{"Amerîkaya Bakur"}
-        005{"Amerîkaya Başûr"}
-        009{"Okyanûsya"}
-        013{"Amerîkaya Navîn"}
-        015{"Afrîkaya Bakur"}
-        019{"Amerîka"}
-        029{"Karîb"}
-        053{"Awistralasya"}
-        054{"Melanezya"}
-        057{"Herêma Mîkronezya"}
-        061{"Polînezya"}
-        142{"Asya"}
-        150{"Ewropa"}
-        151{"Ewropaya Rojhilat"}
-        155{"Ewropaya Rojava"}
         419{"Amerîkaya Latînî"}
         AD{"Andorra"}
         AE{"Emîrtiyên Erebî yên Yekbûyî"}
