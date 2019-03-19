@@ -144,51 +144,10 @@ en_IN{
                 }
             }
         }
-        islamic{
-            DateTimePatterns{
-                "h:mm:ss a zzzz",
-                "h:mm:ss a z",
-                "h:mm:ss a",
-                "h:mm a",
-                "EEEE d MMMM y G",
-                "d MMMM, y G",
-                "dd-MMM-y G",
-                "d/M/y/ GGGGG",
-                "{1}, {0}",
-                "{1} 'at' {0}",
-                "{1} 'at' {0}",
-                "{1}, {0}",
-                "{1}, {0}",
-            }
-            availableFormats{
-                GyMMM{"MMM, y G"}
-                GyMMMEd{"E, d MMM, y G"}
-                GyMMMd{"d MMM, y G"}
-                Md{"d/M"}
-                yyyyM{"M/y GGGGG"}
-                yyyyMEd{"E d/M/y G"}
-                yyyyMMM{"MMM, y G"}
-                yyyyMMMEd{"E, d MMM, y G"}
-                yyyyMMMM{"MMMM, y G"}
-                yyyyMMMd{"d MMM, y G"}
-                yyyyMd{"d/M/y G"}
-            }
-        }
     }
     fields{
         dayperiod{
             dn{"AM/PM"}
-        }
-        wed-short{
-            relativeTime{
-                future{
-                    other{"in {0} Wed."}
-                }
-                past{
-                    one{"{0} Wed. ago"}
-                    other{"{0} Wed. ago"}
-                }
-            }
         }
     }
 }

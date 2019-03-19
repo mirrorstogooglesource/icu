@@ -58,7 +58,6 @@ CURR_SOURCE =\
  fr_BI.txt fr_CD.txt fr_DJ.txt fr_DZ.txt fr_GN.txt fr_HT.txt\
  fr_KM.txt fr_LU.txt fr_MG.txt fr_MR.txt fr_MU.txt fr_RW.txt\
  fr_SC.txt fr_SY.txt fr_TN.txt fr_VU.txt\
- gu.txt\
  he.txt\
  hi.txt\
  hr.txt\
@@ -66,13 +65,9 @@ CURR_SOURCE =\
  id.txt\
  it.txt\
  ja.txt\
- kn.txt\
  ko.txt\
  lt.txt\
  lv.txt\
- ml.txt\
- mr.txt\
- ms.txt\
  nb.txt\
  nl.txt\
  pl.txt\
@@ -87,8 +82,6 @@ CURR_SOURCE =\
  sr_Latn.txt sr_Latn_BA.txt sr_Latn_CS.txt sr_Latn_ME.txt sr_Latn_RS.txt\
  sv.txt\
  sw.txt sw_CD.txt sw_UG.txt\
- ta.txt\
- te.txt\
  th.txt\
  tr.txt\
  uk.txt\
