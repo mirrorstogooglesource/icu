@@ -114,10 +114,6 @@ ia{
             "CZK",
             "corona chec",
         }
-        DEM{
-            "DEM",
-            "Marco geman",
-        }
         DJF{
             "DJF",
             "franco djibutian",
@@ -133,10 +129,6 @@ ia{
         DZD{
             "DZD",
             "dinar algerin",
-        }
-        EEK{
-            "EEK",
-            "Corona estonian",
         }
         EGP{
             "EGP",
@@ -154,10 +146,6 @@ ia{
             "€",
             "euro",
         }
-        FIM{
-            "FIM",
-            "Marco finnese",
-        }
         FJD{
             "FJD",
             "dollar fijian",
@@ -165,10 +153,6 @@ ia{
         FKP{
             "FKP",
             "libra falklandese",
-        }
-        FRF{
-            "FRF",
-            "Franco francese",
         }
         GBP{
             "£",
@@ -213,10 +197,6 @@ ia{
         HUF{
             "HUF",
             "forint hungare",
-        }
-        IEP{
-            "IEP",
-            "Libra irlandese",
         }
         INR{
             "₹",
@@ -270,10 +250,6 @@ ia{
             "MKD",
             "denar macedonie",
         }
-        MRO{
-            "MRO",
-            "ouguiya mauritan (1973–2017)",
-        }
         MRU{
             "MRU",
             "ouguiya mauritan",
@@ -305,10 +281,6 @@ ia{
         NIO{
             "NIO",
             "cordoba nicaraguan",
-        }
-        NLG{
-            "ƒ",
-            "Florino nederlandese",
         }
         NOK{
             "NOK",
@@ -430,10 +402,6 @@ ia{
             "UYU",
             "peso uruguayan",
         }
-        VEF{
-            "VEF",
-            "bolivar venezuelan (2008–2018)",
-        }
         VES{
             "VES",
             "bolivar venezuelan",
@@ -461,10 +429,6 @@ ia{
         XPF{
             "CFPF",
             "franco CFP",
-        }
-        XXX{
-            "¤",
-            "moneta incognite",
         }
         ZAR{
             "ZAR",

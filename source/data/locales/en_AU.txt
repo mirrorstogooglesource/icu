@@ -2,7 +2,6 @@
 // License & terms of use: http://www.unicode.org/copyright.html#License
 en_AU{
     %%Parent{"en_001"}
-    ExemplarCharactersNumbers{"[↑]"}
     NumberElements{
         latn{
             symbols{
@@ -179,35 +178,12 @@ en_AU{
             }
         }
     }
-    characterLabel{
-        downwards_arrows{"downward arrow"}
-        downwards_upwards_arrows{"downward upward arrow"}
-        leftwards_arrows{"leftward arrow"}
-        leftwards_rightwards_arrows{"leftward rightward arrow"}
-        letterlike_symbols{"letter-like symbol"}
-        limited_use{"limited use"}
-        nonspacing{"non-spacing"}
-        rightwards_arrows{"rightward arrow"}
-        upwards_arrows{"upward arrows"}
-    }
     fields{
         day{
             relative{
                 "-1"{"yesterday"}
                 "0"{"today"}
                 "1"{"tomorrow"}
-            }
-        }
-        fri-short{
-            relativeTime{
-                future{
-                    one{"in {0} Fri."}
-                    other{"in {0} Fri."}
-                }
-                past{
-                    one{"{0} Fri. ago"}
-                    other{"{0} Fri. ago"}
-                }
             }
         }
         hour-narrow{
@@ -262,18 +238,6 @@ en_AU{
                 }
             }
         }
-        mon-short{
-            relativeTime{
-                future{
-                    one{"in {0} Mon."}
-                    other{"in {0} Mon."}
-                }
-                past{
-                    one{"{0} Mon. ago"}
-                    other{"{0} Mon. ago"}
-                }
-            }
-        }
         month-narrow{
             dn{"mo."}
             relativeTime{
@@ -324,18 +288,6 @@ en_AU{
                 }
             }
         }
-        sat-short{
-            relativeTime{
-                future{
-                    one{"in {0} Sat."}
-                    other{"in {0} Sat."}
-                }
-                past{
-                    one{"{0} Sat. ago"}
-                    other{"{0} Sat. ago"}
-                }
-            }
-        }
         second-narrow{
             dn{"sec."}
             relativeTime{
@@ -359,54 +311,6 @@ en_AU{
                 past{
                     one{"{0} sec. ago"}
                     other{"{0} secs ago"}
-                }
-            }
-        }
-        sun-short{
-            relativeTime{
-                future{
-                    one{"in {0} Sun."}
-                    other{"in {0} Sun."}
-                }
-                past{
-                    one{"{0} Sun. ago"}
-                    other{"{0} Sun. ago"}
-                }
-            }
-        }
-        thu-short{
-            relativeTime{
-                future{
-                    one{"in {0} Thu."}
-                    other{"in {0} Thu."}
-                }
-                past{
-                    one{"{0} Thu. ago"}
-                    other{"{0} Thu. ago"}
-                }
-            }
-        }
-        tue-short{
-            relativeTime{
-                future{
-                    one{"in {0} Tue."}
-                    other{"in {0} Tue."}
-                }
-                past{
-                    one{"{0} Tue. ago"}
-                    other{"{0} Tue. ago"}
-                }
-            }
-        }
-        wed-short{
-            relativeTime{
-                future{
-                    one{"in {0} Wed."}
-                    other{"in {0} Wed."}
-                }
-                past{
-                    one{"{0} Wed. ago"}
-                    other{"{0} Wed. ago"}
                 }
             }
         }

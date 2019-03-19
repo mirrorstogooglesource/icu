@@ -139,10 +139,6 @@ kea{
             "GEL",
             "GEL",
         }
-        GHC{
-            "GHC",
-            "Sedi di Gana (1979–2007)",
-        }
         GMD{
             "GMD",
             "Dalasi",
@@ -150,10 +146,6 @@ kea{
         GNF{
             "GNF",
             "GNF",
-        }
-        GNS{
-            "GNS",
-            "Sili",
         }
         GTQ{
             "GTQ",
@@ -251,10 +243,6 @@ kea{
             "LSL",
             "Loti di Lezotu",
         }
-        LTL{
-            "LTL",
-            "LTL",
-        }
         LYD{
             "LYD",
             "Dinar libiu",
@@ -283,10 +271,6 @@ kea{
             "MOP",
             "MOP",
         }
-        MRO{
-            "MRO",
-            "Ougia (1973–2017)",
-        }
         MRU{
             "MRU",
             "Ougia",
@@ -310,10 +294,6 @@ kea{
         MYR{
             "MYR",
             "MYR",
-        }
-        MZM{
-            "MZM",
-            "Metikal",
         }
         MZN{
             "MZN",
@@ -395,10 +375,6 @@ kea{
             "SDG",
             "Libra sudanes",
         }
-        SDP{
-            "SDP",
-            "Libra sudanes antigu (1957–1998)",
-        }
         SEK{
             "SEK",
             "Kuroa sueku",
@@ -414,10 +390,6 @@ kea{
         SOS{
             "SOS",
             "Xelin somalianu",
-        }
-        STD{
-            "STD",
-            "Dobra di Sãu Tume i Prínsipi (1977–2017)",
         }
         STN{
             "STN",
@@ -475,10 +447,6 @@ kea{
             "UZS",
             "UZS",
         }
-        VEF{
-            "VEF",
-            "VEF",
-        }
         VND{
             "₫",
             "VND",
@@ -507,10 +475,6 @@ kea{
             "CFPF",
             "XPF",
         }
-        XXX{
-            "¤",
-            "Mueda diskonxedu",
-        }
         YER{
             "YER",
             "YER",
@@ -519,17 +483,9 @@ kea{
             "ZAR",
             "Rand sulafrikanu",
         }
-        ZMK{
-            "ZMK",
-            "Kuaxa zambianu (1968–2012)",
-        }
         ZMW{
             "ZMW",
             "Kuaxa zambianu",
-        }
-        ZWD{
-            "ZWD",
-            "Dola di Zimbabue (1980–2008)",
         }
     }
     Currencies%narrow{
@@ -654,9 +610,6 @@ kea{
         MGA{
             other{"Ariari di Madagaskar"}
         }
-        MRO{
-            other{"Ougia (1973–2017)"}
-        }
         MRU{
             other{"Ougia"}
         }
@@ -708,9 +661,6 @@ kea{
         SOS{
             other{"Xelin somalianu"}
         }
-        STD{
-            other{"Dobra di Sãu Tume i Prinsipi (1977–2017)"}
-        }
         STN{
             other{"Dobra di Sãu Tume i Prinsipi"}
         }
@@ -743,9 +693,6 @@ kea{
         }
         XOF{
             other{"Franku CFA (BCEAO)"}
-        }
-        XXX{
-            other{"(mueda diskonxedu)"}
         }
         ZAR{
             other{"Rand sulafrikanu"}
