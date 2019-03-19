@@ -1,14 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html#License
 ksh{
-    AuxExemplarCharacters{"[á à ă â ã ā ç é è ĕ ê ē ğ í ì ĭ î ï ī ĳ ı ł ñ ó ò ŏ ô ø ō ú ù ŭ û ū ÿ]"}
-    ExemplarCharacters{"[a å ä æ b c d e ë ė f g h i j k l m n o ö œ p q r s ß t u ů ü v w x y z]"}
     ExemplarCharactersIndex{"[A B C D E F G H I J K L M N O P Q R S T U V W X Y Z]"}
-    ExemplarCharactersNumbers{"[  , % ‰ + − 0 1 2 3 4 5 6 7 8 9]"}
-    ExemplarCharactersPunctuation{
-        "[_ ‐ – — ⸗ , ; \\: ! ? . … ' ‘ ‚ \u0022 “ „ ( ) \\[ \\] \\{ \\} § @ * / \\& "
-        "# % † ‡ ° < = > ~]"
-    }
     NumberElements{
         default{"latn"}
         latn{
@@ -163,23 +156,6 @@ ksh{
     }
     Version{"2.1.41.34"}
     calendar{
-        buddhist{
-            DateTimePatterns{
-                "HH:mm:ss zzzz",
-                "HH:mm:ss z",
-                "HH:mm:ss",
-                "HH:mm",
-                "EEEE, d. MMMM y G",
-                "d. MMMM y G",
-                "d. MMM. y G",
-                "d. M. y GGGGG",
-                "{1} {0}",
-                "{1} {0}",
-                "{1} {0}",
-                "{1} {0}",
-                "{1} {0}",
-            }
-        }
         generic{
             DateTimePatterns{
                 "HH:mm:ss zzzz",
@@ -569,13 +545,6 @@ ksh{
         era{
             dn{"Ähra"}
         }
-        fri{
-            relative{
-                "-1"{"Friidaach letzte Woche"}
-                "0"{"Friidaach diese Woche"}
-                "1"{"Friidaach nächste Woche"}
-            }
-        }
         hour{
             dn{"Schtund"}
         }
@@ -593,13 +562,6 @@ ksh{
         }
         minute-short{
             dn{"min."}
-        }
-        mon{
-            relative{
-                "-1"{"Moondaach letzte Woche"}
-                "0"{"Moondaach diese Woche"}
-                "1"{"Moondaach nächste Woche"}
-            }
         }
         month{
             dn{"Mohnd"}
@@ -624,13 +586,6 @@ ksh{
         quarter-short{
             dn{"Q."}
         }
-        sat{
-            relative{
-                "-1"{"Samsdaach letzte Woche"}
-                "0"{"Samsdaach diese Woche"}
-                "1"{"Samsdaach nächste Woche"}
-            }
-        }
         second{
             dn{"Sekond"}
         }
@@ -639,34 +594,6 @@ ksh{
         }
         second-short{
             dn{"sek."}
-        }
-        sun{
-            relative{
-                "-1"{"Sunndaach letzte Woche"}
-                "0"{"Sunndaach diese Woche"}
-                "1"{"Sunndaach nächste Woche"}
-            }
-        }
-        thu{
-            relative{
-                "-1"{"Dunnersdaach letzte Woche"}
-                "0"{"Dunnersdaach diese Woche"}
-                "1"{"Dunnersdaach nächste Woche"}
-            }
-        }
-        tue{
-            relative{
-                "-1"{"Dinnsdaach letzte Woche"}
-                "0"{"Dinnsdaach diese Woche"}
-                "1"{"Dinnsdaach nächste Woche"}
-            }
-        }
-        wed{
-            relative{
-                "-1"{"Metwoch letzte Woche"}
-                "0"{"Metwoch diese Woche"}
-                "1"{"Metwoch nächste Woche"}
-            }
         }
         week{
             dn{"Woch"}

@@ -3,17 +3,12 @@
 es_VE{
     %%Parent{"es_419"}
     Currencies{
-        VEF{
-            "Bs.",
-            "bolívar venezolano",
-        }
         VES{
             "Bs.S",
             "bolívar soberano",
         }
     }
     Currencies%narrow{
-        VEF{"Bs."}
         VES{"Bs.S"}
     }
     CurrencyPlurals{

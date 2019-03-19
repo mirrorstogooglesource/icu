@@ -2,36 +2,6 @@
 // License & terms of use: http://www.unicode.org/copyright.html#License
 ia{
     Countries{
-        001{"Mundo"}
-        002{"Africa"}
-        003{"America del Nord"}
-        005{"America del Sud"}
-        009{"Oceania"}
-        011{"Africa occidental"}
-        013{"America central"}
-        014{"Africa oriental"}
-        015{"Africa septentrional"}
-        017{"Africa central"}
-        018{"Africa meridional"}
-        019{"Americas"}
-        021{"America septentrional"}
-        029{"Caribes"}
-        030{"Asia oriental"}
-        034{"Asia meridional"}
-        035{"Asia del sud-est"}
-        039{"Europa meridional"}
-        053{"Australasia"}
-        054{"Melanesia"}
-        057{"Region micronesian"}
-        061{"Polynesia"}
-        142{"Asia"}
-        143{"Asia central"}
-        145{"Asia occidental"}
-        150{"Europa"}
-        151{"Europa oriental"}
-        154{"Europa septentrional"}
-        155{"Europa occidental"}
-        202{"Africa subsaharian"}
         419{"America latin"}
         AD{"Andorra"}
         AE{"Emiratos Arabe Unite"}

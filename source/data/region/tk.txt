@@ -2,36 +2,6 @@
 // License & terms of use: http://www.unicode.org/copyright.html#License
 tk{
     Countries{
-        001{"Dünýä"}
-        002{"Afrika"}
-        003{"Demirgazyk Amerika"}
-        005{"Günorta Amerika"}
-        009{"Okeaniýa"}
-        011{"Günbatar Afrika"}
-        013{"Orta Amerika"}
-        014{"Gündogar Afrika"}
-        015{"Demirgazyk Afrika"}
-        017{"Orta Afrika"}
-        018{"Afrikanyň günorta sebitleri"}
-        019{"Amerika"}
-        021{"Amerikanyň demirgazyk ýurtlary"}
-        029{"Karib basseýni"}
-        030{"Gündogar Aziýa"}
-        034{"Günorta Aziýa"}
-        035{"Günorta-gündogar Aziýa"}
-        039{"Günorta Ýewropa"}
-        053{"Awstralaziýa"}
-        054{"Melaneziýa"}
-        057{"Mikroneziýa sebti"}
-        061{"Polineziýa"}
-        142{"Aziýa"}
-        143{"Merkezi Aziýa"}
-        145{"Günbatar Aziýa"}
-        150{"Ýewropa"}
-        151{"Gündogar Ýewropa"}
-        154{"Demirgazyk Ýewropa"}
-        155{"Günbatar Ýewropa"}
-        202{"Saharadan aşakdaky Afrika"}
         419{"Latyn Amerikasy"}
         AC{"Beýgeliş adasy"}
         AD{"Andorra"}
