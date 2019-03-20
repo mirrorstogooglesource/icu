@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "266fb0b2_95e993f3",
+        "filename": "filter/desktop_filter.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-03-20T19:25:00Z",
+      "side": 1,
+      "message": "I think you need to put in a perma-link with a version hash.",
+      "range": {
+        "startLine": 6,
+        "startChar": 3,
+        "endLine": 6,
+        "endChar": 87
+      },
+      "revId": "8d5691a5b33ffaa569cb884b341da646bbb4169f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fbc4edcc_4ba9953d",
+        "filename": "filter/desktop_filter.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 618,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-03-20T19:25:00Z",
+      "side": 1,
+      "message": "Does this work with a new mechanism? If it does, it\u0027s great.",
+      "range": {
+        "startLine": 612,
+        "startChar": 0,
+        "endLine": 618,
+        "endChar": 7
+      },
+      "revId": "8d5691a5b33ffaa569cb884b341da646bbb4169f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
