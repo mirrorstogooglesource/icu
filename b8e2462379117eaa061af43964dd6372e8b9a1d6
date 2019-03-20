@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "67b17662_06571227",
+        "filename": "filter/desktop_filter.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 783,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-03-20T20:34:06Z",
+      "side": 1,
+      "message": "This comment is off because ulayout.icu is not used by ICU LE (that is gone anyway). \nulayout.icu is for layout-related character properties data. \n\nBlink/Harfbuzz do not use it so that we should drop it. In ICU 63, these property data used to be in C++ source code, but was split from C++ (and library code) into a separate data file in ICU 64.",
+      "range": {
+        "startLine": 782,
+        "startChar": 3,
+        "endLine": 783,
+        "endChar": 71
+      },
+      "revId": "b8e2462379117eaa061af43964dd6372e8b9a1d6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
