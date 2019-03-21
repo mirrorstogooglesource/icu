@@ -1,0 +1,10 @@
+﻿// © 2016 and later: Unicode, Inc. and others.
+// License & terms of use: http://www.unicode.org/copyright.html#License
+ps_PK{
+    Countries{
+        PS{"فلسطين سيمے"}
+        TC{"د ترکیے او کیکاسو ټاپو"}
+        TF{"د فرانسے جنوبي سیمے"}
+    }
+    Version{"2.1.48.67"}
+}

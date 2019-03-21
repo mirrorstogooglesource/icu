@@ -118,10 +118,6 @@ so{
             "CLP",
             "Beeso Jili",
         }
-        CNH{
-            "CNH",
-            "Yuanta Shiinaha (Offshore)",
-        }
         CNY{
             "CN¥",
             "Yuanta Shiinaha",
@@ -362,10 +358,6 @@ so{
             "MOP",
             "Bataka Makana",
         }
-        MRO{
-            "MRO",
-            "Oogiya Mawritaniya (1973–2017)",
-        }
         MRU{
             "MRU",
             "MRU",
@@ -582,10 +574,6 @@ so{
             "UZS",
             "Soom Usbekistan",
         }
-        VEF{
-            "VEF",
-            "Bolifar Fenesuala (2008–2018)",
-        }
         VES{
             "VES",
             "Bolifar Fenezuela",
@@ -617,10 +605,6 @@ so{
         XPF{
             "CFPF",
             "Farank CFP",
-        }
-        XXX{
-            "¤",
-            "Lacag aan la qoon ama aan saxnayn",
         }
         YER{
             "YER",
@@ -725,14 +709,10 @@ so{
         UAH{"₴"}
         USD{"$"}
         UYU{"$"}
-        VEF{"Bs"}
         VND{"₫"}
         XCD{"$"}
         ZAR{"R"}
         ZMW{"ZK"}
-    }
-    Currencies%variant{
-        TRY{"TL"}
     }
     CurrencyPlurals{
         AED{
@@ -850,10 +830,6 @@ so{
         CLP{
             one{"Beeso Jili"}
             other{"Beeso Jili"}
-        }
-        CNH{
-            one{"Yuan Shiinaha (offshore)"}
-            other{"Yuanta Shiinaha (Offshore)"}
         }
         CNY{
             one{"Yuanta Shiinaha"}
@@ -1091,10 +1067,6 @@ so{
             one{"Bataka Makana"}
             other{"Bataka Makana"}
         }
-        MRO{
-            one{"Oogiya Mawritaniya (1973–2017)"}
-            other{"Oogiya Mawritaniya (1973–2017)"}
-        }
         MRU{
             one{"Oogiya Mawritaniya"}
             other{"Oogiya Mawritaniya"}
@@ -1307,10 +1279,6 @@ so{
             one{"Soom Usbekistan"}
             other{"Soom Usbekistan"}
         }
-        VEF{
-            one{"Bolifar Fenesuala (2008–2018)"}
-            other{"Bolifar Fenesuala (2008–2018)"}
-        }
         VES{
             one{"Bolifar Fenesuala"}
             other{"Bolifar Fenezuela"}
@@ -1342,10 +1310,6 @@ so{
         XPF{
             one{"Farank CFP"}
             other{"Farank CFP"}
-        }
-        XXX{
-            one{"Lacag aan la aqoon"}
-            other{"Lacag aan la aqoon"}
         }
         YER{
             one{"Riyaal Yemen"}

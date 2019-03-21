@@ -11,10 +11,6 @@ es_MX{
             "BTN",
             "ngultrum butanés",
         }
-        CNH{
-            "CNH",
-            "CNH",
-        }
         ERN{
             "ERN",
             "nakfa",
@@ -30,10 +26,6 @@ es_MX{
         LAK{
             "LAK",
             "kip laosiano",
-        }
-        MRO{
-            "MRU",
-            "uguiya (1973–2017)",
         }
         MRU{
             "UM",
@@ -63,10 +55,6 @@ es_MX{
             "UZS",
             "sum",
         }
-        VEF{
-            "VEF",
-            "bolívar venezolano (2008–2018)",
-        }
         VES{
             "VES",
             "bolívar venezolano",
@@ -86,7 +74,6 @@ es_MX{
         RON{"lei"}
         SSP{"£"}
         SYP{"£"}
-        VEF{"Bs"}
     }
     CurrencyPlurals{
         AMD{
@@ -104,10 +91,6 @@ es_MX{
             one{"ngultrum butanés"}
             other{"gultrums bultaneses"}
         }
-        CNH{
-            one{"CNH"}
-            other{"CNH"}
-        }
         KGS{
             one{"som kirguís"}
             other{"soms kirguises"}
@@ -119,10 +102,6 @@ es_MX{
         LAK{
             one{"kip laosiano"}
             other{"kips laosianos"}
-        }
-        LVL{
-            one{"lats letón"}
-            other{"lats letones"}
         }
         MVR{
             one{"rupia de Maldivas"}
@@ -149,10 +128,6 @@ es_MX{
             one{"sum"}
             other{"sums"}
         }
-        VEF{
-            one{"bolívar venezolano (2008–2018)"}
-            other{"bolívares venezolanos (2008–2018)"}
-        }
         VES{
             one{"bolívar venezolano"}
             other{"bolivares venezolanos"}
@@ -160,9 +135,6 @@ es_MX{
         VND{
             one{"dong vietnamita"}
             other{"dongs vietnamitas"}
-        }
-        XXX{
-            one{"(moneda desconocida)"}
         }
         ZMW{
             one{"kwacha zambiano"}

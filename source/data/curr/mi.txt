@@ -126,10 +126,6 @@ mi{
             "EC$",
             "XCD",
         }
-        XXX{
-            "¤",
-            "Moni Tē Mōhiotia",
-        }
     }
     Currencies%narrow{
         ARS{"$"}
@@ -252,9 +248,6 @@ mi{
         }
         XCD{
             other{"XCD"}
-        }
-        XXX{
-            other{"(moni tē mōhiotia)"}
         }
     }
     CurrencyUnitPatterns{

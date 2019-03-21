@@ -1,16 +1,5 @@
-﻿// ***************************************************************************
-// *
-// * Copyright (C) 2014 International Business Machines
-// * Corporation and others.  All Rights Reserved.
-// * Tool: com.ibm.icu.dev.tool.cldr.LDML2ICUConverter.java
-// * Source File:<path>/common/main/zu.xml
-// *
-// ***************************************************************************
-/**
- *  ICU <specials> source: <path>/xml/main/zu.xml
- *  Chrome Note: This locale data is abridged to contain categories
- *  actually used by Chrome.
- */
+﻿// © 2016 and later: Unicode, Inc. and others.
+// License & terms of use: http://www.unicode.org/copyright.html#License
 tg{
     Languages{
         tg{"тоҷикӣ"}

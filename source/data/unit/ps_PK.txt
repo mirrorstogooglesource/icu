@@ -1,0 +1,35 @@
+﻿// © 2016 and later: Unicode, Inc. and others.
+// License & terms of use: http://www.unicode.org/copyright.html#License
+ps_PK{
+    Version{"2.1.48.67"}
+    units{
+        duration{
+            day{
+                dnam{"ورځے"}
+                one{"{0} ورځ"}
+                other{"{0} ورځے"}
+                per{"{0} په هره ورځ کے"}
+            }
+            month{
+                dnam{"مياشتے"}
+                one{"{0} مياشت"}
+                other{"{0} مياشتے"}
+            }
+            week{
+                per{"{0} په هره اونۍ کے"}
+            }
+        }
+    }
+    unitsShort{
+        duration{
+            day{
+                dnam{"ورځے"}
+                one{"{0} ورځ"}
+                other{"{0} ورځے"}
+            }
+            month{
+                dnam{"مياشتے"}
+            }
+        }
+    }
+}

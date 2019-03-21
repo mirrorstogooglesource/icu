@@ -98,10 +98,6 @@ tk{
             "BYN",
             "Belarus rubly",
         }
-        BYR{
-            "BYR",
-            "Belorus rubly (2000–2016)",
-        }
         BZD{
             "BZD",
             "Beliz dollary",
@@ -121,10 +117,6 @@ tk{
         CLP{
             "CLP",
             "Çili pesosy",
-        }
-        CNH{
-            "CNH",
-            "Hytaý ýuany (ofşor)",
         }
         CNY{
             "CN¥",
@@ -366,10 +358,6 @@ tk{
             "MOP",
             "Makao patakasy",
         }
-        MRO{
-            "MRO",
-            "Mawritan ugiýasy (1973–2017)",
-        }
         MRU{
             "MRU",
             "Mawritan ugiýasy",
@@ -518,10 +506,6 @@ tk{
             "SSP",
             "Günorta Sudan funty",
         }
-        STD{
-            "STD",
-            "San-Tome we Prinsipi dobrasy (1977–2017)",
-        }
         STN{
             "STN",
             "San-Tome we Prinsipi dobrasy",
@@ -590,10 +574,6 @@ tk{
             "UZS",
             "Özbek somy",
         }
-        VEF{
-            "VEF",
-            "Wenesuela boliwary (2008–2018)",
-        }
         VES{
             "VES",
             "Wenesuela boliwary",
@@ -625,10 +605,6 @@ tk{
         XPF{
             "CFPF",
             "Fransuz ýuwaş umman franky",
-        }
-        XXX{
-            "¤",
-            "Näbelli pul birligi",
         }
         YER{
             "YER",
@@ -733,15 +709,10 @@ tk{
         UAH{"₴"}
         USD{"$"}
         UYU{"$"}
-        VEF{"Bs"}
         VND{"₫"}
         XCD{"$"}
         ZAR{"R"}
         ZMW{"ZK"}
-    }
-    Currencies%variant{
-        GEL{"₾"}
-        TRY{"TL"}
     }
     CurrencyPlurals{
         AED{
@@ -840,10 +811,6 @@ tk{
             one{"belarus rubly"}
             other{"belarus rubly"}
         }
-        BYR{
-            one{"belorus rubly (2000–2016)"}
-            other{"belorus rubly (2000–2016)"}
-        }
         BZD{
             one{"beliz dollary"}
             other{"beliz dollary"}
@@ -863,10 +830,6 @@ tk{
         CLP{
             one{"çili pesosy"}
             other{"çili pesosy"}
-        }
-        CNH{
-            one{"hytaý ýuany (ofşor)"}
-            other{"hytaý ýuany (ofşor)"}
         }
         CNY{
             one{"hytaý ýuany"}
@@ -1108,10 +1071,6 @@ tk{
             one{"makao patakasy"}
             other{"makao patakasy"}
         }
-        MRO{
-            one{"mawritan ugiýasy (1973–2017)"}
-            other{"mawritan ugiýasy (1973–2017)"}
-        }
         MRU{
             one{"mawritan ugiýasy"}
             other{"mawritan ugiýasy"}
@@ -1260,10 +1219,6 @@ tk{
             one{"günorta sudan funty"}
             other{"günorta sudan funty"}
         }
-        STD{
-            one{"san-tome we prinsipi dobrasy (1977–2017)"}
-            other{"san-tome we prinsipi dobrasy (1977–2017)"}
-        }
         STN{
             one{"san-tome we prinsipi dobrasy"}
             other{"san-tome we prinsipi dobrasy"}
@@ -1332,10 +1287,6 @@ tk{
             one{"özbek somy"}
             other{"özbek somy"}
         }
-        VEF{
-            one{"wenesuela boliwary (2008–2018)"}
-            other{"wenesuela boliwary (2008–2018)"}
-        }
         VES{
             one{"wenesuela boliwary"}
             other{"wenesuela boliwary"}
@@ -1367,10 +1318,6 @@ tk{
         XPF{
             one{"fransuz ýuwaş umman franky"}
             other{"fransuz ýuwaş umman franky"}
-        }
-        XXX{
-            one{"näbelli pul birligi"}
-            other{"näbelli pul birligi"}
         }
         YER{
             one{"ýemen rialy"}

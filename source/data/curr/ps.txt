@@ -6,10 +6,6 @@ ps{
             "AED",
             "AED",
         }
-        AFA{
-            "AFA",
-            "افغانۍ (1927–2002)",
-        }
         AFN{
             "؋",
             "افغانۍ",
@@ -121,10 +117,6 @@ ps{
         CLP{
             "CLP",
             "CLP",
-        }
-        CNH{
-            "CNH",
-            "CNH",
         }
         CNY{
             "CN¥",
@@ -366,10 +358,6 @@ ps{
             "MOP",
             "MOP",
         }
-        MRO{
-            "MRO",
-            "MRO",
-        }
         MRU{
             "MRU",
             "MRU",
@@ -518,10 +506,6 @@ ps{
             "SSP",
             "SSP",
         }
-        STD{
-            "STD",
-            "STD",
-        }
         STN{
             "STN",
             "STN",
@@ -590,10 +574,6 @@ ps{
             "UZS",
             "UZS",
         }
-        VEF{
-            "VEF",
-            "VEF (2008–2018)",
-        }
         VES{
             "VES",
             "VES",
@@ -625,10 +605,6 @@ ps{
         XPF{
             "CFPF",
             "XPF",
-        }
-        XXX{
-            "¤",
-            "نامعلومه مروجه پېسې",
         }
         YER{
             "YER",
@@ -733,23 +709,15 @@ ps{
         UAH{"₴"}
         USD{"$"}
         UYU{"$"}
-        VEF{"Bs"}
         VND{"₫"}
         XCD{"$"}
         ZAR{"R"}
         ZMW{"ZK"}
     }
-    Currencies%variant{
-        TRY{"TL"}
-    }
     CurrencyPlurals{
         AED{
             one{"AED"}
             other{"AED"}
-        }
-        AFA{
-            one{"افغانۍ (1927–2002)"}
-            other{"افغانۍ (1927–2002)"}
         }
         AFN{
             one{"افغانۍ"}
@@ -862,10 +830,6 @@ ps{
         CLP{
             one{"CLP"}
             other{"CLP"}
-        }
-        CNH{
-            one{"CNH"}
-            other{"CNH"}
         }
         CNY{
             one{"CNY"}
@@ -1107,10 +1071,6 @@ ps{
             one{"MOP"}
             other{"MOP"}
         }
-        MRO{
-            one{"MRO (1973–2017)"}
-            other{"MRO (1973–2017)"}
-        }
         MRU{
             one{"MRU"}
             other{"MRU"}
@@ -1259,10 +1219,6 @@ ps{
             one{"SSP"}
             other{"SSP"}
         }
-        STD{
-            one{"STD"}
-            other{"STD"}
-        }
         STN{
             one{"STN"}
             other{"STN"}
@@ -1331,10 +1287,6 @@ ps{
             one{"UZS"}
             other{"UZS"}
         }
-        VEF{
-            one{"VEF (2008–2018)"}
-            other{"VEF (2008–2018)"}
-        }
         VES{
             one{"VES"}
             other{"VES"}
@@ -1366,10 +1318,6 @@ ps{
         XPF{
             one{"XPF"}
             other{"XPF"}
-        }
-        XXX{
-            one{"(د نامعلومه مروجه پېسو واحد)"}
-            other{"(نامعلومه مروجه پېسې)"}
         }
         YER{
             one{"YER"}

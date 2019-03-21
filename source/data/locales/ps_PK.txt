@@ -1,0 +1,99 @@
+﻿// © 2016 and later: Unicode, Inc. and others.
+// License & terms of use: http://www.unicode.org/copyright.html#License
+ps_PK{
+    Version{"2.1.48.67"}
+    calendar{
+        islamic{
+            monthNames{
+                format{
+                    wide{
+                        "محرم",
+                        "د صفرے د",
+                        "ربيع",
+                        "ربيع II",
+                        "جماعه",
+                        "جموما II",
+                        "راجاب",
+                        "شعبان",
+                        "رمضان",
+                        "شوال",
+                        "دالقاعده",
+                        "حلال حج",
+                    }
+                }
+                stand-alone{
+                    wide{
+                        "محرم",
+                        "د صفرے د",
+                        "ربيع",
+                        "ربيع II",
+                        "جماعه",
+                        "جموما II",
+                        "راجاب",
+                        "شعبان",
+                        "رمضان",
+                        "شوال",
+                        "دالقاعده",
+                        "حلال حج",
+                    }
+                }
+            }
+        }
+    }
+    fields{
+        weekOfMonth{
+            dn{"د مياشتے اونۍ"}
+        }
+        weekOfMonth-narrow{
+            dn{"د مياشتے اونۍ"}
+        }
+        weekOfMonth-short{
+            dn{"د مياشتے اونۍ"}
+        }
+        weekdayOfMonth{
+            dn{"د مياشتے اونۍ ورځ"}
+        }
+        weekdayOfMonth-narrow{
+            dn{"د مياشتے اونۍ ورځ"}
+        }
+        weekdayOfMonth-short{
+            dn{"د مياشتے اونۍ ورځ"}
+        }
+        year{
+            relativeTime{
+                future{
+                    one{"په {0} کال کے"}
+                    other{"په {0} کالونو کے"}
+                }
+                past{
+                    one{"{0} کال مخکے"}
+                    other{"{0} کاله مخکے"}
+                }
+            }
+        }
+        year-narrow{
+            relativeTime{
+                future{
+                    one{"په {0} کال کے"}
+                    other{"په {0} کالونو کے"}
+                }
+                past{
+                    one{"{0} کال مخکے"}
+                    other{"{0} کاله مخکے"}
+                }
+            }
+        }
+        year-short{
+            relativeTime{
+                future{
+                    one{"په {0} کال کے"}
+                    other{"په {0} کالونو کے"}
+                }
+                past{
+                    one{"{0} کال مخکے"}
+                    other{"{0} کاله مخکے"}
+                }
+            }
+        }
+    }
+}

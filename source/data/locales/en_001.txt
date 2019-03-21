@@ -291,23 +291,6 @@ en_001{
         dayperiod-short{
             dn{"am/pm"}
         }
-        fri-short{
-            relative{
-                "-1"{"last Fri"}
-                "0"{"this Fri"}
-                "1"{"next Fri"}
-            }
-            relativeTime{
-                future{
-                    one{"in {0} Fri"}
-                    other{"in {0} Fri"}
-                }
-                past{
-                    one{"{0} Fri ago"}
-                    other{"{0} Fri ago"}
-                }
-            }
-        }
         hour-narrow{
             relativeTime{
                 future{
@@ -356,23 +339,6 @@ en_001{
                 past{
                     one{"{0} min ago"}
                     other{"{0} min ago"}
-                }
-            }
-        }
-        mon-short{
-            relative{
-                "-1"{"last Mon"}
-                "0"{"this Mon"}
-                "1"{"next Mon"}
-            }
-            relativeTime{
-                future{
-                    one{"in {0} Mon"}
-                    other{"in {0} Mon"}
-                }
-                past{
-                    one{"{0} Mon ago"}
-                    other{"{0} Mon ago"}
                 }
             }
         }
@@ -428,23 +394,6 @@ en_001{
                 }
             }
         }
-        sat-short{
-            relative{
-                "-1"{"last Sat"}
-                "0"{"this Sat"}
-                "1"{"next Sat"}
-            }
-            relativeTime{
-                future{
-                    one{"in {0} Sat"}
-                    other{"in {0} Sat"}
-                }
-                past{
-                    one{"{0} Sat ago"}
-                    other{"{0} Sat ago"}
-                }
-            }
-        }
         second-narrow{
             relativeTime{
                 future{
@@ -467,74 +416,6 @@ en_001{
                 past{
                     one{"{0} sec ago"}
                     other{"{0} sec ago"}
-                }
-            }
-        }
-        sun-short{
-            relative{
-                "-1"{"last Sun"}
-                "0"{"this Sun"}
-                "1"{"next Sun"}
-            }
-            relativeTime{
-                future{
-                    one{"in {0} Sun"}
-                    other{"in {0} Sun"}
-                }
-                past{
-                    one{"{0} Sun ago"}
-                    other{"{0} Sun ago"}
-                }
-            }
-        }
-        thu-short{
-            relative{
-                "-1"{"last Thu"}
-                "0"{"this Thu"}
-                "1"{"next Thu"}
-            }
-            relativeTime{
-                future{
-                    one{"in {0} Thu"}
-                    other{"in {0} Thu"}
-                }
-                past{
-                    one{"{0} Thu ago"}
-                    other{"{0} Thu ago"}
-                }
-            }
-        }
-        tue-short{
-            relative{
-                "-1"{"last Tue"}
-                "0"{"this Tue"}
-                "1"{"next Tue"}
-            }
-            relativeTime{
-                future{
-                    one{"in {0} Tue"}
-                    other{"in {0} Tue"}
-                }
-                past{
-                    one{"{0} Tue ago"}
-                    other{"{0} Tue ago"}
-                }
-            }
-        }
-        wed-short{
-            relative{
-                "-1"{"last Wed"}
-                "0"{"this Wed"}
-                "1"{"next Wed"}
-            }
-            relativeTime{
-                future{
-                    one{"in {0} Wed"}
-                    other{"in {0} Wed"}
-                }
-                past{
-                    one{"{0} Wed ago"}
-                    other{"{0} Wed ago"}
                 }
             }
         }

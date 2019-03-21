@@ -1,16 +1,5 @@
-// ***************************************************************************
-// *
-// * Copyright (C) 2014 International Business Machines
-// * Corporation and others.  All Rights Reserved.
-// *
-// ***************************************************************************
-/**
- *  Chrome Note: This locale data is abridged to contain categories
- *  actually used by Chrome.
- */
+﻿// © 2016 and later: Unicode, Inc. and others.
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ku{
-    ExemplarCharacters{"[a-z ç ê é ḧ î í ş û ú ù ẍ]"}
-    LocaleScript{
-        "Latn",
-    }
+    Version{"2.1.47.83"}
 }
