@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b75dcecd_53e6a98f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000244
+      },
+      "writtenOn": "2019-03-22T22:31:02Z",
+      "side": 1,
+      "message": "Apply local patches to ICU 64-rc2.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 11
+      },
+      "revId": "4b641611fa615f7a3b00d78a94474663b900072d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e956ce3f_6c19974b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000244
+      },
+      "writtenOn": "2019-03-22T22:31:02Z",
+      "side": 1,
+      "message": "Applies the following patches and update patch files.",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 22
+      },
+      "revId": "4b641611fa615f7a3b00d78a94474663b900072d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ecae7be2_376a8541",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000244
+      },
+      "writtenOn": "2019-03-22T22:31:02Z",
+      "side": 1,
+      "message": "Why?  2018i is the latest and both 63.1 and 64-rc2 have that version, no?",
+      "range": {
+        "startLine": 17,
+        "startChar": 2,
+        "endLine": 17,
+        "endChar": 27
+      },
+      "revId": "4b641611fa615f7a3b00d78a94474663b900072d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
