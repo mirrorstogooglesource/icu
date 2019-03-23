@@ -28,14 +28,16 @@ void FormattedNumber::getAllFieldPositions(FieldPositionIterator& iterator, UErr
     getAllFieldPositionsImpl(fpih, status);
 }
 
+#define NOARG
+
 void FormattedNumber::getAllFieldPositionsImpl(FieldPositionIteratorHandler& fpih,
                                                UErrorCode& status) const {
-    UPRV_FORMATTED_VALUE_METHOD_GUARD()
+    UPRV_FORMATTED_VALUE_METHOD_GUARD(NOARG)
     fData->getStringRef().getAllFieldPositions(fpih, status);
 }
 
 void FormattedNumber::getDecimalQuantity(impl::DecimalQuantity& output, UErrorCode& status) const {
-    UPRV_FORMATTED_VALUE_METHOD_GUARD()
+    UPRV_FORMATTED_VALUE_METHOD_GUARD(NOARG)
     output = fData->quantity;
 }
 

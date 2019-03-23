@@ -227,6 +227,8 @@ D. Local Modifications
   - patches/data_symb.patch :
       Put ICU_DATA_ENTRY_POINT(icudtXX_dat) in common when we use
       the icu data file or icudt.dll
+  - patches/number_output.patch: fix warning/error on windows
+    
 
 6. Double conversion library build failure
 
