@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "51d28af0_df8b0ccd",
+        "filename": "README.chromium",
+        "patchSetId": 1
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1000244
+      },
+      "writtenOn": "2019-03-23T02:36:37Z",
+      "side": 1,
+      "message": "Use https://github.com/unicode-org/icu/pull/560/commits and add a reference to\n https://unicode-org.atlassian.net/browse/ICU-20516",
+      "range": {
+        "startLine": 230,
+        "startChar": 0,
+        "endLine": 230,
+        "endChar": 61
+      },
+      "revId": "8d0594f67bb04b40daebd2386fddcce33f74b5ac",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
