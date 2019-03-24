@@ -200,13 +200,24 @@ function filter_unit_data {
   for i in ${dataroot}/unit/*.txt
   do
     echo Overwriting $i ...
-    sed -r -i \
+    sed -r -i  \
       '/^    units(|Narrow|Short)\{$/, /^    \}$/ {
          /^    units(|Narrow|Short)\{$/ p
-         /^        (duration|compound)\{$/, /^        \}$/ p
+         /^        (duration|compound|digital|area)\{$/, /^        \}$/ p
+         /^        length\{$/, /^        \}/ {
+           /^        length\{$/ p
+           /^            (centimeter|meter|kilometer|mile|foot|inch|yard|millimeter)\{$/, /^            \}$/ p
+           /^        \}$/ p
+         }
+         /^        volume\{$/, /^        \}/ {
+           /^        volume\{$/ p
+           /^            (liter|milliliter|cubic-meter|cubic-inch|cubic-foot|gallon|quart|pint|tablespoon|teaspoon)\{$/, /^            \}$/ p
+           /^        \}$/ p
+         }
          /^    \}$/ p
          d
        }' ${i}
+    sed -r -i '/^                dnam\{/ d' ${i}
 
     # Delete empty units,units{Narrow|Short} block. Otherwise, locale fallback
     # fails. See crbug.com/707515.
