@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "353ee909_e90bec83",
+        "filename": "filter/common_filter.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-03-25T19:51:57Z",
+      "side": 1,
+      "message": "directory name: filter \u003d\u003e filters \n\nfile name: \ncommon_filter.json \u003d\u003e common.json",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 8
+      },
+      "revId": "c262f6ecdd08a8517174babb8375a9688d19151e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "df1d6772_260a575f",
+        "filename": "filter/common_filter.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-03-25T19:51:57Z",
+      "side": 1,
+      "message": "To use implicithan instead of what? \n\n\u003d\u003d\u003e \n\nUse implicithan instead of unihan(I forgot the name) to save ....\n\nSee build file patch for ICU 63 and copy the reasoning here.",
+      "range": {
+        "startLine": 5,
+        "startChar": 3,
+        "endLine": 5,
+        "endChar": 22
+      },
+      "revId": "c262f6ecdd08a8517174babb8375a9688d19151e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9305fe92_923de4b9",
+        "filename": "filter/common_filter.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-03-25T19:51:57Z",
+      "side": 1,
+      "message": "This link will go dead soon. Use a link with hash so that it can be referred to later if necessary. \n\nThe same thing with other links in this file.",
+      "range": {
+        "startLine": 8,
+        "startChar": 3,
+        "endLine": 8,
+        "endChar": 87
+      },
+      "revId": "c262f6ecdd08a8517174babb8375a9688d19151e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cce14637_1bcf4e0f",
+        "filename": "scripts/make_data_all.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-03-25T19:51:57Z",
+      "side": 1,
+      "message": "Can you remove all commented-out lines?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 30
+      },
+      "revId": "c262f6ecdd08a8517174babb8375a9688d19151e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
