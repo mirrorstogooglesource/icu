@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4cf678a8_30b0e2ac",
+        "filename": "scripts/make_data_all.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-03-25T18:51:47Z",
+      "side": 1,
+      "message": "Do not add comments. Delete commented out lines if you don\u0027t need them \nany more.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 30
+      },
+      "revId": "333a596535ca6981a2ffcc73021666075bc5a5e6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
