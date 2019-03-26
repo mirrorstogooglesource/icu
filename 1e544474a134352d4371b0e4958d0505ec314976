@@ -25,6 +25,29 @@
     },
     {
       "key": {
+        "uuid": "be765684_569c4e82",
+        "filename": "filters/common.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 1540,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-03-26T06:59:11Z",
+      "side": 1,
+      "message": "Please, use the following comment from root_subset.txt. Otherwise, it\u0027s not \nclear why we keep an empty block instead of just dropping everything. \n\nNote that an empty RuleBasedTransliteratorIDs block has to be present. \nOtherwise, built-in transforms such as NFD/NFC would fail.",
+      "range": {
+        "startLine": 1540,
+        "startChar": 0,
+        "endLine": 1540,
+        "endChar": 52
+      },
+      "revId": "1e544474a134352d4371b0e4958d0505ec314976",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9edcc7ad_2647257d",
         "filename": "scripts/make_data_all.sh",
         "patchSetId": 6
