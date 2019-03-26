@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "206c5dc7_8c2b147c",
+        "filename": "filters/common.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-03-26T03:22:49Z",
+      "side": 1,
+      "message": "You don\u0027t need to use this mechanism for brkitr/ja.txt for common. Android, etc need that, though. Well, even for them, we can just temporarily swap files in our build script might be simpler unless a way to use a relative path is found. \n\nJust change brkitr/ja.txt with our copy that uses line.brk instead of line_cj.brk. \n\nThen, add brkitr/ja.txt to scripts/data_files_to_preserve.txt. That\u0027s the way brkitr/{zh,zh_Hant}.txt are handled. These files rarely change so that just preserving them across ICU version is fine.",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 4
+      },
+      "revId": "8e7a72ca48bf71c4b8a5640e3aab340071e9f113",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
