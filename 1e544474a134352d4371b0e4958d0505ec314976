@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9edcc7ad_2647257d",
+        "filename": "scripts/make_data_all.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-03-26T06:34:08Z",
+      "side": 1,
+      "message": "Not everybody has a lot of cores ;-). \n\nFor now it\u0027s ok (I\u0027d not block this for this reason), but you don\u0027t want to \u0027make clean\u0027 every time you update ICU data (when the code hasn\u0027t changed). If you want to run \u0027make clean\u0027 in the top build dir, make it an option of this script with the default being false.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 11
+      },
+      "revId": "1e544474a134352d4371b0e4958d0505ec314976",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
