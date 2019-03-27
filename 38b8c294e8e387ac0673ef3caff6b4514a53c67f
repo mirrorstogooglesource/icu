@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "987524ab_7efb04db",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2019-03-27T21:37:05Z",
+      "side": 1,
+      "message": "I try to see will the wpt test pass with DEPS of this committed hash or not.\nI somehow did not add line_cj to common/chromeos so nowhere to remove.",
+      "parentUuid": "45b16634_7cc9df79",
+      "range": {
+        "startLine": 12,
+        "startChar": 4,
+        "endLine": 12,
+        "endChar": 22
+      },
+      "revId": "38b8c294e8e387ac0673ef3caff6b4514a53c67f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1fec92d4_2ada0fb3",
         "filename": "/COMMIT_MSG",
         "patchSetId": 8
@@ -36,6 +60,30 @@
       "writtenOn": "2019-03-27T21:15:51Z",
       "side": 1,
       "message": "What does this mean?",
+      "range": {
+        "startLine": 13,
+        "startChar": 4,
+        "endLine": 13,
+        "endChar": 46
+      },
+      "revId": "38b8c294e8e387ac0673ef3caff6b4514a53c67f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "04bc4609_cbe9ebeb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2019-03-27T21:37:05Z",
+      "side": 1,
+      "message": "I once try to change the filter files for cast to include the late filtering done in copy_data.sh + */*-flutter-removed-resources.txt\nby commenting out some entry in the \"unit_tree\" rules. But later I decided it is too troublesome to do that now because that part is not shared with android/ios/flutter so I removed most of the comments (// ) but forget to remove the // from\n//        \"zh_CN\", \"zh_TW\", \"zh_HK\", \"zh_SG\",\n//        \"no\", \"in\", \"iw\", \"tl\", \"sh\",\nto keep it as\n        \"zh_CN\", \"zh_TW\", \"zh_HK\", \"zh_SG\",\n        \"no\", \"in\", \"iw\", \"tl\", \"sh\",\nLater on I copy that to android/ios/flutter and propagate the errors.\nAfter I write this diff tool I figure out there are missing res so I have to add them back here.",
+      "parentUuid": "1fec92d4_2ada0fb3",
       "range": {
         "startLine": 13,
         "startChar": 4,
