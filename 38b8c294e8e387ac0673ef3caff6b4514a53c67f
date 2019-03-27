@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "45b16634_7cc9df79",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-03-27T21:15:51Z",
+      "side": 1,
+      "message": "You plan to mark wpt test (that depends on line_cj) as failing when DEPS rolling?\n\nOk. You just removed line_cj from mobile, but kept it in common/chromeos. Is that your intention? In that case, please mentioned that in the CL description.\n\nMoreover, in that case, data/brkitr/{ja,zh*}.txt need to be different between desktop and mobile. Have you made that change? I don\u0027t see that change in this CL.",
+      "range": {
+        "startLine": 12,
+        "startChar": 4,
+        "endLine": 12,
+        "endChar": 22
+      },
+      "revId": "38b8c294e8e387ac0673ef3caff6b4514a53c67f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1fec92d4_2ada0fb3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-03-27T21:15:51Z",
+      "side": 1,
+      "message": "What does this mean?",
+      "range": {
+        "startLine": 13,
+        "startChar": 4,
+        "endLine": 13,
+        "endChar": 46
+      },
+      "revId": "38b8c294e8e387ac0673ef3caff6b4514a53c67f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
