@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7973275f_5ada54f3",
+        "filename": "README.chromium",
+        "patchSetId": 18
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 1325333
+      },
+      "writtenOn": "2019-03-28T21:39:29Z",
+      "side": 1,
+      "message": "Can the file \"uniset_perf2.patch\" be removed now as well?",
+      "revId": "5133c78f1132e481c2fd5f899b1da51f401764d4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
