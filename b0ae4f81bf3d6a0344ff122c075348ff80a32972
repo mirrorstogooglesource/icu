@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "52723b7d_36ba4dba",
+        "filename": "README.chromium",
+        "patchSetId": 15
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-03-28T12:31:17Z",
+      "side": 1,
+      "message": "Please, add a reference to the upstream bug and your proposed upstream PR where this patch comes from.\n\nTo expedite your on-going work, I\u0027ll just submit. When you make a next CL, please address this. \n\nIn the meantime, I added a reference to your proposed PR to the CL description.",
+      "revId": "b0ae4f81bf3d6a0344ff122c075348ff80a32972",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
