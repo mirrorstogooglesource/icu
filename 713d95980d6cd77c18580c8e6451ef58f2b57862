@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "789da880_7cd1918b",
+        "filename": "README.chromium",
+        "patchSetId": 2
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-03-29T20:47:11Z",
+      "side": 1,
+      "message": "bugs \u003d\u003e bug\n\nAnd, please add a link to your proposed PR.",
+      "range": {
+        "startLine": 228,
+        "startChar": 6,
+        "endLine": 228,
+        "endChar": 72
+      },
+      "revId": "713d95980d6cd77c18580c8e6451ef58f2b57862",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0bcaaaf7_19c4f93a",
+        "filename": "README.chromium",
+        "patchSetId": 2
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-03-29T20:47:11Z",
+      "side": 1,
+      "message": "There\u0027s only one bug: bugs \u003d\u003e bug",
+      "range": {
+        "startLine": 232,
+        "startChar": 6,
+        "endLine": 232,
+        "endChar": 72
+      },
+      "revId": "713d95980d6cd77c18580c8e6451ef58f2b57862",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
