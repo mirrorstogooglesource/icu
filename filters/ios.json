@@ -371,14 +371,15 @@
 // COLLATION_SYNTHETIC_ALIAS = ...
         "de_", "de__PHONEBOOK", "es_", "es__TRADITIONAL",
         "he_IL", "id_ID", "in", "in_ID", "iw",
-        "iw_IL", "mo", "nb_NO", "no", "no_NO",
+	"iw_IL", "mo", "nb_NO", "no", "no_NO",
         "ro_MD", "sh",
         "sh_BA", "sh_CS", "sh_YU", "sr_BA", "sr_Cyrl",
-        "sr_Cyrl_BA", "sr_Cyrl_ME", "sr_Cyrl_RS", "sr_Latn_BA", "sr_Latn_RS",
+//      "sr_Cyrl_BA", "sr_Cyrl_ME", "sr_Cyrl_RS", "sr_Latn_BA", "sr_Latn_RS",
         "sr_ME", "sr_RS",
-        "zh_CN", "zh_HK", "zh_Hans", "zh_Hans_CN", "zh_Hans_SG",
-        "zh_Hant_HK", "zh_Hant_MO", "zh_Hant_TW", "zh_MO", "zh_SG",
-        "zh_TW",
+        "zh_CN", "zh_HK", "zh_Hans",
+//      "zh_Hans_CN", "zh_Hans_SG",
+//      "zh_Hant_HK", "zh_Hant_MO", "zh_Hant_TW",
+        "zh_MO", "zh_SG", "zh_TW",
 // # Ordinary resources
 // COLLATION_SOURCE = ...
         "am", "ar",
