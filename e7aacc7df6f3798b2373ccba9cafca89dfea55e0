@@ -93,6 +93,93 @@
       "revId": "e7aacc7df6f3798b2373ccba9cafca89dfea55e0",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c664b4d9_da719cd0",
+        "filename": "filters/common.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 1619,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-04-03T23:10:49Z",
+      "side": 1,
+      "message": "How did you generate this list? At least 3 of them (see below) should not be dropped. Only \u0027ec\u0027 has to be dropped for them because they have other fields as well.  \n\nUntil Shane added a feature to drop empty tree after filtering (using \u0027!\u0027 instead of \u0027-\u0027 to specify that an empty tree should be dropped after filtering), I\u0027d say we\u0027d better just use\n\u0027-/zoneStrings/*/ec\u0027 for a clean filter file at the cost of a few tens of kBs.",
+      "parentUuid": "7721c86c_779fd06b",
+      "range": {
+        "startLine": 1619,
+        "startChar": 8,
+        "endLine": 1619,
+        "endChar": 39
+      },
+      "revId": "e7aacc7df6f3798b2373ccba9cafca89dfea55e0",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0a133897_d1b7a9e8",
+        "filename": "filters/common.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 1951,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-04-03T23:10:49Z",
+      "side": 1,
+      "message": "You should not drop it, either. It has fields other than ec.",
+      "revId": "e7aacc7df6f3798b2373ccba9cafca89dfea55e0",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a8c7ae98_9ae3c8a1",
+        "filename": "filters/common.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 1963,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-04-03T23:10:49Z",
+      "side": 1,
+      "message": "You should not drop this, either.",
+      "range": {
+        "startLine": 1963,
+        "startChar": 7,
+        "endLine": 1963,
+        "endChar": 37
+      },
+      "revId": "e7aacc7df6f3798b2373ccba9cafca89dfea55e0",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e530383f_79c12004",
+        "filename": "filters/common.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 2023,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-04-03T23:10:49Z",
+      "side": 1,
+      "message": "You should not drop it. It has \u0027sd\u0027, \u0027sg\u0027, \u0027ss\u0027 in addition to \u0027ec\u0027.",
+      "range": {
+        "startLine": 2023,
+        "startChar": 8,
+        "endLine": 2023,
+        "endChar": 40
+      },
+      "revId": "e7aacc7df6f3798b2373ccba9cafca89dfea55e0",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
     }
   ]
 }
