@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ebf05e24_689444a6",
+        "filename": "filters/common.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 1615,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-04-03T19:21:05Z",
+      "side": 1,
+      "message": "Can you just keep these two?  The size diff is small and I\u0027m worried about an unknown breakage somewhere (not covered by tests).",
+      "range": {
+        "startLine": 1614,
+        "startChar": 0,
+        "endLine": 1615,
+        "endChar": 14
+      },
+      "revId": "e7aacc7df6f3798b2373ccba9cafca89dfea55e0",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a57dfde4_50259480",
+        "filename": "filters/common.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 1619,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-04-03T19:21:05Z",
+      "side": 1,
+      "message": "Sorry I forgot to add comments here. \nAre you enumerating all zoneStrings/\u003czone name\u003e whose only entries are \u0027ec\u0027?  The maintenance won\u0027t be easy. \n\nHow about this ? \n\"-/zoneStrings/*/ec\"\n\nThere\u0027s an issue with empty blocks after dropping ec, but the size impact might not be huge (the size impact of keeping empty blocks is that keys such as \u0027Africa:Abijdjan\u0027 has to be kept, but only once because we use a string pool bundle). See the thread on dropping \u0027ec\u0027 between us and Shane/Markus. \n\nBefore rolling ICU, I think we\u0027d better address this.",
+      "range": {
+        "startLine": 1619,
+        "startChar": 8,
+        "endLine": 1619,
+        "endChar": 39
+      },
+      "revId": "e7aacc7df6f3798b2373ccba9cafca89dfea55e0",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
