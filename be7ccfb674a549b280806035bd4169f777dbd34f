@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "c8e2b05b_e4baf249",
+        "filename": "filters/common.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 842,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2019-04-03T17:44:33Z",
+      "side": 1,
+      "message": "ok, I will remove this filter in the next cl",
+      "parentUuid": "b087fc81_212c20d8",
+      "range": {
+        "startLine": 842,
+        "startChar": 11,
+        "endLine": 842,
+        "endChar": 34
+      },
+      "revId": "be7ccfb674a549b280806035bd4169f777dbd34f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "dda2ad5a_5ae21839",
         "filename": "filters/common.json",
         "patchSetId": 8
@@ -36,6 +60,30 @@
       "writtenOn": "2019-04-03T17:36:15Z",
       "side": 1,
       "message": "Chrome is likely to use this in the UI (e.g. translation menu, via ICU api) even though it does not show up in unittest. So, I\u0027d rather keep it. It\u0027s only a delta from Languages so that it\u0027d affect only a subset of locales.",
+      "range": {
+        "startLine": 858,
+        "startChar": 8,
+        "endLine": 858,
+        "endChar": 34
+      },
+      "revId": "be7ccfb674a549b280806035bd4169f777dbd34f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "147132bf_29881152",
+        "filename": "filters/common.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 858,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2019-04-03T17:44:33Z",
+      "side": 1,
+      "message": "ok, I will remove it from the next cl",
+      "parentUuid": "dda2ad5a_5ae21839",
       "range": {
         "startLine": 858,
         "startChar": 8,
@@ -68,6 +116,30 @@
       "revId": "be7ccfb674a549b280806035bd4169f777dbd34f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "93f34b84_1705c773",
+        "filename": "filters/common.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 1589,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2019-04-03T17:44:33Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "a4abdcb6_8005da30",
+      "range": {
+        "startLine": 1589,
+        "startChar": 8,
+        "endLine": 1589,
+        "endChar": 21
+      },
+      "revId": "be7ccfb674a549b280806035bd4169f777dbd34f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     }
   ]
 }
