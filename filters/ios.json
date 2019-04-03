@@ -794,7 +794,6 @@
         "-/ExemplarCharacters",
         "-/ExemplarCharactersNumbers",
         "-/ExemplarCharactersPunctuation",
-        "-/ExemplarCharactersIndex",
         "-/measurementSystemNames",
         "-/NumberElements/minimalPairs",
         "-/delimiters"
@@ -810,7 +809,6 @@
         "-/Languages%long",
         "-/Languages%short",
         "-/Languages%variant",
-        "-/Languages%stand-alone",
 // Based on https://cs.chromium.org/chromium/src/third_party/icu/scripts/accept_lang.list?rcl=797b7c
         "+/*/ach",
         "+/*/af",
@@ -1265,7 +1263,9 @@
         "unit_tree"
       ],
       "rules": [
-        "-/*",
+        "-/units",
+        "-/unitsNarrow",
+        "-/unitsShort",
         "+/*/acceleration",
         "-/*/acceleration/*/dnam",
 //      "-/*/angle",

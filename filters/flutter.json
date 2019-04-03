@@ -777,7 +777,6 @@
         "-/ExemplarCharacters",
         "-/ExemplarCharactersNumbers",
         "-/ExemplarCharactersPunctuation",
-        "-/ExemplarCharactersIndex",
         "-/measurementSystemNames",
         "-/NumberElements/minimalPairs",
         "-/delimiters"
@@ -793,7 +792,6 @@
         "-/Languages%long",
         "-/Languages%short",
         "-/Languages%variant",
-        "-/Languages%stand-alone",
 // Based on https://cs.chromium.org/chromium/src/third_party/icu/scripts/accept_lang.list?rcl=797b7c
         "+/*/ach",
         "+/*/af",
@@ -1239,45 +1237,6 @@
       "rules": [
         "-/UCARules",
 	"-/collations/*/Sequence"
-      ]
-    },
-// Based on filter_unit_data
-// # Keep only duration and compound in units* sections.
-    {
-      "categories": [
-        "unit_tree"
-      ],
-      "rules": [
-        "-/*",
-//      "-/*/acceleration",
-//      "-/*/angle",
-//      "-/*/area",
-        "+/*/compound",
-        "-/*/compound/*/dnam",
-//      "+/*/concentr",
-        "+/*/concentr/percent",
-        "-/*/concentr/percent/dnam",
-//      "+/*/consumption",
-//      "+/*/coordinate",
-        "+/*/digital",
-        "-/*/digital/*/dnam",
-        "+/*/duration",
-        "-/*/duration/*/dnam",
-//      "+/*/electric",
-//      "+/*/energy",
-//      "+/*/force",
-        "+/*/frequency",
-        "-/*/frequency/*/dnam",
-        "+/*/length",
-        "-/*/length/*/dnam",
-//      "+/*/mass",
-//      "+/*/power",
-//      "+/*/pressure",
-//      "+/*/speed",
-        "+/*/temperature",
-        "-/*/temperature/*/dnam"
-//      "+/*/torque",
-//      "+/*/volume",
       ]
     },
 // Based on
@@ -1928,7 +1887,6 @@
         "-/Languages%long",
         "-/Languages%short",
         "-/Languages%variant",
-        "-/Languages%stand-alone",
         "-/LanguagesShort",
         "-/Scripts",
         "-/Scripts%long",
@@ -1944,7 +1902,6 @@
         "+/Languages%long/zh",
         "+/Languages%short/zh",
         "+/Languages%variant/zh",
-        "+/Languages%stand-alone/zh",
         "+/Scripts/Hans",
         "+/Scripts%long/Hans",
         "+/Scripts%short/Hans",
