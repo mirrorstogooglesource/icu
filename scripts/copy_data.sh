@@ -66,15 +66,7 @@ function copy_cast {
 function copy_flutter {
   echo "Copying icudtl.dat for Flutter"
 
-
-  echo "Removing unused resources from icudtl.dat for Flutter"
-  LD_LIBRARY_PATH=lib/ bin/icupkg -r \
-    "${TOPSRC}/flutter/flutter-removed-resources.txt" \
-    "data/out/tmp/icudt${VERSION}l.dat"
-
   cp "data/out/tmp/icudt${VERSION}l.dat" "${TOPSRC}/flutter/icudt${VERSION}l.dat"
-
-  mv "${TOPSRC}/flutter/icudt${VERSION}l.dat" "${TOPSRC}/flutter/icudtl.dat"
 
   echo "Done with copying pre-built ICU data file for Flutter."
 }
