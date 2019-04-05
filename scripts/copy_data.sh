@@ -52,13 +52,7 @@ function copy_android_ios {
 function copy_cast {
   echo "Copying icudtl.dat for $1"
 
-  LD_LIBRARY_PATH=lib/ bin/icupkg -r \
-    "${TOPSRC}/$2/cast-removed-resources.txt" \
-    "data/out/tmp/icudt${VERSION}l.dat"
-
-  cp "data/out/tmp/icudt${VERSION}l.dat" "${TOPSRC}/$2/icudt${VERSION}l.dat"
-
-  mv "${TOPSRC}/$2/icudt${VERSION}l.dat" "${TOPSRC}/$2/icudtl.dat"
+  cp "data/out/tmp/icudt${VERSION}l.dat" "${TOPSRC}/$2/icudtl.dat"
 
   echo "Done with copying pre-built ICU data file for $1."
 }
