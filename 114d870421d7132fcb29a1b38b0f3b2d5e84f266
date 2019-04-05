@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cfb1d2d7_77d8ad19",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-04-05T22:34:04Z",
+      "side": 1,
+      "message": "I replaced \u0027announced in a quick succession...\u0027 with \u0027announced on March 26 ...\u0027 because there\u0027s only one change here. \n\nThe CL you apparently copied the sentence from included two tzdb updates announced only a couple of days apart. :-)",
+      "range": {
+        "startLine": 9,
+        "startChar": 10,
+        "endLine": 9,
+        "endChar": 37
+      },
+      "revId": "114d870421d7132fcb29a1b38b0f3b2d5e84f266",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "be9a2e7a_69620169",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-04-05T22:34:04Z",
+      "side": 1,
+      "message": "There\u0027s nothing to see above :-). \n\nWould you put in something similar to what\u0027s in \nhttps://chromium-review.googlesource.com/c/chromium/deps/icu/+/1293149 ?\n\nThat\u0027s also a good way to sanity check your data build with tz2019a.  \n\nYou can just copy \u0027icudtl.dat\u0027 with this update to v8\u0027s build directory and use \u0027d8\u0027 to test.",
+      "range": {
+        "startLine": 19,
+        "startChar": 6,
+        "endLine": 19,
+        "endChar": 19
+      },
+      "revId": "114d870421d7132fcb29a1b38b0f3b2d5e84f266",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
