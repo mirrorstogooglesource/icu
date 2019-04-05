@@ -1,0 +1,15 @@
+# Copyright 2018 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+# Base it on the android setup which is based on the cast setup which
+# is based on the desktop setup.
+import("icu_data_android.gni")
+
+# TODO:
+# Keep only two common calendars. Add locale-specific calendars to Thai.
+# COMMON_CALENDARS="gregorian|generic"
+#    th)
+#      EXTRA_CAL='buddhist'
+
+strip_almost_all_calendars = true

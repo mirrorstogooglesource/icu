@@ -1072,6 +1072,16 @@ component("icuuc") {
   }
 }
 
+build_data_file = true
+
+if (build_data_file) {
+  group("icudata") {
+    public_deps = [
+      "data_build:icu_data"
+    ]
+  }
+}
+
 if (is_android && enable_java_templates) {
   android_assets("icu_assets") {
     if (icu_use_data_file) {
@@ -1088,8 +1098,6 @@ if (is_android) {
   data_dir = "android"
 } else if (is_ios) {
   data_dir = "ios"
-} else if (is_chromeos) {
-  data_dir = "chromeos"
 } else {
   data_dir = "common"
 }
@@ -1102,6 +1110,10 @@ if (current_cpu == "mips" || current_cpu == "mips64" ||
 }
 data_bundle = "${data_bundle_prefix}.dat"
 
+if (build_data_file) {
+  not_needed(["data_bundle", "data_dir"])
+}
+
 # TODO(GYP) support use_system_icu.
 if (icu_use_data_file) {
   if (is_ios) {
@@ -1110,55 +1122,57 @@ if (icu_use_data_file) {
       outputs = [ "{{bundle_resources_dir}}/{{source_file_part}}" ]
     }
   } else {
-    copy("icudata") {
-      sources = [ "$data_dir/$data_bundle" ]
-      outputs = [ "$root_out_dir/$data_bundle" ]
-      data = [ "$root_out_dir/$data_bundle" ]
+    if (!build_data_file) {
+      copy("icudata") {
+        sources = [ "$data_dir/$data_bundle" ]
+        outputs = [ "$root_out_dir/$data_bundle" ]
+        data = [ "$root_out_dir/$data_bundle" ]
+      }
+    } else {
+      # Generated in the right place by data_build:icu_data
     }
   }
 } else {
-  data_assembly = "$target_gen_dir/${data_bundle_prefix}_dat.S"
-  inline_data_assembly = "$target_gen_dir/${data_bundle_prefix}_dat.cc"
-  action("make_data_assembly") {
-    script = "scripts/make_data_assembly.py"
-    inputs = [ "$data_dir/$data_bundle" ]
-    outputs = [ data_assembly ]
-    args = [
-      rebase_path(inputs[0], root_build_dir),
-      rebase_path(data_assembly, root_build_dir),
-    ]
-    # TODO(GYP): Gyp has considerations here for QNX and for the host
-    # toolchain that have not been ported over.
-    if (is_mac || is_ios) {
-      args += [ "--mac" ]
-    } else if (is_win) {
-      args += [ "--win" ]
-    }
-  }
-
   if (is_win) {
-    action("make_inline_data_assembly") {
-      deps = [ ":make_data_assembly" ]
-      script = "scripts/asm_to_inline_asm.py"
-      inputs = [ data_assembly ]
-      outputs =  [ inline_data_assembly ]
-      args = rebase_path([
-        data_assembly,
-        inline_data_assembly,
-      ], root_build_dir)
+    # On Windows the target DLL is pre-built so just use a copy rule.
+    # data_bundle and data_dir have to be used to avoid 'unused variable'
+    # error.
+    data_bundle = "icudt.dll"
+    data_dir = "windows"
+    if (!build_data_file) {
+      copy("icudata") {
+        sources = [ "$data_dir/$data_bundle" ]
+        outputs = [ "$root_out_dir/$data_bundle" ]
+        data = outputs
+      }
+    } else {
+      # Generated in the right place by data_build:icu_data
     }
   } else {
-    not_needed([ "inline_data_assembly" ])
-  }
+    data_assembly = "$target_gen_dir/${data_bundle_prefix}_dat.S"
+    action("make_data_assembly") {
+      script = "scripts/make_data_assembly.py"
+      inputs = [ "$data_dir/$data_bundle" ]
+      outputs = [ "$data_assembly" ]
+      args = [
+        rebase_path(inputs[0], root_build_dir),
+        rebase_path(data_assembly, root_build_dir),
+      ]
+      # TODO(GYP): Gyp has considerations here for QNX and for the host
+      # toolchain that have not been ported over.
+      if (is_mac || is_ios) {
+        args += [ "--mac" ]
+      }
+    }
 
-  source_set("icudata") {
-    defines = [ "U_HIDE_DATA_SYMBOL" ]
-    if (is_win) {
-      sources = [ inline_data_assembly ]
-      deps = [ ":make_inline_data_assembly", ]
+    if (!build_data_file) {
+      source_set("icudata") {
+        sources = [ "$data_assembly" ]
+        defines = [ "U_HIDE_DATA_SYMBOL" ]
+        deps = [ ":make_data_assembly", ]
+      }
     } else {
-      sources = [ data_assembly ]
-      deps = [ ":make_data_assembly", ]
+      # Generated into the right place by data_build:icu_data
     }
   }
 }
