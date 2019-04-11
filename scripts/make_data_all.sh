@@ -34,6 +34,12 @@ $ICUROOT/scripts/config_data.sh android
 make -j 120
 $ICUROOT/scripts/copy_data.sh android
 
+echo "Build the filtered data for AndroidBig"
+(cd data && make clean)
+$ICUROOT/scripts/config_data.sh android_big
+make -j 120
+$ICUROOT/scripts/copy_data.sh android_big
+
 echo "Build the filtered data for iOS"
 (cd data && make clean)
 $ICUROOT/scripts/config_data.sh ios
