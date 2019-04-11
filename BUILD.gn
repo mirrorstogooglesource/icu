@@ -1085,7 +1085,12 @@ if (is_android && enable_java_templates) {
 # TODO(GYP): Gyp has considerations here for QNX and for the host toolchain
 #  that have not been ported over.
 if (is_android) {
-  data_dir = "android"
+  if (is_large_default) { // |is_large_default| - name TBD
+    data_dir = "android"
+    data_alternative_dir = "android_small"
+  } else {
+    data_dir = "android_small"
+  }
 } else if (is_ios) {
   data_dir = "ios"
 } else if (is_chromeos) {
@@ -1114,6 +1119,14 @@ if (icu_use_data_file) {
       sources = [ "$data_dir/$data_bundle" ]
       outputs = [ "$root_out_dir/$data_bundle" ]
       data = [ "$root_out_dir/$data_bundle" ]
+    }
+  }
+  // See http://crbug.com/951636#c5
+  if (is_android && is_large_default) {
+    copy("icudata_alternative") {
+      sources = [ "$data_alternative_dir/icudtl.dat" ]
+      outputs = [ "$root_out_dir/alternative_icudtl.dat" ]
+      data = [ "$root_out_dir/alternative_icudtl.dat" ]
     }
   }
 } else {
