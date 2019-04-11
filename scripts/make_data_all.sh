@@ -5,7 +5,8 @@ set -x
 ICUROOT="$(dirname "$0")/.."
 
 echo "Build the necessary tools"
-"${ICUROOT}/source/runConfigureICU" --enable-debug --disable-release Linux/gcc --disable-tests
+"${ICUROOT}/source/runConfigureICU" --enable-debug --disable-release \
+    Linux/gcc  --disable-tests --disable-layoutex
 make -j 120
 
 echo "Build the filtered data for common"

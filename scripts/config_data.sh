@@ -15,4 +15,6 @@ fi
 
 TOPSRC="$(dirname "$0")/.."
 ICU_DATA_FILTER_FILE="${TOPSRC}/filters/$1.json"
-ICU_DATA_FILTER_FILE="${ICU_DATA_FILTER_FILE}" "${TOPSRC}/source/runConfigureICU" --enable-debug --disable-release Linux/gcc --disable-tests
+ICU_DATA_FILTER_FILE="${ICU_DATA_FILTER_FILE}" \
+    "${TOPSRC}/source/runConfigureICU" --enable-debug --disable-release \
+    Linux/gcc --disable-tests  --disable-layoutex
