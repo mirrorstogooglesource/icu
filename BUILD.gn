@@ -1116,6 +1116,14 @@ if (icu_use_data_file) {
       data = [ "$root_out_dir/$data_bundle" ]
     }
   }
+  // See http://crbug.com/951636#c5
+  if (is_android) {
+    copy("icudata_legacy") {
+      sources = [ "android_legacy/icudtl.dat" ]
+      outputs = [ "$root_out_dir/legacy_icudtl.dat" ]
+      data = [ "$root_out_dir/legacy_icudtl.dat" ]
+    }
+  }
 } else {
   data_assembly = "$target_gen_dir/${data_bundle_prefix}_dat.S"
   inline_data_assembly = "$target_gen_dir/${data_bundle_prefix}_dat.cc"
