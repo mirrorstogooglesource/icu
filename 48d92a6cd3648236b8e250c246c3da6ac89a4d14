@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1ca5a8e6_b0d5cedb",
+        "filename": "filters/android.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 838,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-04-11T20:44:12Z",
+      "side": 1,
+      "message": "You don\u0027t need this block because you\u0027re gonna filter them out anyway except for zh and Hans/Hant in filters starting in line 2081.",
+      "range": {
+        "startLine": 818,
+        "startChar": 0,
+        "endLine": 838,
+        "endChar": 18
+      },
+      "revId": "48d92a6cd3648236b8e250c246c3da6ac89a4d14",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e2f1ed7e_f8e2707c",
+        "filename": "filters/android.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 1016,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-04-11T20:44:12Z",
+      "side": 1,
+      "message": "You don\u0027t need this block because you\u0027re gonna filter them out anyway except for zh and Hans/Hant in filters starting in line 2081.",
+      "range": {
+        "startLine": 1016,
+        "startChar": 0,
+        "endLine": 1016,
+        "endChar": 111
+      },
+      "revId": "48d92a6cd3648236b8e250c246c3da6ac89a4d14",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
