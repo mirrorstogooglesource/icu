@@ -32,51 +32,12 @@ function copy_common {
   echo "Done with copying pre-built ICU data files."
 }
 
-function copy_chromeos {
-  DATA_FILE="data/out/tmp/icudt${VERSION}l.dat"
-
-  echo "Copying icudtl.dat"
-  cp "${DATA_FILE}" "${TOPSRC}/chromeos/icudtl.dat"
-
-  echo "Done with copying pre-built ICU data files for chromeos."
-}
-
-function copy_android_ios {
+function copy_data {
   echo "Copying icudtl.dat for $1"
 
   cp "data/out/tmp/icudt${VERSION}l.dat" "${TOPSRC}/$2/icudtl.dat"
 
   echo "Done with copying pre-built ICU data file for $1."
-}
-
-function copy_cast {
-  echo "Copying icudtl.dat for $1"
-
-  LD_LIBRARY_PATH=lib/ bin/icupkg -r \
-    "${TOPSRC}/$2/cast-removed-resources.txt" \
-    "data/out/tmp/icudt${VERSION}l.dat"
-
-  cp "data/out/tmp/icudt${VERSION}l.dat" "${TOPSRC}/$2/icudt${VERSION}l.dat"
-
-  mv "${TOPSRC}/$2/icudt${VERSION}l.dat" "${TOPSRC}/$2/icudtl.dat"
-
-  echo "Done with copying pre-built ICU data file for $1."
-}
-
-function copy_flutter {
-  echo "Copying icudtl.dat for Flutter"
-
-
-  echo "Removing unused resources from icudtl.dat for Flutter"
-  LD_LIBRARY_PATH=lib/ bin/icupkg -r \
-    "${TOPSRC}/flutter/flutter-removed-resources.txt" \
-    "data/out/tmp/icudt${VERSION}l.dat"
-
-  cp "data/out/tmp/icudt${VERSION}l.dat" "${TOPSRC}/flutter/icudt${VERSION}l.dat"
-
-  mv "${TOPSRC}/flutter/icudt${VERSION}l.dat" "${TOPSRC}/flutter/icudtl.dat"
-
-  echo "Done with copying pre-built ICU data file for Flutter."
 }
 
 BACKUP_DIR="dataout/$1"
@@ -88,7 +49,7 @@ function backup_outdir {
 
 case "$1" in
   "chromeos")
-    copy_chromeos
+    copy_data ChromeOS $1
     backup_outdir $1
     ;;
   "common")
@@ -96,7 +57,7 @@ case "$1" in
     backup_outdir $1
     ;;
   "android")
-    copy_android_ios Android android
+    copy_data Android $1
     backup_outdir $1
     ;;
   "android_small")
@@ -104,15 +65,15 @@ case "$1" in
     backup_outdir $1
     ;;
   "ios")
-    copy_android_ios iOS ios
+    copy_data iOS $1
     backup_outdir $1
     ;;
   "cast")
-    copy_cast Cast cast
+    copy_data Cast $1
     backup_outdir $1
     ;;
   "flutter")
-    copy_flutter
+    copy_data Flutter $1
     backup_outdir $1
     ;;
 esac
