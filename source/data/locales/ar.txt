@@ -36,7 +36,8 @@ ar{
                 timeSeparator{":"}
             }
         }
-        default{"latn"}
+        default{"arab"}
+        default_latn{"latn"}
         latn{
             miscPatterns{
                 approximately{"~{0}"}
@@ -376,7 +377,7 @@ ar{
         minimumGroupingDigits{"1"}
         native{"arab"}
     }
-    Version{"2.1.48.22"}
+    Version{"2.1.49.82"}
     calendar{
         buddhist{
             eras{
@@ -1736,7 +1737,7 @@ ar{
                     "تيشو",
                     "شووا",
                     "هيسي",
-                    "Qqqq",
+                    "ريوا",
                 }
             }
         }
