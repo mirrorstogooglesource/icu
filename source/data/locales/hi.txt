@@ -220,7 +220,7 @@ hi{
         minimumGroupingDigits{"1"}
         native{"deva"}
     }
-    Version{"2.1.48.17"}
+    Version{"2.1.49.82"}
     calendar{
         ethiopic{
             monthNames{
@@ -626,14 +626,14 @@ hi{
                     narrow{
                         afternoon1{"दोपहर"}
                         evening1{"शाम"}
-                        midnight{"m"}
+                        midnight{"मध्यरात्रि"}
                         morning1{"सुबह"}
                         night1{"रात"}
                     }
                     wide{
                         afternoon1{"दोपहर"}
                         evening1{"शाम"}
-                        midnight{"midnight"}
+                        midnight{"मध्यरात्रि"}
                         morning1{"सुबह"}
                         night1{"रात"}
                     }
@@ -1317,7 +1317,7 @@ hi{
                     "ताईशो",
                     "शोवा",
                     "हेईसेई",
-                    "Qqqq",
+                    "रेइवा",
                 }
             }
         }

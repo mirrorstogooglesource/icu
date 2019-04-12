@@ -284,15 +284,12 @@ class ListRequest(AbstractRequest):
         return [self.output_file]
 
 
-class IndexRequest(AbstractRequest):
+class IndexTxtRequest(AbstractRequest):
     def __init__(self, **kwargs):
         self.input_files = []
-        self.txt_file = None
         self.output_file = None
         self.cldr_version = ""
-        self.args = ""
-        self.format_with = {}
-        super(IndexRequest, self).__init__(**kwargs)
+        super(IndexTxtRequest, self).__init__(**kwargs)
 
     def apply_file_filter(self, filter):
         i = 0
@@ -306,16 +303,8 @@ class IndexRequest(AbstractRequest):
     def flatten(self, config, all_requests, common_vars):
         return PrintFileRequest(
             name = self.name,
-            output_file = self.txt_file,
+            output_file = self.output_file,
             content = self._generate_index_file(common_vars)
-        ).flatten(config, all_requests, common_vars) + SingleExecutionRequest(
-            name = "%s_res" % self.name,
-            category = self.category,
-            input_files = [self.txt_file],
-            output_files = [self.output_file],
-            tool = IcuTool("genrb"),
-            args = self.args,
-            format_with = self.format_with
         ).flatten(config, all_requests, common_vars)
 
     def _generate_index_file(self, common_vars):

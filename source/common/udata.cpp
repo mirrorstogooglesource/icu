@@ -641,7 +641,7 @@ U_NAMESPACE_END
  *                                                                      *
  *----------------------------------------------------------------------*/
 #if U_PLATFORM_HAS_WINUWP_API == 0 // Windows UWP Platform does not support dll icu data at this time
-extern "C" const ICU_Data_Header U_DATA_API U_ICUDATA_ENTRY_POINT;
+extern "C" const DataHeader U_DATA_API U_ICUDATA_ENTRY_POINT;
 #endif
 
 /*
@@ -693,7 +693,7 @@ openCommonData(const char *path,          /*  Path from OpenChoice?          */
 #if U_PLATFORM_HAS_WINUWP_API == 0 // Windows UWP Platform does not support dll icu data at this time
             int32_t i;
             for(i = 0; i < commonDataIndex; ++i) {
-                if(gCommonICUDataArray[i]->pHeader == &U_ICUDATA_ENTRY_POINT.hdr) {
+                if(gCommonICUDataArray[i]->pHeader == &U_ICUDATA_ENTRY_POINT) {
                     /* The linked-in data is already in the list. */
                     return NULL;
                 }
@@ -715,7 +715,7 @@ openCommonData(const char *path,          /*  Path from OpenChoice?          */
         }
         */
 #if U_PLATFORM_HAS_WINUWP_API == 0 // Windows UWP Platform does not support dll icu data at this time
-        setCommonICUDataPointer(&U_ICUDATA_ENTRY_POINT.hdr, FALSE, pErrorCode);
+        setCommonICUDataPointer(&U_ICUDATA_ENTRY_POINT, FALSE, pErrorCode);
         {
             Mutex lock;
             return gCommonICUDataArray[commonDataIndex];
@@ -831,8 +831,8 @@ static UBool extendICUData(UErrorCode *pErr)
      * Use a specific mutex to avoid nested locks of the global mutex.
      */
 #if MAP_IMPLEMENTATION==MAP_STDIO
-    static UMutex *extendICUDataMutex = new UMutex();
-    umtx_lock(extendICUDataMutex);
+    static UMutex extendICUDataMutex = U_MUTEX_INITIALIZER;
+    umtx_lock(&extendICUDataMutex);
 #endif
     if(!umtx_loadAcquire(gHaveTriedToLoadCommonData)) {
         /* See if we can explicitly open a .dat file for the ICUData. */
@@ -868,7 +868,7 @@ static UBool extendICUData(UErrorCode *pErr)
                                                           /* Also handles a race through here before gHaveTriedToLoadCommonData is set. */
 
 #if MAP_IMPLEMENTATION==MAP_STDIO
-    umtx_unlock(extendICUDataMutex);
+    umtx_unlock(&extendICUDataMutex);
 #endif
     return didUpdate;               /* Return true if ICUData pointer was updated.   */
                                     /*   (Could potentially have been done by another thread racing */
