@@ -1072,21 +1072,11 @@ component("icuuc") {
   }
 }
 
-if (is_android && enable_java_templates) {
-  android_assets("icu_assets") {
-    if (icu_use_data_file) {
-      sources = [ "$root_out_dir/icudtl.dat" ]
-      deps = [ ":icudata" ]
-      disable_compression = true
-    }
-  }
-}
-
 # TODO(GYP): Gyp has considerations here for QNX and for the host toolchain
 #  that have not been ported over.
 if (is_android) {
 # Use android_small for now to keep the size till we decide to switch to the new one.
-  data_dir = "android_small"
+  data_dir = "android"
 } else if (is_ios) {
   data_dir = "ios"
 } else if (is_chromeos) {
@@ -1103,6 +1093,29 @@ if (current_cpu == "mips" || current_cpu == "mips64" ||
 }
 data_bundle = "${data_bundle_prefix}.dat"
 
+if (is_android && enable_java_templates) {
+  android_assets("icu_assets") {
+    if (icu_use_data_file) {
+      sources = [ "$root_out_dir/icudtl.dat" ]
+      deps = [ ":icudata" ]
+      disable_compression = true
+    }
+  }
+  # This target is used to copy the small ICU data file
+  # as icudtl.dat inside Android APKs, since they should
+  # not support the full list of locales (to limit install
+  # size). App bundles can use "icu_assets" instead.
+  small_data_bundle = "${data_bundle_prefix}_small.dat"
+  android_assets("icu_small_assets") {
+    if (icu_use_data_file) {
+      renaming_sources = [ "$root_out_dir/$small_data_bundle" ]
+      renaming_destinations = [ "icudtl.dat"  ]
+      deps = [ ":icudata_small" ]
+      disable_compression = true
+    }
+  }
+}
+
 # TODO(GYP) support use_system_icu.
 if (icu_use_data_file) {
   if (is_ios) {
@@ -1115,6 +1128,13 @@ if (icu_use_data_file) {
       sources = [ "$data_dir/$data_bundle" ]
       outputs = [ "$root_out_dir/$data_bundle" ]
       data = [ "$root_out_dir/$data_bundle" ]
+    }
+  }
+  if (is_android) {
+    copy("icudata_small") {
+      sources = [ "android_small/$data_bundle" ]
+      outputs = [ "$root_out_dir/$small_data_bundle" ]
+      data = [ "$root_out_dir/$small_data_bundle" ]
     }
   }
 } else {
