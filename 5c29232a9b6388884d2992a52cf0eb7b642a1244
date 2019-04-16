@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aa66f814_3f1ab0d3",
+        "filename": "BUILD.gn",
+        "patchSetId": 9
+      },
+      "lineNbr": 1051,
+      "author": {
+        "id": 1001352
+      },
+      "writtenOn": "2019-04-16T09:40:14Z",
+      "side": 1,
+      "message": "There is no need for |needs_two_icu_data_files|, we\u0027re definitely going to use several ones on Android.",
+      "revId": "5c29232a9b6388884d2992a52cf0eb7b642a1244",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "90eeaa12_bd9055e8",
+        "filename": "BUILD.gn",
+        "patchSetId": 9
+      },
+      "lineNbr": 1132,
+      "author": {
+        "id": 1001352
+      },
+      "writtenOn": "2019-04-16T09:40:14Z",
+      "side": 1,
+      "message": "This is not sufficient because Chrome will also need an android_assets() target that copies this file under assets/icudtl.dat in the final APK.",
+      "revId": "5c29232a9b6388884d2992a52cf0eb7b642a1244",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
