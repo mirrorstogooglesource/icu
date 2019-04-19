@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "968c48d4_4fad603a",
+        "filename": "source/data/region/ko.txt",
+        "patchSetId": 5
+      },
+      "lineNbr": 310,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-04-19T21:17:34Z",
+      "side": 0,
+      "message": "Did  this line (and other FK lines in other locale) sneak in accidentally when going from 64-1 to 64-2-rc?",
+      "range": {
+        "startLine": 310,
+        "startChar": 8,
+        "endLine": 310,
+        "endChar": 30
+      },
+      "revId": "405322de758d17ef3ad545aed784f089594a1d53",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
