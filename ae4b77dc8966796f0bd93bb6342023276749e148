@@ -93,6 +93,30 @@
       "revId": "ae4b77dc8966796f0bd93bb6342023276749e148",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7b8b2838_9b8bd1ed",
+        "filename": "filters/flutter.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 730,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-05-08T17:07:22Z",
+      "side": 0,
+      "message": "Didn\u0027t know that flutter depends on Blink (on some platforms?).  Then, it should be present in flutter. In that case, some of other items dropped in flutter may have to be added back. That\u0027s for another bug, though.",
+      "parentUuid": "24dad075_541db60a",
+      "range": {
+        "startLine": 726,
+        "startChar": 0,
+        "endLine": 730,
+        "endChar": 5
+      },
+      "revId": "ae4b77dc8966796f0bd93bb6342023276749e148",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
     }
   ]
 }
