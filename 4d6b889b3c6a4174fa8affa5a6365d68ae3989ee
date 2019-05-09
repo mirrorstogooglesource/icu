@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dde66524_3a489fa9",
+        "filename": "source/i18n/timezone.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 570,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-05-09T20:47:28Z",
+      "side": 1,
+      "message": "Should we use new here (as in https://cs.chromium.org/chromium/src/third_party/icu/patches/staticmutex.patch?type\u003dcs\u0026q\u003dU_MUTEX_INITIALIZER\u0026sq\u003dpackage:chromium\u0026g\u003d0\u0026l\u003d377 )?",
+      "range": {
+        "startLine": 570,
+        "startChar": 3,
+        "endLine": 570,
+        "endChar": 42
+      },
+      "revId": "4d6b889b3c6a4174fa8affa5a6365d68ae3989ee",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
