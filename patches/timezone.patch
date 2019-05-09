@@ -1,0 +1,41 @@
+diff --git a/source/i18n/timezone.cpp b/source/i18n/timezone.cpp
+index f129d8b6..256227e1 100644
+--- a/source/i18n/timezone.cpp
++++ b/source/i18n/timezone.cpp
+@@ -565,13 +565,23 @@ static void U_CALLCONV initDefault()
+     DEFAULT_ZONE = default_zone;
+ }
+ 
++
++static UMutex *gMutex() {
++    static UMutex m = U_MUTEX_INITIALIZER;
++    return &m;
++}
++
+ // -------------------------------------
+ 
+ TimeZone* U_EXPORT2
+ TimeZone::createDefault()
+ {
+     umtx_initOnce(gDefaultZoneInitOnce, initDefault);
+-    return (DEFAULT_ZONE != NULL) ? DEFAULT_ZONE->clone() : NULL;
++    if (DEFAULT_ZONE == NULL) return NULL;
++    {
++        Mutex lock(gMutex());
++        return DEFAULT_ZONE->clone();
++    }
+ }
+ 
+ // -------------------------------------
+@@ -583,7 +593,10 @@ TimeZone::adoptDefault(TimeZone* zone)
+     {
+         TimeZone *old = DEFAULT_ZONE;
+         DEFAULT_ZONE = zone;
+-        delete old;
++        {
++            Mutex lock(gMutex());
++            delete old;
++        }
+         ucln_i18n_registerCleanup(UCLN_I18N_TIMEZONE, timeZone_cleanup);
+     }
+ }
