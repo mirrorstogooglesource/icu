@@ -50,6 +50,7 @@ config("icu_config") {
     defines += [ "ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE" ]
   } else {
     defines += [ "ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_STATIC" ]
+    defines += [ "U_ICUDATAENTRY_IN_COMMON" ]
   }
 
   if (is_win) {
@@ -1060,7 +1061,7 @@ component("icuuc") {
 
   public_configs = [ ":icu_config" ]
 
-  if (is_win || icu_use_data_file) {
+  if (icu_use_data_file) {
     sources += [ "source/stubdata/stubdata.cpp" ]
     defines += [ "U_ICUDATAENTRY_IN_COMMON" ]
   }
