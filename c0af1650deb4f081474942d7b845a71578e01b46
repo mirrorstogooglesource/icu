@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "492a4723_975a74a0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000244
+      },
+      "writtenOn": "2019-05-09T18:52:15Z",
+      "side": 1,
+      "message": "I don\u0027t think it\u0027s ICU 63 specific. \n\nPlease, add more details (why and how) to the CL description.",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 52
+      },
+      "revId": "c0af1650deb4f081474942d7b845a71578e01b46",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
