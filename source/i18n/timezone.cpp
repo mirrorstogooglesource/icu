@@ -577,10 +577,9 @@ TimeZone* U_EXPORT2
 TimeZone::createDefault()
 {
     umtx_initOnce(gDefaultZoneInitOnce, initDefault);
-    if (DEFAULT_ZONE == NULL) return NULL;
     {
         Mutex lock(gMutex());
-        return DEFAULT_ZONE->clone();
+        return (DEFAULT_ZONE != NULL) ? DEFAULT_ZONE->clone() : NULL;
     }
 }
 
@@ -591,9 +590,9 @@ TimeZone::adoptDefault(TimeZone* zone)
 {
     if (zone != NULL)
     {
-        TimeZone *old = DEFAULT_ZONE;
         {
             Mutex lock(gMutex());
+            TimeZone *old = DEFAULT_ZONE;
             DEFAULT_ZONE = zone;
             delete old;
         }
