@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d020dc36_7e72a452",
+        "filename": "BUILD.gn",
+        "patchSetId": 14
+      },
+      "lineNbr": 1138,
+      "author": {
+        "id": 1118373
+      },
+      "writtenOn": "2019-05-13T10:46:37Z",
+      "side": 1,
+      "message": "This is no longer true. There is also a CL that\u0027s fixing some details here: https://chromium-review.googlesource.com/c/chromium/deps/icu/+/1599430\n\nThis is being relied on by https://chromium.googlesource.com/v8/node-ci",
+      "range": {
+        "startLine": 1137,
+        "startChar": 6,
+        "endLine": 1138,
+        "endChar": 73
+      },
+      "revId": "8a53882cf2bf2315243d58e3feaa19fc921dc9ef",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
