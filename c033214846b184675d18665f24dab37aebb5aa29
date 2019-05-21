@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1457e66d_8c52d4d6",
+        "filename": "filters/android.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 1914,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2019-05-21T19:37:36Z",
+      "side": 1,
+      "message": "According to Shane * can only used to match the whole item, not substring, otherwise I will use them in timezone rules.",
+      "parentUuid": "1b6b3208_a8621363",
+      "range": {
+        "startLine": 1911,
+        "startChar": 8,
+        "endLine": 1914,
+        "endChar": 33
+      },
+      "revId": "c033214846b184675d18665f24dab37aebb5aa29",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0df2bdf8_c0d9b886",
         "filename": "filters/android.json",
         "patchSetId": 7
@@ -36,6 +60,30 @@
       "writtenOn": "2019-05-21T18:38:58Z",
       "side": 1,
       "message": "Same here;\n\n+/Script*/Hans",
+      "range": {
+        "startLine": 1915,
+        "startChar": 9,
+        "endLine": 1918,
+        "endChar": 33
+      },
+      "revId": "c033214846b184675d18665f24dab37aebb5aa29",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "289c084f_222b2b00",
+        "filename": "filters/android.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 1918,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2019-05-21T19:37:36Z",
+      "side": 1,
+      "message": "won\u0027t work",
+      "parentUuid": "0df2bdf8_c0d9b886",
       "range": {
         "startLine": 1915,
         "startChar": 9,
