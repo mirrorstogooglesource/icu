@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8a267f86_ede8bda8",
+        "filename": "scripts/copy_data.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2019-05-22T19:47:13Z",
+      "side": 1,
+      "message": "sure. I will do it later in the cl dealign with flutter",
+      "parentUuid": "d6359bae_e8e972b4",
+      "revId": "02988b2aecaa381253ca96f68022079e6e5bd170",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b4f06b33_76329e48",
         "filename": "scripts/copy_data.sh",
         "patchSetId": 3
@@ -30,6 +48,30 @@
       "writtenOn": "2019-05-22T18:11:04Z",
       "side": 1,
       "message": "Any reason for not doing the same for flutter?",
+      "range": {
+        "startLine": 71,
+        "startChar": 1,
+        "endLine": 74,
+        "endChar": 39
+      },
+      "revId": "02988b2aecaa381253ca96f68022079e6e5bd170",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "33cbc42c_aa706844",
+        "filename": "scripts/copy_data.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2019-05-22T19:47:13Z",
+      "side": 1,
+      "message": "I did that in https://chromium-review.googlesource.com/c/chromium/deps/icu/+/1554984 since April 5 but you didn\u0027t review it for a long time and it became hard to merge. I will do that in the next cl after this one for cast get in.",
+      "parentUuid": "b4f06b33_76329e48",
       "range": {
         "startLine": 71,
         "startChar": 1,
