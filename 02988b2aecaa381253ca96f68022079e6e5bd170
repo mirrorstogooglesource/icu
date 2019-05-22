@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d6359bae_e8e972b4",
+        "filename": "scripts/copy_data.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-05-22T18:11:04Z",
+      "side": 1,
+      "message": "You can unify copy_{chromeos, android_ios, cast} into one.",
+      "revId": "02988b2aecaa381253ca96f68022079e6e5bd170",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b4f06b33_76329e48",
+        "filename": "scripts/copy_data.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-05-22T18:11:04Z",
+      "side": 1,
+      "message": "Any reason for not doing the same for flutter?",
+      "range": {
+        "startLine": 71,
+        "startChar": 1,
+        "endLine": 74,
+        "endChar": 39
+      },
+      "revId": "02988b2aecaa381253ca96f68022079e6e5bd170",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
