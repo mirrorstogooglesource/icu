@@ -22,6 +22,30 @@
       "revId": "cf4c45bef2b50a58ebe148e9692e5c91aed0a3f1",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c8d950a2_84a4f8c9",
+        "filename": "BUILD.gn",
+        "patchSetId": 3
+      },
+      "lineNbr": 1067,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-05-25T17:59:38Z",
+      "side": 1,
+      "message": "\u003e Missing this define for the icu_use_data_file\u003dtrue case breaks the component build.\n\nYou meant \u0027missing this ... _file\u003dfalse case breaks the component build\u0027, didn\u0027t you? \n\nBecause even without this CL, U_ICUDATA.._IN_COMMON is defined when icu_use_data_file\u003dtrue.",
+      "parentUuid": "e96260c6_1614e839",
+      "range": {
+        "startLine": 1067,
+        "startChar": 16,
+        "endLine": 1067,
+        "endChar": 40
+      },
+      "revId": "cf4c45bef2b50a58ebe148e9692e5c91aed0a3f1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
     }
   ]
 }
