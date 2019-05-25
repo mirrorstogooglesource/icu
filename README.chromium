@@ -297,3 +297,11 @@ D. Local Modifications
     https://github.com/unicode-org/icu/pull/418
     https://github.com/unicode-org/icu/pull/414
     https://github.com/unicode-org/icu/pull/416
+
+14. Timezone breakage patch
+  - patches/timezone.patch
+  - upstream bug:
+    https://unicode-org.atlassian.net/browse/ICU-20595
+  - The following upstream PR was ported to ICU 63.
+    https://github.com/unicode-org/icu/pull/649
+
