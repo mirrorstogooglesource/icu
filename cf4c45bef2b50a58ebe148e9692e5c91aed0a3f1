@@ -46,6 +46,30 @@
       "revId": "cf4c45bef2b50a58ebe148e9692e5c91aed0a3f1",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a1e90a4d_e94e44d5",
+        "filename": "BUILD.gn",
+        "patchSetId": 3
+      },
+      "lineNbr": 1067,
+      "author": {
+        "id": 1118373
+      },
+      "writtenOn": "2019-05-27T07:26:29Z",
+      "side": 1,
+      "message": "Yes. We need the define for both icu_use_data_file\u003dtrue and \u003dfalse. Previously, we only have it for \u003dtrue.",
+      "parentUuid": "c8d950a2_84a4f8c9",
+      "range": {
+        "startLine": 1067,
+        "startChar": 16,
+        "endLine": 1067,
+        "endChar": 40
+      },
+      "revId": "cf4c45bef2b50a58ebe148e9692e5c91aed0a3f1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
     }
   ]
 }
