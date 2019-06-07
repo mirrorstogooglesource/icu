@@ -47,6 +47,8 @@ config_data android
 make -j 120
 $ICUROOT/scripts/copy_data.sh android
 
+exit -1
+
 echo "Build the filtered data for AndroidSmall"
 (cd data && make clean)
 config_data android_small
