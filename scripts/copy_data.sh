@@ -40,16 +40,36 @@ function copy_common {
 }
 
 function copy_data {
+  echo "================================================================="
   echo "Copying icudtl.dat for $1"
+  echo "================================================================="
 
   cp "data/out/tmp/icudt${VERSION}l.dat" "${TOPSRC}/$2/icudtl.dat"
 
   echo "Done with copying pre-built ICU data file for $1."
 }
 
+function make_extra {
+  echo "================================================================="
+  echo "Making icudtl_extra.dat for $1"
+  echo "================================================================="
+
+  # back up the copy of icudt${VERSION}l.dat
+
+  LD_LIBRARY_PATH=lib/ bin/icupkg -r \
+    "${TOPSRC}/filters/android-extra-removed-resources.txt" \
+    "data/out/tmp/icudt${VERSION}l.dat"  "data/out/tmp/icudtl_extra.dat"
+
+  cp "data/out/tmp/icudtl_extra.dat" "${TOPSRC}/android_small/icudtl_extra.dat"
+
+  echo "Done with making ICU data file icudtl_extra.dat for $1."
+}
 
 BACKUP_DIR="dataout/$1"
 function backup_outdir {
+  echo "================================================================="
+  echo "Backup Directory for $1"
+  echo "================================================================="
   rm -rf "${BACKUP_DIR}"
   mkdir "${BACKUP_DIR}"
   find "data/out" | cpio -pdmv "${BACKUP_DIR}"
@@ -66,6 +86,7 @@ case "$1" in
     ;;
   "android")
     copy_data Android $1
+    make_extra AndroidExtra $1
     backup_outdir $1
     ;;
   "android_small")
