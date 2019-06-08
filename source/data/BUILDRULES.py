@@ -43,42 +43,42 @@ def generate(config, glob, common_vars):
         "locales",
         None,
         "icu-locale-deprecates.xml",
-        True,
+        False,
         [])
 
     requests += generate_tree(config, glob, common_vars,
         "curr",
         "curr",
         "icu-locale-deprecates.xml",
-        True,
+        False,
         [])
 
     requests += generate_tree(config, glob, common_vars,
         "lang",
         "lang",
         "icu-locale-deprecates.xml",
-        True,
+        False,
         [])
 
     requests += generate_tree(config, glob, common_vars,
         "region",
         "region",
         "icu-locale-deprecates.xml",
-        True,
+        False,
         [])
 
     requests += generate_tree(config, glob, common_vars,
         "zone",
         "zone",
         "icu-locale-deprecates.xml",
-        True,
+        False,
         [])
 
     requests += generate_tree(config, glob, common_vars,
         "unit",
         "unit",
         "icu-locale-deprecates.xml",
-        True,
+        False,
         [])
 
     requests += generate_tree(config, glob, common_vars,
