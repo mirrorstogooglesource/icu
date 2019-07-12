@@ -972,6 +972,10 @@
         "-/*/compound/*/dnam",
         "+/*/concentr",
         "-/*/concentr/*/dnam",
+        "+/*/consumption/mile-per-gallon",
+        "-/*/consumption/mile-per-gallon/dnam",
+        "+/*/consumption/liter-per-kilometer",
+        "-/*/consumption/liter-per-kilometer/dnam",
 //      "+/*/consumption",
 //      "+/*/coordinate",
         "+/*/digital",
@@ -1063,9 +1067,17 @@
         "+/*/temperature/fahrenheit",
         "-/*/temperature/fahrenheit/dnam",
         "+/*/temperature/kelvin",
-        "-/*/temperature/kelvin/dnam"
+        "-/*/temperature/kelvin/dnam",
 //      "+/*/torque",
 //      "+/*/volume",
+        "+/*/volume/liter",
+        "-/*/volume/liter/dnam",
+        "+/*/volume/milliliter",
+        "-/*/volume/milliliter/dnam",
+        "+/*/volume/gallon",
+        "-/*/volume/gallon/dnam",
+        "+/*/volume/fluid-ounce",
+        "-/*/volume/fluid-ounce/dnam"
       ]
     },
 // Based on
