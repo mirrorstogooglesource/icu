@@ -984,7 +984,8 @@
         "-/*/compound/*/dnam",
         "+/*/concentr",
         "-/*/concentr/*/dnam",
-//      "+/*/consumption",
+        "+/*/consumption",
+        "-/*/consumption/*/dnam",
 //      "+/*/coordinate",
         "+/*/digital",
         "-/*/digital/*/dnam",
@@ -1041,7 +1042,8 @@
 //      "+/*/length/picometer",
 //      "+/*/length/point",
 //      "+/*/length/solar-radius",
-//      "+/*/length/yard",
+        "+/*/length/yard",
+        "-/*/length/yard/dnam",
 //      "+/*/mass/carat",
 //      "+/*/mass/dalton",
 //      "+/*/mass/earth-mass",
@@ -1075,9 +1077,17 @@
         "+/*/temperature/fahrenheit",
         "-/*/temperature/fahrenheit/dnam",
         "+/*/temperature/kelvin",
-        "-/*/temperature/kelvin/dnam"
+        "-/*/temperature/kelvin/dnam",
 //      "+/*/torque",
 //      "+/*/volume",
+        "+/*/volume/liter",
+        "-/*/volume/liter/dnam",
+        "+/*/volume/milliliter",
+        "-/*/volume/milliliter/dnam",
+        "+/*/volume/gallon",
+        "-/*/volume/gallon/dnam",
+        "+/*/volume/fluid-ounce",
+        "-/*/volume/fluid-ounce/dnam"
       ]
     },
 // Based on
