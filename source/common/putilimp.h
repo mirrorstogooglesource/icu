@@ -223,10 +223,10 @@ typedef size_t uintptr_t;
  */
 #ifdef U_HAVE_CLANG_ATOMICS
     /* Use the predefined value. */
-#elif __has_builtin(__c11_atomic_load) && \
-    __has_builtin(__c11_atomic_store) && \
-    __has_builtin(__c11_atomic_fetch_add) && \
-    __has_builtin(__c11_atomic_fetch_sub)
+#elif ICU_HAS_BUILTIN(__c11_atomic_load) &&    \
+    ICU_HAS_BUILTIN(__c11_atomic_store) &&     \
+    ICU_HAS_BUILTIN(__c11_atomic_fetch_add) && \
+    ICU_HAS_BUILTIN(__c11_atomic_fetch_sub)
 #    define U_HAVE_CLANG_ATOMICS 1
 #else
 #    define U_HAVE_CLANG_ATOMICS 0
