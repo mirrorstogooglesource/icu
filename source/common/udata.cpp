@@ -433,7 +433,6 @@ private:
 };
 
 /**
- * @param iter    The iterator to be initialized. Its current state does not matter.
  * @param inPath  The full pathname to be iterated over.  If NULL, defaults to U_ICUDATA_NAME 
  * @param pkg     Package which is being searched for, ex "icudt28l".  Will ignore leaf directories such as /icudt28l 
  * @param item    Item to be searched for.  Can include full path, such as /a/b/foo.dat 
@@ -493,11 +492,11 @@ UDataPathIterator::UDataPathIterator(const char *inPath, const char *pkg,
 
 #ifdef UDATA_DEBUG
     fprintf(stderr, "%p: init %s -> [path=%s], [base=%s], [suff=%s], [itempath=%s], [nextpath=%s], [checklast4=%s]\n",
-            iter,
+            this,
             item,
             path,
             basename,
-            suffix,
+            suffix.data(),
             itemPath.data(),
             nextPath,
             checkLastFour?"TRUE":"false");
@@ -574,7 +573,7 @@ const char *UDataPathIterator::next(UErrorCode *pErrorCode)
            uprv_strlen(pathBasename)==(basenameLen+4)) { /* base+suffix = full len */
 
 #ifdef UDATA_DEBUG
-            fprintf(stderr, "Have %s file on the path: %s\n", suffix, pathBuffer.data());
+            fprintf(stderr, "Have %s file on the path: %s\n", suffix.data(), pathBuffer.data());
 #endif
             /* do nothing */
         }
