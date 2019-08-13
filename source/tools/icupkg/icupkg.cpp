@@ -503,7 +503,7 @@ main(int argc, char *argv[]) {
     /* check dependencies between items */
     if(!pkg->checkDependencies()) {
         /* some dependencies are not fulfilled */
-        return U_MISSING_RESOURCE_ERROR;
+//        return U_MISSING_RESOURCE_ERROR;
     }
 
     /* write the output .dat package if there are any modifications */
