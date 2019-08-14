@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4dbd1e5c_ff1b8c62",
+        "filename": "source/tools/icupkg/icupkg.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 505,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-08-14T19:37:02Z",
+      "side": 1,
+      "message": "Removing if-clause entirely seems to be going too far. Something to consider:\n\n1. add a buildtool option \n2. limit the application of this change to \u0027root.res\u0027 (?)",
+      "range": {
+        "startLine": 504,
+        "startChar": 4,
+        "endLine": 505,
+        "endChar": 29
+      },
+      "revId": "955d8ff5502f47b54ba35db5390da52598d0bf4a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
