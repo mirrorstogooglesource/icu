@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0cb628fc_34c5c303",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 11
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-08-15T23:34:34Z",
+      "side": 1,
+      "message": "To work around the limitation of ICU\u0027s handling of multiple data packages, the following is done for android_small/icudatl_extra.dat.\n\na. Do not use pool bundles. usePoolBundle is set to false in android_extra.json. \nb. Filter out res_index.res files with \"icupkg -r\"",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 70
+      },
+      "revId": "cc9a3a31a897dd2a19b3508feeab3deb4528e728",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f6cfaac2_57ea2322",
+        "filename": "filters/android_extra.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-08-15T23:34:34Z",
+      "side": 1,
+      "message": "Let\u0027s list ta locale variants as well. \n\nIIRC, there\u0027s a way to automatically include locale variants by listing languages only. Can you use that? \n\nIf not, at least list ta_IN, ta_SG, ta_LK.",
+      "range": {
+        "startLine": 9,
+        "startChar": 2,
+        "endLine": 11,
+        "endChar": 64
+      },
+      "revId": "cc9a3a31a897dd2a19b3508feeab3deb4528e728",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "782b259b_d85b44fc",
+        "filename": "filters/android_extra.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-08-15T23:34:34Z",
+      "side": 1,
+      "message": "Why do we need this and corresponding filter for translit/?  We don\u0027t need any locale-specific transliterators. So, android-extra won\u0027t need translit/ tree at all, will it?\n\nWell, their size is tiny. So, it won\u0027t matter size-wise,",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 6
+      },
+      "revId": "cc9a3a31a897dd2a19b3508feeab3deb4528e728",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
