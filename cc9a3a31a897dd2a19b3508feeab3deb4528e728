@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "756d596f_840999a9",
+        "filename": "filters/android_extra.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2019-08-16T00:41:49Z",
+      "side": 1,
+      "message": "we are depending on the res_index.res built by the android_small.json \nso adding ta_IN to this filter itself or automatic expansion won\u0027t work because\nwe won\u0027t have ta_IN in the res_index.res and any ta_IN resources will simply be ignored\nby the ECMA402 locale lookup code.",
+      "parentUuid": "f6cfaac2_57ea2322",
+      "range": {
+        "startLine": 9,
+        "startChar": 2,
+        "endLine": 11,
+        "endChar": 64
+      },
+      "revId": "cc9a3a31a897dd2a19b3508feeab3deb4528e728",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "782b259b_d85b44fc",
         "filename": "filters/android_extra.json",
         "patchSetId": 11
