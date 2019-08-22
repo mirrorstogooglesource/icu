@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2f4e4789_24c9c5b2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2019-08-22T19:12:37Z",
+      "side": 1,
+      "message": "I mean \"CherryPick\"",
+      "parentUuid": "25f51c00_8b8d39a7",
+      "revId": "e71d24848691b27cef0d2ffc6b183d1d862ca6e4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "ede8aa25_48be6b17",
         "filename": "patches/localematcher.patch",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2019-08-22T18:39:55Z",
       "side": 1,
       "message": "Why is this patch too short? Gerrit UI limitation?",
+      "revId": "e71d24848691b27cef0d2ffc6b183d1d862ca6e4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "097509e7_97127978",
+        "filename": "patches/localematcher.patch",
+        "patchSetId": 1
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2019-08-22T19:12:37Z",
+      "side": 1,
+      "message": "\u003e Why is this patch too short? Gerrit UI limitation?\n\ngood catch for my mistake of generating diff",
+      "parentUuid": "ede8aa25_48be6b17",
       "revId": "e71d24848691b27cef0d2ffc6b183d1d862ca6e4",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
