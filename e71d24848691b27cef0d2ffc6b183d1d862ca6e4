@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "25f51c00_8b8d39a7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1249238
+      },
+      "writtenOn": "2019-08-22T18:39:55Z",
+      "side": 1,
+      "message": "\"CP\"? Do you mean \"C++\"?",
+      "revId": "e71d24848691b27cef0d2ffc6b183d1d862ca6e4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ede8aa25_48be6b17",
+        "filename": "patches/localematcher.patch",
+        "patchSetId": 1
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1249238
+      },
+      "writtenOn": "2019-08-22T18:39:55Z",
+      "side": 1,
+      "message": "Why is this patch too short? Gerrit UI limitation?",
+      "revId": "e71d24848691b27cef0d2ffc6b183d1d862ca6e4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
