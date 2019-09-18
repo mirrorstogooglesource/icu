@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fd503c3d_60bef3e3",
+        "filename": "BUILD.gn",
+        "patchSetId": 1
+      },
+      "lineNbr": 1107,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-09-18T08:23:40Z",
+      "side": 0,
+      "message": "Briefly, I wondered how Linux distros build Chromium with system ICU before I realized that https://cs.chromium.org/chromium/src/build/linux/unbundle/icu.gn?sq\u003dpackage:chromium\u0026g\u003d0 is for them.",
+      "revId": "faee8bc70570192d82d2978a71e2a615788597d1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
