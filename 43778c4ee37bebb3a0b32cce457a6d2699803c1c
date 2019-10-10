@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e0bb0f78_7e5883eb",
+        "filename": "fuzzers/icu_appendable_fuzzer.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1312725
+      },
+      "writtenOn": "2019-10-10T22:35:07Z",
+      "side": 1,
+      "message": "Why build this vector instead of using data and size directly?",
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
