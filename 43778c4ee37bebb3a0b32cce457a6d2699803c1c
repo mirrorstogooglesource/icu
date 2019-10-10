@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "48af5d65_931c4957",
+        "filename": "fuzzers/BUILD.gn",
+        "patchSetId": 2
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2019-10-10T22:38:29Z",
+      "side": 1,
+      "message": "this is discouraged, could you please add a check in the beginning of LLVMFuzzerTestOneInput instead? see https://chromium.googlesource.com/chromium/src/+/master/testing/libfuzzer/getting_started.md#common-tricks",
+      "range": {
+        "startLine": 104,
+        "startChar": 2,
+        "endLine": 104,
+        "endChar": 41
+      },
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "eb0d8638_abba7332",
+        "filename": "fuzzers/icu_appendable_fuzzer.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2019-10-10T22:38:29Z",
+      "side": 1,
+      "message": "can you please make it a static local variable inside LLVMFuzzerTestOneInput, e.g.:\n\n  static IcuEnvironment env;\n\nit\u0027s not a big deal in most of the cases, but that way it will 100% work with other fuzzing engines, while the existing version might cause issues under certain circumstances",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 43
+      },
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "e0bb0f78_7e5883eb",
         "filename": "fuzzers/icu_appendable_fuzzer.cc",
         "patchSetId": 2
@@ -13,6 +59,75 @@
       "writtenOn": "2019-10-10T22:35:07Z",
       "side": 1,
       "message": "Why build this vector instead of using data and size directly?",
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9369e7ff_e1e20cbd",
+        "filename": "fuzzers/icu_appendable_fuzzer.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2019-10-10T22:38:29Z",
+      "side": 1,
+      "message": "I\u0027d replace this with something like:\n\n  const char16_t* data_ptr \u003d reinterpret_cast\u003cconst char16_t*\u003e(data);\n  std::vector\u003cchar16_t\u003e appendChrs(data_ptr, data_ptr + size * sizeof(uint8_t) / sizeof(char16_t));\n\ncan also multiply the size by `rng()`, if that\u0027s important",
+      "range": {
+        "startLine": 32,
+        "startChar": 6,
+        "endLine": 35,
+        "endChar": 69
+      },
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7aaec7e7_7c8bffc2",
+        "filename": "fuzzers/icu_appendable_fuzzer.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2019-10-10T22:38:29Z",
+      "side": 1,
+      "message": "doesn\u0027t this return uint64_t value?",
+      "range": {
+        "startLine": 44,
+        "startChar": 35,
+        "endLine": 44,
+        "endChar": 40
+      },
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "571e1eb1_0c44e825",
+        "filename": "fuzzers/icu_appendable_fuzzer.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2019-10-10T22:38:29Z",
+      "side": 1,
+      "message": "is this some magic constant? would it make sense to leave a comment or maybe there is an existing constant / macro with this value?",
+      "range": {
+        "startLine": 49,
+        "startChar": 39,
+        "endLine": 49,
+        "endChar": 45
+      },
       "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
