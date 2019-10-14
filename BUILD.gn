@@ -37,7 +37,7 @@ config("icu_config") {
     "USE_CHROMIUM_ICU=1",
   ]
 
-  if (!is_component_build) {
+  if (!is_component_build && (!is_chromeos || is_nacl)) {
     defines += [ "U_STATIC_IMPLEMENTATION" ]
   }
 
@@ -57,6 +57,12 @@ config("icu_config") {
   } else {
     defines += [ "UCHAR_TYPE=uint16_t" ]
   }
+}
+
+if (is_component_build || (is_chromeos && !is_nacl)) {
+  icu_target_type = "shared_library"
+} else {
+  icu_target_type = "static_library"
 }
 
 # Config used only by ICU code.
@@ -108,9 +114,10 @@ config("icu_code") {
       "-Wno-deprecated-declarations",
     ]
   }
+
 }
 
-component("icui18n") {
+target(icu_target_type, "icui18n") {
   # find  source/i18n -maxdepth 1  ! -type d  | egrep  '\.(c|cpp|h)$' |\
   # sort | sed 's/^\(.*\)$/    "\1",/'
   sources = [
@@ -635,7 +642,7 @@ component("icui18n") {
   }
 }
 
-component("icuuc") {
+target(icu_target_type, "icuuc") {
   # find  source/common -maxdepth 1  ! -type d  | egrep  '\.(c|cpp|h)$' |\
   # sort | sed 's/^\(.*\)$/    "\1",/'
   sources = [
