@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "842019f7_9a59ab4e",
+        "filename": "fuzzers/BUILD.gn",
+        "patchSetId": 2
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1315263
+      },
+      "writtenOn": "2019-10-14T19:25:47Z",
+      "side": 1,
+      "message": "I just copied this from the other targets -- I think we can just drop the length requirements unless we have a reason to do otherwise.",
+      "parentUuid": "48af5d65_931c4957",
+      "range": {
+        "startLine": 104,
+        "startChar": 2,
+        "endLine": 104,
+        "endChar": 41
+      },
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eb0d8638_abba7332",
         "filename": "fuzzers/icu_appendable_fuzzer.cc",
         "patchSetId": 2
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "e1289145_cba0e6da",
+        "filename": "fuzzers/icu_appendable_fuzzer.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1315263
+      },
+      "writtenOn": "2019-10-14T19:25:47Z",
+      "side": 1,
+      "message": "Done -- FYI I copied from https://cs.chromium.org/chromium/src/third_party/icu/fuzzers/icu_break_iterator_fuzzer.cc -- I\u0027m thinking that should be updated too?",
+      "parentUuid": "eb0d8638_abba7332",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 43
+      },
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e0bb0f78_7e5883eb",
         "filename": "fuzzers/icu_appendable_fuzzer.cc",
         "patchSetId": 2
@@ -62,6 +110,24 @@
       "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9b654e2e_63d08d09",
+        "filename": "fuzzers/icu_appendable_fuzzer.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1315263
+      },
+      "writtenOn": "2019-10-14T19:25:47Z",
+      "side": 1,
+      "message": "I got the vector idea from the bottom section of https://chromium.googlesource.com/chromium/src/+/master/testing/libfuzzer/getting_started.md#bytes-taken-from-data_size -- the issue of missing some use-out-of-bounds coverage occurs if your pass a subslice of the data array, instead of the whole array, or a copy of the array.",
+      "parentUuid": "e0bb0f78_7e5883eb",
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     },
     {
       "key": {
@@ -88,6 +154,30 @@
     },
     {
       "key": {
+        "uuid": "bb78655a_5b922f88",
+        "filename": "fuzzers/icu_appendable_fuzzer.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1315263
+      },
+      "writtenOn": "2019-10-14T19:25:47Z",
+      "side": 1,
+      "message": "I\u0027m concerned your suggestion is undefined behavior (UB) due to possible violation of C++ alignment and or aliasing rules (reinterpret_cast to type of stricter alignment requirements, passing that pointer to vector constructor). \n\nI\u0027m not certain (I always get confused by the rules...), and willing to be convinced otherwise -- I know that memcpy() is one way to avoid aliasing problems. \n\nI think the pattern of creating a random, arbitrary-size 16-bit array could be pretty common in a Unicode / char encoding library like ICU, so perhaps the right thing to do is extract this as a function next to the common third_party/icu/fuzzers/fuzzer_utils.h next to UnicodeStringFromUtf32(), which has similar logic. This should hopefully make the code more readable.",
+      "parentUuid": "9369e7ff_e1e20cbd",
+      "range": {
+        "startLine": 32,
+        "startChar": 6,
+        "endLine": 35,
+        "endChar": 69
+      },
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7aaec7e7_7c8bffc2",
         "filename": "fuzzers/icu_appendable_fuzzer.cc",
         "patchSetId": 2
@@ -111,6 +201,30 @@
     },
     {
       "key": {
+        "uuid": "2ab89d31_4d05d629",
+        "filename": "fuzzers/icu_appendable_fuzzer.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1315263
+      },
+      "writtenOn": "2019-10-14T19:25:47Z",
+      "side": 1,
+      "message": "It does -- I\u0027m narrowing to int32_t since that\u0027s the type getAppendBuffer accepts for the arguments where I use the min_capacity. The narrowing is fine since kScratchBufSize is much smaller than the max int32_t.",
+      "parentUuid": "7aaec7e7_7c8bffc2",
+      "range": {
+        "startLine": 44,
+        "startChar": 35,
+        "endLine": 44,
+        "endChar": 40
+      },
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "571e1eb1_0c44e825",
         "filename": "fuzzers/icu_appendable_fuzzer.cc",
         "patchSetId": 2
@@ -131,6 +245,30 @@
       "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "988f25ea_08e1d2b3",
+        "filename": "fuzzers/icu_appendable_fuzzer.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1315263
+      },
+      "writtenOn": "2019-10-14T19:25:47Z",
+      "side": 1,
+      "message": "Nope, it\u0027s not a magic constant -- added a comment.",
+      "parentUuid": "571e1eb1_0c44e825",
+      "range": {
+        "startLine": 49,
+        "startChar": 39,
+        "endLine": 49,
+        "endChar": 45
+      },
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     }
   ]
 }
