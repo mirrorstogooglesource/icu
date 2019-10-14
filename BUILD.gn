@@ -37,7 +37,7 @@ config("icu_config") {
     "USE_CHROMIUM_ICU=1",
   ]
 
-  if (!is_component_build) {
+  if (!is_component_build && (!is_chromeos || is_nacl)) {
     defines += [ "U_STATIC_IMPLEMENTATION" ]
   }
 
@@ -110,7 +110,13 @@ config("icu_code") {
   }
 }
 
-component("icui18n") {
+if (is_component_build || (is_chromeos && !is_nacl)) {
+  icu_target_type = "shared_library"
+} else {
+  icu_target_type = "static_library"
+}
+
+target(icu_target_type, "icui18n") {
   # find  source/i18n -maxdepth 1  ! -type d  | egrep  '\.(c|cpp|h)$' |\
   # sort | sed 's/^\(.*\)$/    "\1",/'
   sources = [
@@ -635,7 +641,7 @@ component("icui18n") {
   }
 }
 
-component("icuuc") {
+target(icu_target_type, "icuuc") {
   # find  source/common -maxdepth 1  ! -type d  | egrep  '\.(c|cpp|h)$' |\
   # sort | sed 's/^\(.*\)$/    "\1",/'
   sources = [
@@ -1056,6 +1062,7 @@ component("icuuc") {
     "//build/config/compiler:rtti",
     "//build/config/compiler:no_chromium_code",
   ]
+  
   configs += [ ":icu_code" ]
 
   public_configs = [ ":icu_config" ]
