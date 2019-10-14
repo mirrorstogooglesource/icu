@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "6ee1c157_b357adfc",
+        "filename": "fuzzers/BUILD.gn",
+        "patchSetId": 2
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2019-10-14T20:04:31Z",
+      "side": 1,
+      "message": "SG, if you don\u0027t need to enforce the limit",
+      "parentUuid": "842019f7_9a59ab4e",
+      "range": {
+        "startLine": 104,
+        "startChar": 2,
+        "endLine": 104,
+        "endChar": 41
+      },
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eb0d8638_abba7332",
         "filename": "fuzzers/icu_appendable_fuzzer.cc",
         "patchSetId": 2
@@ -93,6 +117,30 @@
       "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b8add8bd_f165691e",
+        "filename": "fuzzers/icu_appendable_fuzzer.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2019-10-14T20:04:31Z",
+      "side": 1,
+      "message": "Sorry, by \"local\" I meant declared inside of `LLVMFuzzerTestOneInput`.\n\nThe fuzz target you\u0027ve mentioned should be updated too indeed. I\u0027d appreciate if you could do it, but feel free to skip as well, as it\u0027s not related to your CL.",
+      "parentUuid": "e1289145_cba0e6da",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 43
+      },
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
     },
     {
       "key": {
@@ -178,6 +226,30 @@
     },
     {
       "key": {
+        "uuid": "f2a3b814_4dd00baf",
+        "filename": "fuzzers/icu_appendable_fuzzer.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2019-10-14T20:04:31Z",
+      "side": 1,
+      "message": "There are other fuzz targets converting the pointer that way, so I\u0027m not super concerned: https://cs.chromium.org/search/?q\u003dfile:fuzz+reinterpret_cast.*16.*data\u0026sq\u003dpackage:chromium\u0026type\u003dcs\n\nWhat\u0027s bothering me is `memcpy` into `.data()`, I\u0027d prefer either `std::copy` or using the constructor instead, but I\u0027m not aware of any rules in this regard, so consider this as a question of preferences :) Either way is fine.",
+      "parentUuid": "bb78655a_5b922f88",
+      "range": {
+        "startLine": 32,
+        "startChar": 6,
+        "endLine": 35,
+        "endChar": 69
+      },
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7aaec7e7_7c8bffc2",
         "filename": "fuzzers/icu_appendable_fuzzer.cc",
         "patchSetId": 2
@@ -225,6 +297,30 @@
     },
     {
       "key": {
+        "uuid": "e2191bd0_4573f763",
+        "filename": "fuzzers/icu_appendable_fuzzer.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2019-10-14T20:04:31Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "2ab89d31_4d05d629",
+      "range": {
+        "startLine": 44,
+        "startChar": 35,
+        "endLine": 44,
+        "endChar": 40
+      },
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "571e1eb1_0c44e825",
         "filename": "fuzzers/icu_appendable_fuzzer.cc",
         "patchSetId": 2
@@ -260,6 +356,30 @@
       "side": 1,
       "message": "Nope, it\u0027s not a magic constant -- added a comment.",
       "parentUuid": "571e1eb1_0c44e825",
+      "range": {
+        "startLine": 49,
+        "startChar": 39,
+        "endLine": 49,
+        "endChar": 45
+      },
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff059da9_309992e9",
+        "filename": "fuzzers/icu_appendable_fuzzer.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2019-10-14T20:04:31Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "988f25ea_08e1d2b3",
       "range": {
         "startLine": 49,
         "startChar": 39,
