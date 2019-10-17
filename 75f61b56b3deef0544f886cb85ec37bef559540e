@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8357fc1e_854c8874",
+        "filename": "README.chromium",
+        "patchSetId": 3
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-10-17T01:02:20Z",
+      "side": 1,
+      "message": "These files are not necessary/around any more, aren\u0027t they?",
+      "range": {
+        "startLine": 139,
+        "startChar": 0,
+        "endLine": 146,
+        "endChar": 64
+      },
+      "revId": "75f61b56b3deef0544f886cb85ec37bef559540e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "00655b96_c9601d59",
+        "filename": "README.chromium",
+        "patchSetId": 3
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-10-17T01:02:20Z",
+      "side": 1,
+      "message": "don\u0027t need this, either, right?",
+      "range": {
+        "startLine": 160,
+        "startChar": 3,
+        "endLine": 162,
+        "endChar": 0
+      },
+      "revId": "75f61b56b3deef0544f886cb85ec37bef559540e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "83d2adaa_1feb06cc",
+        "filename": "patches/locale_google.patch",
+        "patchSetId": 3
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-10-17T01:02:20Z",
+      "side": 1,
+      "message": "Where is the \u0027source\u0027 for this trie?  I hope it does not contain Google-specific changes like normalizing he to iw.",
+      "range": {
+        "startLine": 105,
+        "startChar": 0,
+        "endLine": 105,
+        "endChar": 44
+      },
+      "revId": "75f61b56b3deef0544f886cb85ec37bef559540e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
