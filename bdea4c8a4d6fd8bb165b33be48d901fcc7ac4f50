@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b69603f0_ef1b0008",
+        "filename": "source/data/curr/en_AU.txt",
+        "patchSetId": 5
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-10-19T01:10:18Z",
+      "side": 1,
+      "message": "Do you know why these were added to en-AU?  \n\nen-AU does not need them because en has them all (identical) and en is the grandparent of en-AU (en-AU \u003d\u003e en-001 \u003d\u003e en). \n\nWell, the actual data size increase wouldn\u0027t be much because strings like \u0027Chilean Peso\u0027 would be shared thanks to the string pooling (pool bundle), but the size increase is not zero.",
+      "range": {
+        "startLine": 90,
+        "startChar": 0,
+        "endLine": 101,
+        "endChar": 9
+      },
+      "revId": "bdea4c8a4d6fd8bb165b33be48d901fcc7ac4f50",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ba38b38_acc4c3df",
+        "filename": "source/data/curr/es_419.txt",
+        "patchSetId": 5
+      },
+      "lineNbr": 332,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-10-19T01:10:18Z",
+      "side": 0,
+      "message": "es-419 dropped all these entries (that are presumably identical to those in es). That\u0027s exactly the opposite of the change in en-AU.",
+      "range": {
+        "startLine": 313,
+        "startChar": 1,
+        "endLine": 332,
+        "endChar": 9
+      },
+      "revId": "5005010d694e16571b8dfbf07d70817841f80a69",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
