@@ -168,6 +168,30 @@
     },
     {
       "key": {
+        "uuid": "b514f48a_494aa20a",
+        "filename": "fuzzers/icu_appendable_fuzzer.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2019-10-21T22:43:46Z",
+      "side": 1,
+      "message": "It\u0027s not a style issue in case of fuzzers. We run the same fuzz targets with two fuzzing engines: libFuzzer and AFL. AFL uses fork() and in some cases this global state doesn\u0027t get initialized. I don\u0027t remember the details, metzman@ was investigating and fixing that issue (he\u0027s OOO right now), but that was a pretty rare case, and we should be good with this version as well.",
+      "parentUuid": "252636cd_cff7747f",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 43
+      },
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e0bb0f78_7e5883eb",
         "filename": "fuzzers/icu_appendable_fuzzer.cc",
         "patchSetId": 2
@@ -286,6 +310,30 @@
       "side": 1,
       "message": "Yeah, but a future compiler release could change the behavior -- not to mention fuzz tests run with UBsan (undefined behavior sanitizer), which might trip on this behavior at some point.",
       "parentUuid": "f2a3b814_4dd00baf",
+      "range": {
+        "startLine": 32,
+        "startChar": 6,
+        "endLine": 35,
+        "endChar": 69
+      },
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d4078d8b_ee2397e2",
+        "filename": "fuzzers/icu_appendable_fuzzer.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2019-10-21T22:43:46Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "db528693_260ea8a0",
       "range": {
         "startLine": 32,
         "startChar": 6,

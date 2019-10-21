@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a50c1c43_b733c9da",
+        "filename": "fuzzers/icu_appendable_fuzzer.cc",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1149974
+      },
+      "writtenOn": "2019-10-21T22:43:46Z",
+      "side": 1,
+      "message": "IMO it would make sense to wrap this into a loop:\n\n  while (provider.remaining_bytes()) { switch() }\n\nOtherwise we\u0027ll just discard the rest of the data after executing the switch block. If you like this idea, may also consider replacing `ConsumeRemainingBytes` on line #44 with either:\n\nA) ConsumeBytes(ConsumeIntegralInRange())\nB) ConsumeRandomLengthString(some max size here)",
+      "range": {
+        "startLine": 35,
+        "startChar": 2,
+        "endLine": 35,
+        "endChar": 49
+      },
+      "revId": "d2a4c6c662cf1ef2b7a3d1d96ace6abee1f56162",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
