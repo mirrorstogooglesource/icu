@@ -144,6 +144,30 @@
     },
     {
       "key": {
+        "uuid": "252636cd_cff7747f",
+        "filename": "fuzzers/icu_appendable_fuzzer.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1315263
+      },
+      "writtenOn": "2019-10-21T21:24:51Z",
+      "side": 1,
+      "message": "Looking at this again -- isn\u0027t your suggestion a style guide violation?\nhttps://google.github.io/styleguide/cppguide.html#Static_and_Global_Variables\n\nFrom the guide:\n\nvoid bar() {\n  // bad: non-trivial destructor\n  static std::map\u003cint, int\u003e kData \u003d {{1, 0}, {2, 0}, {3, 0}};\n}\n\nWhat are the issues with this style? \n\n// outside function / class definitions\nstatic IcuEnvironment* env \u003d new IcuEnvironment();\n\nIt seems to be the predominant form in Chromium: \nhttps://cs.chromium.org/search/?q\u003dIcuEnvironment+f:fuzz\u0026p\u003d1\u0026sq\u003dpackage:chromium\u0026type\u003dcs",
+      "parentUuid": "b8add8bd_f165691e",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 43
+      },
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e0bb0f78_7e5883eb",
         "filename": "fuzzers/icu_appendable_fuzzer.cc",
         "patchSetId": 2
@@ -238,6 +262,30 @@
       "side": 1,
       "message": "There are other fuzz targets converting the pointer that way, so I\u0027m not super concerned: https://cs.chromium.org/search/?q\u003dfile:fuzz+reinterpret_cast.*16.*data\u0026sq\u003dpackage:chromium\u0026type\u003dcs\n\nWhat\u0027s bothering me is `memcpy` into `.data()`, I\u0027d prefer either `std::copy` or using the constructor instead, but I\u0027m not aware of any rules in this regard, so consider this as a question of preferences :) Either way is fine.",
       "parentUuid": "bb78655a_5b922f88",
+      "range": {
+        "startLine": 32,
+        "startChar": 6,
+        "endLine": 35,
+        "endChar": 69
+      },
+      "revId": "43778c4ee37bebb3a0b32cce457a6d2699803c1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "db528693_260ea8a0",
+        "filename": "fuzzers/icu_appendable_fuzzer.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1315263
+      },
+      "writtenOn": "2019-10-21T21:24:51Z",
+      "side": 1,
+      "message": "Yeah, but a future compiler release could change the behavior -- not to mention fuzz tests run with UBsan (undefined behavior sanitizer), which might trip on this behavior at some point.",
+      "parentUuid": "f2a3b814_4dd00baf",
       "range": {
         "startLine": 32,
         "startChar": 6,
