@@ -405,6 +405,11 @@
         "zh", "zh_Hant"
       ]
     },
+    "misc": {
+      "blacklist": [
+        "langInfo"
+      ]
+    },
 // Based on the ICU63 version of
 // https://cs.chromium.org/chromium/src/third_party/icu/source/data/lang/reslocal.mk?rcl=797b7c
     "lang_tree": {
@@ -1554,6 +1559,29 @@
       "rules": [
         "-/UCARules",
 	"-/collations/*/Sequence"
+      ]
+    },
+    {
+      "categories": [
+        "misc"
+      ],
+      "files": {
+        "whitelist": [
+          "supplementalData"
+	]
+      },
+      "rules": [
+        "-/*",
+        "+/calendarData",
+        "+/calendarPreferenceData",
+        "+/cldrVersion",
+        "+/codeMappings",
+        "+/idValidity",
+        "+/measurementData",
+        "+/territoryContainment",
+        "+/timeData",
+        "+/weekData",
+        "+/weekData%variant"
       ]
     },
 // Based on filter_unit_data
