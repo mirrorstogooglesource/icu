@@ -449,8 +449,9 @@
     },
     "misc": {
       "blacklist": [
-	"currencyNumericCodes",
-	"windowsZones"
+        "currencyNumericCodes",
+        "langInfo",
+        "windowsZones"
       ]
     },
 // Based on the ICU63 version of
