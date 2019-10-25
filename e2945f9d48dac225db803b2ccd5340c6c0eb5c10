@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cbe3b587_0c4bbfe2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-10-25T17:28:43Z",
+      "side": 1,
+      "message": "How about changing the summary line to  \"Reduce the data size by filtering supplemental data\" ?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 40
+      },
+      "revId": "e2945f9d48dac225db803b2ccd5340c6c0eb5c10",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
