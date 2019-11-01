@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "43c62e6f_d38f9c01",
+        "filename": "source/common/uloc_tag.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 1114,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2019-11-01T06:41:11Z",
+      "side": 1,
+      "message": "I thought ICU wants to use \u0027nullptr\u0027 in new C++ code.  Markus may have overlooked it.",
+      "range": {
+        "startLine": 1114,
+        "startChar": 49,
+        "endLine": 1114,
+        "endChar": 53
+      },
+      "revId": "6ef25fb65081809fc5d7913e7bc34ff1f5345d9b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
