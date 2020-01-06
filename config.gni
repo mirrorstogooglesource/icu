@@ -6,4 +6,7 @@ declare_args() {
   # Tells icu to load an external data file rather than rely on the icudata
   # being linked directly into the binary.
   icu_use_data_file = true
+
+  # Compile icu into a standalone shared library.
+  icu_compile_to_shared_library = false
 }
