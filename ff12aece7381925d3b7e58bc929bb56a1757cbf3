@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "146f2334_90289e13",
+        "filename": "BUILD.gn",
+        "patchSetId": 3
+      },
+      "lineNbr": 648,
+      "author": {
+        "id": 1001629
+      },
+      "writtenOn": "2020-02-06T01:24:12Z",
+      "side": 1,
+      "message": "\"opt/google/chrome\" looks wrong for:\n- unbranded builds\n- windows, mac, ...\n\nYou probably only want this if icu_compile_to_shared_library?\n\n(But why do you need this at all? Add a comment in the gn file that answers the question.)",
+      "revId": "ff12aece7381925d3b7e58bc929bb56a1757cbf3",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d165e356_11af6fd1",
+        "filename": "BUILD.gn",
+        "patchSetId": 3
+      },
+      "lineNbr": 1100,
+      "author": {
+        "id": 1001629
+      },
+      "writtenOn": "2020-02-06T01:24:12Z",
+      "side": 1,
+      "message": "same",
+      "revId": "ff12aece7381925d3b7e58bc929bb56a1757cbf3",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
