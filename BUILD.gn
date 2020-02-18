@@ -621,6 +621,19 @@ target(icu_target_type, "icui18n") {
     # I18N_HDR_END
   ]
 
+  # This should be kept synced with the definition of template component in
+  # "//src/build/config/BUILDCONFIG.gn".
+  # This is a temporary hack because we are exploring compiling icu into a
+  # shared library in Chrome OS.
+  if (is_component_build) {
+    configs = default_shared_library_configs
+    if (is_android) {
+      configs -= [ "//build/config/android:hide_all_but_jni_onload" ]
+    }
+  } else {
+    configs = default_compiler_configs
+  }
+
   defines = [ "U_I18N_IMPLEMENTATION" ]
   deps = [
     ":icuuc",
@@ -1066,6 +1079,20 @@ target(icu_target_type, "icuuc") {
     "source/common/unicode/uversion.h",
     # COMMON_HDR_END
   ]
+
+  # This should be kept synced with the definition of template component in
+  # "//src/build/config/BUILDCONFIG.gn".
+  # This is a temporary hack because we are exploring compiling icu into a
+  # shared library in Chrome OS.
+  if (is_component_build) {
+    configs = default_shared_library_configs
+    if (is_android) {
+      configs -= [ "//build/config/android:hide_all_but_jni_onload" ]
+    }
+  } else {
+    configs = default_compiler_configs
+  }
+
   defines = [ "U_COMMON_IMPLEMENTATION" ]
   deps = [
     ":icudata",
