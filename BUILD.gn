@@ -635,6 +635,12 @@ component("icui18n") {
     # .so when doing component builds, so we need to give this a different name.
     output_name = "icui18n_cr"
   }
+
+  # Make icu into a standalone static library. Currently This is only useful on
+  # Chrome OS.
+  if (icu_disable_thin_archive) {
+    configs -= [ "//build/config/compiler:thin_archive" ]
+  }
 }
 
 component("icuuc") {
@@ -1084,6 +1090,12 @@ component("icuuc") {
     # Fuchsia puts its own libicuuc.so in /system/lib where we need to put our
     # .so when doing component builds, so we need to give this a different name.
     output_name = "icuuc_cr"
+  }
+
+  # Make icu into a standalone static library. Currently This is only useful on
+  # Chrome OS.
+  if (icu_disable_thin_archive) {
+    configs -= [ "//build/config/compiler:thin_archive" ]
   }
 }
 
