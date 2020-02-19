@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cfe69216_5acbc308",
+        "filename": "BUILD.gn",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001629
+      },
+      "writtenOn": "2020-02-19T12:42:15Z",
+      "side": 1,
+      "message": "add `assert(!icu_disable_thin_archive || !is_component_build, \"icu_disable_thin_archive only works in static library builds\")` somewhere up here.",
+      "revId": "eb37a4987a52ec5949481fc47dfa25bd95996022",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "659bd9b0_faa4bfbe",
+        "filename": "BUILD.gn",
+        "patchSetId": 1
+      },
+      "lineNbr": 642,
+      "author": {
+        "id": 1001629
+      },
+      "writtenOn": "2020-02-19T12:42:15Z",
+      "side": 1,
+      "message": "Instead of having two blocks like this, add `complete_static_lib \u003d true` up here and remove the change below.\n\n(See `gn help complete_static_lib` and see https://cs.chromium.org/chromium/src/build/config/compiler/BUILD.gn?type\u003dcs\u0026q\u003dthin_archive+file:%5C.gn\u0026sq\u003dpackage:chromium\u0026g\u003d0\u0026l\u003d1740 )",
+      "revId": "eb37a4987a52ec5949481fc47dfa25bd95996022",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
