@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4bc3c916_0197f066",
+        "filename": "BUILD.gn",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1356022
+      },
+      "writtenOn": "2020-02-19T23:06:33Z",
+      "side": 1,
+      "message": "Good point! I also thought we should add some checkers but did not know how to add it. Thanks!",
+      "parentUuid": "cfe69216_5acbc308",
+      "revId": "eb37a4987a52ec5949481fc47dfa25bd95996022",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "659bd9b0_faa4bfbe",
         "filename": "BUILD.gn",
         "patchSetId": 1
@@ -33,6 +51,24 @@
       "revId": "eb37a4987a52ec5949481fc47dfa25bd95996022",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "85e1d61c_e73e2947",
+        "filename": "BUILD.gn",
+        "patchSetId": 1
+      },
+      "lineNbr": 642,
+      "author": {
+        "id": 1356022
+      },
+      "writtenOn": "2020-02-19T23:06:33Z",
+      "side": 1,
+      "message": "Thank you! I never thought we can do it this way! Updated.",
+      "parentUuid": "659bd9b0_faa4bfbe",
+      "revId": "eb37a4987a52ec5949481fc47dfa25bd95996022",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     }
   ]
 }
