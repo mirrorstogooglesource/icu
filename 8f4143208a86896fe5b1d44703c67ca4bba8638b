@@ -22,6 +22,30 @@
       "revId": "8f4143208a86896fe5b1d44703c67ca4bba8638b",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ed57b8a7_048f12df",
+        "filename": "README.chromium",
+        "patchSetId": 2
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2020-03-10T20:03:53Z",
+      "side": 1,
+      "message": "If they\u0027re not, please say so in the CL description / README.chromium (marking this patch as Chromium only).",
+      "parentUuid": "0aac01af_09fd9d9e",
+      "range": {
+        "startLine": 262,
+        "startChar": 3,
+        "endLine": 264,
+        "endChar": 0
+      },
+      "revId": "8f4143208a86896fe5b1d44703c67ca4bba8638b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
     }
   ]
 }
