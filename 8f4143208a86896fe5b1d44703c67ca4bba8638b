@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0aac01af_09fd9d9e",
+        "filename": "README.chromium",
+        "patchSetId": 2
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2020-03-10T20:00:12Z",
+      "side": 1,
+      "message": "Is there an upstream bug/PR?  Or, the upstream is not interested in this patch?",
+      "range": {
+        "startLine": 262,
+        "startChar": 3,
+        "endLine": 264,
+        "endChar": 0
+      },
+      "revId": "8f4143208a86896fe5b1d44703c67ca4bba8638b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
