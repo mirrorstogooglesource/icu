@@ -298,9 +298,6 @@ zh{
         ZZ{"未知地区"}
     }
     Countries%short{
-        GB{"英国"}
-        UN{"联合国"}
-        US{"美国"}
     }
     Countries%variant{
         CD{"刚果民主共和国"}
@@ -308,5 +305,5 @@ zh{
         CI{"象牙海岸"}
         CZ{"捷克共和国"}
     }
-    Version{"36"}
+    Version{"37"}
 }
