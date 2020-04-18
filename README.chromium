@@ -216,13 +216,6 @@ D. Local Modifications
   - upstream bug:
     https://unicode-org.atlassian.net/browse/ICU-20774
 
-9. Fix the variant in locale is not sorted
-  - patches/sort_variant.patch
-  - upstream bug:
-    https://unicode-org.atlassian.net/browse/ICU-20478
-  - upstream PR:
-    https://github.com/unicode-org/icu/pull/836
-
 10. Fix SEGV_MAPERR in UnicodeString::doAppend
   - patches/unistr_segmap.patch
   - upstream bug:
