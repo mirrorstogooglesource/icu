@@ -206,6 +206,10 @@ D. Local Modifications
     upstream bugs : https://unicode-org.atlassian.net/browse/ICU-8043
                     https://unicode-org.atlassian.net/browse/ICU-5701
 
+  - patches/formatted_string_builder.patch
+    upstream bugs: https://unicode-org.atlassian.net/browse/ICU-21081
+    * #if 0 out constexpr hacks which does not work with C++-14
+
 5. ISO-2022-JP encoding (fromUnicode) change per WHATWG encoding spec.
   - patches/iso2022jp.patch
   - upstream bug:
