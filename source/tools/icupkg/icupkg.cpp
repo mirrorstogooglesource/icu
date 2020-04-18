@@ -501,8 +501,10 @@ main(int argc, char *argv[]) {
     }
 
     /* check dependencies between items */
-    // Still check the checkDependencies to output warning but not produce error
-    pkg->checkDependencies();
+    if(!pkg->checkDependencies()) {
+        /* some dependencies are not fulfilled */
+        return U_MISSING_RESOURCE_ERROR;
+    }
 
     /* write the output .dat package if there are any modifications */
     if(isModified) {
