@@ -206,10 +206,6 @@ D. Local Modifications
     upstream bugs : https://unicode-org.atlassian.net/browse/ICU-8043
                     https://unicode-org.atlassian.net/browse/ICU-5701
 
-  - patches/extra-semi.patch
-    - upstream bugs: https://unicode-org.atlassian.net/browse/ICU-20872
-    - upstream PR: https://github.com/unicode-org/icu/pull/888
-
 5. ISO-2022-JP encoding (fromUnicode) change per WHATWG encoding spec.
   - patches/iso2022jp.patch
   - upstream bug:
