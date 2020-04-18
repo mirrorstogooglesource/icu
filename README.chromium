@@ -220,13 +220,6 @@ D. Local Modifications
   - upstream bug:
     https://unicode-org.atlassian.net/browse/ICU-20774
 
-7. Fix DateInterval::createInstance
-  - patches/DateIntervalInfo.patch
-  - upstream bug:
-    https://unicode-org.atlassian.net/browse/ICU-20706
-  - upstream PR:
-    https://github.com/unicode-org/icu/pull/876
-
 8. Fix uninitialized array.
   - patches/uninitialized_uloc.patch
   - upstream bug:
