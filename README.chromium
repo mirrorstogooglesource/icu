@@ -216,17 +216,6 @@ D. Local Modifications
   - upstream bug:
     https://unicode-org.atlassian.net/browse/ICU-20774
 
-11. Fix fractional second support.
-  - patches/fracsecond.patch
-  - upstream bug:
-    https://unicode-org.atlassian.net/browse/ICU-20739
-    https://unicode-org.atlassian.net/browse/ICU-20738
-    https://unicode-org.atlassian.net/browse/ICU-20967
-  - upstream PR:
-    https://github.com/unicode-org/icu/pull/977
-    https://github.com/unicode-org/icu/pull/914
-    https://github.com/unicode-org/icu/pull/978
-
 12. Enable tracing of file but not resource, only for Chromium
     to reduce performance impact/risk.
   - patches/restrace.patch
