@@ -216,13 +216,6 @@ D. Local Modifications
   - upstream bug:
     https://unicode-org.atlassian.net/browse/ICU-20774
 
-10. Fix SEGV_MAPERR in UnicodeString::doAppend
-  - patches/unistr_segmap.patch
-  - upstream bug:
-    https://unicode-org.atlassian.net/browse/ICU-20958
-  - upstream PR:
-    https://github.com/unicode-org/icu/pull/971
-
 11. Fix fractional second support.
   - patches/fracsecond.patch
   - upstream bug:
