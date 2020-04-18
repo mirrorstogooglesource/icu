@@ -298,9 +298,6 @@ vi{
         ZZ{"Vùng không xác định"}
     }
     Countries%short{
-        GB{"Vương quốc Anh"}
-        UN{"Liên hiệp quốc"}
-        US{"Hoa Kỳ"}
     }
     Countries%variant{
         CD{"Cộng hòa Dân chủ Congo"}
@@ -310,5 +307,5 @@ vi{
         SZ{"Eswatini"}
         TL{"Đông Timor"}
     }
-    Version{"36"}
+    Version{"37"}
 }
