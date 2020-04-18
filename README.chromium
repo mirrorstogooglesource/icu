@@ -216,13 +216,6 @@ D. Local Modifications
   - upstream bug:
     https://unicode-org.atlassian.net/browse/ICU-20774
 
-8. Fix uninitialized array.
-  - patches/uninitialized_uloc.patch
-  - upstream bug:
-    https://unicode-org.atlassian.net/browse/ICU-20884
-  - upstream PR:
-    https://github.com/unicode-org/icu/pull/902
-
 9. Fix the variant in locale is not sorted
   - patches/sort_variant.patch
   - upstream bug:
