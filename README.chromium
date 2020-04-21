@@ -206,9 +206,17 @@ D. Local Modifications
     upstream bugs : https://unicode-org.atlassian.net/browse/ICU-8043
                     https://unicode-org.atlassian.net/browse/ICU-5701
 
+  - patches/data_symb.patch :
+      Put ICU_DATA_ENTRY_POINT(icudtXX_dat) in common when we use
+      the icu data file or icudt.dll
+
   - patches/formatted_string_builder.patch
     upstream bugs: https://unicode-org.atlassian.net/browse/ICU-21081
     * #if 0 out constexpr hacks which does not work with C++-14
+
+  - patches/doubleconvert-hasattribute.patch
+    * upstream bug: https://unicode-org.atlassian.net/browse/ICU-21085
+    * upstream PR: https://github.com/google/double-conversion/pull/131
 
 5. ISO-2022-JP encoding (fromUnicode) change per WHATWG encoding spec.
   - patches/iso2022jp.patch
