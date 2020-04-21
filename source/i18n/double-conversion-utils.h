@@ -66,20 +66,25 @@ inline void abort_noreturn() { abort(); }
 #endif
 #endif
 
+// Not all compilers support __has_attribute and combining a check for both
+// ifdef and __has_attribute on the same preprocessor line isn't portable.
+#ifdef __has_attribute
+#   define DOUBLE_CONVERSION_HAS_ATTRIBUTE(x) __has_attribute(x)
+#else
+#   define DOUBLE_CONVERSION_HAS_ATTRIBUTE(x) 0
+#endif
+
 #ifndef DOUBLE_CONVERSION_UNUSED
-#ifdef __GNUC__
+#if DOUBLE_CONVERSION_HAS_ATTRIBUTE(unused)
 #define DOUBLE_CONVERSION_UNUSED __attribute__((unused))
 #else
 #define DOUBLE_CONVERSION_UNUSED
 #endif
 #endif
 
-#if defined(__clang__) && defined(__has_attribute)
-#if __has_attribute(uninitialized)
+#if DOUBLE_CONVERSION_HAS_ATTRIBUTE(uninitialized)
 #define DOUBLE_CONVERSION_STACK_UNINITIALIZED __attribute__((uninitialized))
-#endif
-#endif
-#if !defined(DOUBLE_CONVERSION_STACK_UNINITIALIZED)
+#else
 #define DOUBLE_CONVERSION_STACK_UNINITIALIZED
 #endif
 
