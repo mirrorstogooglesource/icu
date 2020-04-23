@@ -18649,7 +18649,7 @@ supplementalData:table(nofallback){
                 "nn",
                 "no",
                 "20",
-                "1",
+                "0",
             }
             {
                 "nso",
@@ -35520,6 +35520,24 @@ supplementalData:table(nofallback){
         WS{
             allowed{
                 "h",
+                "H",
+            }
+            preferred{"h"}
+        }
+        XA{
+            allowed{
+                "h",
+                "hb",
+                "H",
+                "hB",
+            }
+            preferred{"h"}
+        }
+        XB{
+            allowed{
+                "h",
+                "hB",
+                "hb",
                 "H",
             }
             preferred{"h"}

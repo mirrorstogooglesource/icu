@@ -1,15 +1,15 @@
 Name: icu
 URL: https://github.com/unicode-org/icu
-Version: 67.rc
+Version: 67.1
 License: MIT
 Security Critical: yes
 
 Description:
-This directory contains the source code of ICU 67.rc for C/C++.
+This directory contains the source code of ICU 67.1 for C/C++.
 
 A. How to update ICU
 
-1. Run "scripts/update.sh <version>" (e.g. 67-rc).
+1. Run "scripts/update.sh <version>" (e.g. 67-1).
    This will download ICU from the upstream git repository.
    It does preserve Chrome-specific build files and
    converter files. (see section C)
@@ -213,10 +213,6 @@ D. Local Modifications
   - patches/formatted_string_builder.patch
     upstream bugs: https://unicode-org.atlassian.net/browse/ICU-21081
     * #if 0 out constexpr hacks which does not work with C++-14
-
-  - patches/doubleconvert-hasattribute.patch
-    * upstream bug: https://unicode-org.atlassian.net/browse/ICU-21085
-    * upstream PR: https://github.com/google/double-conversion/pull/131
 
 5. ISO-2022-JP encoding (fromUnicode) change per WHATWG encoding spec.
   - patches/iso2022jp.patch
