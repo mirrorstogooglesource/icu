@@ -297,8 +297,6 @@ ko{
         ZW{"짐바브웨"}
         ZZ{"알려지지 않은 지역"}
     }
-    Countries%short{
-    }
     Countries%variant{
         CD{"콩고민주공화국"}
         CG{"콩고 공화국"}

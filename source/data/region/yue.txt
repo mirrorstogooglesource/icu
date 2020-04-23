@@ -297,8 +297,6 @@ yue{
         ZW{"辛巴威"}
         ZZ{"未知區域"}
     }
-    Countries%short{
-    }
     Countries%variant{
         CD{"剛果民主共和國"}
         CG{"剛果共和國"}

@@ -298,8 +298,6 @@ yue_Hans{
         ZW{"辛巴威"}
         ZZ{"未知区域"}
     }
-    Countries%short{
-    }
     Countries%variant{
         CD{"刚果民主共和国"}
         CG{"刚果共和国"}
