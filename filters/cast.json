@@ -163,7 +163,7 @@
         "line_normal",
         "line_normal_cj",
         "sent",
-        "title",
+//      "title",  No code use title
         "word"
       ]
     },
@@ -534,13 +534,8 @@
     "stringprep": {
       "filterType": "exclude"
     },
-// Based on the ICU63 version of
-// https://cs.chromium.org/chromium/src/third_party/icu/source/data/translit/trnslocal.mk?rcl=797b7c
     "translit": {
-      "whitelist": [
-// Need to explicitly add "root"
-	"root"
-      ]
+      "filterType": "exclude"
     },
 // Based on the ICU63 version of
 // https://cs.chromium.org/chromium/src/third_party/icu/source/data/zone/reslocal.mk?rcl=797b7c
@@ -1137,19 +1132,6 @@
       "rules": [
         "-/UCARules",
 	"-/collations/*/Sequence"
-      ]
-    },
-// Based on
-// https://cs.chromium.org/chromium/src/third_party/icu/source/data/translit/root_subset.txt?rcl=797b7c
-    {
-      "categories": [
-        "translit"
-      ],
-      "rules": [
-        "-/*",
-// Need to leave an empty RuleBasedTransliteratorIDs
-	"+/RuleBasedTransliteratorIDs",
-        "-/RuleBasedTransliteratorIDs/*"
       ]
     },
 // # Remove exemplar cities in timezone data.
