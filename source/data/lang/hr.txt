@@ -161,7 +161,6 @@ hr{
         eu{"baskijski"}
         ewo{"ewondo"}
         fa{"perzijski"}
-        fa_AF{"dari"}
         fan{"fang"}
         fat{"fanti"}
         ff{"fula"}
@@ -563,8 +562,6 @@ hr{
         zh_Hant{"mandarinski kineski (tradicionalni)"}
     }
     Languages%menu{
-        ars{"arapski, najdi"}
-        ckb{"kurdski, sorani"}
         yue{"kineski, kantonski"}
         zh{"kineski, mandarinski"}
     }
@@ -577,7 +574,6 @@ hr{
     Scripts{
         Afak{"afaka pismo"}
         Arab{"arapsko pismo"}
-        Aran{"nastaliq"}
         Armi{"aramejsko pismo"}
         Armn{"armensko pismo"}
         Avst{"avestansko pismo"}
@@ -687,7 +683,6 @@ hr{
         Phnx{"feničko pismo"}
         Plrd{"pollard fonetsko pismo"}
         Prti{"pisani parthian"}
-        Qaag{"zawgyi"}
         Rjng{"rejang pismo"}
         Roro{"rongorongo pismo"}
         Runr{"runsko pismo"}
@@ -928,7 +923,7 @@ hr{
         VALENCIA{"valencijski"}
         WADEGILE{"Wade-Giles romanizacija"}
     }
-    Version{"37"}
+    Version{"36"}
     characterLabelPattern{
         all{"{0} – sve"}
         category-list{"{0}: {1}"}

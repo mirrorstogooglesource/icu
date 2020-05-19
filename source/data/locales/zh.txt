@@ -705,7 +705,7 @@ zh{
             }
         }
     }
-    Version{"37"}
+    Version{"36"}
     calendar{
         buddhist{
             DateTimePatterns{

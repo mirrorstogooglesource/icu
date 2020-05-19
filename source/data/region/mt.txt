@@ -299,5 +299,5 @@ mt{
         CZ{"Ir-Repubblika Ċeka"}
         TL{"Timor tal-Lvant"}
     }
-    Version{"37"}
+    Version{"36"}
 }

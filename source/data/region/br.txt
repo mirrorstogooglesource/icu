@@ -309,5 +309,5 @@ br{
         SZ{"Swaziland"}
         TL{"Timor ar Reter"}
     }
-    Version{"37"}
+    Version{"36"}
 }

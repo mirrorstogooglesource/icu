@@ -298,6 +298,7 @@ ro{
         ZZ{"Regiune necunoscută"}
     }
     Countries%short{
+        GB{"Regatul Unit"}
         UN{"ONU"}
         US{"S.U.A."}
     }
@@ -309,5 +310,5 @@ ro{
         SZ{"Swaziland"}
         TL{"Timorul de Est"}
     }
-    Version{"37"}
+    Version{"36"}
 }

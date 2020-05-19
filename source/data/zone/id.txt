@@ -1,7 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html#License
 id{
-    Version{"37"}
+    Version{"36"}
     zoneStrings{
         "Africa:Abidjan"{
             ec{"Abidjan"}
@@ -1757,9 +1757,7 @@ id{
             ls{"Waktu Niue"}
         }
         "meta:Norfolk"{
-            ld{"Waktu Musim Panas Kepulauan Norfolk"}
-            lg{"Waktu Kepulauan Norfolk"}
-            ls{"Waktu Standar Kepulauan Norfolk"}
+            ls{"Waktu Kepulauan Norfolk"}
         }
         "meta:Noronha"{
             ld{"Waktu Musim Panas Fernando de Noronha"}

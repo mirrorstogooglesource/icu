@@ -8,5 +8,5 @@ es_HN{
             "lempira hondureño",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

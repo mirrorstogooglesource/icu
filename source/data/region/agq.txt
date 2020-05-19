@@ -226,5 +226,5 @@ agq{
         ZM{"Zambìa"}
         ZW{"Zìmbagbɛ̀"}
     }
-    Version{"37"}
+    Version{"36"}
 }

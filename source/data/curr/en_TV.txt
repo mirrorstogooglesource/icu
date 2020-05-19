@@ -8,5 +8,5 @@ en_TV{
             "Australian Dollar",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

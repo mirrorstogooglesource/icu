@@ -260,7 +260,7 @@ yue_Hans{
         native{"hanidec"}
         traditional{"hans"}
     }
-    Version{"37"}
+    Version{"36"}
     calendar{
         buddhist{
             DateTimePatterns{

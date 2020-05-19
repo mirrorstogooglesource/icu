@@ -23,5 +23,5 @@ haw{
         RU{"Lūkia"}
         US{"ʻAmelika Hui Pū ʻIa"}
     }
-    Version{"37"}
+    Version{"36"}
 }

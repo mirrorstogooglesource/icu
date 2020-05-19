@@ -310,5 +310,5 @@ tr{
         SZ{"Svaziland"}
         TL{"Doğu Timor"}
     }
-    Version{"37"}
+    Version{"36"}
 }

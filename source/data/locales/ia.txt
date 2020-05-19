@@ -193,7 +193,7 @@ ia{
         }
         minimumGroupingDigits{"2"}
     }
-    Version{"37"}
+    Version{"36"}
     calendar{
         generic{
             DateTimePatterns{

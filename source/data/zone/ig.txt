@@ -1,7 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html#License
 ig{
-    Version{"37"}
+    Version{"36"}
     zoneStrings{
         "America:Araguaina"{
             ec{"Araguaina"}
@@ -433,9 +433,7 @@ ig{
             ls{"Oge Niue"}
         }
         "meta:Norfolk"{
-            ld{"Oge Okpomọkụ Norfolk Island"}
-            lg{"Oge Norfolk Island"}
-            ls{"Oge Izugbe Norfolk Island"}
+            ls{"Oge Norfolk Island"}
         }
         "meta:Noronha"{
             ld{"Oge Okpomọkụ Fernando de Noronha"}

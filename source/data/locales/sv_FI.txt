@@ -8,7 +8,7 @@ sv_FI{
             }
         }
     }
-    Version{"37"}
+    Version{"36"}
     calendar{
         gregorian{
             availableFormats{

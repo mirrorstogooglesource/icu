@@ -1,7 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html#License
 af{
-    Version{"37"}
+    Version{"36"}
     zoneStrings{
         "Africa:Abidjan"{
             ec{"Abidjan"}
@@ -1726,9 +1726,7 @@ af{
             ls{"Niue-tyd"}
         }
         "meta:Norfolk"{
-            ld{"Norfolkeiland-dagligtyd"}
-            lg{"Norfolkeiland-tyd"}
-            ls{"Norfolkeiland-standaardtyd"}
+            ls{"Norfolkeiland-tyd"}
         }
         "meta:Noronha"{
             ld{"Fernando de Noronha-somertyd"}

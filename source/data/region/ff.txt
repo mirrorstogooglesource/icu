@@ -226,5 +226,5 @@ ff{
         ZM{"Sammbi"}
         ZW{"Simbaabuwe"}
     }
-    Version{"37"}
+    Version{"36"}
 }

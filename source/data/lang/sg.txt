@@ -48,5 +48,5 @@ sg{
         zh{"Shinuäa"}
         zu{"Zûlu"}
     }
-    Version{"37"}
+    Version{"36"}
 }

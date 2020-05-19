@@ -4,5 +4,5 @@ ar_YE{
     NumberElements{
         default{"arab"}
     }
-    Version{"37"}
+    Version{"36"}
 }

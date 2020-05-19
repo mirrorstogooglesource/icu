@@ -906,6 +906,9 @@ jv{
         MNT{
             other{"Tugrik Mongol"}
         }
+        MOP{
+            other{"MOP"}
+        }
         MRO{
             other{"Ouguiya Mauritania (1973 - 2017)"}
         }
@@ -1114,5 +1117,5 @@ jv{
     CurrencyUnitPatterns{
         other{"{0} {1}"}
     }
-    Version{"37"}
+    Version{"36"}
 }

@@ -165,7 +165,6 @@ am{
         eu{"ባስክኛ"}
         ewo{"ኤዎንዶ"}
         fa{"ፐርሺያኛ"}
-        fa_AF{"ዳሪኛ"}
         ff{"ፉላህ"}
         fi{"ፊኒሽ"}
         fil{"ፊሊፒንኛ"}
@@ -546,7 +545,6 @@ am{
         Thaa{"ታና"}
         Thai{"ታይ"}
         Tibt{"ቲቤታን"}
-        Zmth{"የሂሳብ መግለጫ"}
         Zsye{"ኢሞጂ"}
         Zsym{"ምልክቶች"}
         Zxxx{"ያልተጻፈ"}
@@ -698,7 +696,7 @@ am{
             vaii{"የቫይ አሃዞች"}
         }
     }
-    Version{"37"}
+    Version{"36"}
     characterLabelPattern{
         all{"{0} — ሁሉም"}
         category-list{"{0}: {1}"}

@@ -1,7 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html#License
 nl{
-    Version{"37"}
+    Version{"36"}
     zoneStrings{
         "Africa:Abidjan"{
             ec{"Abidjan"}
@@ -1789,9 +1789,7 @@ nl{
             ls{"Niuese tijd"}
         }
         "meta:Norfolk"{
-            ld{"Norfolkeilandse zomertijd"}
-            lg{"Norfolkeilandse tijd"}
-            ls{"Norfolkeilandse standaardtijd"}
+            ls{"Norfolkeilandse tijd"}
         }
         "meta:Noronha"{
             ld{"Fernando de Noronha-zomertijd"}

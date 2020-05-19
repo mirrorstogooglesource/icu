@@ -226,5 +226,5 @@ eo{
         ZM{"Zambio"}
         ZW{"Zimbabvo"}
     }
-    Version{"37"}
+    Version{"36"}
 }

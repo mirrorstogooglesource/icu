@@ -7,5 +7,5 @@ ms_SG{
             "Dolar Singapura",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

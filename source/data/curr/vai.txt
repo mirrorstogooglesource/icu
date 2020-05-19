@@ -228,5 +228,5 @@ vai{
             other{"ꔖꗼꔷ ꖩꔪ"}
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

@@ -13,7 +13,7 @@ ceb{
         015{"Northern Africa"}
         017{"Middle Africa"}
         018{"Southern Africa"}
-        019{"Mga Amerika"}
+        019{"Americas"}
         021{"Northern America"}
         029{"Caribbean"}
         030{"Eastern Asia"}
@@ -113,9 +113,9 @@ ceb{
         FK{"Falkland Islands (Islas Malvinas)"}
         FM{"Micronesia"}
         FO{"Faroe Islands"}
-        FR{"Pransya"}
+        FR{"Pransiya"}
         GA{"Gabon"}
-        GB{"United Kingdom"}
+        GB{"Hiniusang Gingharian"}
         GD{"Grenada"}
         GE{"Georgia"}
         GF{"French Guiana"}
@@ -153,7 +153,7 @@ ceb{
         JE{"Jersey"}
         JM{"Jamaica"}
         JO{"Jordan"}
-        JP{"Japan"}
+        JP{"Hapon"}
         KE{"Kenya"}
         KG{"Kyrgyzstan"}
         KH{"Cambodia"}
@@ -295,11 +295,10 @@ ceb{
         ZA{"South Africa"}
         ZM{"Zambia"}
         ZW{"Zimbabwe"}
-        ZZ{"Wala Mailhing Rehiyon"}
+        ZZ{"Wala-mailhing Rehiyon"}
     }
     Countries%short{
         GB{"UK"}
-        US{"US"}
     }
     Countries%variant{
         CD{"Congo (DRC)"}
@@ -309,5 +308,5 @@ ceb{
         SZ{"Swaziland"}
         TL{"East Timor"}
     }
-    Version{"37"}
+    Version{"36"}
 }

@@ -14,7 +14,6 @@
 
 #if !UCONFIG_NO_FORMATTING
 
-#include "unicode/ucal.h"
 #include "unicode/umisc.h"
 #include "unicode/localpointer.h"
 #include "unicode/uformattedvalue.h"
@@ -83,12 +82,14 @@
 struct UDateIntervalFormat;
 typedef struct UDateIntervalFormat UDateIntervalFormat;  /**< C typedef for struct UDateIntervalFormat. @stable ICU 4.8 */
 
+#ifndef U_HIDE_DRAFT_API
 struct UFormattedDateInterval;
 /**
  * Opaque struct to contain the results of a UDateIntervalFormat operation.
- * @stable ICU 64
+ * @draft ICU 64
  */
 typedef struct UFormattedDateInterval UFormattedDateInterval;
+#endif /* U_HIDE_DRAFT_API */
 
 /**
  * Open a new UDateIntervalFormat object using the predefined rules for a
@@ -131,6 +132,8 @@ udtitvfmt_open(const char*  locale,
 U_STABLE void U_EXPORT2
 udtitvfmt_close(UDateIntervalFormat *formatter);
 
+
+#ifndef U_HIDE_DRAFT_API
 /**
  * Creates an object to hold the result of a UDateIntervalFormat
  * operation. The object can be used repeatedly; it is cleared whenever
@@ -138,7 +141,7 @@ udtitvfmt_close(UDateIntervalFormat *formatter);
  *
  * @param ec Set if an error occurs.
  * @return A pointer needing ownership.
- * @stable ICU 64
+ * @draft ICU 64
  */
 U_CAPI UFormattedDateInterval* U_EXPORT2
 udtitvfmt_openResult(UErrorCode* ec);
@@ -163,7 +166,7 @@ udtitvfmt_openResult(UErrorCode* ec);
  * @param uresult The object containing the formatted string.
  * @param ec Set if an error occurs.
  * @return A UFormattedValue owned by the input object.
- * @stable ICU 64
+ * @draft ICU 64
  */
 U_CAPI const UFormattedValue* U_EXPORT2
 udtitvfmt_resultAsValue(const UFormattedDateInterval* uresult, UErrorCode* ec);
@@ -172,10 +175,11 @@ udtitvfmt_resultAsValue(const UFormattedDateInterval* uresult, UErrorCode* ec);
  * Releases the UFormattedDateInterval created by udtitvfmt_openResult().
  *
  * @param uresult The object to release.
- * @stable ICU 64
+ * @draft ICU 64
  */
 U_CAPI void U_EXPORT2
 udtitvfmt_closeResult(UFormattedDateInterval* uresult);
+#endif /* U_HIDE_DRAFT_API */
 
 
 #if U_SHOW_CPLUSPLUS_API
@@ -193,6 +197,7 @@ U_NAMESPACE_BEGIN
  */
 U_DEFINE_LOCAL_OPEN_POINTER(LocalUDateIntervalFormatPointer, UDateIntervalFormat, udtitvfmt_close);
 
+#ifndef U_HIDE_DRAFT_API
 /**
  * \class LocalUFormattedDateIntervalPointer
  * "Smart pointer" class, closes a UFormattedDateInterval via udtitvfmt_close().
@@ -200,9 +205,10 @@ U_DEFINE_LOCAL_OPEN_POINTER(LocalUDateIntervalFormatPointer, UDateIntervalFormat
  *
  * @see LocalPointerBase
  * @see LocalPointer
- * @stable ICU 64
+ * @draft ICU 64
  */
 U_DEFINE_LOCAL_OPEN_POINTER(LocalUFormattedDateIntervalPointer, UFormattedDateInterval, udtitvfmt_closeResult);
+#endif /* U_HIDE_DRAFT_API */
 
 U_NAMESPACE_END
 
@@ -254,48 +260,23 @@ udtitvfmt_format(const UDateIntervalFormat* formatter,
  * UDateIntervalFormat object.
  * @param formatter
  *            The UDateIntervalFormat object specifying the format conventions.
+ * @param result
+ *            The UFormattedDateInterval to contain the result of the
+ *            formatting operation.
  * @param fromDate
  *            The starting point of the range.
  * @param toDate
  *            The ending point of the range.
- * @param result
- *            The UFormattedDateInterval to contain the result of the
- *            formatting operation.
  * @param status
  *            A pointer to a UErrorCode to receive any errors.
- * @draft ICU 67
+ * @draft ICU 64
  */
 U_DRAFT void U_EXPORT2
 udtitvfmt_formatToResult(
                 const UDateIntervalFormat* formatter,
+                UFormattedDateInterval* result,
                 UDate           fromDate,
                 UDate           toDate,
-                UFormattedDateInterval* result,
-                UErrorCode*     status);
-
-/**
- * Formats a date/time range using the conventions established for the
- * UDateIntervalFormat object.
- * @param formatter
- *            The UDateIntervalFormat object specifying the format conventions.
- * @param fromCalendar
- *            The starting point of the range.
- * @param toCalendar
- *            The ending point of the range.
- * @param result
- *            The UFormattedDateInterval to contain the result of the
- *            formatting operation.
- * @param status
- *            A pointer to a UErrorCode to receive any errors.
- * @draft ICU 67
- */
-
-U_DRAFT void U_EXPORT2
-udtitvfmt_formatCalendarToResult(
-                const UDateIntervalFormat* formatter,
-                UCalendar*      fromCalendar,
-                UCalendar*      toCalendar,
-                UFormattedDateInterval* result,
                 UErrorCode*     status);
 #endif /* U_HIDE_DRAFT_API */
 

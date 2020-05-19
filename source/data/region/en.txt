@@ -308,10 +308,9 @@ en{
         CD{"Congo (DRC)"}
         CG{"Congo (Republic)"}
         CI{"Ivory Coast"}
-        CV{"Cabo Verde"}
         CZ{"Czech Republic"}
         SZ{"Swaziland"}
         TL{"East Timor"}
     }
-    Version{"37"}
+    Version{"36"}
 }

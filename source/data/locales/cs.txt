@@ -519,7 +519,7 @@ cs{
             }
         }
     }
-    Version{"37"}
+    Version{"36"}
     calendar{
         buddhist{
             DateTimePatterns{
@@ -3131,6 +3131,10 @@ cs{
             }
             eras{
                 abbreviated{
+                    "př. n. l.",
+                    "n. l.",
+                }
+                abbreviated%variant{
                     "př. n. l.",
                     "n. l.",
                 }

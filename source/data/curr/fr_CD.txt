@@ -7,5 +7,5 @@ fr_CD{
             "franc congolais",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

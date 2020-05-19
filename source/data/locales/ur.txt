@@ -242,7 +242,7 @@ ur{
         minimumGroupingDigits{"1"}
         native{"arabext"}
     }
-    Version{"37"}
+    Version{"36"}
     calendar{
         buddhist{
             eras{

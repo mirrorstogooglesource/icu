@@ -412,8 +412,7 @@ storeMapping(uint32_t codepoint, uint32_t* mapping,int32_t length,
         int16_t delta = (int16_t)((int32_t)codepoint - (int16_t) mapping[0]);
         if(delta >= SPREP_DELTA_RANGE_NEGATIVE_LIMIT && delta <= SPREP_DELTA_RANGE_POSITIVE_LIMIT){
 
-            trieWord = delta;
-            trieWord <<= 2;
+            trieWord = delta << 2;
 
 
             /* make sure that the second bit is OFF */

@@ -160,7 +160,6 @@ hu{
         eu{"baszk"}
         ewo{"evondo"}
         fa{"perzsa"}
-        fa_AF{"dari"}
         fan{"fang"}
         fat{"fanti"}
         ff{"fulani"}
@@ -562,8 +561,6 @@ hu{
         zh_Hant{"kínai (hagyományos)"}
     }
     Languages%menu{
-        ars{"arab, nedzsdi"}
-        ckb{"kurd, szoráni"}
         yue{"kantoni kínai"}
         zh{"mandarin"}
     }
@@ -572,7 +569,6 @@ hu{
     }
     Scripts{
         Arab{"Arab"}
-        Aran{"Nasztalik"}
         Armi{"Birodalmi arámi"}
         Armn{"Örmény"}
         Avst{"Avesztán"}
@@ -607,7 +603,7 @@ hu{
         Grek{"Görög"}
         Gujr{"Gudzsaráti"}
         Guru{"Gurmuki"}
-        Hanb{"Han bopomofóval"}
+        Hanb{"Hanb"}
         Hang{"Hangul"}
         Hani{"Han"}
         Hano{"Hanunoo"}
@@ -664,7 +660,6 @@ hu{
         Phnx{"Főniciai"}
         Plrd{"Pollard fonetikus"}
         Prti{"Feliratos parthian"}
-        Qaag{"Zawgyi"}
         Rjng{"Redzsang"}
         Roro{"Rongorongo"}
         Runr{"Runikus"}
@@ -916,7 +911,7 @@ hu{
         VALLADER{"Vallader"}
         WADEGILE{"Wade-Giles átírás"}
     }
-    Version{"37"}
+    Version{"36"}
     characterLabelPattern{
         all{"{0} – összes"}
         category-list{"{0}: {1}"}

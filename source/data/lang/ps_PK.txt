@@ -16,5 +16,5 @@ ps_PK{
             arabext{"غځېدلے عربي ۔ اينډيک عدد"}
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

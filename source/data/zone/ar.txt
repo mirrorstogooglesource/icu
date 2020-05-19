@@ -1,7 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html#License
 ar{
-    Version{"37"}
+    Version{"36"}
     zoneStrings{
         "Africa:Abidjan"{
             ec{"أبيدجان"}
@@ -1724,9 +1724,7 @@ ar{
             ls{"توقيت نيوي"}
         }
         "meta:Norfolk"{
-            ld{"توقيت جزيرة نورفولك الصيفي"}
-            lg{"توقيت جزيرة نورفولك"}
-            ls{"توقيت جزيرة نورفولك الرسمي"}
+            ls{"توقيت جزيرة نورفولك"}
         }
         "meta:Noronha"{
             ld{"توقيت فرناندو دي نورونها الصيفي"}

@@ -298,6 +298,7 @@ be{
         ZZ{"Невядомы рэгіён"}
     }
     Countries%short{
+        GB{"Вялікабрытанія"}
         US{"ЗША"}
     }
     Countries%variant{
@@ -308,5 +309,5 @@ be{
         SZ{"Свазіленд"}
         TL{"Усходні Тымор"}
     }
-    Version{"37"}
+    Version{"36"}
 }

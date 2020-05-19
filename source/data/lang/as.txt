@@ -108,7 +108,6 @@ as{
         eu{"বাস্ক"}
         ewo{"ইওন্দো"}
         fa{"ফাৰ্ছী"}
-        fa_AF{"দাৰি"}
         ff{"ফুলাহ"}
         fi{"ফিনিচ"}
         fil{"ফিলিপিনো"}
@@ -553,7 +552,7 @@ as{
             tibt{"তিব্বতী অংক"}
         }
     }
-    Version{"37"}
+    Version{"36"}
     characterLabelPattern{
         all{"{0} — সকলো"}
         category-list{"{0}: {1}"}

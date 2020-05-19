@@ -15,7 +15,7 @@ khq{
             }
         }
     }
-    Version{"37"}
+    Version{"36"}
     calendar{
         generic{
             DateTimePatterns{

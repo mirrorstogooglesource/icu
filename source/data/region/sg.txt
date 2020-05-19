@@ -226,5 +226,5 @@ sg{
         ZM{"Zambïi"}
         ZW{"Zimbäbwe"}
     }
-    Version{"37"}
+    Version{"36"}
 }

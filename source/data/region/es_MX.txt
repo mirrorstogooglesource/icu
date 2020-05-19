@@ -29,5 +29,5 @@ es_MX{
     Countries%short{
         GB{"RU"}
     }
-    Version{"37"}
+    Version{"36"}
 }

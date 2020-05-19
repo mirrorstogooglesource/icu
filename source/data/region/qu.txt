@@ -259,8 +259,17 @@ qu{
         ZM{"Zambia"}
         ZW{"Zimbabue"}
     }
-    Countries%variant{
-        CZ{"República Checa"}
+    Countries%short{
+        GB{"Reino Unido"}
+        US{"Estados Unidos"}
     }
-    Version{"37"}
+    Countries%variant{
+        CD{"Congo (RDC)"}
+        CG{"Congo"}
+        CI{"Côte d’Ivoire"}
+        CZ{"República Checa"}
+        SZ{"Suazilandia"}
+        TL{"Timor-Leste"}
+    }
+    Version{"36"}
 }

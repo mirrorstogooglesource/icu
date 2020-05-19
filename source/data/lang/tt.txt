@@ -165,6 +165,10 @@ tt{
     Languages%menu{
         zh{"мандарин кытайчасы"}
     }
+    Languages%short{
+        en_GB{"инглиз (Берләшкән Корольлек)"}
+        en_US{"инглиз (АКШ)"}
+    }
     Scripts{
         Arab{"гарәп"}
         Cyrl{"кирилл"}
@@ -189,7 +193,7 @@ tt{
             latn{"көнбатыш цифрлары"}
         }
     }
-    Version{"37"}
+    Version{"36"}
     codePatterns{
         language{"Тел: {0}"}
         script{"Язу: {0}"}

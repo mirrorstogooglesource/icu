@@ -7,5 +7,5 @@ fr_MG{
             "ariary malgache",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

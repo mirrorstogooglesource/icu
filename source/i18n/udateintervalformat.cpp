@@ -119,36 +119,17 @@ udtitvfmt_format(const UDateIntervalFormat* formatter,
 U_DRAFT void U_EXPORT2
 udtitvfmt_formatToResult(
                 const UDateIntervalFormat* formatter,
+                UFormattedDateInterval* result,
                 UDate           fromDate,
                 UDate           toDate,
-                UFormattedDateInterval* result,
                 UErrorCode*     status) {
     if (U_FAILURE(*status)) {
         return;
     }
     auto* resultImpl = UFormattedDateIntervalApiHelper::validate(result, *status);
     DateInterval interval = DateInterval(fromDate,toDate);
-    if (resultImpl != nullptr) {
-        resultImpl->fImpl = reinterpret_cast<const DateIntervalFormat*>(formatter)
-            ->formatToValue(interval, *status);
-    }
-}
-
-U_DRAFT void U_EXPORT2
-udtitvfmt_formatCalendarToResult(
-                const UDateIntervalFormat* formatter,
-                UCalendar*      fromCalendar,
-                UCalendar*      toCalendar,
-                UFormattedDateInterval* result,
-                UErrorCode*     status) {
-    if (U_FAILURE(*status)) {
-        return;
-    }
-    auto* resultImpl = UFormattedDateIntervalApiHelper::validate(result, *status);
-    if (resultImpl != nullptr) {
-        resultImpl->fImpl = reinterpret_cast<const DateIntervalFormat*>(formatter)
-            ->formatToValue(*(Calendar *)fromCalendar, *(Calendar *)toCalendar, *status);
-    }
+    resultImpl->fImpl = reinterpret_cast<const DateIntervalFormat*>(formatter)
+        ->formatToValue(interval, *status);
 }
 
 

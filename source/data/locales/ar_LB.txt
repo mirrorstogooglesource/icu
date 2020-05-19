@@ -11,7 +11,7 @@ ar_LB{
             }
         }
     }
-    Version{"37"}
+    Version{"36"}
     calendar{
         gregorian{
             monthNames{

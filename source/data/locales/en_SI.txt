@@ -14,5 +14,5 @@ en_SI{
             }
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

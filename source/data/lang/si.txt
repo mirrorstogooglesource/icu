@@ -110,7 +110,6 @@ si{
         eu{"බාස්ක්"}
         ewo{"එවොන්ඩො"}
         fa{"පර්සියානු"}
-        fa_AF{"ඩාරි"}
         ff{"ෆුලාහ්"}
         fi{"ෆින්ලන්ත"}
         fil{"පිලිපීන"}
@@ -558,7 +557,7 @@ si{
             tibt{"ටිබෙට ඉලක්කම්"}
         }
     }
-    Version{"37"}
+    Version{"36"}
     characterLabelPattern{
         all{"{0} — සියල්ල"}
         category-list{"{0}: {1}"}

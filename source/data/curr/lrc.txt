@@ -75,9 +75,12 @@ lrc{
         RUB{
             other{"روٙبل روٙسیه"}
         }
+        USD{
+            other{"USD"}
+        }
         XXX{
             other{"پیل نادیار"}
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

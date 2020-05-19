@@ -73,8 +73,6 @@ public:
                                                     //   reverse rules,
                                                     //   and a list of UnicodeSets encountered.
 
-    int32_t     numRules();                         // Return the number of rules that have been seen.
-
     /**
      * Return a rules string without unnecessary
      * characters.

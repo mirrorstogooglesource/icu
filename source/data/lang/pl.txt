@@ -182,7 +182,6 @@ pl{
         ewo{"ewondo"}
         ext{"estremadurski"}
         fa{"perski"}
-        fa_AF{"dari"}
         fan{"fang"}
         fat{"fanti"}
         ff{"fulani"}
@@ -646,7 +645,6 @@ pl{
         zh_Hant{"standardowy chiński tradycyjny"}
     }
     Languages%menu{
-        ckb{"kurdyjski sorani"}
         zh{"chiński, mandaryński"}
     }
     Languages%short{
@@ -657,7 +655,6 @@ pl{
     }
     Scripts{
         Arab{"arabskie"}
-        Aran{"nastaliq"}
         Armi{"armi"}
         Armn{"ormiańskie"}
         Avst{"awestyjskie"}
@@ -751,7 +748,6 @@ pl{
         Phnx{"fenicki"}
         Plrd{"fonetyczny Pollard’a"}
         Prti{"partyjski inskrypcyjny"}
-        Qaag{"zawgyi"}
         Rjng{"rejang"}
         Roro{"rongorongo"}
         Runr{"runiczne"}
@@ -976,7 +972,7 @@ pl{
         VALENCIA{"walencki"}
         WADEGILE{"latynizacja Wade’a i Gilesa"}
     }
-    Version{"37"}
+    Version{"36"}
     characterLabelPattern{
         all{"{0} — wszystko"}
         category-list{"{0}: {1}"}

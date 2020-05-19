@@ -478,7 +478,7 @@ sw{
         Grek{"Kigiriki"}
         Gujr{"Kigujarati"}
         Guru{"Kigurmukhi"}
-        Hanb{"Kihan chenye Bopomofo"}
+        Hanb{"Hanb"}
         Hang{"Kihangul"}
         Hani{"Kihan"}
         Hans{"Rahisi"}
@@ -656,7 +656,7 @@ sw{
             vaii{"Dijiti za Vai"}
         }
     }
-    Version{"37"}
+    Version{"36"}
     characterLabelPattern{
         all{"{0} — zote"}
         category-list{"{0}: {1}"}

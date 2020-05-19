@@ -46,7 +46,6 @@ enum ParseState {
     STATE_INCREMENT_PRECISION,
     STATE_MEASURE_UNIT,
     STATE_PER_MEASURE_UNIT,
-    STATE_IDENTIFIER_UNIT,
     STATE_CURRENCY_UNIT,
     STATE_INTEGER_WIDTH,
     STATE_NUMBERING_SYSTEM,
@@ -72,7 +71,6 @@ enum StemEnum {
     STEM_BASE_UNIT,
     STEM_PERCENT,
     STEM_PERMILLE,
-    STEM_PERCENT_100, // concise-only
     STEM_PRECISION_INTEGER,
     STEM_PRECISION_UNLIMITED,
     STEM_PRECISION_CURRENCY_STANDARD,
@@ -111,23 +109,11 @@ enum StemEnum {
     STEM_PRECISION_INCREMENT,
     STEM_MEASURE_UNIT,
     STEM_PER_MEASURE_UNIT,
-    STEM_UNIT,
     STEM_CURRENCY,
     STEM_INTEGER_WIDTH,
     STEM_NUMBERING_SYSTEM,
     STEM_SCALE,
 };
-
-/** Default wildcard char, accepted on input and printed in output */
-constexpr char16_t kWildcardChar = u'*';
-
-/** Alternative wildcard char, accept on input but not printed in output */
-constexpr char16_t kAltWildcardChar = u'+';
-
-/** Checks whether the char is a wildcard on input */
-inline bool isWildcardChar(char16_t c) {
-    return c == kWildcardChar || c == kAltWildcardChar;
-}
 
 /**
  * Creates a NumberFormatter corresponding to the given skeleton string.
@@ -240,8 +226,6 @@ void generateMeasureUnitOption(const MeasureUnit& measureUnit, UnicodeString& sb
 
 void parseMeasurePerUnitOption(const StringSegment& segment, MacroProps& macros, UErrorCode& status);
 
-void parseIdentifierUnitOption(const StringSegment& segment, MacroProps& macros, UErrorCode& status);
-
 void parseFractionStem(const StringSegment& segment, MacroProps& macros, UErrorCode& status);
 
 void generateFractionStem(int32_t minFrac, int32_t maxFrac, UnicodeString& sb, UErrorCode& status);
@@ -249,14 +233,6 @@ void generateFractionStem(int32_t minFrac, int32_t maxFrac, UnicodeString& sb, U
 void parseDigitsStem(const StringSegment& segment, MacroProps& macros, UErrorCode& status);
 
 void generateDigitsStem(int32_t minSig, int32_t maxSig, UnicodeString& sb, UErrorCode& status);
-
-void parseScientificStem(const StringSegment& segment, MacroProps& macros, UErrorCode& status);
-
-// Note: no generateScientificStem since this syntax was added later in ICU 67
-
-void parseIntegerStem(const StringSegment& segment, MacroProps& macros, UErrorCode& status);
-
-// Note: no generateIntegerStem since this syntax was added later in ICU 67
 
 /** @return Whether we successfully found and parsed a frac-sig option. */
 bool parseFracSigOption(const StringSegment& segment, MacroProps& macros, UErrorCode& status);

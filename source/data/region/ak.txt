@@ -226,5 +226,5 @@ ak{
         ZM{"Zambia"}
         ZW{"Zembabwe"}
     }
-    Version{"37"}
+    Version{"36"}
 }

@@ -1,7 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html#License
 et{
-    Version{"37"}
+    Version{"36"}
     zoneStrings{
         "Africa:Abidjan"{
             ec{"Abidjan"}
@@ -1754,9 +1754,7 @@ et{
             ls{"Niue aeg"}
         }
         "meta:Norfolk"{
-            ld{"Norfolki saarte suveaeg"}
-            lg{"Norfolki saarte aeg"}
-            ls{"Norfolki saarte standardaeg"}
+            ls{"Norfolki saarte aeg"}
         }
         "meta:Noronha"{
             ld{"Fernando de Noronha suveaeg"}

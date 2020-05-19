@@ -20,10 +20,6 @@ ha{
         034{"kudancin Asiya"}
         035{"Kudu Maso Gabashin Asiya"}
         039{"Kudancin Turai"}
-        053{"Tsibarai na Austraila da New Zealand da maƙota"}
-        054{"Tsibirai na New Guinea da Fiji da maƙota"}
-        057{"Yankin Micronesia"}
-        061{"tsibiri"}
         142{"Asiya"}
         143{"Asiya ta Tsakiya"}
         145{"Yammacin Asiya"}
@@ -33,7 +29,6 @@ ha{
         155{"Yammacin Turai"}
         202{"Sub-Saharan Africa"}
         419{"Latin America"}
-        AC{"Tsibirin Ascension"}
         AD{"Andora"}
         AE{"Haɗaɗɗiyar Daular Larabawa"}
         AF{"Afaganistan"}
@@ -48,7 +43,6 @@ ha{
         AT{"Ostiriya"}
         AU{"Ostareliya"}
         AW{"Aruba"}
-        AX{"Tsibirai na Åland"}
         AZ{"Azarbaijan"}
         BA{"Bosniya Harzagobina"}
         BB{"Barbadas"}
@@ -67,7 +61,6 @@ ha{
         BR{"Birazil"}
         BS{"Bahamas"}
         BT{"Butan"}
-        BV{"Tsibirin Bouvet"}
         BW{"Baswana"}
         BY{"Belarus"}
         BZ{"Beliz"}
@@ -83,7 +76,6 @@ ha{
         CM{"Kamaru"}
         CN{"Sin"}
         CO{"Kolambiya"}
-        CP{"Tsibirin Clipperton"}
         CR{"Kwasta Rika"}
         CU{"Kyuba"}
         CV{"Tsibiran Kap Barde"}
@@ -92,17 +84,14 @@ ha{
         CY{"Sifurus"}
         CZ{"Jamhuriyar Cak"}
         DE{"Jamus"}
-        DG{"Tsibirn Diego Garcia"}
         DJ{"Jibuti"}
         DK{"Danmark"}
         DM{"Dominika"}
         DO{"Jamhuriyar Dominika"}
         DZ{"Aljeriya"}
-        EA{"Ceuta & Melilla"}
         EC{"Ekwador"}
         EE{"Estoniya"}
         EG{"Misira"}
-        EH{"Yammacin Sahara"}
         ER{"Eritireya"}
         ES{"Sipen"}
         ET{"Habasha"}
@@ -112,14 +101,12 @@ ha{
         FJ{"Fiji"}
         FK{"Tsibiran Falkilan"}
         FM{"Mikuronesiya"}
-        FO{"Tsibirai na Faroe"}
         FR{"Faransa"}
         GA{"Gabon"}
         GB{"Biritaniya"}
         GD{"Girnada"}
         GE{"Jiwarjiya"}
         GF{"Gini Ta Faransa"}
-        GG{"Yankin Guernsey"}
         GH{"Gana"}
         GI{"Jibaraltar"}
         GL{"Grinlan"}
@@ -128,29 +115,23 @@ ha{
         GP{"Gwadaluf"}
         GQ{"Gini Ta Ikwaita"}
         GR{"Girka"}
-        GS{"Kudancin Geogia da Kudancin Tsibirin Sandiwic"}
         GT{"Gwatamala"}
         GU{"Gwam"}
         GW{"Gini Bisau"}
         GY{"Guyana"}
-        HK{"Hong Kong Babban Birnin Kasar Chana"}
-        HM{"Tsibirin Heard da McDonald"}
         HN{"Honduras"}
         HR{"Kurowaishiya"}
         HT{"Haiti"}
         HU{"Hungari"}
-        IC{"Canary Islands"}
         ID{"Indunusiya"}
         IE{"Ayalan"}
         IL{"Iziraʼila"}
-        IM{"Isle na Mutum"}
         IN{"Indiya"}
         IO{"Yankin Birtaniya Na Tekun Indiya"}
         IQ{"Iraƙi"}
         IR{"Iran"}
         IS{"Aisalan"}
         IT{"Italiya"}
-        JE{"Kasar Jersey"}
         JM{"Jamaika"}
         JO{"Jordan"}
         JP{"Jàpân"}
@@ -187,7 +168,6 @@ ha{
         ML{"Mali"}
         MM{"Burma, Miyamar"}
         MN{"Mangoliya"}
-        MO{"Babban Birnin Mulki na Chana"}
         MP{"Tsibiran Mariyana Na Arewa"}
         MQ{"Martinik"}
         MR{"Moritaniya"}
@@ -227,7 +207,6 @@ ha{
         PW{"Palau"}
         PY{"Faragwai"}
         QA{"Katar"}
-        QO{"Bakin Teku"}
         RE{"Rawuniyan"}
         RO{"Romaniya"}
         RS{"Sabiya"}
@@ -241,7 +220,6 @@ ha{
         SG{"Singapur"}
         SH{"San Helena"}
         SI{"Sulobeniya"}
-        SJ{"Svalbard da Jan Mayen"}
         SK{"Sulobakiya"}
         SL{"Salewo"}
         SM{"San Marino"}
@@ -273,7 +251,6 @@ ha{
         TZ{"Tanzaniya"}
         UA{"Yukaran"}
         UG{"Yuganda"}
-        UM{"Rukunin Tsibirin U.S"}
         UN{"Majalisar Dinkin Duniya"}
         US{"Amurka"}
         UY{"Yurigwai"}
@@ -287,9 +264,6 @@ ha{
         VU{"Banuwatu"}
         WF{"Walis Da Futuna"}
         WS{"Samoa"}
-        XA{"Gogewar Kwalwa"}
-        XB{"Gano wani abu ta hanyar amfani da fasaha"}
-        XK{"Kasar Kosovo"}
         YE{"Yamal"}
         YT{"Mayoti"}
         ZA{"Afirka Ta Kudu"}
@@ -300,6 +274,7 @@ ha{
     Countries%variant{
         CD{"Kongo (DRC)"}
         CG{"Jamhuriyar Kongo"}
+        CI{"Aibari Kwas"}
     }
-    Version{"37"}
+    Version{"36"}
 }

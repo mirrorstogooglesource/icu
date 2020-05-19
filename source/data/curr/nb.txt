@@ -640,7 +640,7 @@ nb{
         }
         MCF{
             "MCF",
-            "monegaskiske franc",
+            "MCF",
         }
         MDC{
             "MDC",
@@ -1942,8 +1942,8 @@ nb{
             other{"marokkanske franc"}
         }
         MCF{
-            one{"monegaskisk franc"}
-            other{"monegaskiske franc"}
+            one{"MCF"}
+            other{"MCF"}
         }
         MDC{
             one{"moldovsk cupon"}
@@ -2514,5 +2514,5 @@ nb{
         one{"{0} {1}"}
         other{"{0} {1}"}
     }
-    Version{"37"}
+    Version{"36"}
 }

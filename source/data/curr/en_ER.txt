@@ -8,5 +8,5 @@ en_ER{
             "Eritrean Nakfa",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

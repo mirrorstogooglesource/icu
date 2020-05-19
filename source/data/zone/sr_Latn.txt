@@ -2,7 +2,7 @@
 // License & terms of use: http://www.unicode.org/copyright.html#License
 sr_Latn{
     %%Parent{"root"}
-    Version{"37"}
+    Version{"36"}
     zoneStrings{
         "Africa:Abidjan"{
             ec{"Abidžan"}
@@ -1762,9 +1762,7 @@ sr_Latn{
             ls{"Niue vreme"}
         }
         "meta:Norfolk"{
-            ld{"Norfolk Ostrvo, letnje vreme"}
-            lg{"Norfolk Ostrvo vreme"}
-            ls{"Norfolk Ostrvo, standardno vreme"}
+            ls{"Norfolk Ostrvo vreme"}
         }
         "meta:Noronha"{
             ld{"Fernando de Noronja, letnje vreme"}

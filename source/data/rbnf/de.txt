@@ -1,5 +1,8 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html#License
+/**
+ * ICU <specials> source: <path>/xml/rbnf/de.xml
+ */
 de{
     RBNFRules{
         SpelloutRules{
@@ -182,5 +185,5 @@ de{
             "0: =%spellout-ordinal=s;",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

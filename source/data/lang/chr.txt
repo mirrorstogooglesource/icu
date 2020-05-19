@@ -109,7 +109,6 @@ chr{
         eu{"ᏆᏍᎨ"}
         ewo{"ᎡᏬᏂᏙ"}
         fa{"ᏇᏏᎠᏂ"}
-        fa_AF{"ᏓᎵ"}
         ff{"ᏊᎳᏂ"}
         fi{"ᏈᏂᏍ"}
         fil{"ᎠᏈᎵᎩ"}
@@ -549,7 +548,7 @@ chr{
             tibt{"ᏘᏇᏔᏂ ᏗᏎᏍᏗ"}
         }
     }
-    Version{"37"}
+    Version{"36"}
     characterLabelPattern{
         all{"{0} — ᏂᎦᏓ"}
         category-list{"{0}: {1}"}

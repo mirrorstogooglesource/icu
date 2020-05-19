@@ -1,7 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html#License
 kok{
-    Version{"37"}
+    Version{"36"}
     durationUnits{
         hm{"h:mm"}
         hms{"h:mm:ss"}
@@ -9,7 +9,7 @@ kok{
     }
     units{
         acceleration{
-            meter-per-square-second{
+            meter-per-second-squared{
                 dnam{"मी/से²"}
                 other{"{0} मी/से²"}
             }
@@ -83,9 +83,6 @@ kok{
                 other{"{0} चौरस यार्ड"}
             }
         }
-        compound{
-            per{"{1} क {0}"}
-        }
         concentr{
             karat{
                 dnam{"कॅरट्स"}
@@ -113,7 +110,7 @@ kok{
             }
         }
         consumption{
-            liter-per-100-kilometer{
+            liter-per-100kilometers{
                 dnam{"लिटर/100किलोमीटर"}
                 other{"{0} लिटर/100किलोमीटर"}
             }
@@ -441,10 +438,6 @@ kok{
             }
         }
         power{
-            gigawatt{
-                dnam{"गिगावॉट्स"}
-                other{"{0} गिगावॉट्स"}
-            }
             horsepower{
                 dnam{"हॉर्सपावर"}
                 other{"{0} हॉर्सपावर"}
@@ -692,7 +685,7 @@ kok{
                 dnam{"g-force"}
                 other{"{0} G"}
             }
-            meter-per-square-second{
+            meter-per-second-squared{
                 dnam{"मी/से²"}
                 other{"{0} मी/से²"}
             }
@@ -787,6 +780,10 @@ kok{
                 dnam{"मोल"}
                 other{"{0} मोल"}
             }
+            part-per-million{
+                dnam{"ppm"}
+                other{"{0} ppm"}
+            }
             percent{
                 dnam{"%"}
                 other{"{0}%"}
@@ -795,17 +792,13 @@ kok{
                 dnam{"‰"}
                 other{"{0}‰"}
             }
-            permillion{
-                dnam{"ppm"}
-                other{"{0} ppm"}
-            }
             permyriad{
                 dnam{"‱"}
                 other{"{0}‱"}
             }
         }
         consumption{
-            liter-per-100-kilometer{
+            liter-per-100kilometers{
                 dnam{"लि/100किमी"}
                 other{"{0} लि/100किमी"}
             }
@@ -1236,7 +1229,7 @@ kok{
                 dnam{"hPa"}
                 other{"{0} hPa"}
             }
-            inch-ofhg{
+            inch-hg{
                 dnam{"inHg"}
                 other{"{0} inHg"}
             }
@@ -1252,7 +1245,7 @@ kok{
                 dnam{"mbar"}
                 other{"{0} mbar"}
             }
-            millimeter-ofhg{
+            millimeter-of-mercury{
                 dnam{"mm Hg"}
                 other{"{0} mm Hg"}
             }
@@ -1260,7 +1253,7 @@ kok{
                 dnam{"Pa"}
                 other{"{0} Pa"}
             }
-            pound-force-per-square-inch{
+            pound-per-square-inch{
                 dnam{"psi"}
                 other{"{0} psi"}
             }
@@ -1306,7 +1299,7 @@ kok{
                 dnam{"N⋅m"}
                 other{"{0} N⋅m"}
             }
-            pound-force-foot{
+            pound-foot{
                 dnam{"lbf⋅ft"}
                 other{"{0} lbf⋅ft"}
             }

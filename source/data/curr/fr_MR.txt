@@ -7,5 +7,5 @@ fr_MR{
             "ouguiya mauritanien",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

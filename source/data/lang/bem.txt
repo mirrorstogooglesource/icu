@@ -48,5 +48,5 @@ bem{
         zh{"Ichi Chainisi"}
         zu{"Ichi Zulu"}
     }
-    Version{"37"}
+    Version{"36"}
 }

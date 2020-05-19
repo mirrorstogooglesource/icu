@@ -27,12 +27,10 @@
 #  Character Class Definitions.
 #
 
-$Han                = [:Han:];
-
 $CR                 = [\p{Word_Break = CR}];
 $LF                 = [\p{Word_Break = LF}];
-$Newline            = [\p{Word_Break = Newline}];
-$Extend             = [\p{Word_Break = Extend}-$Han];
+$Newline            = [\p{Word_Break = Newline} ];
+$Extend             = [\p{Word_Break = Extend}];
 $ZWJ                = [\p{Word_Break = ZWJ}];
 $Regional_Indicator = [\p{Word_Break = Regional_Indicator}];
 $Format             = [\p{Word_Break = Format}];
@@ -50,11 +48,12 @@ $Double_Quote       = [\p{Word_Break = Double_Quote}];
 $MidNumLet          = [[\p{Word_Break = MidNumLet}] - [\u002E \uFF0E]];
 $MidLetter          = [\p{Word_Break = MidLetter}];
 $MidNum             = [\p{Word_Break = MidNum}[\u002E \uFF0E]];
-$Numeric            = [\p{Word_Break = Numeric}];
+$Numeric            = [[\p{Word_Break = Numeric}] [\uFF10-\uff19]];  # Patch for ICU-12079
 $ExtendNumLet       = [\p{Word_Break = ExtendNumLet}];
 $WSegSpace          = [\p{Word_Break = WSegSpace}];
 $Extended_Pict      = [\p{Extended_Pictographic}];
 
+$Han                = [:Han:];
 $Hiragana           = [:Hiragana:];
 $Ideographic        = [\p{Ideographic}];
 

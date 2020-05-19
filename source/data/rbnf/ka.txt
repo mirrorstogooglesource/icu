@@ -63,5 +63,5 @@ ka{
             "1: ' =%spellout-cardinal=;",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

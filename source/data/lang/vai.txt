@@ -48,5 +48,5 @@ vai{
         zh{"ꕦꕇꔧ"}
         zu{"ꖮꖨ"}
     }
-    Version{"37"}
+    Version{"36"}
 }

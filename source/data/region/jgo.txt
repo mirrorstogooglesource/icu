@@ -85,5 +85,5 @@ jgo{
         ZW{"Zimbámbwɛ"}
         ZZ{"ŋgɔŋ yi pɛ́ ká kɛ́ jʉɔ"}
     }
-    Version{"37"}
+    Version{"36"}
 }

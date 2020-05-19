@@ -7,5 +7,5 @@ so_KE{
             "Shilingka Kenya",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

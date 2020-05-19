@@ -8,5 +8,5 @@ en_SE{
             "Swedish Krona",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

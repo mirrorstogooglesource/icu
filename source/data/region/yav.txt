@@ -225,5 +225,5 @@ yav{
         ZM{"saambíi"}
         ZW{"simbapuwé"}
     }
-    Version{"37"}
+    Version{"36"}
 }

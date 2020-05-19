@@ -8,5 +8,5 @@ pt_MZ{
             "metical moçambicano",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

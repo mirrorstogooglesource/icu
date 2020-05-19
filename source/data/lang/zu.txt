@@ -120,7 +120,6 @@ zu{
         eu{"isi-Basque"}
         ewo{"isi-Ewondo"}
         fa{"isi-Persian"}
-        fa_AF{"isi-Dari"}
         ff{"isi-Fulah"}
         fi{"isi-Finnish"}
         fil{"isi-Filipino"}
@@ -635,7 +634,7 @@ zu{
             vaii{"Izinhlazu Zezinombolo ze-Vai"}
         }
     }
-    Version{"37"}
+    Version{"36"}
     characterLabelPattern{
         all{"{0} — All"}
         category-list{"{0}: {1}"}

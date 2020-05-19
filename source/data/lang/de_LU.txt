@@ -4,5 +4,5 @@ de_LU{
     Languages{
         be{"Belarussisch"}
     }
-    Version{"37"}
+    Version{"36"}
 }

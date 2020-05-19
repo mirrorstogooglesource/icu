@@ -301,7 +301,12 @@ fo{
         US{"USA"}
     }
     Countries%variant{
+        CD{"Kongo, Dem. Lýðveldið"}
+        CG{"Kongo"}
+        CI{"Fílabeinsstrondin"}
+        CZ{"Kekkia"}
         SZ{"Svasiland"}
+        TL{"Eysturtimor"}
     }
-    Version{"37"}
+    Version{"36"}
 }

@@ -175,7 +175,6 @@ de{
         ewo{"Ewondo"}
         ext{"Extremadurisch"}
         fa{"Persisch"}
-        fa_AF{"Dari"}
         fan{"Pangwe"}
         fat{"Fanti"}
         ff{"Ful"}
@@ -632,18 +631,18 @@ de{
     }
     Languages%long{
         zh_Hans{"Mandarin (Vereinfacht)"}
-        zh_Hant{"Mandarin (traditionell)"}
     }
     Languages%menu{
-        ckb{"Kurdisch (Sorani)"}
         yue{"Chinesisch (Kantonesisch)"}
         zh{"Chinesisch (Mandarin)"}
+    }
+    Languages%short{
+        az{"Aserbaidschanisch"}
     }
     Scripts{
         Afak{"Afaka"}
         Aghb{"Kaukasisch-Albanisch"}
         Arab{"Arabisch"}
-        Aran{"Nastaliq"}
         Armn{"Armenisch"}
         Avst{"Avestisch"}
         Bali{"Balinesisch"}
@@ -682,7 +681,6 @@ de{
         Grek{"Griechisch"}
         Gujr{"Gujarati"}
         Guru{"Gurmukhi"}
-        Hanb{"Han mit Bopomofo"}
         Hang{"Hangul"}
         Hani{"Chinesisch"}
         Hano{"Hanunoo"}
@@ -755,7 +753,6 @@ de{
         Phnx{"Phönizisch"}
         Plrd{"Pollard Phonetisch"}
         Prti{"Parthisch"}
-        Qaag{"Zawgyi"}
         Rjng{"Rejang"}
         Roro{"Rongorongo"}
         Runr{"Runenschrift"}
@@ -1013,7 +1010,7 @@ de{
         VALENCIA{"Valencianisch"}
         WADEGILE{"Wade-Giles"}
     }
-    Version{"37"}
+    Version{"36"}
     characterLabelPattern{
         all{"{0} — Alle"}
         category-list{"{0}: {1}"}

@@ -92,5 +92,5 @@ om{
     Scripts{
         Latn{"Latin"}
     }
-    Version{"37"}
+    Version{"36"}
 }

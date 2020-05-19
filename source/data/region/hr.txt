@@ -310,5 +310,5 @@ hr{
         SZ{"Svazi"}
         TL{"Istočni Timor"}
     }
-    Version{"37"}
+    Version{"36"}
 }

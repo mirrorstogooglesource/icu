@@ -100,7 +100,6 @@ writeObjectCode(
     const char *optMatchArch,
     const char *optFilename,
     char *outFilePath,
-    size_t outFilePathCapacity,
-    UBool optWinDllExport);
+    size_t outFilePathCapacity);
 
 #endif

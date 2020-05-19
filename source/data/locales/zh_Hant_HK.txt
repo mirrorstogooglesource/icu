@@ -91,7 +91,7 @@ zh_Hant_HK{
             }
         }
     }
-    Version{"37"}
+    Version{"36"}
     calendar{
         buddhist{
             availableFormats{

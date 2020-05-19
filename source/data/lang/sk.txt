@@ -160,7 +160,6 @@ sk{
         eu{"baskičtina"}
         ewo{"ewondo"}
         fa{"perzština"}
-        fa_AF{"daríjčina"}
         fan{"fangčina"}
         fat{"fanti"}
         ff{"fulbčina"}
@@ -561,12 +560,12 @@ sk{
         zh{"čínština (mandarínska)"}
     }
     Languages%short{
+        az{"azerbajdžančina"}
         en_GB{"angličtina (britská)"}
         en_US{"angličtina (americká)"}
     }
     Scripts{
         Arab{"arabské"}
-        Aran{"nastaliq"}
         Armn{"arménske"}
         Bali{"balijský"}
         Beng{"bengálske"}
@@ -603,12 +602,9 @@ sk{
         Maya{"mayské hieroglyfy"}
         Mlym{"malajálamske"}
         Mong{"mongolské"}
-        Mtei{"mejtej majek (manipurské)"}
         Mymr{"barmské"}
-        Olck{"santálske (ol chiki)"}
         Orya{"uríjske"}
         Osma{"osmanský"}
-        Qaag{"zawgyi"}
         Runr{"Runové písmo"}
         Sinh{"sinhálske"}
         Taml{"tamilské"}
@@ -774,7 +770,7 @@ sk{
     Variants{
         SCOTLAND{"škótska štandardná angličtina"}
     }
-    Version{"37"}
+    Version{"36"}
     characterLabelPattern{
         all{"{0} – všetko"}
         category-list{"{0}: {1}"}

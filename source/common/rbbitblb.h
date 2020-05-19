@@ -91,10 +91,9 @@ private:
     void     calcFirstPos(RBBINode *n);
     void     calcLastPos(RBBINode  *n);
     void     calcFollowPos(RBBINode *n);
-    void     calcChainedFollowPos(RBBINode *n, RBBINode *endMarkNode);
+    void     calcChainedFollowPos(RBBINode *n);
     void     bofFixup();
     void     buildStateTable();
-    void     mapLookAheadRules();
     void     flagAcceptingStates();
     void     flagLookAheadStates();
     void     flagTaggedStates();
@@ -175,9 +174,6 @@ private:
 
     /** Synthesized safe table, UVector of UnicodeString, one string per table row.   */
     UVector          *fSafeTable;
-
-    /** Map from rule number (fVal in look ahead nodes) to sequential lookahead index. */
-    UVector32        *fLookAheadRuleMap = nullptr;
 
 
     RBBITableBuilder(const RBBITableBuilder &other); // forbid copying of this class

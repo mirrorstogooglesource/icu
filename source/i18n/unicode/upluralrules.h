@@ -152,6 +152,7 @@ uplrules_select(const UPluralRules *uplrules,
                UChar *keyword, int32_t capacity,
                UErrorCode *status);
 
+#ifndef U_HIDE_DRAFT_API
 /**
  * Given a formatted number, returns the keyword of the first rule
  * that applies to the number, according to the supplied UPluralRules object.
@@ -167,13 +168,14 @@ uplrules_select(const UPluralRules *uplrules,
  * @param capacity The capacity of the keyword buffer.
  * @param status A pointer to a UErrorCode to receive any errors.
  * @return The length of the keyword.
- * @stable ICU 64
+ * @draft ICU 64
  */
 U_CAPI int32_t U_EXPORT2
 uplrules_selectFormatted(const UPluralRules *uplrules,
                const struct UFormattedNumber* number,
                UChar *keyword, int32_t capacity,
                UErrorCode *status);
+#endif  /* U_HIDE_DRAFT_API */
 
 #ifndef U_HIDE_INTERNAL_API
 /**

@@ -8,5 +8,5 @@ en_RW{
             "Rwandan Franc",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

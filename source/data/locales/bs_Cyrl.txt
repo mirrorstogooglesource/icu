@@ -233,7 +233,7 @@ bs_Cyrl{
             }
         }
     }
-    Version{"37"}
+    Version{"36"}
     calendar{
         buddhist{
             eras{

@@ -8,5 +8,5 @@ en_TZ{
             "Tanzanian Shilling",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

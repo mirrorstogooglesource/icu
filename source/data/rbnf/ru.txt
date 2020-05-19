@@ -1,5 +1,8 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html#License
+/**
+ * ICU <specials> source: <path>/xml/rbnf/ru.xml
+ */
 ru{
     RBNFRules{
         SpelloutRules{
@@ -1383,5 +1386,5 @@ ru{
             "21001: =0=.;",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

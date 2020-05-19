@@ -299,6 +299,7 @@ ka{
     }
     Countries%short{
         GB{"გაერთ.სამ."}
+        UN{"გაერო"}
         US{"აშშ"}
     }
     Countries%variant{
@@ -309,5 +310,5 @@ ka{
         SZ{"სვაზილანდი"}
         TL{"აღმოსავლეთ ტიმორი"}
     }
-    Version{"37"}
+    Version{"36"}
 }
