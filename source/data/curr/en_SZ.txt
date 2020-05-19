@@ -8,5 +8,5 @@ en_SZ{
             "Swazi Lilangeni",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

@@ -235,5 +235,5 @@ tzm{
             "Ḍular Uzimbabwi",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

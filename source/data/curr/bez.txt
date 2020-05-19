@@ -231,5 +231,5 @@ bez{
             "Lupila lwa Huzimbabwe",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

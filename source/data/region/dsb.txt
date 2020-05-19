@@ -301,5 +301,5 @@ dsb{
         CI{"Słonowokósćowy pśibrjog"}
         TL{"Pódzajtšny Timor"}
     }
-    Version{"37"}
+    Version{"36"}
 }

@@ -308,6 +308,7 @@ ca{
         CI{"Costa d’Ivori"}
         CZ{"República Txeca"}
         SZ{"Swazilàndia"}
+        TL{"Timor Oriental"}
     }
-    Version{"37"}
+    Version{"36"}
 }

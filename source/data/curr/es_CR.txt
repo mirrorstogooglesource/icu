@@ -8,5 +8,5 @@ es_CR{
             "colón costarricense",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

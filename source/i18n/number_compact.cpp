@@ -215,25 +215,19 @@ void CompactData::CompactDataSink::put(const char *key, ResourceValue &value, UB
 /// END OF CompactData.java; BEGIN CompactNotation.java ///
 ///////////////////////////////////////////////////////////
 
-CompactHandler::CompactHandler(
-        CompactStyle compactStyle,
-        const Locale &locale,
-        const char *nsName,
-        CompactType compactType,
-        const PluralRules *rules,
-        MutablePatternModifier *buildReference,
-        bool safe,
-        const MicroPropsGenerator *parent,
-        UErrorCode &status)
-        : rules(rules), parent(parent), safe(safe) {
+CompactHandler::CompactHandler(CompactStyle compactStyle, const Locale &locale, const char *nsName,
+                               CompactType compactType, const PluralRules *rules,
+                               MutablePatternModifier *buildReference, const MicroPropsGenerator *parent,
+                               UErrorCode &status)
+        : rules(rules), parent(parent) {
     data.populate(locale, nsName, compactStyle, compactType, status);
-    if (safe) {
+    if (buildReference != nullptr) {
         // Safe code path
         precomputeAllModifiers(*buildReference, status);
+        safe = TRUE;
     } else {
         // Unsafe code path
-        // Store the MutablePatternModifier reference.
-        unsafePatternModifier = buildReference;
+        safe = FALSE;
     }
 }
 
@@ -266,7 +260,7 @@ void CompactHandler::precomputeAllModifiers(MutablePatternModifier &buildReferen
         ParsedPatternInfo patternInfo;
         PatternParser::parseToPatternInfo(UnicodeString(patternString), patternInfo, status);
         if (U_FAILURE(status)) { return; }
-        buildReference.setPatternInfo(&patternInfo, {UFIELD_CATEGORY_NUMBER, UNUM_COMPACT_FIELD});
+        buildReference.setPatternInfo(&patternInfo, UNUM_COMPACT_FIELD);
         info.mod = buildReference.createImmutable(status);
         if (U_FAILURE(status)) { return; }
         info.patternString = patternString;
@@ -280,13 +274,12 @@ void CompactHandler::processQuantity(DecimalQuantity &quantity, MicroProps &micr
 
     // Treat zero, NaN, and infinity as if they had magnitude 0
     int32_t magnitude;
-    int32_t multiplier = 0;
     if (quantity.isZeroish()) {
         magnitude = 0;
         micros.rounder.apply(quantity, status);
     } else {
         // TODO: Revisit chooseMultiplierAndApply
-        multiplier = micros.rounder.chooseMultiplierAndApply(quantity, data, status);
+        int32_t multiplier = micros.rounder.chooseMultiplierAndApply(quantity, data, status);
         magnitude = quantity.isZeroish() ? 0 : quantity.getMagnitude();
         magnitude -= multiplier;
     }
@@ -316,17 +309,9 @@ void CompactHandler::processQuantity(DecimalQuantity &quantity, MicroProps &micr
         // C++ Note: Use unsafePatternInfo for proper lifecycle.
         ParsedPatternInfo &patternInfo = const_cast<CompactHandler *>(this)->unsafePatternInfo;
         PatternParser::parseToPatternInfo(UnicodeString(patternString), patternInfo, status);
-        unsafePatternModifier->setPatternInfo(
-            &unsafePatternInfo,
-            {UFIELD_CATEGORY_NUMBER, UNUM_COMPACT_FIELD});
-        unsafePatternModifier->setNumberProperties(quantity.signum(), StandardPlural::Form::COUNT);
-        micros.modMiddle = unsafePatternModifier;
+        static_cast<MutablePatternModifier*>(const_cast<Modifier*>(micros.modMiddle))
+            ->setPatternInfo(&patternInfo, UNUM_COMPACT_FIELD);
     }
-
-    // Change the exponent only after we select appropriate plural form
-    // for formatting purposes so that we preserve expected formatted
-    // string behavior.
-    quantity.adjustExponent(-1 * multiplier);
 
     // We already performed rounding. Do not perform it again.
     micros.rounder = RoundingImpl::passThrough();

@@ -294,7 +294,9 @@ RoundingImpl::RoundingImpl(const Precision& precision, UNumberFormatRoundingMode
 }
 
 RoundingImpl RoundingImpl::passThrough() {
-    return {};
+    RoundingImpl retval;
+    retval.fPassThrough = true;
+    return retval;
 }
 
 bool RoundingImpl::isSignificantDigits() const {

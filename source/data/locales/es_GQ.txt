@@ -8,5 +8,5 @@ es_GQ{
             }
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

@@ -181,5 +181,5 @@ fr_CH{
             "2: =%%spellout-ordinal=;",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

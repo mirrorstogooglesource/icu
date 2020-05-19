@@ -169,7 +169,6 @@ gd{
         ewo{"Ewondo"}
         ext{"Cànan na h-Extremadura"}
         fa{"Peirsis"}
-        fa_AF{"Dari"}
         fan{"Fang"}
         fat{"Fanti"}
         ff{"Fulah"}
@@ -749,7 +748,7 @@ gd{
         Phnx{"Pheniceach"}
         Plrd{"Miao Phollard"}
         Prti{"Partais snaidh-sgrìobhte"}
-        Qaag{"Zawgyi"}
+        Qaag{"Qaag"}
         Rjng{"Rejang"}
         Rohg{"Hanifi Rohingya"}
         Roro{"Rongorongo"}
@@ -967,13 +966,13 @@ gd{
         1994{"Litreachadh stannardach dual-chainnt Resia"}
         1996{"Litreachadh na Gearmailtise 1996"}
         ABL1943{"Gnàthas-litreachaidh 1943"}
-        AKUAPEM{"Akuapem"}
+        AKUAPEM{"AKUAPEM"}
         ALALC97{"Ròmanachadh ALA-LC 1997"}
         ALUKU{"Dual-chainnt Aluku"}
         AO1990{"Aonta litreachadh na Portagailise 1990"}
         AREVELA{"Airmeinis an Ear"}
         AREVMDA{"Airmeinis an Iar"}
-        ASANTE{"Asante"}
+        ASANTE{"ASANTE"}
         BAKU1926{"Abidil Laideann aonaichte na Turcaise"}
         BALANKA{"Dual-chainnt Balanka de Anii"}
         BARLA{"Dual-chainntean Barlavento de Kabuverdianu"}
@@ -989,18 +988,15 @@ gd{
         EKAVSK{"Sèirbhis le fuaimneachadh iarach"}
         EMODENG{"Nua-Bheurla thràth"}
         FONIPA{"Comharran fuaim-eòlais an IPA"}
-        FONNAPA{"Aibidil Fhuaim-eòlach Aimeireaga a Tuath"}
+        FONNAPA{"FONNAPA"}
         FONUPA{"Comharran fuaim-eòlais an UPA"}
-        FONXSAMP{"Tar-sgrìobhadh X-SAMPA"}
+        FONXSAMP{"FONXSAMP"}
         HEPBURN{"Ròmanachadh Hepburn"}
         HOGNORSK{"Høgnorsk"}
-        HSISTEMO{"Roghainn-èiginn stannardach litreachadh na h-Esperanto le h"}
+        HSISTEMO{"HSISTEMO"}
         IJEKAVSK{"Sèirbis le fuaimneachadh Ijekavia"}
         ITIHASA{"Itihasa"}
-        IVANCHOV{
-            "Bulgarian in 1899 orthography = Bulgairis le litreachadh na bliadhna 189"
-            "9"
-        }
+        IVANCHOV{"IVANCHOV"}
         JAUER{"Jauer"}
         JYUTPING{"Jyutping"}
         KKCOR{"Litreachadh coitcheann"}
@@ -1008,7 +1004,7 @@ gd{
         KSCOR{"Litreachadh stannardach"}
         LAUKIKA{"Laukika"}
         LIPAW{"Dual-chainnt Lipovaz Resia"}
-        LUNA1918{"Litreachadh na Ruisise às dèidh 1917"}
+        LUNA1918{"LUNA1918"}
         METELKO{"Aibidil Metelko"}
         MONOTON{"Greugais mhonotonach"}
         NDYUKA{"Dual-chainnt Ndyuka"}
@@ -1034,7 +1030,7 @@ gd{
         SAAHO{"Saho"}
         SCOTLAND{"Beurla Stannardach na h-Alba"}
         SCOUSE{"Scouse"}
-        SIMPLE{"Samhlaidhean sìmplichte"}
+        SIMPLE{"SIMPLE"}
         SOLBA{"Dual-chainnt Stolvizza/Solbica"}
         SOTAV{"Dual-chainntean Sotavento de Kabuverdianu"}
         SPANGLIS{"Spanglish"}
@@ -1050,9 +1046,9 @@ gd{
         VALENCIA{"Valencià"}
         VALLADER{"Vallader"}
         WADEGILE{"Ròmanachadh Wade-Giles"}
-        XSISTEMO{"Roghainn-èiginn stannardach litreachadh na h-Esperanto le x"}
+        XSISTEMO{"XSISTEMO"}
     }
-    Version{"37"}
+    Version{"36"}
     characterLabelPattern{
         all{"{0} – na h-uile"}
         category-list{"{0}: {1}"}

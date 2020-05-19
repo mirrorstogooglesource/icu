@@ -7,8 +7,7 @@ pa_Arab{
     }
     Scripts{
         Arab{"عربی"}
-        Aran{"نستعلیق"}
         Guru{"گُرمُکھی"}
     }
-    Version{"37"}
+    Version{"36"}
 }

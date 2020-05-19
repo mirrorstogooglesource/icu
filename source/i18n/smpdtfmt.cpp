@@ -583,14 +583,11 @@ SimpleDateFormat& SimpleDateFormat::operator=(const SimpleDateFormat& other)
     fHasMinute = other.fHasMinute;
     fHasSecond = other.fHasSecond;
 
-    fLocale = other.fLocale;
-
-    // TimeZoneFormat can now be set independently via setter.
-    // If it is NULL, it will be lazily initialized from locale
-    delete fTimeZoneFormat;
-    fTimeZoneFormat = NULL;
-    if (other.fTimeZoneFormat) {
-        fTimeZoneFormat = new TimeZoneFormat(*other.fTimeZoneFormat);
+    // TimeZoneFormat in ICU4C only depends on a locale for now
+    if (fLocale != other.fLocale) {
+        delete fTimeZoneFormat;
+        fTimeZoneFormat = NULL; // forces lazy instantiation with the other locale
+        fLocale = other.fLocale;
     }
 
 #if !UCONFIG_NO_BREAK_ITERATION
@@ -999,8 +996,7 @@ SimpleDateFormat::_format(Calendar& cal, UnicodeString& appendTo,
         // Use subFormat() to format a repeated pattern character
         // when a different pattern or non-pattern character is seen
         if (ch != prevCh && count > 0) {
-            subFormat(appendTo, prevCh, count, capitalizationContext, fieldNum++,
-                      prevCh, handler, *workCal, status);
+            subFormat(appendTo, prevCh, count, capitalizationContext, fieldNum++, handler, *workCal, status);
             count = 0;
         }
         if (ch == QUOTE) {
@@ -1027,8 +1023,7 @@ SimpleDateFormat::_format(Calendar& cal, UnicodeString& appendTo,
 
     // Format the last item in the pattern, if any
     if (count > 0) {
-        subFormat(appendTo, prevCh, count, capitalizationContext, fieldNum++,
-                  prevCh, handler, *workCal, status);
+        subFormat(appendTo, prevCh, count, capitalizationContext, fieldNum++, handler, *workCal, status);
     }
 
     if (calClone != NULL) {
@@ -1407,11 +1402,10 @@ SimpleDateFormat::processOverrideString(const Locale &locale, const UnicodeStrin
 //---------------------------------------------------------------------
 void
 SimpleDateFormat::subFormat(UnicodeString &appendTo,
-                            char16_t ch,
+                            UChar ch,
                             int32_t count,
                             UDisplayContext capitalizationContext,
                             int32_t fieldNum,
-                            char16_t fieldToOutput,
                             FieldPositionHandler& handler,
                             Calendar& cal,
                             UErrorCode& status) const
@@ -1859,11 +1853,8 @@ SimpleDateFormat::subFormat(UnicodeString &appendTo,
         // In either case, fall back to am/pm.
         if (toAppend == NULL || toAppend->isBogus()) {
             // Reformat with identical arguments except ch, now changed to 'a'.
-            // We are passing a different fieldToOutput because we want to add
-            // 'b' to field position. This makes this fallback stable when
-            // there is a data change on locales.
-            subFormat(appendTo, u'a', count, capitalizationContext, fieldNum, u'b', handler, cal, status);
-            return;
+            subFormat(appendTo, 0x61, count, capitalizationContext, fieldNum,
+                      handler, cal, status);
         } else {
             appendTo += *toAppend;
         }
@@ -1883,11 +1874,9 @@ SimpleDateFormat::subFormat(UnicodeString &appendTo,
         if (ruleSet == NULL) {
             // Data doesn't exist for the locale we're looking for.
             // Falling back to am/pm.
-            // We are passing a different fieldToOutput because we want to add
-            // 'B' to field position. This makes this fallback stable when
-            // there is a data change on locales.
-            subFormat(appendTo, u'a', count, capitalizationContext, fieldNum, u'B', handler, cal, status);
-            return;
+            subFormat(appendTo, 0x61, count, capitalizationContext, fieldNum,
+                      handler, cal, status);
+            break;
         }
 
         // Get current display time.
@@ -1956,11 +1945,8 @@ SimpleDateFormat::subFormat(UnicodeString &appendTo,
         if (periodType == DayPeriodRules::DAYPERIOD_AM ||
             periodType == DayPeriodRules::DAYPERIOD_PM ||
             toAppend->isBogus()) {
-            // We are passing a different fieldToOutput because we want to add
-            // 'B' to field position iterator. This makes this fallback stable when
-            // there is a data change on locales.
-            subFormat(appendTo, u'a', count, capitalizationContext, fieldNum, u'B', handler, cal, status);
-            return;
+            subFormat(appendTo, 0x61, count, capitalizationContext, fieldNum,
+                      handler, cal, status);
         }
         else {
             appendTo += *toAppend;
@@ -2004,7 +1990,7 @@ SimpleDateFormat::subFormat(UnicodeString &appendTo,
     }
 #endif
 
-    handler.addAttribute(DateFormatSymbols::getPatternCharIndex(fieldToOutput), beginOffset, appendTo.length());
+    handler.addAttribute(fgPatternIndexToDateFormatField[patternCharIndex], beginOffset, appendTo.length());
 }
 
 //----------------------------------------------------------------------

@@ -71,5 +71,5 @@ sw_KE{
         XB{"Pseudo-Bidi"}
         YT{"Mayote"}
     }
-    Version{"37"}
+    Version{"36"}
 }

@@ -1,7 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html#License
 fo{
-    Version{"37"}
+    Version{"36"}
     zoneStrings{
         "Africa:Abidjan"{
             ec{"Abidjan"}
@@ -1710,9 +1710,7 @@ fo{
             ls{"Niue tíð"}
         }
         "meta:Norfolk"{
-            ld{"Norfolksoyggj summartíð"}
-            lg{"Norfolksoyggj tíð"}
-            ls{"Norfolksoyggj vanlig tíð"}
+            ls{"Norfolksoyggj tíð"}
         }
         "meta:Noronha"{
             ld{"Fernando de Noronha summartíð"}

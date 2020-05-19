@@ -1,5 +1,8 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html#License
+/**
+ * ICU <specials> source: <path>/xml/rbnf/mt.xml
+ */
 mt{
     RBNFRules{
         DurationRules{
@@ -265,5 +268,5 @@ mt{
             "10: g\u0127axart;",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

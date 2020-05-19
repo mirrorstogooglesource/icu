@@ -108,5 +108,5 @@ rw{
         yi{"Inyeyidishi"}
         zu{"Inyezulu"}
     }
-    Version{"37"}
+    Version{"36"}
 }

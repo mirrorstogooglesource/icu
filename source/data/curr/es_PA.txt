@@ -8,5 +8,5 @@ es_PA{
             "balboa panameño",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

@@ -8,5 +8,5 @@ en_ZA{
             "South African Rand",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

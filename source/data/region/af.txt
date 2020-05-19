@@ -307,6 +307,8 @@ af{
         CG{"Kongo (Republiek die)"}
         CI{"Cote d’Ivoire"}
         CZ{"Tsjeggiese Republiek"}
+        SZ{"Eswatini"}
+        TL{"Oos-Timor"}
     }
-    Version{"37"}
+    Version{"36"}
 }

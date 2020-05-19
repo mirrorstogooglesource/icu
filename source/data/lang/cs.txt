@@ -177,7 +177,6 @@ cs{
         ewo{"ewondo"}
         ext{"extremadurština"}
         fa{"perština"}
-        fa_AF{"darí"}
         fan{"fang"}
         fat{"fantština"}
         ff{"fulbština"}
@@ -641,13 +640,13 @@ cs{
         zh{"standardní čínština"}
     }
     Languages%short{
+        az{"ázerbájdžánština"}
         en_GB{"angličtina (VB)"}
     }
     Scripts{
         Afak{"afaka"}
         Aghb{"kavkazskoalbánské"}
         Arab{"arabské"}
-        Aran{"nastaliq"}
         Armi{"aramejské (imperiální)"}
         Armn{"arménské"}
         Avst{"avestánské"}
@@ -762,7 +761,6 @@ cs{
         Phnx{"fénické"}
         Plrd{"Pollardova fonetická abeceda"}
         Prti{"parthské klínové"}
-        Qaag{"zawgyi"}
         Rjng{"redžanské"}
         Roro{"rongorongo"}
         Runr{"runové"}
@@ -971,7 +969,7 @@ cs{
         SCOTLAND{"angličtina (Skotsko)"}
         WADEGILE{"Wade-Giles"}
     }
-    Version{"37"}
+    Version{"36"}
     characterLabelPattern{
         all{"{0} – vše"}
         category-list{"{0}: {1}"}

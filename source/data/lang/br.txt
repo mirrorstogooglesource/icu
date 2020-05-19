@@ -878,7 +878,7 @@ br{
         WADEGILE{"romanekadur Wade-Giles"}
         XSISTEMO{"esperanteg sistem X"}
     }
-    Version{"37"}
+    Version{"36"}
     characterLabelPattern{
         enclosed{"{0} — kelcʼhiet"}
         extended{"{0} — astennet"}

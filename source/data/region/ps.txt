@@ -299,6 +299,7 @@ ps{
     }
     Countries%short{
         GB{"انګلستان"}
+        US{"متحده آيالات"}
     }
     Countries%variant{
         CD{"کانګو (DRC)"}
@@ -308,5 +309,5 @@ ps{
         SZ{"سوازيلېنډ"}
         TL{"ختيځ تيمور"}
     }
-    Version{"37"}
+    Version{"36"}
 }

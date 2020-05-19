@@ -1034,10 +1034,6 @@ sv{
             "UYU",
             "uruguayansk peso",
         }
-        UYW{
-            "UYW",
-            "uruguayansk indexenhet för nominell lön",
-        }
         UZS{
             "UZS",
             "uzbekisk sum",
@@ -1578,7 +1574,7 @@ sv{
         }
         CNH{
             one{"kinesisk yuan (offshore)"}
-            other{"kinesisk yuan (offshore)"}
+            other{"CNH"}
         }
         CNX{
             one{"kinesisk dollar"}
@@ -2348,10 +2344,6 @@ sv{
             one{"uruguayansk peso"}
             other{"uruguayanska pesos"}
         }
-        UYW{
-            one{"uruguayansk indexenhet för nominell lön"}
-            other{"uruguayansk indexenhet för nominell lön"}
-        }
         UZS{
             one{"uzbekisk sum"}
             other{"uzbekiska sum"}
@@ -2533,5 +2525,5 @@ sv{
         one{"{0} {1}"}
         other{"{0} {1}"}
     }
-    Version{"37"}
+    Version{"36"}
 }

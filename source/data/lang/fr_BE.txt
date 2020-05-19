@@ -7,5 +7,5 @@ fr_BE{
         gu{"gujarati"}
         njo{"ao"}
     }
-    Version{"37"}
+    Version{"36"}
 }

@@ -12,7 +12,7 @@ jv{
         numbers{"Angka"}
     }
     Languages{
-        af{"Afrika"}
+        af{"af"}
         agq{"Aghem"}
         ak{"Akan"}
         am{"Amharik"}
@@ -22,8 +22,9 @@ jv{
         asa{"Asu"}
         ast{"Asturia"}
         az{"Azerbaijan"}
+        ban{"ban"}
         bas{"Basaa"}
-        be{"Belarus"}
+        be{"be"}
         bem{"Bemba"}
         bez{"Bena"}
         bg{"Bulgaria"}
@@ -32,7 +33,7 @@ jv{
         bo{"Tibet"}
         br{"Breton"}
         brx{"Bodo"}
-        bs{"Bosnia lan Hercegovina"}
+        bs{"bs"}
         ca{"Katala"}
         ccp{"Chakma"}
         ce{"Chechen"}
@@ -251,7 +252,7 @@ jv{
         en_GB{"Inggris (Britania)"}
     }
     Scripts{
-        Arab{"hija’iyah"}
+        Arab{"Arab"}
         Armn{"Armenia"}
         Beng{"Bangla"}
         Bopo{"Bopomofo"}
@@ -284,7 +285,6 @@ jv{
         Orya{"Odia"}
         Sinh{"Sinhala"}
         Taml{"Tamil"}
-        Telu{"Telugu"}
         Thaa{"Thaana"}
         Thai{"Thailand"}
         Tibt{"Tibetan"}
@@ -376,7 +376,7 @@ jv{
             tibt{"Digit Tibet"}
         }
     }
-    Version{"37"}
+    Version{"36"}
     characterLabelPattern{
         all{"{0} — kabeh"}
         compatibility{"{0} — kompatibilitas"}

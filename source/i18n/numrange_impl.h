@@ -31,7 +31,7 @@ namespace impl {
  */
 class UFormattedNumberRangeData : public FormattedValueStringBuilderImpl {
 public:
-    UFormattedNumberRangeData() : FormattedValueStringBuilderImpl(kUndefinedField) {}
+    UFormattedNumberRangeData() : FormattedValueStringBuilderImpl(0) {}
     virtual ~UFormattedNumberRangeData();
 
     DecimalQuantity quantity1;

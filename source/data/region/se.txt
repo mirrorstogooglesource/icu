@@ -287,7 +287,8 @@ se{
         ZZ{"dovdameahttun guovlu"}
     }
     Countries%short{
+        GB{"Stuorra-Británnia"}
         US{"USA"}
     }
-    Version{"37"}
+    Version{"36"}
 }

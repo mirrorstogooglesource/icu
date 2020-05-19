@@ -116,7 +116,6 @@ af{
         eu{"Baskies"}
         ewo{"Ewondo"}
         fa{"Persies"}
-        fa_AF{"Dari"}
         ff{"Fulah"}
         fi{"Fins"}
         fil{"Filippyns"}
@@ -629,7 +628,7 @@ af{
             vaii{"Vai-syfers"}
         }
     }
-    Version{"37"}
+    Version{"36"}
     characterLabelPattern{
         all{"{0} – alle"}
         category-list{"{0}: {1}"}

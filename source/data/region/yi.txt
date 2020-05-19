@@ -230,5 +230,5 @@ yi{
     Countries%variant{
         TL{"מזרח טימאר"}
     }
-    Version{"37"}
+    Version{"36"}
 }

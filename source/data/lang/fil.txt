@@ -120,7 +120,6 @@ fil{
         eu{"Basque"}
         ewo{"Ewondo"}
         fa{"Persian"}
-        fa_AF{"Dari"}
         ff{"Fulah"}
         fi{"Finnish"}
         fil{"Filipino"}
@@ -460,7 +459,7 @@ fil{
         Grek{"Greek"}
         Gujr{"Gujarati"}
         Guru{"Gurmukhi"}
-        Hanb{"Han na may Bopomofo"}
+        Hanb{"Hanb"}
         Hang{"Hangul"}
         Hani{"Han"}
         Hans{"Pinasimple"}
@@ -674,7 +673,7 @@ fil{
         PINYIN{"Pinyin Romanization"}
         WADEGILE{"Wade-Giles Romanization"}
     }
-    Version{"37"}
+    Version{"36"}
     characterLabelPattern{
         all{"{0} — lahat"}
         category-list{"{0}: {1}"}

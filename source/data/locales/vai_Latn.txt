@@ -23,7 +23,7 @@ vai_Latn{
         }
         native{"vaii"}
     }
-    Version{"37"}
+    Version{"36"}
     calendar{
         generic{
             DateTimePatterns{
@@ -116,6 +116,24 @@ vai_Latn{
                         "aimisa",
                         "aijima",
                         "siɓiti",
+                    }
+                }
+            }
+            monthNames{
+                format{
+                    wide{
+                        "luukao kemã",
+                        "ɓandaɓu",
+                        "vɔɔ",
+                        "fulu",
+                        "goo",
+                        "6",
+                        "7",
+                        "kɔnde",
+                        "saah",
+                        "galo",
+                        "kenpkato ɓololɔ",
+                        "luukao lɔma",
                     }
                 }
             }

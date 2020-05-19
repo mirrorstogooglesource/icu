@@ -8,5 +8,5 @@ es_PY{
             "guaraní paraguayo",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

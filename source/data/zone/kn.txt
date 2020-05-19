@@ -1,7 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html#License
 kn{
-    Version{"37"}
+    Version{"36"}
     zoneStrings{
         "Africa:Abidjan"{
             ec{"ಅಬಿದ್‌ಜನ್"}
@@ -1721,9 +1721,7 @@ kn{
             ls{"ನಿಯು ಸಮಯ"}
         }
         "meta:Norfolk"{
-            ld{"ನಾರ್ಫೋಕ್ ದ್ವೀಪ ಬೇಸಿಗೆ ಸಮಯ"}
-            lg{"ನಾರ್ಫೋಕ್ ದ್ವೀಪ ಸಮಯ"}
-            ls{"ನಾರ್ಫೋಕ್ ದ್ವೀಪ ಪ್ರಮಾಣಿತ ಸಮಯ"}
+            ls{"ನಾರ್ಫೋಕ್ ದ್ವೀಪ ಸಮಯ"}
         }
         "meta:Noronha"{
             ld{"ಫರ್ನಾಂಡೋ ದೆ ನೊರೊನ್ಹಾ ಬೇಸಿಗೆ ಸಮಯ"}

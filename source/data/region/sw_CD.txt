@@ -32,5 +32,5 @@ sw_CD{
         TL{"Timori ya Mashariki"}
         VN{"Vietnamu"}
     }
-    Version{"37"}
+    Version{"36"}
 }

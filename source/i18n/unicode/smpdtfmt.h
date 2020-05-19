@@ -1274,7 +1274,6 @@ private:
                    int32_t count,
                    UDisplayContext capitalizationContext,
                    int32_t fieldNum,
-                   char16_t fieldToOutput,
                    FieldPositionHandler& handler,
                    Calendar& cal,
                    UErrorCode& status) const; // in case of illegal argument

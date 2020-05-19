@@ -299,6 +299,7 @@ ur{
     }
     Countries%short{
         GB{"یو کے"}
+        UN{"اقوام متحدہ"}
         US{"امریکا"}
     }
     Countries%variant{
@@ -309,5 +310,5 @@ ur{
         SZ{"سوازی لینڈ"}
         TL{"مشرقی تیمور"}
     }
-    Version{"37"}
+    Version{"36"}
 }

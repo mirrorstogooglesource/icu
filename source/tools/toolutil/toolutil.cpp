@@ -60,8 +60,6 @@
 
 #include <errno.h>
 
-#include <cstddef>
-
 #include "unicode/errorcode.h"
 #include "unicode/putil.h"
 #include "cmemory.h"
@@ -245,7 +243,7 @@ struct UToolMemory {
     char name[64];
     int32_t capacity, maxCapacity, size, idx;
     void *array;
-    alignas(std::max_align_t) char staticArray[1];
+    alignas(max_align_t) char staticArray[1];
 };
 
 U_CAPI UToolMemory * U_EXPORT2

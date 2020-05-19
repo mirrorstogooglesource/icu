@@ -11,5 +11,5 @@ os_RU{
             "Сом",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

@@ -1,7 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html#License
 ka{
-    Version{"37"}
+    Version{"36"}
     zoneStrings{
         "Africa:Abidjan"{
             ec{"აბიჯანი"}
@@ -1710,9 +1710,7 @@ ka{
             ls{"ნიუეს დრო"}
         }
         "meta:Norfolk"{
-            ld{"ნორფოლკის კუნძულის ზაფხულის დრო"}
-            lg{"ნორფოლკის კუნძულის დრო"}
-            ls{"ნორფოლკის კუნძულის სტანდარტული დრო"}
+            ls{"ნორფოლკის კუნძულის დრო"}
         }
         "meta:Noronha"{
             ld{"ფერნანდო-დე-ნორონიას ზაფხულის დრო"}

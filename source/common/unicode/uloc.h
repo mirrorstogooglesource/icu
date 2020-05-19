@@ -1034,45 +1034,29 @@ uloc_getLineOrientation(const char* localeId,
                         UErrorCode *status);
 
 /**
- * Output values which uloc_acceptLanguage() writes to the 'outResult' parameter.
- *
+ * enums for the 'outResult' parameter return value
  * @see uloc_acceptLanguageFromHTTP
  * @see uloc_acceptLanguage
  * @stable ICU 3.2
  */
 typedef enum {
-    /**
-     * No exact match was found.
-     * @stable ICU 3.2
-     */
-    ULOC_ACCEPT_FAILED   = 0,
-    /**
-     * An exact match was found.
-     * @stable ICU 3.2
-     */
-    ULOC_ACCEPT_VALID    = 1,
-    /**
-     * A fallback was found. For example, the Accept-Language list includes 'ja_JP'
-     * and is matched with available locale 'ja'.
-     * @stable ICU 3.2
-     */
-    ULOC_ACCEPT_FALLBACK = 2   /*  */
+  ULOC_ACCEPT_FAILED   = 0,  /* No exact match was found. */
+  ULOC_ACCEPT_VALID    = 1,  /* An exact match was found. */
+  ULOC_ACCEPT_FALLBACK = 2   /* A fallback was found, for example, 
+                                Accept list contained 'ja_JP'
+                                which matched available locale 'ja'. */
 } UAcceptResult;
+
 
 /**
  * Based on a HTTP header from a web browser and a list of available locales,
  * determine an acceptable locale for the user.
- *
- * This is a thin wrapper over C++ class LocaleMatcher.
- *
  * @param result - buffer to accept the result locale
  * @param resultAvailable the size of the result buffer.
  * @param outResult - An out parameter that contains the fallback status
  * @param httpAcceptLanguage - "Accept-Language:" header as per HTTP.
  * @param availableLocales - list of available locales to match
- * @param status ICU error code. Its input value must pass the U_SUCCESS() test,
- *               or else the function returns immediately. Check for U_FAILURE()
- *               on output or use with function chaining. (See User Guide for details.)
+ * @param status Error status, may be BUFFER_OVERFLOW_ERROR
  * @return length needed for the locale.
  * @stable ICU 3.2
  */
@@ -1086,18 +1070,13 @@ uloc_acceptLanguageFromHTTP(char *result, int32_t resultAvailable,
 /**
  * Based on a list of available locales,
  * determine an acceptable locale for the user.
- *
- * This is a thin wrapper over C++ class LocaleMatcher.
- *
  * @param result - buffer to accept the result locale
  * @param resultAvailable the size of the result buffer.
  * @param outResult - An out parameter that contains the fallback status
  * @param acceptList - list of acceptable languages
  * @param acceptListCount - count of acceptList items
  * @param availableLocales - list of available locales to match
- * @param status ICU error code. Its input value must pass the U_SUCCESS() test,
- *               or else the function returns immediately. Check for U_FAILURE()
- *               on output or use with function chaining. (See User Guide for details.)
+ * @param status Error status, may be BUFFER_OVERFLOW_ERROR
  * @return length needed for the locale.
  * @stable ICU 3.2
  */

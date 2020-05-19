@@ -220,7 +220,7 @@ hy{
         native{"latn"}
         traditional{"armn"}
     }
-    Version{"37"}
+    Version{"36"}
     calendar{
         generic{
             DateTimePatterns{

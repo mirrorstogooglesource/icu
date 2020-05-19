@@ -210,7 +210,7 @@ NumberRangeFormatterImpl::NumberRangeFormatterImpl(const RangeMacroProps& macros
     getNumberRangeData(macros.locale.getName(), nsName, data, status);
     if (U_FAILURE(status)) { return; }
     fRangeFormatter = data.rangePattern;
-    fApproximatelyModifier = {data.approximatelyPattern, kUndefinedField, false};
+    fApproximatelyModifier = {data.approximatelyPattern, UNUM_FIELD_COUNT, false};
 
     // TODO: Get locale from PluralRules instead?
     fPluralRanges.initialize(macros.locale, status);
@@ -368,8 +368,7 @@ void NumberRangeFormatterImpl::formatRange(UFormattedNumberRangeData& data,
                 // Only collapse if the modifier is a unit.
                 // TODO: Make a better way to check for a unit?
                 // TODO: Handle case where the modifier has both notation and unit (compact currency)?
-                if (!mm->containsField({UFIELD_CATEGORY_NUMBER, UNUM_CURRENCY_FIELD})
-                        && !mm->containsField({UFIELD_CATEGORY_NUMBER, UNUM_PERCENT_FIELD})) {
+                if (!mm->containsField(UNUM_CURRENCY_FIELD) && !mm->containsField(UNUM_PERCENT_FIELD)) {
                     collapseMiddle = false;
                 }
             } else if (fCollapse == UNUM_RANGE_COLLAPSE_AUTO) {
@@ -417,7 +416,7 @@ void NumberRangeFormatterImpl::formatRange(UFormattedNumberRangeData& data,
         0,
         &lengthPrefix,
         &lengthSuffix,
-        kUndefinedField,
+        UNUM_FIELD_COUNT,
         status);
     if (U_FAILURE(status)) { return; }
     lengthInfix = lengthRange - lengthPrefix - lengthSuffix;
@@ -435,10 +434,10 @@ void NumberRangeFormatterImpl::formatRange(UFormattedNumberRangeData& data,
         if (repeatInner || repeatMiddle || repeatOuter) {
             // Add spacing if there is not already spacing
             if (!PatternProps::isWhiteSpace(string.charAt(UPRV_INDEX_1))) {
-                lengthInfix += string.insertCodePoint(UPRV_INDEX_1, u'\u0020', kUndefinedField, status);
+                lengthInfix += string.insertCodePoint(UPRV_INDEX_1, u'\u0020', UNUM_FIELD_COUNT, status);
             }
             if (!PatternProps::isWhiteSpace(string.charAt(UPRV_INDEX_2 - 1))) {
-                lengthInfix += string.insertCodePoint(UPRV_INDEX_2, u'\u0020', kUndefinedField, status);
+                lengthInfix += string.insertCodePoint(UPRV_INDEX_2, u'\u0020', UNUM_FIELD_COUNT, status);
             }
         }
     }

@@ -235,5 +235,5 @@ dje{
             "Zimbabwe Dollar",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

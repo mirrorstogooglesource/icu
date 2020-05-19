@@ -15,7 +15,7 @@ en_FI{
             }
         }
     }
-    Version{"37"}
+    Version{"36"}
     calendar{
         generic{
             availableFormats{

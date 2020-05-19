@@ -1,7 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html#License
 es_419{
-    Version{"37"}
+    Version{"36"}
     units{
         concentr{
             milligram-per-deciliter{
@@ -86,7 +86,7 @@ es_419{
             g-force{
                 dnam{"G"}
             }
-            meter-per-square-second{
+            meter-per-second-squared{
                 dnam{"m/s²"}
                 one{"{0}m/s²"}
                 other{"{0}m/s²"}

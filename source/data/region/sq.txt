@@ -300,6 +300,7 @@ sq{
     Countries%short{
         GB{"MB"}
         UN{"OKB"}
+        US{"SHBA"}
     }
     Countries%variant{
         CD{"Kongo (RDK)"}
@@ -309,5 +310,5 @@ sq{
         SZ{"Suazilend"}
         TL{"Timori Lindor"}
     }
-    Version{"37"}
+    Version{"36"}
 }

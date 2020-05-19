@@ -292,6 +292,7 @@ mzn{
         ZZ{"نامَیِّن منطقه"}
     }
     Countries%short{
+        GB{"بریتانیا"}
         US{"آمریکا متحده ایالات"}
     }
     Countries%variant{
@@ -300,5 +301,5 @@ mzn{
         CI{"عاج ساحل"}
         TL{"شرقی تیمور"}
     }
-    Version{"37"}
+    Version{"36"}
 }

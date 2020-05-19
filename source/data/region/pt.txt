@@ -298,6 +298,7 @@ pt{
         ZZ{"Região desconhecida"}
     }
     Countries%short{
+        GB{"Reino Unido"}
         UN{"ONU"}
         US{"EUA"}
     }
@@ -309,5 +310,5 @@ pt{
         SZ{"Suazilândia"}
         TL{"República Democrática de Timor-Leste"}
     }
-    Version{"37"}
+    Version{"36"}
 }

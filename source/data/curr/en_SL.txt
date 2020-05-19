@@ -8,5 +8,5 @@ en_SL{
             "Sierra Leonean Leone",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

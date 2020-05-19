@@ -8,5 +8,5 @@ en_BM{
             "Bermudan Dollar",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

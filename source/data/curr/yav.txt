@@ -95,5 +95,5 @@ yav{
             "́faláŋɛ u kɔmɔ́ɔl",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

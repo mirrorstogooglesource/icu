@@ -7,5 +7,5 @@ nl_AW{
             "Arubaanse gulden",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

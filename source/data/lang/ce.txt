@@ -403,6 +403,7 @@ ce{
         zza{"заза"}
     }
     Languages%short{
+        az{"азербайджанийн"}
         en_GB{"ингалсан (Британи)"}
     }
     Scripts{
@@ -451,6 +452,10 @@ ce{
         Zyyy{"массара а тӀеэцна"}
         Zzzz{"доьвзуш доцу йоза"}
     }
+    Scripts%stand-alone{
+        Hans{"атта китайн"}
+        Hant{"ламастан китайн"}
+    }
     Types{
         calendar{
             gregorian{"григорианан"}
@@ -459,7 +464,7 @@ ce{
             persian{"гӀажарийн"}
         }
     }
-    Version{"37"}
+    Version{"36"}
     codePatterns{
         language{"Мотт: {0}"}
         script{"Скрипт: {0}"}

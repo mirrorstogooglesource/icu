@@ -637,6 +637,7 @@ to{
         zh{"lea fakasiaina-mānitali"}
     }
     Languages%short{
+        az{"lea fakaʻasapaisani"}
         en_GB{"lea fakapilitānia"}
         en_US{"lea fakapālangi-ʻAmelika"}
     }
@@ -809,6 +810,10 @@ to{
         Zyyy{"tohinima fakatatau"}
         Zzzz{"tohinima taʻeʻiloa"}
     }
+    Scripts%stand-alone{
+        Hans{"tohinima fakasiaina-fakafaingofua"}
+        Hant{"tohinima fakasiaina-tukufakaholo"}
+    }
     Types{
         calendar{
             buddhist{"fakaputa"}
@@ -891,7 +896,7 @@ to{
             tibt{"fika fakatipeti"}
         }
     }
-    Version{"37"}
+    Version{"36"}
     characterLabelPattern{
         all{"{0} — kotoa"}
         category-list{"{0}: {1}"}

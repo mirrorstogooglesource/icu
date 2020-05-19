@@ -45,6 +45,10 @@ se_FI{
         Zxxx{"orrut čállojuvvot"}
         Zzzz{"dovdameahttun čállin"}
     }
+    Scripts%stand-alone{
+        Hans{"álkes kiinnálaš"}
+        Hant{"árbevirolaš kiinnálaš"}
+    }
     Types{
         calendar{
             buddhist{"buddhista kaleandar"}
@@ -55,8 +59,11 @@ se_FI{
             ethiopic-amete-alem{"etiohpalaš-amete-alem kaleandar"}
             gregorian{"gregorialaš kalendar"}
         }
+        numbers{
+            fullwide{"fullwide"}
+        }
     }
-    Version{"37"}
+    Version{"36"}
     codePatterns{
         script{"čállin: {0}"}
     }

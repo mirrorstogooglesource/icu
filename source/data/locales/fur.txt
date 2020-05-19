@@ -27,7 +27,7 @@ fur{
             }
         }
     }
-    Version{"37"}
+    Version{"36"}
     calendar{
         generic{
             DateTimePatterns{
@@ -613,6 +613,9 @@ fur{
                     other{"{0} agns indaûr"}
                 }
             }
+        }
+        zone{
+            dn{"zone"}
         }
     }
     listPattern{

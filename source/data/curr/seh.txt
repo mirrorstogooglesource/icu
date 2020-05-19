@@ -239,5 +239,5 @@ seh{
             "Dólar do Zimbábue",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

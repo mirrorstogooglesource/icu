@@ -372,7 +372,7 @@ typedef int8_t UBool;
     typedef char16_t UChar;
 #elif defined(UCHAR_TYPE)
     typedef UCHAR_TYPE UChar;
-#elif (U_CPLUSPLUS_VERSION >= 11)
+#elif defined(__cplusplus)
     typedef char16_t UChar;
 #else
     typedef uint16_t UChar;

@@ -241,7 +241,7 @@ ml{
         }
         native{"mlym"}
     }
-    Version{"37"}
+    Version{"36"}
     calendar{
         buddhist{
             eras{

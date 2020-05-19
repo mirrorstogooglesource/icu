@@ -226,5 +226,5 @@ kab{
         ZM{"Zambya"}
         ZW{"Zimbabwi"}
     }
-    Version{"37"}
+    Version{"36"}
 }

@@ -38,6 +38,7 @@ U_NAMESPACE_BEGIN
 class FormattedDateIntervalData;
 class DateIntervalFormat;
 
+#ifndef U_HIDE_DRAFT_API
 /**
  * An immutable class containing the result of a date interval formatting operation.
  *
@@ -53,25 +54,25 @@ class DateIntervalFormat;
  *
  * Not intended for public subclassing.
  *
- * @stable ICU 64
+ * @draft ICU 64
  */
 class U_I18N_API FormattedDateInterval : public UMemory, public FormattedValue {
   public:
     /**
      * Default constructor; makes an empty FormattedDateInterval.
-     * @stable ICU 64
+     * @draft ICU 64
      */
     FormattedDateInterval() : fData(nullptr), fErrorCode(U_INVALID_STATE_ERROR) {}
 
     /**
      * Move constructor: Leaves the source FormattedDateInterval in an undefined state.
-     * @stable ICU 64
+     * @draft ICU 64
      */
     FormattedDateInterval(FormattedDateInterval&& src) U_NOEXCEPT;
 
     /**
      * Destruct an instance of FormattedDateInterval.
-     * @stable ICU 64
+     * @draft ICU 64
      */
     virtual ~FormattedDateInterval() U_OVERRIDE;
 
@@ -83,7 +84,7 @@ class U_I18N_API FormattedDateInterval : public UMemory, public FormattedValue {
 
     /**
      * Move assignment: Leaves the source FormattedDateInterval in an undefined state.
-     * @stable ICU 64
+     * @draft ICU 64
      */
     FormattedDateInterval& operator=(FormattedDateInterval&& src) U_NOEXCEPT;
 
@@ -108,6 +109,7 @@ class U_I18N_API FormattedDateInterval : public UMemory, public FormattedValue {
         : fData(nullptr), fErrorCode(errorCode) {}
     friend class DateIntervalFormat;
 };
+#endif /* U_HIDE_DRAFT_API */
 
 
 /**
@@ -502,6 +504,7 @@ public:
                           FieldPosition& fieldPosition,
                           UErrorCode& status) const ;
 
+#ifndef U_HIDE_DRAFT_API
     /**
      * Format a DateInterval to produce a FormattedDateInterval.
      *
@@ -510,11 +513,12 @@ public:
      * @param dtInterval        DateInterval to be formatted.
      * @param status            Set if an error occurs.
      * @return                  A FormattedDateInterval containing the format result.
-     * @stable ICU 64
+     * @draft ICU 64
      */
     FormattedDateInterval formatToValue(
         const DateInterval& dtInterval,
         UErrorCode& status) const;
+#endif /* U_HIDE_DRAFT_API */
 
     /**
      * Format 2 Calendars to produce a string.
@@ -545,6 +549,7 @@ public:
                           FieldPosition& fieldPosition,
                           UErrorCode& status) const ;
 
+#ifndef U_HIDE_DRAFT_API
     /**
      * Format 2 Calendars to produce a FormattedDateInterval.
      *
@@ -559,12 +564,13 @@ public:
      *                          to be formatted into date interval string
      * @param status            Set if an error occurs.
      * @return                  A FormattedDateInterval containing the format result.
-     * @stable ICU 64
+     * @draft ICU 64
      */
     FormattedDateInterval formatToValue(
         Calendar& fromCalendar,
         Calendar& toCalendar,
         UErrorCode& status) const;
+#endif /* U_HIDE_DRAFT_API */
 
     /**
      * Date interval parsing is not supported. Please do not use.

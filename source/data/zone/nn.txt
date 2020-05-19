@@ -1,7 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html#License
 nn{
-    Version{"37"}
+    Version{"36"}
     zoneStrings{
         "Africa:Abidjan"{
             ec{"Abidjan"}
@@ -1711,9 +1711,7 @@ nn{
             ls{"tidssone for Niue"}
         }
         "meta:Norfolk"{
-            ld{"sumartid for Norfolkøya"}
-            lg{"tidssone for Norfolkøya"}
-            ls{"normaltid for Norfolkøya"}
+            ls{"tidssone for Norfolkøya"}
         }
         "meta:Noronha"{
             ld{"sumartid for Fernando de Noronha"}

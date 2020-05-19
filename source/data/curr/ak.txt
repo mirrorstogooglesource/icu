@@ -231,5 +231,5 @@ ak{
             "Zimbabwe Dɔla",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

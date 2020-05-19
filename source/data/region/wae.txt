@@ -292,5 +292,5 @@ wae{
         CI{"Côte d’Ivoire"}
         TL{"Wešttimor"}
     }
-    Version{"37"}
+    Version{"36"}
 }

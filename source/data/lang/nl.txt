@@ -172,7 +172,6 @@ nl{
         ewo{"Ewondo"}
         ext{"Extremeens"}
         fa{"Perzisch"}
-        fa_AF{"Dari"}
         fan{"Fang"}
         fat{"Fanti"}
         ff{"Fulah"}
@@ -627,8 +626,7 @@ nl{
         zh_Hant{"Mandarijn (traditioneel)"}
     }
     Languages%menu{
-        ars{"Arabisch, Nadjdi"}
-        ckb{"Koerdisch, Soranî"}
+        yue{"Kantonees"}
         zh{"Mandarijn"}
     }
     Languages%short{
@@ -643,7 +641,6 @@ nl{
         Aghb{"Kaukasisch Albanees"}
         Ahom{"Ahom"}
         Arab{"Arabisch"}
-        Aran{"Nastaliq"}
         Armi{"Keizerlijk Aramees"}
         Armn{"Armeens"}
         Avst{"Avestaans"}
@@ -664,14 +661,12 @@ nl{
         Cari{"Carisch"}
         Cham{"Cham"}
         Cher{"Cherokee"}
-        Chrs{"Chorasmisch"}
         Cirt{"Cirth"}
         Copt{"Koptisch"}
         Cprt{"Cyprisch"}
         Cyrl{"Cyrillisch"}
         Cyrs{"Oudkerkslavisch Cyrillisch"}
         Deva{"Devanagari"}
-        Diak{"Dives Akuru"}
         Dogr{"Dogra"}
         Dsrt{"Deseret"}
         Dupl{"Duployan snelschrift"}
@@ -691,7 +686,7 @@ nl{
         Grek{"Grieks"}
         Gujr{"Gujarati"}
         Guru{"Gurmukhi"}
-        Hanb{"Han met Bopomofo"}
+        Hanb{"Hanb"}
         Hang{"Hangul"}
         Hani{"Han"}
         Hano{"Hanunoo"}
@@ -716,7 +711,6 @@ nl{
         Khar{"Kharoshthi"}
         Khmr{"Khmer"}
         Khoj{"Khojki"}
-        Kits{"Kitaans kleinschrift"}
         Knda{"Kannada"}
         Kore{"Koreaans"}
         Kpel{"Kpelle"}
@@ -775,7 +769,7 @@ nl{
         Phnx{"Foenicisch"}
         Plrd{"Pollard-fonetisch"}
         Prti{"Inscriptioneel Parthisch"}
-        Qaag{"Zawgyi"}
+        Qaag{"Qaag"}
         Rjng{"Rejang"}
         Rohg{"Hanifi Rohingya"}
         Roro{"Rongorongo"}
@@ -823,7 +817,6 @@ nl{
         Wole{"Woleai"}
         Xpeo{"Oudperzisch"}
         Xsux{"Sumero-Akkadian Cuneiform"}
-        Yezi{"Jezidi"}
         Yiii{"Yi"}
         Zanb{"vierkant Zanabazar"}
         Zinh{"Overgeërfd"}
@@ -956,7 +949,6 @@ nl{
             cham{"Cham cijfers"}
             cyrl{"Cyrillische cijfers"}
             deva{"Devanagari cijfers"}
-            diak{"Dives Akuru cijfers"}
             ethi{"Ethiopische cijfers"}
             finance{"Financiële cijfers"}
             fullwide{"cijfers met volledige breedte"}
@@ -1054,7 +1046,6 @@ nl{
         BISKE{"San Giorgio/Bila-dialect"}
         BOHORIC{"Bohorič-alfabet"}
         BOONT{"Boontling"}
-        BORNHOLM{"Bornholms"}
         CISAUP{"Cisaup"}
         COLB1945{"Portugese-Braziliaanse spellingsverdrag van 1945"}
         CORNU{"Cornu"}
@@ -1133,7 +1124,7 @@ nl{
         WADEGILE{"Wade-Giles-romanisering"}
         XSISTEMO{"X-sistemo"}
     }
-    Version{"37"}
+    Version{"36"}
     characterLabelPattern{
         all{"{0} — alle"}
         category-list{"{0}: {1}"}

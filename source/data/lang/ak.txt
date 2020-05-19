@@ -47,5 +47,5 @@ ak{
         zh{"Kyaena kasa"}
         zu{"Zulu"}
     }
-    Version{"37"}
+    Version{"36"}
 }

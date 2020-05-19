@@ -175,7 +175,6 @@ vi{
         ewo{"Tiếng Ewondo"}
         ext{"Tiếng Extremadura"}
         fa{"Tiếng Ba Tư"}
-        fa_AF{"Tiếng Dari"}
         fan{"Tiếng Fang"}
         fat{"Tiếng Fanti"}
         ff{"Tiếng Fulah"}
@@ -591,13 +590,11 @@ vi{
         en_US{"Tiếng Anh (Mỹ)"}
     }
     Languages%variant{
-        ckb{"Tiếng Kurd Sorani"}
         ps{"Tiếng Pushto"}
     }
     Scripts{
         Afak{"Chữ Afaka"}
         Arab{"Chữ Ả Rập"}
-        Aran{"Chữ Nastaliq"}
         Armi{"Chữ Imperial Aramaic"}
         Armn{"Chữ Armenia"}
         Avst{"Chữ Avestan"}
@@ -708,7 +705,6 @@ vi{
         Phnx{"Chữ Phoenicia"}
         Plrd{"Ngữ âm Pollard"}
         Prti{"Chữ Parthia Văn bia"}
-        Qaag{"Chữ Zawgyi"}
         Rjng{"Chữ Rejang"}
         Roro{"Chữ Rongorongo"}
         Runr{"Chữ Runic"}
@@ -999,7 +995,7 @@ vi{
         VALENCIA{"Tiếng Valencia"}
         WADEGILE{"La Mã hóa Wade-Giles"}
     }
-    Version{"37"}
+    Version{"36"}
     characterLabelPattern{
         all{"{0} — tất cả"}
         category-list{"{0}: {1}"}

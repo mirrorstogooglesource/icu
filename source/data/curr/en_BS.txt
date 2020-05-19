@@ -8,5 +8,5 @@ en_BS{
             "Bahamian Dollar",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

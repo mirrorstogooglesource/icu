@@ -92,7 +92,7 @@ private:
     CollationTailoring(const CollationTailoring &other);
 };
 
-struct U_I18N_API CollationCacheEntry : public SharedObject {
+struct CollationCacheEntry : public SharedObject {
     CollationCacheEntry(const Locale &loc, const CollationTailoring *t)
             : validLocale(loc), tailoring(t) {
         if(t != NULL) {

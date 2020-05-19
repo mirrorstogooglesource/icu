@@ -329,7 +329,7 @@ kea{
             latn{"Nunbru osidental"}
         }
     }
-    Version{"37"}
+    Version{"36"}
     codePatterns{
         language{"Lingua: {0}"}
         script{"Skrita: {0}"}

@@ -48,5 +48,5 @@ ebu{
         zh{"Kĩchina"}
         zu{"Kĩzulu"}
     }
-    Version{"37"}
+    Version{"36"}
 }

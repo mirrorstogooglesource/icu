@@ -7,5 +7,5 @@ fr_MU{
             "roupie mauricienne",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }

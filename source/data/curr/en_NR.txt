@@ -8,5 +8,5 @@ en_NR{
             "Australian Dollar",
         }
     }
-    Version{"37"}
+    Version{"36"}
 }
