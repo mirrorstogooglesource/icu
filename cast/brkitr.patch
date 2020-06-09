@@ -7,11 +7,11 @@ index dba2fdcf..71f090da 100644
 +﻿// © 2016 and later: Unicode, Inc. and others.
  // License & terms of use: http://www.unicode.org/copyright.html#License
  ja{
-     Version{"2.1.44.56"}
+     Version{"37"}
 @@ -7,5 +7,6 @@ ja{
          line_loose:process(dependency){"line_loose_cj.brk"}
          line_normal:process(dependency){"line_normal_cj.brk"}
-         line_strict:process(dependency){"line.brk"}
+         line_strict:process(dependency){"line_cj.brk"}
 +	word:process(dependency){"word_ja.brk"}
      }
  }

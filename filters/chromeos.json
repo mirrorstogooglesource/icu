@@ -192,13 +192,14 @@
       ]
     },
 // # List of break iterator files (brk).
-// BRK_SOURCE = char.txt line.txt line_loose.txt line_loose_cj.txt\
+// BRK_SOURCE = char.txt line.txt line_cj.txt line_loose.txt line_loose_cj.txt\
 //  line_normal.txt line_normal_cj.txt sent.txt sent_el.txt title.txt\
 //  word.txt
     "brkitr_rules": {
       "whitelist": [
         "char",
         "line",
+        "line_cj",
         "line_loose",
         "line_loose_cj",
         "line_normal",
