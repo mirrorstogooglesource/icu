@@ -5,6 +5,7 @@
   "collationUCAData": "implicithan",
   "usePoolBundle": false,
   "localeFilter": {
+    "filterType": "language",
     "whitelist": [
       "af",
       "az",
