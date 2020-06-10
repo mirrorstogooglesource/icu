@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f45244ec_c34761cc",
+        "filename": "scripts/data_files_to_preserve.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2020-06-10T22:01:59Z",
+      "side": 1,
+      "message": "You don\u0027t need this file any more because it\u0027s now possible to support built-in rules such as NFD, NFC without translit files. That change must be included in ICU 63, right?\n\nYou can make another CL to clean this up.",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 24
+      },
+      "revId": "e4b8586e8ab6b3a33d9e016cddeeb70b81d2ab82",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
