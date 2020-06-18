@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e8a49d55_338b051c",
+        "filename": "BUILD.gn",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1238297
+      },
+      "writtenOn": "2020-06-18T05:50:50Z",
+      "side": 1,
+      "message": "Might be useful to mention https://unicode-org.atlassian.net/browse/ICU-20869 in a comment here (if that issue is fixed, the warning no longer needs to be suppressed).",
+      "range": {
+        "startLine": 92,
+        "startChar": 9,
+        "endLine": 92,
+        "endChar": 43
+      },
+      "revId": "bffdf5ccc2e754db3f2cf3d8396c8b8623b5aea4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
