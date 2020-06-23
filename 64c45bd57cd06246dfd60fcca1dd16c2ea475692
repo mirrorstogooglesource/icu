@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "912e37c2_4c1e3f79",
+        "filename": "BUILD.gn",
+        "patchSetId": 3
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1238297
+      },
+      "writtenOn": "2020-06-23T21:30:25Z",
+      "side": 1,
+      "message": "Ideally, we\u0027d move this outside the is_win block, it applies to all clang builds on all platforms.",
+      "range": {
+        "startLine": 92,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 0
+      },
+      "revId": "64c45bd57cd06246dfd60fcca1dd16c2ea475692",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
