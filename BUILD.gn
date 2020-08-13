@@ -657,7 +657,7 @@ template("generate_icui18n") {
     if (is_fuchsia) {
       # Fuchsia puts its own libicui18n.so in /system/lib where we need to put our
       # .so when doing component builds, so we need to give this a different name.
-      output_name = "icui18n_cr"
+      output_name = "${target_name}_cr"
     }
 
     # Make icu into a standalone static library. Currently This is only useful on
@@ -1131,7 +1131,7 @@ template("generate_icuuc") {
     if (is_fuchsia) {
       # Fuchsia puts its own libicuuc.so in /system/lib where we need to put our
       # .so when doing component builds, so we need to give this a different name.
-      output_name = "icuuc_cr"
+      output_name = "${target_name}_cr"
     }
   }
 }
