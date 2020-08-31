@@ -508,7 +508,6 @@ Locale::operator==( const   Locale& other) const
 
 #define ISASCIIALPHA(c) (((c) >= 'a' && (c) <= 'z') || ((c) >= 'A' && (c) <= 'Z'))
 
-#if 0  // TURN OFF the new part of UTS35 Locale Canonicalization due to start up performance regression
 namespace {
 
 CharString& AppendLSCVE(CharString& out, const char* language, const char* script,
@@ -538,7 +537,6 @@ CharString& AppendLSCVE(CharString& out, const char* language, const char* scrip
 }
 
 }  // namespace
-#endif
 
 /*This function initializes a Locale from a C locale ID*/
 Locale& Locale::init(const char* localeID, UBool canonicalize)
@@ -663,8 +661,15 @@ Locale& Locale::init(const char* localeID, UBool canonicalize)
             break;
         }
 
-#if 0  // TURN OFF the new part of UTS35 Locale Canonicalization due to start up performance regression
         if (canonicalize) {
+            // Return for 3 common application locales which are know to be
+            // already canoncalized to speed up.
+            if (uprv_strcmp(fullName, "c") == 0 ||
+                uprv_strcmp(fullName, "en") == 0 ||
+                uprv_strcmp(fullName, "en_US") == 0) {
+                return *this;
+            }
+
             UErrorCode status = U_ZERO_ERROR;
             // TODO: Try to use ResourceDataValue and ures_getValueWithFallback() etc.
             LocalUResourceBundlePointer metadata(ures_openDirect(NULL, "metadata", &status));
@@ -852,7 +857,6 @@ Locale& Locale::init(const char* localeID, UBool canonicalize)
                 }   // End of handle REGION
             } while (0);
         }   // if (canonicalize) {
-#endif
 
         // successful end of init()
         return *this;
