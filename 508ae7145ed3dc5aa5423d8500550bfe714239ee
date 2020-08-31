@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "5b2ffd5f_521281d9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2020-08-31T23:45:14Z",
+      "side": 1,
+      "message": "Sorry, but this line does not tell me anything about this CL. Could you be more specific? \n\nFrom the CL, I guess this is to change the previous work around to avoid a start up perf regression to special case \u0027c\u0027, \u0027en\u0027 and \u0027en-US\u0027.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 40
+      },
+      "revId": "508ae7145ed3dc5aa5423d8500550bfe714239ee",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ba362eab_c13767fb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2020-08-31T23:45:14Z",
+      "side": 1,
+      "message": "Is this the correct bug?  It seems not. Please, refer to the bug for this CL.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 20
+      },
+      "revId": "508ae7145ed3dc5aa5423d8500550bfe714239ee",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "de12da34_2e69c6f4",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 3
@@ -16,6 +62,52 @@
       "revId": "508ae7145ed3dc5aa5423d8500550bfe714239ee",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6129613d_1802729f",
+        "filename": "patches/turnOffNewCodeInLocaleCanonical.patch",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2020-08-31T23:45:14Z",
+      "side": 1,
+      "message": "known",
+      "range": {
+        "startLine": 7,
+        "startChar": 66,
+        "endLine": 7,
+        "endChar": 70
+      },
+      "revId": "508ae7145ed3dc5aa5423d8500550bfe714239ee",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5b9586fe_5e6fd9d6",
+        "filename": "source/common/locid.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 665,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2020-08-31T23:45:14Z",
+      "side": 1,
+      "message": "nit: known",
+      "range": {
+        "startLine": 665,
+        "startChar": 65,
+        "endLine": 665,
+        "endChar": 69
+      },
+      "revId": "508ae7145ed3dc5aa5423d8500550bfe714239ee",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
     }
   ]
 }
