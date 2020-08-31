@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "de12da34_2e69c6f4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2020-08-31T23:31:05Z",
+      "side": 1,
+      "message": "Jungshik - while I land ICU 67, I got rollback because the new canonicalization code caused\n30ms startup delay. I was force to turn off that part of new code by #if 0 to roll the ICU.\nNow after looking more into it, I believe in the start up time, most build call it with a handful of known canonicalized locales which we can just skip to optimized the performance. I am trying to implement that in ICU build but I would like to, in parallel, also put into the ICU 67 build in chrome so it could \n1. unblock me to use the function to fix other locale issue\n2. learn any other issues before the end of 68 freeze.",
+      "revId": "508ae7145ed3dc5aa5423d8500550bfe714239ee",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    }
+  ]
+}
