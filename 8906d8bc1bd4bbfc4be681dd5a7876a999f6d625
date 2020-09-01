@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ec3e22ed_e7d2151f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1116524
+      },
+      "writtenOn": "2020-09-01T21:49:08Z",
+      "side": 1,
+      "message": "PTAL\n\nLet me know if you have any concerns. I decided to pull out the sources into their own file as I found they made the build file harder to read.\nI uploaded a test CL for the ICU roll here: https://crrev.com/c/2388896",
+      "revId": "8906d8bc1bd4bbfc4be681dd5a7876a999f6d625",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    }
+  ]
+}
