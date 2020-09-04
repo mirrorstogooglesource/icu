@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "288e81d4_d7281531",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1145459
+      },
+      "writtenOn": "2020-09-04T20:13:07Z",
+      "side": 1,
+      "message": "Sorry if this is coming out of nowhere but I just kinda stumbled into this. I just wanted to be easily able to link the ICU data with my MSVC built executable and,as the commit message notes, I kinda stumbled on to a simplification for all platforms. Truth in advertising using C added about 1400 bytes (which was \u003e 1MB already) to the ucidt\u003cx\u003e_data.o though with a bit of effort I might be able to get rid of some of the teeny extra bit of fat. Doesn\u0027t seem worth much effort.\n\nI could also make it so it only uses the straight to C approach with a Windows build but that seems a little silly, adding complexity rather than removing it. I tested the cange with Windows (MSVC and clang), Linux (x86 Linux, zLinux, and Power Linux), and macOs. I don\u0027t have an ARM build in my menagerie yet but not sure if one can build an ICU data object file for ARM anyway (does this enable it?). Ditto for Fuchsia.\n\nThanks for looking at this.\n",
+      "revId": "93f5bedf3774df51755335adbbd299b47b4ee097",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    }
+  ]
+}
