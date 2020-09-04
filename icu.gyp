@@ -133,28 +133,28 @@
           }],
         },
         {
-          'target_name': 'data_assembly',
+          'target_name': 'data_c',
           'type': 'none',
           'conditions': [
             [ 'v8_host_byteorder=="big" or target_arch=="mips" or \
                target_arch=="mips64"', { # Big Endian
-              'data_assembly_inputs': [
+              'data_c_inputs': [
                 'common/icudtb.dat',
               ],
-              'data_assembly_outputs': [
-                '<(SHARED_INTERMEDIATE_DIR)/third_party/icu/icudtb_dat.S',
+              'data_c_outputs': [
+                '<(SHARED_INTERMEDIATE_DIR)/third_party/icu/icudtb_dat.cc',
               ],
             }, { # Little Endian
-              'data_assembly_outputs': [
-                '<(SHARED_INTERMEDIATE_DIR)/third_party/icu/icudtl_dat.S',
+              'data_c_outputs': [
+                '<(SHARED_INTERMEDIATE_DIR)/third_party/icu/icudtl_dat.cc',
               ],
               'conditions': [
                 ['OS == "android"', {
-                  'data_assembly_inputs': [
+                  'data_c_inputs': [
                     'android/icudtl.dat',
                   ],
                 } , { # else: OS!="android"
-                  'data_assembly_inputs': [
+                  'data_c_inputs': [
                     'common/icudtl.dat',
                   ],
                 }], # OS==android
@@ -162,17 +162,17 @@
             }],
           ],
           'sources': [
-            '<@(_data_assembly_inputs)',
+            '<@(_data_c_inputs)',
           ],
           'actions': [
             {
-              'action_name': 'make_data_assembly',
+              'action_name': 'make_data_c',
               'inputs': [
-                'scripts/make_data_assembly.py',
-                '<@(_data_assembly_inputs)',
+                'scripts/make_data_c.py',
+                '<@(_data_c_inputs)',
               ],
               'outputs': [
-                '<@(_data_assembly_outputs)',
+                '<@(_data_c_outputs)',
               ],
               'target_conditions': [
                  [ 'OS == "mac" or OS == "ios" or '
@@ -193,7 +193,7 @@
             'U_HIDE_DATA_SYMBOL',
           ],
           'dependencies': [
-            'data_assembly#target',
+            'data_c#target',
           ],
           'sources': [
              '<(SHARED_INTERMEDIATE_DIR)/third_party/icu/icudtl_dat.S',
@@ -222,7 +222,7 @@
             [ 'OS == "win" and icu_use_data_file_flag==0', {
               'type': 'none',
               'dependencies!': [
-                'data_assembly#target',
+                'data_c#target',
               ],
               'copies': [
                 {
@@ -236,7 +236,7 @@
             [ 'icu_use_data_file_flag==1', {
               'type': 'none',
               'dependencies!': [
-                'data_assembly#target',
+                'data_c#target',
               ],
               # Remove any assembly data file.
               'sources/': [['exclude', 'icudt[lb]_dat']],
