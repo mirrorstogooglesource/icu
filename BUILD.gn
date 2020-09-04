@@ -1217,46 +1217,20 @@ if (icu_use_data_file) {
     outputs = [ "$root_out_dir/icudtl_extra.dat" ]
   }
 } else {
-  data_assembly = "$target_gen_dir/${data_bundle_prefix}_dat.S"
-  inline_data_assembly = "$target_gen_dir/${data_bundle_prefix}_dat.cc"
-  action("make_data_assembly") {
-    script = "scripts/make_data_assembly.py"
+  data_c = "$target_gen_dir/${data_bundle_prefix}_dat.cc"
+  action("make_data_c") {
+    script = "scripts/make_data_c.py"
     inputs = [ "$data_dir/$data_bundle" ]
-    outputs = [ data_assembly ]
+    outputs = [ data_c ]
     args = [
       rebase_path(inputs[0], root_build_dir),
-      rebase_path(data_assembly, root_build_dir),
+      rebase_path(data_c, root_build_dir),
     ]
-    if (is_mac || is_ios) {
-      args += [ "--mac" ]
-    } else if (is_win) {
-      args += [ "--win" ]
-    }
-  }
-
-  if (is_win) {
-    action("make_inline_data_assembly") {
-      deps = [ ":make_data_assembly" ]
-      script = "scripts/asm_to_inline_asm.py"
-      inputs = [ data_assembly ]
-      outputs =  [ inline_data_assembly ]
-      args = rebase_path([
-        data_assembly,
-        inline_data_assembly,
-      ], root_build_dir)
-    }
-  } else {
-    not_needed([ "inline_data_assembly" ])
   }
 
   source_set("icudata") {
     defines = [ "U_HIDE_DATA_SYMBOL" ]
-    if (is_win) {
-      sources = [ inline_data_assembly ]
-      deps = [ ":make_inline_data_assembly", ]
-    } else {
-      sources = [ data_assembly ]
-      deps = [ ":make_data_assembly", ]
-    }
+    sources = [ data_c ]
+    deps = [ ":make_data_c" ]
   }
 }
