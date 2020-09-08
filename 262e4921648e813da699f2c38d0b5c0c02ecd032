@@ -19,6 +19,41 @@
     },
     {
       "key": {
+        "uuid": "26b13dbe_ede76812",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1116524
+      },
+      "writtenOn": "2020-09-08T17:17:12Z",
+      "side": 1,
+      "message": "Thank you!\nftang@ do you have any comment or concern with this?",
+      "revId": "262e4921648e813da699f2c38d0b5c0c02ecd032",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "555aede3_8d95fb74",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1116524
+      },
+      "writtenOn": "2020-09-08T17:17:12Z",
+      "side": 1,
+      "message": "You\u0027re welcome! I thought it made the file harder to read through.",
+      "parentUuid": "124279f3_9ce2fb63",
+      "revId": "262e4921648e813da699f2c38d0b5c0c02ecd032",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "448fa8ac_d1b245e5",
         "filename": "BUILD.gn",
         "patchSetId": 2
@@ -30,6 +65,30 @@
       "writtenOn": "2020-09-08T09:33:40Z",
       "side": 1,
       "message": "is this space change intentional?",
+      "range": {
+        "startLine": 94,
+        "startChar": 6,
+        "endLine": 94,
+        "endChar": 49
+      },
+      "revId": "262e4921648e813da699f2c38d0b5c0c02ecd032",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "89a492b6_6013a1e6",
+        "filename": "BUILD.gn",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1116524
+      },
+      "writtenOn": "2020-09-08T17:17:12Z",
+      "side": 1,
+      "message": "That\u0027s gn format. I don\u0027t really like it either but it\u0027s the kind of corner case where the auto-formatter is not very good. I still think we should stick to the gn format way of formatting for consistency.",
+      "parentUuid": "448fa8ac_d1b245e5",
       "range": {
         "startLine": 94,
         "startChar": 6,
