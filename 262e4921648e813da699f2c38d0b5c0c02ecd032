@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "124279f3_9ce2fb63",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2020-09-08T09:33:40Z",
+      "side": 1,
+      "message": "Nice. Thank you for factoring out source list, etc. ",
+      "revId": "262e4921648e813da699f2c38d0b5c0c02ecd032",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "448fa8ac_d1b245e5",
+        "filename": "BUILD.gn",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2020-09-08T09:33:40Z",
+      "side": 1,
+      "message": "is this space change intentional?",
+      "range": {
+        "startLine": 94,
+        "startChar": 6,
+        "endLine": 94,
+        "endChar": 49
+      },
+      "revId": "262e4921648e813da699f2c38d0b5c0c02ecd032",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
