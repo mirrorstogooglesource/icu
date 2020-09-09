@@ -54,6 +54,23 @@
     },
     {
       "key": {
+        "uuid": "7b5879db_8b238f35",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2020-09-09T21:56:51Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "262e4921648e813da699f2c38d0b5c0c02ecd032",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "448fa8ac_d1b245e5",
         "filename": "BUILD.gn",
         "patchSetId": 2
