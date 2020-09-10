@@ -33,6 +33,24 @@
       "revId": "93f5bedf3774df51755335adbbd299b47b4ee097",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5e89480c_11039590",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1145459
+      },
+      "writtenOn": "2020-09-10T13:23:10Z",
+      "side": 1,
+      "message": "As you can see I have done so. While it might be putting it strongly that the change is \"needed\", it\u0027s certainly important to me for Windows builds and, in general it seems like a nice simplification. Dunno if it facilitates icu_use_data_file\u003dfalse builds on ARM or Fuchsia (no clue whether their C-embedded assemblers are compatible enough with the Linux/Unix assemblers) but it *might* add  icu_use_data_file\u003dfalse capability to those platforms if they don\u0027t already have it so it might be useful beyond Windows. \n\nI\u0027d also argue that it\u0027s pretty low risk as it\u0027s pretty easy to see if it fails and it eliminates some platform-specific code (embedded in Python, no less) which it seems is always a good thing.\n\nThanks for looking at this.",
+      "parentUuid": "7d169ba9_19be10a8",
+      "revId": "93f5bedf3774df51755335adbbd299b47b4ee097",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     }
   ]
 }
