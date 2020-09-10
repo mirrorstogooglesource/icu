@@ -16,6 +16,23 @@
       "revId": "93f5bedf3774df51755335adbbd299b47b4ee097",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7d169ba9_19be10a8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2020-09-10T00:24:26Z",
+      "side": 1,
+      "message": "Could you file a bug about this and put down the reason why do we need to make a change from what we have now?",
+      "revId": "93f5bedf3774df51755335adbbd299b47b4ee097",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     }
   ]
 }
