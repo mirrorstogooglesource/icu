@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8f08d00c_59de7689",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1342026
+      },
+      "writtenOn": "2020-09-22T18:56:55Z",
+      "side": 1,
+      "message": "Moved upstream from https://fuchsia-review.googlesource.com/c/third_party/icu/+/429518",
+      "revId": "c54fb10b3aebeb1217922152e5fc81a821d585d3",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    }
+  ]
+}
