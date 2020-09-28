@@ -50,6 +50,23 @@
       "revId": "f539bd7a969bc35b5407a94b565e5117375ffb19",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9bcb5864_03537151",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1356022
+      },
+      "writtenOn": "2020-09-28T23:16:20Z",
+      "side": 1,
+      "message": "Just one concern: will disabling thin archive greatly increase the compilation time of chrome on Chrome OS? icu is quite a fundamental package, I remember that every time I modify it a bit, I need recompile 50% of chrome.",
+      "revId": "f539bd7a969bc35b5407a94b565e5117375ffb19",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     }
   ]
 }
