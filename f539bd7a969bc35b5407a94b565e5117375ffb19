@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "b1da2fd7_5b1e1164",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000479
+      },
+      "writtenOn": "2020-09-29T00:24:13Z",
+      "side": 1,
+      "message": "at least I can confirm that this successfully build on normal linux-chromeos build and simple-chrome environment for nocturne and betty-pi-arc (environment I happened to have locally).\n\nI didn\u0027t compare the compilation speed, I didn\u0027t see any clear problems, but maybe I should also check with the behavior with use_thin_lto\u003dtrue, I guess. Let me do that.",
+      "parentUuid": "2530e130_73f4ca5a",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 30
+      },
+      "revId": "f539bd7a969bc35b5407a94b565e5117375ffb19",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "6a5abcf9_95a69dcd",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1
