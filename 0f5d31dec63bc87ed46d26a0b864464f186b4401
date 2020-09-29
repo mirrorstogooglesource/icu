@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9a79a034_1de10fc6",
+        "filename": "filters/common.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 334,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2020-09-29T09:24:10Z",
+      "side": 1,
+      "message": "no, sffc told me if I remove the filterType and have a whitelist it will only include whatever I listed there. And I verify that by using the icu/scripts/diff_data_all.sh script that the output does not include zh_Hant.res",
+      "parentUuid": "c09ffd52_a3215a4b",
+      "range": {
+        "startLine": 330,
+        "startChar": 0,
+        "endLine": 334,
+        "endChar": 12
+      },
+      "revId": "0f5d31dec63bc87ed46d26a0b864464f186b4401",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f9ad6a90_81fcaa3c",
         "filename": "filters/ios.json",
         "patchSetId": 3

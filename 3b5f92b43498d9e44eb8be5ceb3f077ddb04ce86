@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dd9a834b_ab2344bc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2020-09-29T09:24:10Z",
+      "side": 1,
+      "message": "PTAL I also filed https://bugs.chromium.org/p/chromium/issues/detail?id\u003d1133219 for other issues",
+      "revId": "3b5f92b43498d9e44eb8be5ceb3f077ddb04ce86",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    }
+  ]
+}
