@@ -97,6 +97,30 @@
     },
     {
       "key": {
+        "uuid": "3f1f5fdf_dc0d0ad8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000479
+      },
+      "writtenOn": "2020-09-29T22:51:05Z",
+      "side": 1,
+      "message": "thanks. I\u0027ve also tried with use_thin_lto\u003dtrue case; once build chrome binary fully, switch this flag on and off, and compared the duration of rebuilding chrome (with slight files related to ICU).\n\nI\u0027d say the build time will not be impacted.\n\ndefault (icu_disable_thin_archive\u003dfalse):\nautoninja -C out/Default chrome  85.57s user 38.91s system 193% cpu 1:04.34 total\n\nwith this CL (icu_disable_thin_archive\u003dtrue):\nautoninja -C out/Default chrome  85.71s user 36.38s system 198% cpu 1:01.62 total",
+      "parentUuid": "b77a6aa6_fc02ec37",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 30
+      },
+      "revId": "f539bd7a969bc35b5407a94b565e5117375ffb19",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6a5abcf9_95a69dcd",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1
@@ -176,6 +200,23 @@
       "writtenOn": "2020-09-29T20:59:25Z",
       "side": 1,
       "message": "(non-owners lgtm)",
+      "revId": "f539bd7a969bc35b5407a94b565e5117375ffb19",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "277e2fdf_1cc8009b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000479
+      },
+      "writtenOn": "2020-09-29T22:51:05Z",
+      "side": 1,
+      "message": "ftang, jshin, PTAL",
       "revId": "f539bd7a969bc35b5407a94b565e5117375ffb19",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": false
