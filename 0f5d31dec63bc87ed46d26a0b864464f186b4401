@@ -22,6 +22,29 @@
       "revId": "0f5d31dec63bc87ed46d26a0b864464f186b4401",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f9ad6a90_81fcaa3c",
+        "filename": "filters/ios.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 324,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2020-09-29T07:17:00Z",
+      "side": 1,
+      "message": "I don\u0027t think iOS needs this. iOS Chrome does not have v8 because it uses iOS WebView (that of Safari).",
+      "range": {
+        "startLine": 319,
+        "startChar": 0,
+        "endLine": 324,
+        "endChar": 12
+      },
+      "revId": "0f5d31dec63bc87ed46d26a0b864464f186b4401",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
     }
   ]
 }
