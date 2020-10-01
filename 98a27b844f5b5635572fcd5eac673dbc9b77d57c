@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7bc26fa9_08dcc634",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1145459
+      },
+      "writtenOn": "2020-10-01T12:11:07Z",
+      "side": 1,
+      "message": "Hi Jungshik and Frank,\n\nThis one\u0027s kind of bubbled back to the top of issues that would be nice to get resolved (between my day job and a few other V8 CLs had to put this down). I understand your lack of enthusiasm for this change -- if it ain\u0027t broke, don\u0027t fix it. But it seems that it *is* broke, at least for MSVC builds. I can rework this change so the use of a generated C file is only used for MSVC builds which AFAIK simply don\u0027t work with internal ICU data. While that adds complexity rather than reducing it, I suppose, from your perspective, it reduces risk. Maybe if I make it an MSVC-only change and it proves itself, someone might be inspired to simplify and use it for all builds. Or not. Happy just to get the MSVC builds working,\n\nThanks ",
+      "revId": "98a27b844f5b5635572fcd5eac673dbc9b77d57c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    }
+  ]
+}
