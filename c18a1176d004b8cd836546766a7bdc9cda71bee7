@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3999bc9f_afa1bd70",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1249724
+      },
+      "writtenOn": "2020-10-15T01:12:26Z",
+      "side": 1,
+      "message": "I think this broke V8\u0027s DEPS upgrade due to failing test https://source.chromium.org/chromium/chromium/src/+/master:v8/test/intl/regress-1074578.js?q\u003dregress-1074578\u0026ss\u003dchromium%2Fchromium%2Fsrc:v8%2F\n\nSee https://chromium-review.googlesource.com/c/v8/v8/+/2469821, example failure https://logs.chromium.org/logs/v8/buildbucket/cr-buildbucket.appspot.com/8866486683143628448/+/steps/Check/0/logs/regress-1074578/0",
+      "revId": "c18a1176d004b8cd836546766a7bdc9cda71bee7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
