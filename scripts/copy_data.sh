@@ -50,12 +50,12 @@ function copy_data {
 function copy_android_extra {
   echo "Copying icudtl_extra.dat for AndroidExtra"
 
-  LD_LIBRARY_PATH=lib/ bin/icupkg -r \
+  LD_LIBRARY_PATH=lib/ bin/icupkg -r --ignore-deps \
     "${TOPSRC}/filters/android-extra-removed-resources.txt" \
     "data/out/tmp/icudt${VERSION}l.dat"
 
   echo "AFTER strip out the content is"
-  LD_LIBRARY_PATH=lib/ bin/icupkg -l \
+  LD_LIBRARY_PATH=lib/ bin/icupkg -l --ignore-deps \
     "data/out/tmp/icudt${VERSION}l.dat"
 
   cp "data/out/tmp/icudt${VERSION}l.dat" "${TOPSRC}/android_small/icudtl_extra.dat"
