@@ -221,3 +221,8 @@ D. Local Modifications
     to reduce performance impact/risk.
   - patches/restrace.patch
 
+7. Patch Arabic date time pattern back to 67 value to avoid test
+   breakage in 
+   third_party/blink/web_tests/fast/forms/datetimelocal/datetimelocal-appearance-l10n.html
+  - patches/ardatepattern.patch
+  - https://bugs.chromium.org/p/chromium/issues/detail?id=1139186
