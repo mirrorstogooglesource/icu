@@ -223,7 +223,7 @@ lv{
         PM{"Senpjēra un Mikelona"}
         PN{"Pitkērnas salas"}
         PR{"Puertoriko"}
-        PS{"Palestīnas teritorijas"}
+        PS{"Palestīna"}
         PT{"Portugāle"}
         PW{"Palau"}
         PY{"Paragvaja"}
@@ -299,7 +299,6 @@ lv{
         ZZ{"nezināms reģions"}
     }
     Countries%short{
-        PS{"Palestīna"}
         UN{"ANO"}
         US{"ASV"}
     }
