@@ -16,6 +16,24 @@
       "message": "+1 (but I have no power here)",
       "revId": "02cbc49b081e4fafce7d39fac416d0233c3d7fe1",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "63070855_8b932aa7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1375392
+      },
+      "writtenOn": "2020-11-06T20:39:23Z",
+      "side": 1,
+      "message": "I wanted you to be informed. And will find another OWNERS, since ftang@ is not available at the moment.",
+      "parentUuid": "97323ef3_eb652fd4",
+      "revId": "02cbc49b081e4fafce7d39fac416d0233c3d7fe1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
