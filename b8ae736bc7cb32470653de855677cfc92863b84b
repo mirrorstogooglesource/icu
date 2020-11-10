@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "626b3e8a_1b301949",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1375392
+      },
+      "writtenOn": "2020-11-10T02:09:22Z",
+      "side": 1,
+      "message": "Hi folks!  Would you mind taking a look at this commit? It\u0027s not a big one but it is a big help to Fuchsia.",
+      "revId": "b8ae736bc7cb32470653de855677cfc92863b84b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
