@@ -16,6 +16,23 @@
       "message": "Hi jshin@, do you mind taking a look? Chromium is now ready for this :) I have tested this already with ftang@\u0027s experimental char16tv3 branch, the prototype CL is here: https://crrev.com/c/2595738",
       "revId": "39b3fe531f985c29c6f4967f5736aeeb3db92ad5",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0c34b0d_c7317837",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1179305
+      },
+      "writtenOn": "2021-01-19T07:41:13Z",
+      "side": 1,
+      "message": "Friendly ping, can either one of you PTAL? :)",
+      "revId": "39b3fe531f985c29c6f4967f5736aeeb3db92ad5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
