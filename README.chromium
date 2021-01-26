@@ -282,3 +282,9 @@ D. Local Modifications
     https://github.com/unicode-org/icu/pull/1502
   - updtream bug:
     https://unicode-org.atlassian.net/browse/ICU-21430
+
+15. Remove explicit std::atomic<NumberRangeFormatterImpl*> template
+    instantiation
+    patches/atomic_template_instantiation.patch
+  - This instantiation does not appear to be necessary and interferes in some
+    build configurations
