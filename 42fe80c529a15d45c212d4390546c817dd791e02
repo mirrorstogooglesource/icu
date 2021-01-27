@@ -34,6 +34,24 @@
       "parentUuid": "92598c07_27626ec5",
       "revId": "42fe80c529a15d45c212d4390546c817dd791e02",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae32cfaf_03ee9744",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001629
+      },
+      "writtenOn": "2021-01-27T16:51:23Z",
+      "side": 1,
+      "message": "So should we upstream this then?",
+      "parentUuid": "e84e0631_e6f85835",
+      "revId": "42fe80c529a15d45c212d4390546c817dd791e02",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
