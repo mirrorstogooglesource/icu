@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "92598c07_27626ec5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001629
+      },
+      "writtenOn": "2021-01-27T14:02:23Z",
+      "side": 1,
+      "message": "Please add some words to the effect that this is a workaround for a toolchain bug. I\u0027m fine with landing this temporarily to get the libc++ roll in earlier, but we should fix the underlying issue that makes us incompatible with cl.exe here and then remove this again.\n\n(chrome code can assume clang, but this is a third-party dep, and we should try to not require patching third-party code to appease clang/libc++)",
+      "revId": "42fe80c529a15d45c212d4390546c817dd791e02",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
