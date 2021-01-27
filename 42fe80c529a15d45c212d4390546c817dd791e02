@@ -16,6 +16,24 @@
       "message": "Please add some words to the effect that this is a workaround for a toolchain bug. I\u0027m fine with landing this temporarily to get the libc++ roll in earlier, but we should fix the underlying issue that makes us incompatible with cl.exe here and then remove this again.\n\n(chrome code can assume clang, but this is a third-party dep, and we should try to not require patching third-party code to appease clang/libc++)",
       "revId": "42fe80c529a15d45c212d4390546c817dd791e02",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e84e0631_e6f85835",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003006
+      },
+      "writtenOn": "2021-01-27T16:49:26Z",
+      "side": 1,
+      "message": "I don\u0027t think it\u0027s a toolchain bug. You can\u0027t explicitly instantiate std::atomic\u003cT*\u003e with an incomplete T with MSVC either:\nhttps://gcc.godbolt.org/z/34xx8h\n\nThis code just happened to work because of the exclude_from_explicit_instantiation attributes in libc++ std::atomic. Removing those attributes is a workaround for a compiler bug, but this explicit instantiation never should\u0027ve worked, it doesn\u0027t work with MSVC or mingw, and it may never have been needed.\n\nI tried to track this down before I sent out the CL, but I didn\u0027t get far. This time I made it all the way to here:\nhttps://unicode-org.atlassian.net/browse/ICU-20209#icft\u003dICU-20209\nhttps://unicode-org.atlassian.net/browse/ICU-20157\n\nI\u0027ll add those links to README.chromium and try to add more context there.",
+      "parentUuid": "92598c07_27626ec5",
+      "revId": "42fe80c529a15d45c212d4390546c817dd791e02",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
