@@ -52,6 +52,24 @@
       "parentUuid": "e84e0631_e6f85835",
       "revId": "42fe80c529a15d45c212d4390546c817dd791e02",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e7798f5_61760100",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003006
+      },
+      "writtenOn": "2021-01-27T17:56:37Z",
+      "side": 1,
+      "message": "I think so, but it needs to be tested with MSVC first. I included this in the new README text.",
+      "parentUuid": "ae32cfaf_03ee9744",
+      "revId": "42fe80c529a15d45c212d4390546c817dd791e02",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
