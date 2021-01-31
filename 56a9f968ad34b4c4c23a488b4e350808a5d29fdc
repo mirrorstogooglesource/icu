@@ -33,6 +33,23 @@
       "message": "Friendly ping",
       "revId": "56a9f968ad34b4c4c23a488b4e350808a5d29fdc",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3252ba71_7747ebe6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000805
+      },
+      "writtenOn": "2021-01-31T01:19:32Z",
+      "side": 1,
+      "message": "Ping",
+      "revId": "56a9f968ad34b4c4c23a488b4e350808a5d29fdc",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
