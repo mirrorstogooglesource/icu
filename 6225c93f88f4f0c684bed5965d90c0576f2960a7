@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20e066b3_89102e13",
+        "filename": "source/data/unit/fa.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 1858,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2021-02-04T23:38:14Z",
+      "side": 0,
+      "message": "With this revert, you are losing fixes for over-localization in Farsi for km, m, etc. \n\nCan you make a better fix than just reverting?  Replacing \"\u003cLRM\u003e\" with Unicode LRM works ?",
+      "range": {
+        "startLine": 1856,
+        "startChar": 15,
+        "endLine": 1858,
+        "endChar": 34
+      },
+      "revId": "6225c93f88f4f0c684bed5965d90c0576f2960a7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
