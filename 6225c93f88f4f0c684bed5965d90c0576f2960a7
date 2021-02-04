@@ -22,6 +22,30 @@
       },
       "revId": "6225c93f88f4f0c684bed5965d90c0576f2960a7",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c42b581f_64fbbe28",
+        "filename": "source/data/unit/fa.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 1858,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2021-02-04T23:52:15Z",
+      "side": 0,
+      "message": "I am not a Persian speaker, and I have no confidence if I did that it will produce a correct result. The previous version was proof-read by Persian localization folks and we are sure they have no worst issue than what we ship in m87. If I change line by line, I could introduce error and could cause even more problem. I think that should be done in ICU, and get Persian speaker to review them. We can do that after I stop the bleeding in m89 first (and m88 may cp that).",
+      "parentUuid": "20e066b3_89102e13",
+      "range": {
+        "startLine": 1856,
+        "startChar": 15,
+        "endLine": 1858,
+        "endChar": 34
+      },
+      "revId": "6225c93f88f4f0c684bed5965d90c0576f2960a7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
