@@ -281,9 +281,9 @@ D. Local Modifications
 
 14. Patch locale canoncalization fixes which is part of 68.2
     patches/loc2.patch
-  - updatream PR:
+  - upsream PR:
     https://github.com/unicode-org/icu/pull/1502
-  - updtream bug:
+  - upstream bug:
     https://unicode-org.atlassian.net/browse/ICU-21430
 
 15. Remove explicit std::atomic<NumberRangeFormatterImpl*> template
@@ -298,3 +298,9 @@ D. Local Modifications
     At this time, it's not clear if this particular instantiation with
     NumberRangeFormatterImpl* was ever necessary for MSVC. Further testing with
     MSVC is required to upstream this patch.
+
+16. Patch Farsi unit formats
+    patches/farsi_unit.patch
+  - upstream bug:
+    https://unicode-org.atlassian.net/browse/CLDR-14476
+
