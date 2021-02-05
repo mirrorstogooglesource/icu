@@ -70,6 +70,30 @@
       },
       "revId": "6225c93f88f4f0c684bed5965d90c0576f2960a7",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aac7c0f1_c616d38f",
+        "filename": "source/data/unit/fa.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 1858,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2021-02-05T01:04:10Z",
+      "side": 0,
+      "message": "I aske the question in https://unicode-org.atlassian.net/browse/CLDR-10831",
+      "parentUuid": "5223b691_c9c28c5b",
+      "range": {
+        "startLine": 1856,
+        "startChar": 15,
+        "endLine": 1858,
+        "endChar": 34
+      },
+      "revId": "6225c93f88f4f0c684bed5965d90c0576f2960a7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
