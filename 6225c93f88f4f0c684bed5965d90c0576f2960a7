@@ -94,6 +94,30 @@
       },
       "revId": "6225c93f88f4f0c684bed5965d90c0576f2960a7",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "780fafbb_2f514456",
+        "filename": "source/data/unit/fa.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 1858,
+      "author": {
+        "id": 1324561
+      },
+      "writtenOn": "2021-02-05T01:39:38Z",
+      "side": 0,
+      "message": "I think we\u0027d be assuming too much by replacing \u003cLRM\u003e with a real LRM.  Note that most of the file has units that are still in the Arabic/Persian script.  It seems like these entries probably weren\u0027t well reviewed.  Now we\u0027ve flagged the problem, so hopefully it will get taken care of in the next CLDR release once vetters have taken a closer look.",
+      "parentUuid": "aac7c0f1_c616d38f",
+      "range": {
+        "startLine": 1856,
+        "startChar": 15,
+        "endLine": 1858,
+        "endChar": 34
+      },
+      "revId": "6225c93f88f4f0c684bed5965d90c0576f2960a7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
