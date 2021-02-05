@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef30efea_63ff091e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2021-02-05T01:50:04Z",
+      "side": 1,
+      "message": "Here is my view. It is a regression caused by the change in the big landing of 68.1\nThe default approach, is the revert the change ASAP, until we have enough time to figure out\nthe right approach. And this CL is exactly taking that approach- revert that file to the state prior to 68.1 landing. ",
+      "revId": "58e10b412e6c7f497a4d1c7ad1f7ee7995ef7ecc",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
