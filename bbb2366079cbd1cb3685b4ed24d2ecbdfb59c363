@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cfb01d98_cfd08b3f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2021-02-05T18:02:18Z",
+      "side": 1,
+      "message": "BTW, the test in the CL description worked. ",
+      "revId": "bbb2366079cbd1cb3685b4ed24d2ecbdfb59c363",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
