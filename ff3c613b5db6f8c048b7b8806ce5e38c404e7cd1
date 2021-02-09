@@ -16,6 +16,23 @@
       "message": "not: Can you change the 1st line of CL description to sth like this?\n\n[M89] Fix Persian unit formatting and extra data file handling on Android \n\n",
       "revId": "ff3c613b5db6f8c048b7b8806ce5e38c404e7cd1",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "90b764ea_7aab2de0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2021-02-09T00:45:12Z",
+      "side": 1,
+      "message": "And, the 2nd BUG: line should have both bugs listed so that this CL is recorded properly in both bugs at crbug.com. ",
+      "revId": "ff3c613b5db6f8c048b7b8806ce5e38c404e7cd1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
