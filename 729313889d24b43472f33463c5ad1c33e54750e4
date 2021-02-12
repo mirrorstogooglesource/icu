@@ -33,6 +33,75 @@
       "message": "Friendly ping :)",
       "revId": "729313889d24b43472f33463c5ad1c33e54750e4",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "66b0f82d_2c47eec6",
+        "filename": "sources.gni",
+        "patchSetId": 2
+      },
+      "lineNbr": 523,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2021-02-12T19:10:25Z",
+      "side": 1,
+      "message": "The corresponding change has to be made in https://chromium.googlesource.com/chromium/deps/icu/+/refs/heads/master/scripts/update.sh .",
+      "range": {
+        "startLine": 523,
+        "startChar": 0,
+        "endLine": 523,
+        "endChar": 70
+      },
+      "revId": "729313889d24b43472f33463c5ad1c33e54750e4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b27275b3_67ffad51",
+        "filename": "sources.gni",
+        "patchSetId": 2
+      },
+      "lineNbr": 727,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2021-02-12T19:10:25Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 725,
+        "startChar": 0,
+        "endLine": 727,
+        "endChar": 34
+      },
+      "revId": "729313889d24b43472f33463c5ad1c33e54750e4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d16da449_a1a57077",
+        "filename": "sources.gni",
+        "patchSetId": 2
+      },
+      "lineNbr": 736,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2021-02-12T19:10:25Z",
+      "side": 1,
+      "message": "Moving private headers of icuuc to icuuc_public for icui18n, we\u0027re opening them up for non-ICU code outside third_party/icu, aren\u0027t we? \n\nIs there a way to restrict the access to icuuc\u0027s internal header files to icui18n?",
+      "range": {
+        "startLine": 728,
+        "startChar": 0,
+        "endLine": 736,
+        "endChar": 28
+      },
+      "revId": "729313889d24b43472f33463c5ad1c33e54750e4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
