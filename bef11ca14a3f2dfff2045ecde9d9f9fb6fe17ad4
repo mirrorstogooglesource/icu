@@ -33,6 +33,24 @@
       "message": "Please also need to create a new patch file in third_party/icu/patches/with your change in source/common/uposixdefs.h (NOT other changes)add  add a note in third_party/icu/README.chromium\n\nsee https://chromium-review.googlesource.com/c/chromium/deps/icu/+/2702525 as example. \nWe need to do this this way so when I later (about early April) to update icu to icu69.1 I can replay all necessary patches to that tree.\n\nFor the changes in third_party/icu/README.chromium\nJust add point 18 in the end of that file to describe the patch and mention the patch name and do not worry about lines of upstream bug: \u0026 upstream PR:\n",
       "revId": "bef11ca14a3f2dfff2045ecde9d9f9fb6fe17ad4",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2eef5eb_0fbe0829",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1375392
+      },
+      "writtenOn": "2021-03-04T02:03:52Z",
+      "side": 1,
+      "message": "Done.\nAre there buildbots to submit this change to, just in case?",
+      "parentUuid": "e4efda1a_48583a47",
+      "revId": "bef11ca14a3f2dfff2045ecde9d9f9fb6fe17ad4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
