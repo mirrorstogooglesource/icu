@@ -16,6 +16,23 @@
       "message": "Hi ftang@, PTAL.",
       "revId": "2abf28656a39c56e41f7a57433503aaaa155cf27",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "748e0e18_61bbd60c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1249238
+      },
+      "writtenOn": "2021-03-08T16:33:51Z",
+      "side": 1,
+      "message": "lgtm",
+      "revId": "2abf28656a39c56e41f7a57433503aaaa155cf27",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
