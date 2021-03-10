@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0c95a4aa_54d9ddf9",
+        "filename": "patches/locid_sort.patch",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2021-03-10T23:38:20Z",
+      "side": 1,
+      "message": "It appears that somehow fixing uprv_strcmp() was not considered as a good alternative in the upstream PR. Shane suggested it, but Markus liked your patch.",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 58
+      },
+      "revId": "a6a564339a48b8c73477ac11b4f13acf42aa11eb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
