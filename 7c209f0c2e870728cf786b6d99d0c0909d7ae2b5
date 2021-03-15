@@ -34,6 +34,24 @@
       "parentUuid": "1a4cf927_ab4f2671",
       "revId": "7c209f0c2e870728cf786b6d99d0c0909d7ae2b5",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5b43d4b_9ace85ec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1208815
+      },
+      "writtenOn": "2021-03-15T18:31:04Z",
+      "side": 1,
+      "message": "Ah, it actually looks like this is indeed obsolete now since tott of icu doesn\u0027t produce these warning anymore. Thanks for the ping!",
+      "parentUuid": "48686b49_a8cbf90e",
+      "revId": "7c209f0c2e870728cf786b6d99d0c0909d7ae2b5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
