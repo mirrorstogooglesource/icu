@@ -239,7 +239,11 @@ D. Local Modifications
     MSVC is required to upstream this patch.
   - https://unicode-org.atlassian.net/browse/ICU-21482
 
-9. Patch source/common/uposixdefs.h so it compiles on Fuchsia on Macs.
+9.  Patch source/common/uposixdefs.h so it compiles on Fuchsia on Macs.
     patches/fuchsia.patch
-    - context bug: https://bugs.chromium.org/p/chromium/issues/detail?id=1184527
+  - context bug: https://bugs.chromium.org/p/chromium/issues/detail?id=1184527
+
+10. Fix build problem of "no member named 'abs' in namespace 'std';"
+    patches/include_cstdlib.patch
+  - https://unicode-org.atlassian.net/browse/ICU-21562
 
