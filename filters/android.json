@@ -1724,6 +1724,7 @@
       "rules": [
         "-/*",
         "+/%%ALIAS",
+        "+/%%Parent",
         "+/LocaleScript",
         "+/layout",
         "+/Version"
