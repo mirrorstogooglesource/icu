@@ -20,22 +20,6 @@ class LongNameHandler;
 }
 } // namespace number
 
-// Export an explicit template instantiation of the LocalPointer that is used as a
-// data member of MeasureUnitImpl.
-// (When building DLLs for Windows this is required.)
-#if U_PF_WINDOWS <= U_PLATFORM && U_PLATFORM <= U_PF_CYGWIN
-#if defined(_MSC_VER)
-// Ignore warning 4661 as LocalPointerBase does not use operator== or operator!=
-#pragma warning(push)
-#pragma warning(disable : 4661)
-#endif
-template class U_I18N_API LocalPointerBase<MeasureUnitImpl>;
-template class U_I18N_API LocalPointer<MeasureUnitImpl>;
-#if defined(_MSC_VER)
-#pragma warning(pop)
-#endif
-#endif
-
 static const char16_t kDefaultCurrency[] = u"XXX";
 static const char kDefaultCurrency8[] = "XXX";
 
@@ -329,6 +313,22 @@ struct U_I18N_API MeasureUnitImplWithIndex : public UMemory {
         : index(index), unitImpl(MeasureUnitImpl(singleUnitImpl, status)) {
     }
 };
+
+// Export an explicit template instantiation of the LocalPointer that is used as a
+// data member of MeasureUnitImpl.
+// (When building DLLs for Windows this is required.)
+#if U_PF_WINDOWS <= U_PLATFORM && U_PLATFORM <= U_PF_CYGWIN
+#if defined(_MSC_VER)
+// Ignore warning 4661 as LocalPointerBase does not use operator== or operator!=
+#pragma warning(push)
+#pragma warning(disable : 4661)
+#endif
+template class U_I18N_API LocalPointerBase<MeasureUnitImpl>;
+template class U_I18N_API LocalPointer<MeasureUnitImpl>;
+#if defined(_MSC_VER)
+#pragma warning(pop)
+#endif
+#endif
 
 U_NAMESPACE_END
 

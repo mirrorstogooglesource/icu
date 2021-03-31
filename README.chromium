@@ -245,5 +245,14 @@ D. Local Modifications
 
 10. Fix build problem of "no member named 'abs' in namespace 'std';"
     patches/include_cstdlib.patch
-  - https://unicode-org.atlassian.net/browse/ICU-21562
+  - upstream bug:
+    https://unicode-org.atlassian.net/browse/ICU-21562
+  - upstream PR:
+    https://github.com/unicode-org/icu/pull/1670
 
+11. Fix window build problem
+    patches/measunit_impl_move-template.patch
+  - upstream bug:
+    https://unicode-org.atlassian.net/browse/ICU-21563
+  - upstream PR:
+    https://github.com/unicode-org/icu/pull/1671
