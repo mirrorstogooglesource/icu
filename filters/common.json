@@ -1377,7 +1377,7 @@
         "+/*/*/mile-per-hour",
         "+/*/*/liter-per-kilometer",
         "+/*/*/mile-per-gallon",
-        "+/*/compound",
+        "+/*/compound/per",
         "+/*/acceleration",
 	"+/*/area",
         "+/*/concentr",

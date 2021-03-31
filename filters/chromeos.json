@@ -1396,7 +1396,7 @@
         "+/*/*/mile-per-hour",
         "+/*/*/liter-per-kilometer",
         "+/*/*/mile-per-gallon",
-        "+/*/compound"
+        "+/*/compound/per"
       ]
     },
 // Remove all the Version

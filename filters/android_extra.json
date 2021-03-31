@@ -250,7 +250,7 @@
         "+/*/*/mile-per-hour",
         "+/*/*/liter-per-kilometer",
         "+/*/*/mile-per-gallon",
-        "+/*/compound"
+        "+/*/compound/per"
       ]
     },
 // # Remove exemplar cities in timezone data.
