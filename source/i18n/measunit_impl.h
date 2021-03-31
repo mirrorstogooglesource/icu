@@ -171,18 +171,6 @@ struct U_I18N_API SingleUnitImpl : public UMemory {
 // Forward declaration
 struct MeasureUnitImplWithIndex;
 
-// Export explicit template instantiations of MaybeStackArray, MemoryPool and
-// MaybeStackVector. This is required when building DLLs for Windows. (See
-// datefmt.h, collationiterator.h, erarules.h and others for similar examples.)
-#if U_PF_WINDOWS <= U_PLATFORM && U_PLATFORM <= U_PF_CYGWIN
-template class U_I18N_API MaybeStackArray<SingleUnitImpl *, 8>;
-template class U_I18N_API MemoryPool<SingleUnitImpl, 8>;
-template class U_I18N_API MaybeStackVector<SingleUnitImpl, 8>;
-template class U_I18N_API MaybeStackArray<MeasureUnitImplWithIndex *, 8>;
-template class U_I18N_API MemoryPool<MeasureUnitImplWithIndex, 8>;
-template class U_I18N_API MaybeStackVector<MeasureUnitImplWithIndex, 8>;
-#endif
-
 /**
  * Internal representation of measurement units. Capable of representing all complexities of units,
  * including mixed and compound units.
@@ -313,6 +301,18 @@ struct U_I18N_API MeasureUnitImplWithIndex : public UMemory {
         : index(index), unitImpl(MeasureUnitImpl(singleUnitImpl, status)) {
     }
 };
+
+// Export explicit template instantiations of MaybeStackArray, MemoryPool and
+// MaybeStackVector. This is required when building DLLs for Windows. (See
+// datefmt.h, collationiterator.h, erarules.h and others for similar examples.)
+#if U_PF_WINDOWS <= U_PLATFORM && U_PLATFORM <= U_PF_CYGWIN
+template class U_I18N_API MaybeStackArray<SingleUnitImpl *, 8>;
+template class U_I18N_API MemoryPool<SingleUnitImpl, 8>;
+template class U_I18N_API MaybeStackVector<SingleUnitImpl, 8>;
+template class U_I18N_API MaybeStackArray<MeasureUnitImplWithIndex *, 8>;
+template class U_I18N_API MemoryPool<MeasureUnitImplWithIndex, 8>;
+template class U_I18N_API MaybeStackVector<MeasureUnitImplWithIndex, 8>;
+#endif
 
 // Export an explicit template instantiation of the LocalPointer that is used as a
 // data member of MeasureUnitImpl.
