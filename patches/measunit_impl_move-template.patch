@@ -2,83 +2,38 @@ diff --git a/patches/measunit_impl_move-template.patch b/patches/measunit_impl_m
 new file mode 100644
 index 00000000..e69de29b
 diff --git a/source/i18n/measunit_impl.h b/source/i18n/measunit_impl.h
-index f88d9000..ede63938 100644
+index f88d9000..2c957c62 100644
 --- a/source/i18n/measunit_impl.h
 +++ b/source/i18n/measunit_impl.h
-@@ -20,22 +20,6 @@ class LongNameHandler;
+@@ -20,6 +20,7 @@ class LongNameHandler;
  }
  } // namespace number
  
--// Export an explicit template instantiation of the LocalPointer that is used as a
--// data member of MeasureUnitImpl.
--// (When building DLLs for Windows this is required.)
--#if U_PF_WINDOWS <= U_PLATFORM && U_PLATFORM <= U_PF_CYGWIN
--#if defined(_MSC_VER)
--// Ignore warning 4661 as LocalPointerBase does not use operator== or operator!=
--#pragma warning(push)
--#pragma warning(disable : 4661)
--#endif
--template class U_I18N_API LocalPointerBase<MeasureUnitImpl>;
--template class U_I18N_API LocalPointer<MeasureUnitImpl>;
--#if defined(_MSC_VER)
--#pragma warning(pop)
--#endif
--#endif
--
++#if 0
+ // Export an explicit template instantiation of the LocalPointer that is used as a
+ // data member of MeasureUnitImpl.
+ // (When building DLLs for Windows this is required.)
+@@ -35,6 +36,7 @@ template class U_I18N_API LocalPointer<MeasureUnitImpl>;
+ #pragma warning(pop)
+ #endif
+ #endif
++#endif
+ 
  static const char16_t kDefaultCurrency[] = u"XXX";
  static const char kDefaultCurrency8[] = "XXX";
- 
-@@ -187,18 +171,6 @@ struct U_I18N_API SingleUnitImpl : public UMemory {
+@@ -187,6 +189,7 @@ struct U_I18N_API SingleUnitImpl : public UMemory {
  // Forward declaration
  struct MeasureUnitImplWithIndex;
  
--// Export explicit template instantiations of MaybeStackArray, MemoryPool and
--// MaybeStackVector. This is required when building DLLs for Windows. (See
--// datefmt.h, collationiterator.h, erarules.h and others for similar examples.)
--#if U_PF_WINDOWS <= U_PLATFORM && U_PLATFORM <= U_PF_CYGWIN
--template class U_I18N_API MaybeStackArray<SingleUnitImpl *, 8>;
--template class U_I18N_API MemoryPool<SingleUnitImpl, 8>;
--template class U_I18N_API MaybeStackVector<SingleUnitImpl, 8>;
--template class U_I18N_API MaybeStackArray<MeasureUnitImplWithIndex *, 8>;
--template class U_I18N_API MemoryPool<MeasureUnitImplWithIndex, 8>;
--template class U_I18N_API MaybeStackVector<MeasureUnitImplWithIndex, 8>;
--#endif
--
++#if 0
+ // Export explicit template instantiations of MaybeStackArray, MemoryPool and
+ // MaybeStackVector. This is required when building DLLs for Windows. (See
+ // datefmt.h, collationiterator.h, erarules.h and others for similar examples.)
+@@ -198,6 +201,7 @@ template class U_I18N_API MaybeStackArray<MeasureUnitImplWithIndex *, 8>;
+ template class U_I18N_API MemoryPool<MeasureUnitImplWithIndex, 8>;
+ template class U_I18N_API MaybeStackVector<MeasureUnitImplWithIndex, 8>;
+ #endif
++#endif
+ 
  /**
   * Internal representation of measurement units. Capable of representing all complexities of units,
-  * including mixed and compound units.
-@@ -330,6 +302,34 @@ struct U_I18N_API MeasureUnitImplWithIndex : public UMemory {
-     }
- };
- 
-+// Export explicit template instantiations of MaybeStackArray, MemoryPool and
-+// MaybeStackVector. This is required when building DLLs for Windows. (See
-+// datefmt.h, collationiterator.h, erarules.h and others for similar examples.)
-+#if U_PF_WINDOWS <= U_PLATFORM && U_PLATFORM <= U_PF_CYGWIN
-+template class U_I18N_API MaybeStackArray<SingleUnitImpl *, 8>;
-+template class U_I18N_API MemoryPool<SingleUnitImpl, 8>;
-+template class U_I18N_API MaybeStackVector<SingleUnitImpl, 8>;
-+template class U_I18N_API MaybeStackArray<MeasureUnitImplWithIndex *, 8>;
-+template class U_I18N_API MemoryPool<MeasureUnitImplWithIndex, 8>;
-+template class U_I18N_API MaybeStackVector<MeasureUnitImplWithIndex, 8>;
-+#endif
-+
-+// Export an explicit template instantiation of the LocalPointer that is used as a
-+// data member of MeasureUnitImpl.
-+// (When building DLLs for Windows this is required.)
-+#if U_PF_WINDOWS <= U_PLATFORM && U_PLATFORM <= U_PF_CYGWIN
-+#if defined(_MSC_VER)
-+// Ignore warning 4661 as LocalPointerBase does not use operator== or operator!=
-+#pragma warning(push)
-+#pragma warning(disable : 4661)
-+#endif
-+template class U_I18N_API LocalPointerBase<MeasureUnitImpl>;
-+template class U_I18N_API LocalPointer<MeasureUnitImpl>;
-+#if defined(_MSC_VER)
-+#pragma warning(pop)
-+#endif
-+#endif
-+
- U_NAMESPACE_END
- 
- #endif /* #if !UCONFIG_NO_FORMATTING */

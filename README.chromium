@@ -254,5 +254,3 @@ D. Local Modifications
     patches/measunit_impl_move-template.patch
   - upstream bug:
     https://unicode-org.atlassian.net/browse/ICU-21563
-  - upstream PR:
-    https://github.com/unicode-org/icu/pull/1671

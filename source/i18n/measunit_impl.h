@@ -20,6 +20,24 @@ class LongNameHandler;
 }
 } // namespace number
 
+#if 0
+// Export an explicit template instantiation of the LocalPointer that is used as a
+// data member of MeasureUnitImpl.
+// (When building DLLs for Windows this is required.)
+#if U_PF_WINDOWS <= U_PLATFORM && U_PLATFORM <= U_PF_CYGWIN
+#if defined(_MSC_VER)
+// Ignore warning 4661 as LocalPointerBase does not use operator== or operator!=
+#pragma warning(push)
+#pragma warning(disable : 4661)
+#endif
+template class U_I18N_API LocalPointerBase<MeasureUnitImpl>;
+template class U_I18N_API LocalPointer<MeasureUnitImpl>;
+#if defined(_MSC_VER)
+#pragma warning(pop)
+#endif
+#endif
+#endif
+
 static const char16_t kDefaultCurrency[] = u"XXX";
 static const char kDefaultCurrency8[] = "XXX";
 
@@ -171,6 +189,20 @@ struct U_I18N_API SingleUnitImpl : public UMemory {
 // Forward declaration
 struct MeasureUnitImplWithIndex;
 
+#if 0
+// Export explicit template instantiations of MaybeStackArray, MemoryPool and
+// MaybeStackVector. This is required when building DLLs for Windows. (See
+// datefmt.h, collationiterator.h, erarules.h and others for similar examples.)
+#if U_PF_WINDOWS <= U_PLATFORM && U_PLATFORM <= U_PF_CYGWIN
+template class U_I18N_API MaybeStackArray<SingleUnitImpl *, 8>;
+template class U_I18N_API MemoryPool<SingleUnitImpl, 8>;
+template class U_I18N_API MaybeStackVector<SingleUnitImpl, 8>;
+template class U_I18N_API MaybeStackArray<MeasureUnitImplWithIndex *, 8>;
+template class U_I18N_API MemoryPool<MeasureUnitImplWithIndex, 8>;
+template class U_I18N_API MaybeStackVector<MeasureUnitImplWithIndex, 8>;
+#endif
+#endif
+
 /**
  * Internal representation of measurement units. Capable of representing all complexities of units,
  * including mixed and compound units.
@@ -301,34 +333,6 @@ struct U_I18N_API MeasureUnitImplWithIndex : public UMemory {
         : index(index), unitImpl(MeasureUnitImpl(singleUnitImpl, status)) {
     }
 };
-
-// Export explicit template instantiations of MaybeStackArray, MemoryPool and
-// MaybeStackVector. This is required when building DLLs for Windows. (See
-// datefmt.h, collationiterator.h, erarules.h and others for similar examples.)
-#if U_PF_WINDOWS <= U_PLATFORM && U_PLATFORM <= U_PF_CYGWIN
-template class U_I18N_API MaybeStackArray<SingleUnitImpl *, 8>;
-template class U_I18N_API MemoryPool<SingleUnitImpl, 8>;
-template class U_I18N_API MaybeStackVector<SingleUnitImpl, 8>;
-template class U_I18N_API MaybeStackArray<MeasureUnitImplWithIndex *, 8>;
-template class U_I18N_API MemoryPool<MeasureUnitImplWithIndex, 8>;
-template class U_I18N_API MaybeStackVector<MeasureUnitImplWithIndex, 8>;
-#endif
-
-// Export an explicit template instantiation of the LocalPointer that is used as a
-// data member of MeasureUnitImpl.
-// (When building DLLs for Windows this is required.)
-#if U_PF_WINDOWS <= U_PLATFORM && U_PLATFORM <= U_PF_CYGWIN
-#if defined(_MSC_VER)
-// Ignore warning 4661 as LocalPointerBase does not use operator== or operator!=
-#pragma warning(push)
-#pragma warning(disable : 4661)
-#endif
-template class U_I18N_API LocalPointerBase<MeasureUnitImpl>;
-template class U_I18N_API LocalPointer<MeasureUnitImpl>;
-#if defined(_MSC_VER)
-#pragma warning(pop)
-#endif
-#endif
 
 U_NAMESPACE_END
 
