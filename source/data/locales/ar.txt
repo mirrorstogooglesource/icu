@@ -42,7 +42,8 @@ ar{
                 timeSeparator{":"}
             }
         }
-        default{"latn"}
+        default{"arab"}
+        default_latn{"latn"}
         latn{
             miscPatterns{
                 approximately{"~{0}"}
@@ -740,7 +741,7 @@ ar{
                 "{1} في {0}",
                 "{1} في {0}",
                 "{1}, {0}",
-                "{1} {0}",
+                "{1}, {0}",
             }
             appendItems{
                 Timezone{"{0} {1}"}
