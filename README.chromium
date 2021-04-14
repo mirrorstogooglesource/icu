@@ -1,16 +1,16 @@
 Name: icu
 URL: https://github.com/unicode-org/icu
-Version: 69-rc
-CPEPrefix: cpe:/a:icu-project:international_components_for_unicode:69.rc
+Version: 69-1
+CPEPrefix: cpe:/a:icu-project:international_components_for_unicode:69.1
 License: MIT
 Security Critical: yes
 
 Description:
-This directory contains the source code of ICU 69.rc for C/C++.
+This directory contains the source code of ICU 69.1 for C/C++.
 
 A. How to update ICU
 
-1. Run "scripts/update.sh <version>" (e.g. 69-rc).
+1. Run "scripts/update.sh <version>" (e.g. 69-1).
    This will download ICU from the upstream git repository.
    It does preserve Chrome-specific build files and
    converter files. (see section C)
@@ -242,15 +242,3 @@ D. Local Modifications
 9.  Patch source/common/uposixdefs.h so it compiles on Fuchsia on Macs.
     patches/fuchsia.patch
   - context bug: https://bugs.chromium.org/p/chromium/issues/detail?id=1184527
-
-10. Fix build problem of "no member named 'abs' in namespace 'std';"
-    patches/include_cstdlib.patch
-  - upstream bug:
-    https://unicode-org.atlassian.net/browse/ICU-21562
-  - upstream PR:
-    https://github.com/unicode-org/icu/pull/1670
-
-11. Fix window build problem
-    patches/measunit_impl_move-template.patch
-  - upstream bug:
-    https://unicode-org.atlassian.net/browse/ICU-21563
