@@ -16,6 +16,24 @@
       "message": "We haven\u0027t officially added anything that is actually python3-specific (as opposed to something that is python3-copmpatible but still runs in python2), AFAIK, so landing this might be a little dicey.\n\nIt\u0027s still theoretically possible that the change might need to be reverted (it hasn\u0027t been in the tree for a full week yet).\n\nI expect that we will start landing python3-specific stuff Real Soon Now (as I can\u0027t watch/catch everything) and so I\u0027ll probably bless doing so pretty soon just to head off the inevitable, but we might want to wait on this unless there\u0027s some hurry.\n\nThat said, otherwise this change looks fine :).",
       "revId": "9891d47de6eece54940ea2aae3843f1410343456",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a4bb96d_3c7bdae1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1115876
+      },
+      "writtenOn": "2021-04-21T05:41:47Z",
+      "side": 1,
+      "message": "I\u0027ve actually had to do it because building headless is currently broken for me (apparently due to icu_use_data_file \u003d false) -- so we somehow end up running this with python3 despite #!/usr/bin/python2 in this file. Would it make more sense to fix the invocation of this script in BUILD.gn instead to be on the safe side during transitional period then?",
+      "parentUuid": "eac2cb18_a219e827",
+      "revId": "9891d47de6eece54940ea2aae3843f1410343456",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
