@@ -314,6 +314,7 @@ D. Local Modifications
 
 18. Patch source/common/uposixdefs.h so it compiles on Fuchsia on Macs.
     patches/fuchsia.patch
+<<<<<<< HEAD   (81d656 CP ICU locale canoncalization fix The problem has been repro)
     - context bug: https://bugs.chromium.org/p/chromium/issues/detail?id=1184527
 
 19. Patch locid.cpp to fix locale canoncalization due to overflow of strcmp return value
@@ -323,3 +324,13 @@ D. Local Modifications
   - updatream PR:
     https://github.com/unicode-org/icu/pull/1618
 
+=======
+  - context bug: https://bugs.chromium.org/p/chromium/issues/detail?id=1184527
+
+10. Patch locale to fix assign and assing move operators:
+    patches/locid_operators.patch
+  - upstream bug:
+    https://unicode-org.atlassian.net/browse/ICU-21587
+  - upstream PR:
+    https://github.com/unicode-org/icu/pull/1698
+>>>>>>> CHANGE (d25bdc Fix crash caused by locale assign/move operators)
