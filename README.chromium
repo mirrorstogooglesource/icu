@@ -299,6 +299,7 @@ D. Local Modifications
     NumberRangeFormatterImpl* was ever necessary for MSVC. Further testing with
     MSVC is required to upstream this patch.
 
+<<<<<<< HEAD   (e05b66 Fix icu_uregex_open_fuzzer: ASSERT: loc < end)
 16. Patch data/unit/fa.txt back to pre68.1 version
     patches/back_patch_fa_unit_to_67.patch
   - upstream bug:
@@ -311,3 +312,15 @@ D. Local Modifications
     https://unicode-org.atlassian.net/browse/ICU-21492
   - updatream PR:
     https://github.com/unicode-org/icu/pull/1577
+=======
+9.  Patch source/common/uposixdefs.h so it compiles on Fuchsia on Macs.
+    patches/fuchsia.patch
+  - context bug: https://bugs.chromium.org/p/chromium/issues/detail?id=1184527
+
+10. Patch locale to fix assign and assing move operators:
+    patches/locid_operators.patch
+  - upstream bug:
+    https://unicode-org.atlassian.net/browse/ICU-21587
+  - upstream PR:
+    https://github.com/unicode-org/icu/pull/1698
+>>>>>>> CHANGE (d25bdc Fix crash caused by locale assign/move operators)
