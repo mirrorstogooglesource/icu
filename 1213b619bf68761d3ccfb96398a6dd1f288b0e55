@@ -18,6 +18,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0c0c7e06_4eb73c75",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2021-04-21T19:29:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b36ebee0_d005e477",
+      "revId": "1213b619bf68761d3ccfb96398a6dd1f288b0e55",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fd1b8666_d652ff58",
@@ -31,6 +49,30 @@
       "writtenOn": "2021-04-21T16:39:16Z",
       "side": 1,
       "message": "I don\u0027t think v8 has over a million bugs. :-). Please, fix the bug reference. I tried to find a bug, but couldn\u0027t perhaps because it\u0027s a security bug and is not visible to me.",
+      "range": {
+        "startLine": 9,
+        "startChar": 1,
+        "endLine": 9,
+        "endChar": 15
+      },
+      "revId": "1213b619bf68761d3ccfb96398a6dd1f288b0e55",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "35725927_18b9857e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2021-04-21T19:29:21Z",
+      "side": 1,
+      "message": "sorry, you are right",
+      "parentUuid": "fd1b8666_d652ff58",
       "range": {
         "startLine": 9,
         "startChar": 1,
