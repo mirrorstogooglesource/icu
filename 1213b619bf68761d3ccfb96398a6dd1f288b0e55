@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b36ebee0_d005e477",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2021-04-21T16:39:16Z",
+      "side": 1,
+      "message": "I\u0027d also add a link to the upstream bug in the CL description as well for the future convenience (I know it\u0027s in README.chromium). \n\nhttps://unicode-org.atlassian.net/browse/ICU-21587",
+      "revId": "1213b619bf68761d3ccfb96398a6dd1f288b0e55",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd1b8666_d652ff58",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2021-04-21T16:39:16Z",
+      "side": 1,
+      "message": "I don\u0027t think v8 has over a million bugs. :-). Please, fix the bug reference. I tried to find a bug, but couldn\u0027t perhaps because it\u0027s a security bug and is not visible to me.",
+      "range": {
+        "startLine": 9,
+        "startChar": 1,
+        "endLine": 9,
+        "endChar": 15
+      },
+      "revId": "1213b619bf68761d3ccfb96398a6dd1f288b0e55",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
