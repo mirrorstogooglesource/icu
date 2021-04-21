@@ -241,9 +241,22 @@ D. Local Modifications
   - upstream bug:
     https://unicode-org.atlassian.net/browse/ICU-13786
 
+<<<<<<< HEAD   (79326e Make visibility_hidden configuration only pass -fvisibility=)
 10. Add ability to use locale default for minimum grouping digits
  - patches/grouping_digits.patch
  - upstream PR:
    https://github.com/unicode-org/icu/pull/1152
  - upbstream bug:
    https://unicode-org.atlassian.net/browse/ICU-21109
+=======
+9.  Patch source/common/uposixdefs.h so it compiles on Fuchsia on Macs.
+    patches/fuchsia.patch
+  - context bug: https://bugs.chromium.org/p/chromium/issues/detail?id=1184527
+
+10. Patch locale to fix assign and assing move operators:
+    patches/locid_operators.patch
+  - upstream bug:
+    https://unicode-org.atlassian.net/browse/ICU-21587
+  - upstream PR:
+    https://github.com/unicode-org/icu/pull/1698
+>>>>>>> CHANGE (d25bdc Fix crash caused by locale assign/move operators)
