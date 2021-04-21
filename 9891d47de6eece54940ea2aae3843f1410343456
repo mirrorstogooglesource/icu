@@ -34,6 +34,24 @@
       "parentUuid": "eac2cb18_a219e827",
       "revId": "9891d47de6eece54940ea2aae3843f1410343456",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7f51777_f89025f0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003232
+      },
+      "writtenOn": "2021-04-21T15:43:35Z",
+      "side": 1,
+      "message": "Hm. We don\u0027t have a bot that tests this configuration?\n\nAt any rate, the build doesn\u0027t look at the shebang line. \n\nIdeally we\u0027d fix this in a way that is compatible with both 2 and 3 (which this isn\u0027t; there\u0027s no .hex() method in 2, I think). \n\nOr, you can force python2 by changing the action() to python2_action() in the BUILD.gn file. But, I\u0027d rather not do that if we can avoid it; if you can\u0027t find \na 2- and 3-compatible way, let\u0027s discuss again whether to land this CL as-is\nand go 3-only.",
+      "parentUuid": "7a4bb96d_3c7bdae1",
+      "revId": "9891d47de6eece54940ea2aae3843f1410343456",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
