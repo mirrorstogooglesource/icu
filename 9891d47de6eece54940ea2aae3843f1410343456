@@ -52,6 +52,24 @@
       "parentUuid": "7a4bb96d_3c7bdae1",
       "revId": "9891d47de6eece54940ea2aae3843f1410343456",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71ffc77c_6a40613c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1115876
+      },
+      "writtenOn": "2021-04-23T00:33:58Z",
+      "side": 1,
+      "message": "\u003e Hm. We don\u0027t have a bot that tests this configuration?\n\nYup :-( I think it\u0027s about the time we should have it... I\u0027ll have a look into it.\n\n\u003e Ideally we\u0027d fix this in a way that is compatible with both 2 and 3 (which this isn\u0027t; there\u0027s no .hex() method in 2, I think). \n\nGotcha, thanks, done!",
+      "parentUuid": "c7f51777_f89025f0",
+      "revId": "9891d47de6eece54940ea2aae3843f1410343456",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
