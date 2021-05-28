@@ -1303,9 +1303,8 @@
         "-/Keys",
         "-/Languages",
         "-/Languages%long",
-        "-/Languages%short",
+        "-/Languages%menu",
         "-/Languages%variant",
-        "-/LanguagesShort",
         "-/Scripts",
         "-/Scripts%long",
         "-/Scripts%short",
@@ -1331,7 +1330,8 @@
         "+/Scripts%long/Hant",
         "+/Scripts%short/Hant",
         "+/Scripts%variant/Hant",
-        "+/Scripts%stand-alone/Hant"
+        "+/Scripts%stand-alone/Hant",
+        "+/Types/calendar"
       ]
     },
     {
