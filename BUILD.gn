@@ -96,6 +96,9 @@ config("icu_code") {
       #   if (found = uprv_getWindowsTimeZoneInfo(...))
       "-Wno-parentheses",
 
+      "-Wno-unused-but-set-parameter",
+      "-Wno-unused-but-set-variable",
+
       # ucnv2022.cpp contains three functions that are only used when
       # certain preprocessor defines are set.
       # unistr.cpp also has an unused function for non-component builds.
