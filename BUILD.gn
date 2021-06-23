@@ -127,6 +127,9 @@ config("icu_code") {
       "-DICU_IS_IN_FUCHSIA",
     ]
   }
+
+  # Suppress warnings the icu code doesn't comply with.
+  configs = [ "//build/config:Wno-unused-but-set-variable" ]
 }
 
 # Config used to set default visibility to hidden.
