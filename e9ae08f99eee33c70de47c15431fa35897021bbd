@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb314f29_d695c0dc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2021-06-28T23:56:43Z",
+      "side": 1,
+      "message": "Can you file a bug against the upstream ( see http://site.icu-project.org/bugs )? ",
+      "revId": "e9ae08f99eee33c70de47c15431fa35897021bbd",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
