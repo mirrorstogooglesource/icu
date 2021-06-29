@@ -16,6 +16,24 @@
       "message": "Can you file a bug against the upstream ( see http://site.icu-project.org/bugs )? ",
       "revId": "e9ae08f99eee33c70de47c15431fa35897021bbd",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "506688b4_82acf080",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1515037
+      },
+      "writtenOn": "2021-06-29T16:34:26Z",
+      "side": 1,
+      "message": "I created the following ticket:\nhttps://unicode-org.atlassian.net/browse/ICU-21664\n\nDo I need to get +2 to submit it to CQ?\nWhen I tried to click on Submit button, it says \"You don\u0027t have permission to submit change\". What should I do?\nWhat is roll process in this repo? Is it auto-rolled or manually-rolled?",
+      "parentUuid": "fb314f29_d695c0dc",
+      "revId": "e9ae08f99eee33c70de47c15431fa35897021bbd",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
