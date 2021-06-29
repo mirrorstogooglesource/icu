@@ -34,6 +34,24 @@
       "parentUuid": "fb314f29_d695c0dc",
       "revId": "e9ae08f99eee33c70de47c15431fa35897021bbd",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "33972f71_259d4574",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1116524
+      },
+      "writtenOn": "2021-06-29T17:16:22Z",
+      "side": 1,
+      "message": "I submitted for you, I think you need to be a Chromium committer.\n\nThe roll into Chromium is manual but not required here as this is a Fuchsia-only change. The roll into Fuchsia should be automagic. I\u0027ll contact you offline with the roller.",
+      "parentUuid": "506688b4_82acf080",
+      "revId": "e9ae08f99eee33c70de47c15431fa35897021bbd",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
