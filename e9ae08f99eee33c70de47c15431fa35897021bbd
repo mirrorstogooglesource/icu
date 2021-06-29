@@ -70,6 +70,23 @@
       "parentUuid": "33972f71_259d4574",
       "revId": "e9ae08f99eee33c70de47c15431fa35897021bbd",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "14400b0c_4eac0bcc",
+        "filename": "BUILD.gn",
+        "patchSetId": 3
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2021-06-29T19:39:48Z",
+      "side": 1,
+      "message": "Thank you for filing https://unicode-org.atlassian.net/browse/ICU-21664. \n\nI meant to add this, but it\u0027s already submitted. It\u0027s not a big deal, but if you can do the following, that\u0027d be great.  \n\nInstead of adding this line to BUILD.gn,  can you just make a patch (that deleted the offending line) referring to the ticket above? \n\nMake a patch and add it to patches/ directory and update README.chromium.  README.chromium has a few examples of local patches applied in our copy of ICU.",
+      "revId": "e9ae08f99eee33c70de47c15431fa35897021bbd",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
