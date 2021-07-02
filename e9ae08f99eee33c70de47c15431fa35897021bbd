@@ -87,6 +87,24 @@
       "message": "Thank you for filing https://unicode-org.atlassian.net/browse/ICU-21664. \n\nI meant to add this, but it\u0027s already submitted. It\u0027s not a big deal, but if you can do the following, that\u0027d be great.  \n\nInstead of adding this line to BUILD.gn,  can you just make a patch (that deleted the offending line) referring to the ticket above? \n\nMake a patch and add it to patches/ directory and update README.chromium.  README.chromium has a few examples of local patches applied in our copy of ICU.",
       "revId": "e9ae08f99eee33c70de47c15431fa35897021bbd",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "083994d1_51d49cd3",
+        "filename": "BUILD.gn",
+        "patchSetId": 3
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1515037
+      },
+      "writtenOn": "2021-07-02T20:49:43Z",
+      "side": 1,
+      "message": "Multiple line needs to be changed as `size` is assigned 6 times in different if statements. Some of these if statements can be entirely removed. I think it is better if someone more familiar with that code does the cleanup. What do you think?",
+      "parentUuid": "14400b0c_4eac0bcc",
+      "revId": "e9ae08f99eee33c70de47c15431fa35897021bbd",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
