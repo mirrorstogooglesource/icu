@@ -103,6 +103,9 @@ config("icu_code") {
 
       # putil.cpp contains unused variables when building for iOS simulators.
       "-Wno-unused-variable",
+
+      # locid.cpp contains variable which is set but not used.
+      "-Wno-unused-but-set-variable",
     ]
   }
   if (is_clang || is_linux || is_chromeos || is_android || icu_is_in_fuchsia) {
@@ -121,6 +124,7 @@ config("icu_code") {
       # is fixed.
       "-Wno-implicit-int-float-conversion",
       "-Wno-conversion",
+      "-Wno-unused-but-set-variable",
 
       # Used for conditional changes to the compilation process that
       # are only needed for the Fuchsia toolchain.
