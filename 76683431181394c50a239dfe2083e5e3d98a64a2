@@ -50,6 +50,23 @@
       "message": "Ah looks like Frank is OOO right now.  Changing reviewer to Jungshik.",
       "revId": "76683431181394c50a239dfe2083e5e3d98a64a2",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "458ae9ec_e9b24d3f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2021-07-30T17:09:59Z",
+      "side": 1,
+      "message": "LGTM. \n\nLet\u0027s just add references to the upstream issue and its fix in README.chromium so that when updating ICU to the next version, we know that it\u0027s not necessary to apply this local patch. \n\nbug: \nhttps://unicode-org.atlassian.net/browse/ICU-21664\nfix: \nhttps://github.com/unicode-org/icu/commit/1d560c37e559b36f951c79c48af03679f6831b7a\n\n ",
+      "revId": "76683431181394c50a239dfe2083e5e3d98a64a2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
