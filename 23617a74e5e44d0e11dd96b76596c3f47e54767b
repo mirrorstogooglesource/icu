@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f31c1df_e8caeafb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1116047
+      },
+      "writtenOn": "2021-09-09T00:44:08Z",
+      "side": 1,
+      "message": "ftag@, jshin@, would you review this please?\n\nI missed to enable \"use_libfuzzer\" while making https://chromium-review.googlesource.com/c/chromium/deps/icu/+/3132308",
+      "revId": "23617a74e5e44d0e11dd96b76596c3f47e54767b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
