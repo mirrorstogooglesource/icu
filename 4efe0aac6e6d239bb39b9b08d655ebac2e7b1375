@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bdf168dc_a7be82d1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1375392
+      },
+      "writtenOn": "2021-09-15T22:41:20Z",
+      "side": 1,
+      "message": "Looks like there was only one dependency mention.",
+      "revId": "4efe0aac6e6d239bb39b9b08d655ebac2e7b1375",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
