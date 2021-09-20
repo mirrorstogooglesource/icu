@@ -311,7 +311,7 @@ source_set("icuuc_public") {
 
 generate_icuuc("icuuc_private") {
   extra_configs = []
-  output_name = "icuuc"
+  output_name = "icuuc_private"
   visibility = [
     ":icui18n",
     ":icuuc",
@@ -320,7 +320,7 @@ generate_icuuc("icuuc_private") {
 
 generate_icuuc("icuuc_private_hidden_visibility") {
   extra_configs = [ ":visibility_hidden" ]
-  output_name = "icuuc_hidden_visiblity"
+  output_name = "icuuc_private_hidden_visiblity"
   visibility = [
     ":icui18n_hidden_visibility",
     ":icuuc_hidden_visibility",
