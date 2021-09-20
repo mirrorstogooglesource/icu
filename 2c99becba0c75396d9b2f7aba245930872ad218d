@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a9cc956_3adfc7dd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2021-09-20T23:40:27Z",
+      "side": 1,
+      "message": "Nico, can you take a look?   \n\nBTW, I\u0027d rather combine two parts of the CL description into one with one BUG line.\n\n\nBug: 1250187,1251429\n",
+      "revId": "2c99becba0c75396d9b2f7aba245930872ad218d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
