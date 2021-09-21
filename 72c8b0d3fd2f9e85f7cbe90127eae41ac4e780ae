@@ -16,6 +16,23 @@
       "message": "Filip Filmar found there are misspelled word  icuuc_hidden_visiblity (instead of icuuc_hidden_visibility )",
       "revId": "72c8b0d3fd2f9e85f7cbe90127eae41ac4e780ae",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42edfb07_eae95bfc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2021-09-21T00:05:40Z",
+      "side": 1,
+      "message": "Frank, next time a significant change (you\u0027re not familiar with) is introduced to BUILD.gn, please ask thakis@ to go over it instead of just being content with test-building it. \n\n",
+      "revId": "72c8b0d3fd2f9e85f7cbe90127eae41ac4e780ae",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
