@@ -33,6 +33,23 @@
       "message": "Frank, next time a significant change (you\u0027re not familiar with) is introduced to BUILD.gn, please ask thakis@ to go over it instead of just being content with test-building it. \n\n",
       "revId": "72c8b0d3fd2f9e85f7cbe90127eae41ac4e780ae",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "efdb174b_8e1200ef",
+        "filename": "BUILD.gn",
+        "patchSetId": 4
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 1375392
+      },
+      "writtenOn": "2021-09-21T00:38:27Z",
+      "side": 1,
+      "message": "Hi folks. This change modified the spelling of this target, which breaks Flutter and Dart.\n\nDetails here: https://bugs.chromium.org/p/chromium/issues/detail?id\u003d1250014\n\nI tried to fix, but failed. I\u0027ll make another attempt, but if y\u0027all know better how one might fix things, please let me know what to do.\n\nNote that with this change in place, it is no longer possible to simply fix the name of the above group.\n\nIf you rename this group to \":icuuc_hidden_visibility\", its stamp file name will conflict with the target \":icuuc_private_hidden_visibility\" due to the `output_name` override, and you\u0027ll get a bogus dependency cycle and a failed compilation.\n\nPerhaps it would be possible to instead rename the private targets judiciously, to ensure that there would be a top-level group with the proper name.",
+      "revId": "72c8b0d3fd2f9e85f7cbe90127eae41ac4e780ae",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
