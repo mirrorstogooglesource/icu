@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9e3b6459_a29de05d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1249724
+      },
+      "writtenOn": "2021-10-05T22:32:36Z",
+      "side": 1,
+      "message": "Sorry this patch is bad, I\u0027m missing the cflags +\u003d part. I can revert and resubmit, or I can send another patch to fix it up.",
+      "revId": "cf1c41b7972d6cca9dc4b4f31a80e7302c6389b1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
