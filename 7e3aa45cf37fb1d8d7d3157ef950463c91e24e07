@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a84b3f77_cf5fe8ca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1249724
+      },
+      "writtenOn": "2021-10-05T22:34:38Z",
+      "side": 1,
+      "message": "Nico, as commented on https://crrev.com/c/3206233/, ptal.",
+      "revId": "7e3aa45cf37fb1d8d7d3157ef950463c91e24e07",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
