@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9618b5e9_22387842",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1249724
+      },
+      "writtenOn": "2021-10-05T17:16:13Z",
+      "side": 1,
+      "message": "Hi Frank, V8 is failing to compile with MSVC, this is an attempt to fix this, not sure if we\u0027ll need to ignore more warnings, don\u0027t have a Windows machine ready to figure it out yet, but this is definitely one of the warnings https://logs.chromium.org/logs/v8/buildbucket/cr-buildbucket/8834258983302251905/+/u/build/compile/stdout?format\u003draw",
+      "revId": "2dd0c599b4c42f67735db822bc791a1c432beab4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
