@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c378a54_60b509db",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2021-10-06T21:02:17Z",
+      "side": 1,
+      "message": "Did 2021c get rid of controversial parts (merging many zones such as Europe/Oslo to Europe/Berlin)?   Hmm... apparently, it didn\u0027t. The discussion is still ongoing. \n\nThen, let\u0027s go with this one for now. ",
+      "revId": "dc66a2c1d581c9633a265805d601c3fb97b7fd05",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
