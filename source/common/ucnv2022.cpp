@@ -513,7 +513,7 @@ _ISO2022Open(UConverter *cnv, UConverterLoadArgs *pArgs, UErrorCode *errorCode){
                     ucnv_loadSharedData("ISO8859_7", &stackPieces, &stackArgs, errorCode);
             }
             myConverterData->myConverterArray[JISX208] =
-                ucnv_loadSharedData("EUC-JP", &stackPieces, &stackArgs, errorCode);
+                ucnv_loadSharedData("Shift-JIS", &stackPieces, &stackArgs, errorCode);
             if(jpCharsetMasks[version]&CSM(JISX212)) {
                 myConverterData->myConverterArray[JISX212] =
                     ucnv_loadSharedData("jisx-212", &stackPieces, &stackArgs, errorCode);
@@ -527,7 +527,7 @@ _ISO2022Open(UConverter *cnv, UConverterLoadArgs *pArgs, UErrorCode *errorCode){
                     ucnv_loadSharedData("ksc_5601", &stackPieces, &stackArgs, errorCode);
             }
 
-            /* set the function pointers to appropriate funtions */
+            /* set the function pointers to appropriate functions */
             cnv->sharedData=(UConverterSharedData*)(&_ISO2022JPData);
             uprv_strcpy(myConverterData->locale,"ja");
 
@@ -578,7 +578,7 @@ _ISO2022Open(UConverter *cnv, UConverterLoadArgs *pArgs, UErrorCode *errorCode){
                 setInitialStateToUnicodeKR(cnv, myConverterData);
                 setInitialStateFromUnicodeKR(cnv, myConverterData);
 
-                /* set the function pointers to appropriate funtions */
+                /* set the function pointers to appropriate functions */
                 cnv->sharedData=(UConverterSharedData*)&_ISO2022KRData;
                 uprv_strcpy(myConverterData->locale,"ko");
             }
@@ -605,7 +605,7 @@ _ISO2022Open(UConverter *cnv, UConverterLoadArgs *pArgs, UErrorCode *errorCode){
                 ucnv_loadSharedData("cns-11643-1992", &stackPieces, &stackArgs, errorCode);
 
 
-            /* set the function pointers to appropriate funtions */
+            /* set the function pointers to appropriate functions */
             cnv->sharedData=(UConverterSharedData*)&_ISO2022CNData;
             uprv_strcpy(myConverterData->locale,"cn");
 
@@ -1515,6 +1515,79 @@ jisx201FromU(uint32_t value) {
 }
 
 /*
+ * Take a valid Shift-JIS byte pair, check that it is in the range corresponding
+ * to JIS X 0208, and convert it to a pair of 21..7E bytes.
+ * Return 0 if the byte pair is out of range.
+ */
+static inline uint32_t
+_2022FromSJIS(uint32_t value) {
+    uint8_t trail;
+
+    if(value > 0xEFFC) {
+        return 0;  /* beyond JIS X 0208 */
+    }
+
+    trail = (uint8_t)value;
+
+    value &= 0xff00;  /* lead byte */
+    if(value <= 0x9f00) {
+        value -= 0x7000;
+    } else /* 0xe000 <= value <= 0xef00 */ {
+        value -= 0xb000;
+    }
+    value <<= 1;
+
+    if(trail <= 0x9e) {
+        value -= 0x100;
+        if(trail <= 0x7e) {
+            value |= trail - 0x1f;
+        } else {
+            value |= trail - 0x20;
+        }
+    } else /* trail <= 0xfc */ {
+        value |= trail - 0x7e;
+    }
+    return value;
+}
+
+/*
+ * Convert a pair of JIS X 0208 21..7E bytes to Shift-JIS.
+ * If either byte is outside 21..7E make sure that the result is not valid
+ * for Shift-JIS so that the converter catches it.
+ * Some invalid byte values already turn into equally invalid Shift-JIS
+ * byte values and need not be tested explicitly.
+ */
+static inline void
+_2022ToSJIS(uint8_t c1, uint8_t c2, char bytes[2]) {
+    if(c1&1) {
+        ++c1;
+        if(c2 <= 0x5f) {
+            c2 += 0x1f;
+        } else if(c2 <= 0x7e) {
+            c2 += 0x20;
+        } else {
+            c2 = 0;  /* invalid */
+        }
+    } else {
+        if((uint8_t)(c2-0x21) <= ((0x7e)-0x21)) {
+            c2 += 0x7e;
+        } else {
+            c2 = 0;  /* invalid */
+        }
+    }
+    c1 >>= 1;
+    if(c1 <= 0x2f) {
+        c1 += 0x70;
+    } else if(c1 <= 0x3f) {
+        c1 += 0xb0;
+    } else {
+        c1 = 0;  /* invalid */
+    }
+    bytes[0] = (char)c1;
+    bytes[1] = (char)c2;
+}
+
+/*
  * JIS X 0208 has fallbacks from Unicode half-width Katakana to full-width (DBCS)
  * Katakana.
  * Now that we use a Shift-JIS table for JIS X 0208 we need to hardcode these fallbacks
@@ -1784,13 +1857,8 @@ getTrail:
                                 converterData->myConverterArray[cs0],
                                 sourceChar, &value,
                                 useFallback, MBCS_OUTPUT_2);
-                    // Only accept DBCS char (abs(len2) == 2).
-                    // With EUC-JP table for JIS X 208, half-width Kana
-                    // represented with DBCS starting with 0x8E has to be
-                    // filtered out so that they can be converted with
-                    // hwkana_fb table.
-                    if((len2 == 2 && ((value & 0xFF00) != 0x8E00)) || (len2 == -2 && len == 0)) {
-                        value &= 0x7F7F;
+                    if(len2 == 2 || (len2 == -2 && len == 0)) {  /* only accept DBCS: abs(len)==2 */
+                        value = _2022FromSJIS(value);
                         if(value != 0) {
                             targetValue = value;
                             len = len2;
@@ -2079,7 +2147,7 @@ escape:
                     changeState_2022(args->converter,&(mySource),
                         mySourceLimit, ISO_2022_JP,err);
 
-                    /* If in ISO-2022-JP only and we successully completed an escape sequence, but previous segment was empty, create an error */
+                    /* If in ISO-2022-JP only and we successfully completed an escape sequence, but previous segment was empty, create an error */
                     if(myData->version==0 && myData->key==0 && U_SUCCESS(*err) && myData->isEmptySegment) {
                         *err = U_ILLEGAL_ESCAPE_SEQUENCE;
                         args->converter->toUCallbackReason = UCNV_IRREGULAR;
@@ -2182,13 +2250,18 @@ getTrailByte:
                         if (leadIsOk && trailIsOk) {
                             ++mySource;
                             tmpSourceChar = (mySourceChar << 8) | trailByte;
-                            /* Copy before we modify tmpSourceChar so toUnicodeCallback() sees the correct bytes. */
-                            mySourceChar = tmpSourceChar;
-                            if (cs == JISX208 || cs == KSC5601) {
-                                tmpSourceChar += 0x8080;  /* = _2022ToGR94DBCS(tmpSourceChar) */
+                            if(cs == JISX208) {
+                                _2022ToSJIS((uint8_t)mySourceChar, trailByte, tempBuf);
+                                mySourceChar = tmpSourceChar;
+                            } else {
+                                /* Copy before we modify tmpSourceChar so toUnicodeCallback() sees the correct bytes. */
+                                mySourceChar = tmpSourceChar;
+                                if (cs == KSC5601) {
+                                    tmpSourceChar += 0x8080;  /* = _2022ToGR94DBCS(tmpSourceChar) */
+                                }
+                                tempBuf[0] = (char)(tmpSourceChar >> 8);
+                                tempBuf[1] = (char)(tmpSourceChar);
                             }
-                            tempBuf[0] = (char)(tmpSourceChar >> 8);
-                            tempBuf[1] = (char)(tmpSourceChar);
                             targetUniChar = ucnv_MBCSSimpleGetNextUChar(myData->myConverterArray[cs], tempBuf, 2, FALSE);
                         } else if (!(trailIsOk || IS_2022_CONTROL(trailByte))) {
                             /* report a pair of illegal bytes if the second byte is not a DBCS starter */
@@ -2776,21 +2849,21 @@ getTrailByte:
 *       SS2 is a Chinese character as defined in CNS
 *       11643-plane-2, until another SS2designation
 *       appears
-*       (Meaning <ESC>N must preceed every 2 byte
+*       (Meaning <ESC>N must precede every 2 byte
 *        sequence.)
 *
 *      ESC $ + I       Indicates the immediate two bytes following SS3
 *       is a Chinese character as defined in CNS
 *       11643-plane-3, until another SS3designation
 *       appears
-*       (Meaning <ESC>O must preceed every 2 byte
+*       (Meaning <ESC>O must precede every 2 byte
 *        sequence.)
 *
 *      ESC $ + J       Indicates the immediate two bytes following SS3
 *       is a Chinese character as defined in CNS
 *       11643-plane-4, until another SS3designation
 *       appears
-*       (In English: <ESC>O must preceed every 2 byte
+*       (In English: <ESC>O must precede every 2 byte
 *        sequence.)
 *
 *      ESC $ + K       Indicates the immediate two bytes following SS3

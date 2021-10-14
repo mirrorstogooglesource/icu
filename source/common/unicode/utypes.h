@@ -312,11 +312,7 @@ typedef double UDate;
 #define U_IO_API
 #define U_TOOLUTIL_API
 #elif defined(U_COMMON_IMPLEMENTATION)
-#if defined(U_ICUDATAENTRY_IN_COMMON)
-#define U_DATA_API     U_EXPORT
-#else
 #define U_DATA_API     U_IMPORT
-#endif
 #define U_COMMON_API   U_EXPORT
 #define U_I18N_API     U_IMPORT
 #define U_LAYOUT_API   U_IMPORT
@@ -483,16 +479,14 @@ typedef enum UErrorCode {
     U_COLLATOR_VERSION_MISMATCH = 28,   /**< Collator version is not compatible with the base version */
     U_USELESS_COLLATOR_ERROR  = 29,     /**< Collator is options only and no base is specified */
     U_NO_WRITE_PERMISSION     = 30,     /**< Attempt to modify read-only or constant data. */
-#ifndef U_HIDE_DRAFT_API
     /**
      * The input is impractically long for an operation.
      * It is rejected because it may lead to problems such as excessive
      * processing time, stack depth, or heap memory requirements.
      *
-     * @draft ICU 68
+     * @stable ICU 68
      */
     U_INPUT_TOO_LONG_ERROR = 31,
-#endif  // U_HIDE_DRAFT_API
 
 #ifndef U_HIDE_DEPRECATED_API
     /**
