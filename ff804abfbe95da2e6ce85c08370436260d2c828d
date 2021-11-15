@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f5491f16_02da9264",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2021-11-15T18:51:43Z",
+      "side": 1,
+      "message": "I edited the CL description to s/partial/partially/ . ",
+      "revId": "ff804abfbe95da2e6ce85c08370436260d2c828d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
