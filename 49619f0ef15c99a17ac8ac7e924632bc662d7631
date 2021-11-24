@@ -68,6 +68,24 @@
       "parentUuid": "28b34440_9244c770",
       "revId": "49619f0ef15c99a17ac8ac7e924632bc662d7631",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bcd1e805_9176e66b",
+        "filename": "fuzzers/OWNERS",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1126309
+      },
+      "writtenOn": "2021-11-24T02:07:44Z",
+      "side": 1,
+      "message": "Done - CL:3298120.",
+      "parentUuid": "df848395_bec1cd3d",
+      "revId": "49619f0ef15c99a17ac8ac7e924632bc662d7631",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
