@@ -33,6 +33,24 @@
       "message": "BTW seems mmoroz@ isn\u0027t on the team anymore, so should I file a CL to remove this entry from the owners file?",
       "revId": "49619f0ef15c99a17ac8ac7e924632bc662d7631",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "df848395_bec1cd3d",
+        "filename": "fuzzers/OWNERS",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1129734
+      },
+      "writtenOn": "2021-11-24T02:03:08Z",
+      "side": 1,
+      "message": "yes please, thanks!",
+      "parentUuid": "28b34440_9244c770",
+      "revId": "49619f0ef15c99a17ac8ac7e924632bc662d7631",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
