@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4105a06b_89a89f39",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1175774
+      },
+      "writtenOn": "2021-11-29T16:37:22Z",
+      "side": 1,
+      "message": "Frank, PTAL as OWNER\nNico, PTAL based on your comments in the bug",
+      "revId": "5a6510d444a40a3314375066339ca19ff6ed6a9c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
