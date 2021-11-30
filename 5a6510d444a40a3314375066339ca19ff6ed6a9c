@@ -50,6 +50,23 @@
       "message": "LGTM",
       "revId": "5a6510d444a40a3314375066339ca19ff6ed6a9c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f94091e_24120d21",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2021-11-30T18:53:09Z",
+      "side": 1,
+      "message": "I see some errors\n\nStep _compile_ failed. Error logs are shown below:\n[1139/1348] CXX obj/v8_compiler/js-heap-broker.obj\nFAILED: obj/v8_compiler/js-heap-broker.obj\nninja -t msvc -e environment.x64 -- \"C:\\b\\s\\w\\ir\\cache\\builder\\v8\\third_party\\depot_tools\\win_toolch...(too long)\n../../src/compiler/js-heap-broker.cc(37): error C2220: the following warning is treated as an error\n../../src/compiler/js-heap-broker.cc(37): warning C5041: \u0027kMinimalRefsBucketCount\u0027: out-of-line definition for constexpr static data member is not needed and is deprecated in C++17\n../../src/compiler/js-heap-broker.cc(37): note: to simplify migration, consider the temporary use of /Wv:18 flag with the version of the compiler with which you used to build without warnings",
+      "revId": "5a6510d444a40a3314375066339ca19ff6ed6a9c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
