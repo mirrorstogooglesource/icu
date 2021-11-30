@@ -84,6 +84,24 @@
       "message": "I also filed https://unicode-org.atlassian.net/browse/ICU-21865\nand will cherry pick https://github.com/unicode-org/icu/pull/1948\nfrom ICU trunk if it passed all their CI bots",
       "revId": "5a6510d444a40a3314375066339ca19ff6ed6a9c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "10ca4327_372a6e97",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1115851
+      },
+      "writtenOn": "2021-11-30T19:46:31Z",
+      "side": 1,
+      "message": "Should have been fixed by https://crrev.com/c/3308795, but it still fails. It must be that MSVC isn\u0027t setting __cplusplus as expected.\n\nThat said that\u0027s fixable on the V8 side without ICU, so I think we should land this to make forward progess. Thanks for the review, and for handling this upstream.",
+      "parentUuid": "0f94091e_24120d21",
+      "revId": "5a6510d444a40a3314375066339ca19ff6ed6a9c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
