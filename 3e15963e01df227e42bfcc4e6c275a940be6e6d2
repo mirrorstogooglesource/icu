@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "85388eec_64b989b0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1115851
+      },
+      "writtenOn": "2021-11-30T22:59:12Z",
+      "side": 1,
+      "message": "lgtm\n\nIf we\u0027re pulling in this patch should we just revert the deprecation-silencing patch, since it\u0027ll no longer be needed?",
+      "revId": "3e15963e01df227e42bfcc4e6c275a940be6e6d2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
