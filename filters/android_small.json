@@ -562,8 +562,7 @@
         "-/ExemplarCharactersNumbers",
         "-/ExemplarCharactersPunctuation",
         "-/measurementSystemNames",
-        "-/NumberElements/minimalPairs",
-        "-/delimiters"
+        "-/NumberElements/minimalPairs"
       ]
     },
 // Based on filter_currency_data
