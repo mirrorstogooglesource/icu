@@ -33,6 +33,24 @@
       "message": "BTW, Android already seems to have populated region_tree. You didn\u0027t change it in this CL, either?  Am I mistaken? ",
       "revId": "958df899ba1e77ffd3d9df908caad63c081d5ebc",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "626c0de4_42575adc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2021-12-08T01:20:08Z",
+      "side": 1,
+      "message": "We filter android_small.json region_tree w/ a smaller set of language. For both android.json and android_extra.json- the filter is based on the top level \"localeFilter\":",
+      "parentUuid": "050b2bf5_41bc1385",
+      "revId": "958df899ba1e77ffd3d9df908caad63c081d5ebc",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
