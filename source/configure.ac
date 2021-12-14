@@ -1390,6 +1390,7 @@ AC_CONFIG_FILES([icudefs.mk \
 		tools/icuswap/Makefile \
 		tools/pkgdata/Makefile \
 		tools/icuexportdata/Makefile \
+		tools/icualign/Makefile \
 		tools/tzcode/Makefile \
 		tools/gencfu/Makefile \
 		tools/escapesrc/Makefile \
