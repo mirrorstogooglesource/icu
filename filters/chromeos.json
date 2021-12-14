@@ -256,13 +256,13 @@
     "coll_tree": {
       "filterType": "union",
       "unionOf": [
-	{
+        {
           "includelist": [
             "en",
             "en_US"
-	  ]
-	},
-	{
+          ]
+        },
+        {
           "filterType": "language",
           "includelist": [
 // Need to explicitly add "root"
@@ -322,7 +322,7 @@
             "uk",
             "vi",
             "zh"
-	  ]
+          ]
         }
       ]
     },
@@ -403,7 +403,7 @@
 // Based on the ICU63 version of
 // https://cs.chromium.org/chromium/src/third_party/icu/source/data/sprep/spreplocal.mk?rcl=797b7c
     "stringprep": { "filterType": "exclude" },
-    "translit": {  "filterType": "exclude" },
+    "translit": { "filterType": "exclude" },
 // Based on the ICU63 version of
 // https://cs.chromium.org/chromium/src/third_party/icu/source/data/unit/reslocal.mk?rcl=797b7c
 // Includes the items from UNIT_ALIAS_SOURCE and UNIT_SOURCE

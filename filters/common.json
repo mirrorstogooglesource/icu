@@ -266,7 +266,7 @@
           "filterType": "language",
           "includelist": [
 // Need to explicitly add "root"
-    	    "root",
+            "root",
 
             "am",
             "ar",
@@ -1303,7 +1303,7 @@
       "files": {
         "includelist": [
           "grammaticalFeatures"
-	]
+        ]
       },
       "rules": [
         "-/*",
