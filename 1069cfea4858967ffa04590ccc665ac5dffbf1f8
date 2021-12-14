@@ -1,0 +1,300 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1108e205_00216bab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2021-12-14T13:58:42Z",
+      "side": 1,
+      "message": "Just a initial scan about the code.",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a21ecc2f_ea406d4b",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2021-12-14T13:58:42Z",
+      "side": 1,
+      "message": "copyright?",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dc5bc3e5_691a8e4a",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2021-12-14T13:58:42Z",
+      "side": 1,
+      "message": "could you use constexpr?\nconstant style is kPageSize.",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "78130f65_21aaac93",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2021-12-14T13:58:42Z",
+      "side": 1,
+      "message": "fyi: you\u0027d need to wrap by paren to avoid accidents.",
+      "range": {
+        "startLine": 10,
+        "startChar": 22,
+        "endLine": 10,
+        "endChar": 24
+      },
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "63d4a870_e9f9ed0c",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2021-12-14T13:58:42Z",
+      "side": 1,
+      "message": "size_t or ssize_t ?",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 3
+      },
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f4f2d49b_bf81b0da",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2021-12-14T13:58:42Z",
+      "side": 1,
+      "message": "Could you add document?",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3e7621ba_177bacff",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2021-12-14T13:58:42Z",
+      "side": 1,
+      "message": "looks redundant.",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ff89171_6108b51c",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2021-12-14T13:58:42Z",
+      "side": 1,
+      "message": "fd is leaked. Could you maintain?",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ce5af4a_8ca78784",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2021-12-14T13:58:42Z",
+      "side": 1,
+      "message": "maybe better to output errno content.\n\nDitto for below.",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c5b32f01_21f7d19f",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2021-12-14T13:58:42Z",
+      "side": 1,
+      "message": "ditto.",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "28535be7_85ab7771",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2021-12-14T13:58:42Z",
+      "side": 1,
+      "message": "maybe fwrite?",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bea9ab0c_707574ea",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2021-12-14T13:58:42Z",
+      "side": 1,
+      "message": "Looks UB.\n\nheader_size \u003d data[0] | (data[1] \u003c\u003c 8);\n\nditto for below.\n\nOr alternatively, introduces a struct with proper field alignment.\nThen, reinterpret cast? (You\u0027ll need to take care of endians?)",
+      "range": {
+        "startLine": 54,
+        "startChar": 27,
+        "endLine": 54,
+        "endChar": 51
+      },
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c920993_071b5860",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2021-12-14T13:58:42Z",
+      "side": 1,
+      "message": "nit: size_t for the size. Ditto for below.",
+      "range": {
+        "startLine": 62,
+        "startChar": 9,
+        "endLine": 62,
+        "endChar": 12
+      },
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "27fd7a1d_23702c90",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2021-12-14T13:58:42Z",
+      "side": 1,
+      "message": "could you add the comment about the internal data structure?\nIt\u0027s worth adding some reference, too.\nAlso, it\u0027s nice to have brief comment for important fields. E.g. \"offset\" fields are relative to the beginning of the data, not relative to the beginning of the data file.",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "74448002_4f7585bc",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2021-12-14T13:58:42Z",
+      "side": 1,
+      "message": "let\u0027s cleanly teardown, or at least comment it.",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "05bc4dee_dcdf8db0",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2021-12-14T13:58:42Z",
+      "side": 1,
+      "message": "let\u0027s avoid leak. you can easily avoid by using std::vector.",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
