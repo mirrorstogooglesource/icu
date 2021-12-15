@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "71a9b10d_b0b590f1",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2021-12-15T04:29:33Z",
+      "side": 1,
+      "message": "What\u0027s the correct copyright header to use in this case? Is it the Unicode one?",
+      "parentUuid": "a21ecc2f_ea406d4b",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "dc5bc3e5_691a8e4a",
         "filename": "source/tools/icualign/icualign.cpp",
         "patchSetId": 12
@@ -48,6 +66,24 @@
       "writtenOn": "2021-12-14T13:58:42Z",
       "side": 1,
       "message": "could you use constexpr?\nconstant style is kPageSize.",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b0343e1_4125667f",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2021-12-15T04:29:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dc5bc3e5_691a8e4a",
       "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -65,6 +101,30 @@
       "writtenOn": "2021-12-14T13:58:42Z",
       "side": 1,
       "message": "fyi: you\u0027d need to wrap by paren to avoid accidents.",
+      "range": {
+        "startLine": 10,
+        "startChar": 22,
+        "endLine": 10,
+        "endChar": 24
+      },
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c90570ba_5600dfc9",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2021-12-15T04:29:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "78130f65_21aaac93",
       "range": {
         "startLine": 10,
         "startChar": 22,
@@ -115,6 +175,48 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4083666c_1c16fb22",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2021-12-15T04:29:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "63d4a870_e9f9ed0c",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 3
+      },
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a656f925_b9e57cf4",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2021-12-15T04:29:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f4f2d49b_bf81b0da",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3e7621ba_177bacff",
@@ -128,6 +230,24 @@
       "writtenOn": "2021-12-14T13:58:42Z",
       "side": 1,
       "message": "looks redundant.",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "44304547_68e77bde",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2021-12-15T04:29:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3e7621ba_177bacff",
       "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -149,6 +269,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "de2c171b_ebb36e8b",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2021-12-15T04:29:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ff89171_6108b51c",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7ce5af4a_8ca78784",
@@ -166,6 +304,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7045405a_9bd6e82c",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2021-12-15T04:29:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ce5af4a_8ca78784",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c5b32f01_21f7d19f",
@@ -179,6 +335,24 @@
       "writtenOn": "2021-12-14T13:58:42Z",
       "side": 1,
       "message": "ditto.",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "66318efa_17feb33e",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2021-12-15T04:29:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c5b32f01_21f7d19f",
       "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -223,6 +397,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "96e71d0e_6e0c2536",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2021-12-15T04:29:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bea9ab0c_707574ea",
+      "range": {
+        "startLine": 54,
+        "startChar": 27,
+        "endLine": 54,
+        "endChar": 51
+      },
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6c920993_071b5860",
@@ -236,6 +434,30 @@
       "writtenOn": "2021-12-14T13:58:42Z",
       "side": 1,
       "message": "nit: size_t for the size. Ditto for below.",
+      "range": {
+        "startLine": 62,
+        "startChar": 9,
+        "endLine": 62,
+        "endChar": 12
+      },
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2d1a13e_67ca4dc5",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2021-12-15T04:29:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6c920993_071b5860",
       "range": {
         "startLine": 62,
         "startChar": 9,
@@ -263,6 +485,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a72e6721_a17636b7",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2021-12-15T04:29:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "27fd7a1d_23702c90",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "74448002_4f7585bc",
@@ -280,6 +520,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb775c7e_23abd3b9",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2021-12-15T04:29:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "74448002_4f7585bc",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "05bc4dee_dcdf8db0",
@@ -293,6 +551,24 @@
       "writtenOn": "2021-12-14T13:58:42Z",
       "side": 1,
       "message": "let\u0027s avoid leak. you can easily avoid by using std::vector.",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2071d6e_0cb94dab",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2021-12-15T04:29:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "05bc4dee_dcdf8db0",
       "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
