@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c9325fa4_93745f3d",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2021-12-15T16:40:22Z",
+      "side": 1,
+      "message": "good question... ftang@, any thoughts? I cannot find Chromium copyright in the directory.",
+      "parentUuid": "71a9b10d_b0b590f1",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "dc5bc3e5_691a8e4a",
         "filename": "source/tools/icualign/icualign.cpp",
         "patchSetId": 12
@@ -388,6 +406,24 @@
       "side": 1,
       "message": "Now that it\u0027s a vector, you prefer a std::copy into a ofstream?",
       "parentUuid": "28535be7_85ab7771",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3a3f5535_a640f366",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2021-12-15T16:40:22Z",
+      "side": 1,
+      "message": "you can use std::vector::data().",
+      "parentUuid": "f9e417d8_ba6f52ce",
       "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
