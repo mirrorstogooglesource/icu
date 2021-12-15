@@ -376,6 +376,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f9e417d8_ba6f52ce",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2021-12-15T04:32:36Z",
+      "side": 1,
+      "message": "Now that it\u0027s a vector, you prefer a std::copy into a ofstream?",
+      "parentUuid": "28535be7_85ab7771",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "bea9ab0c_707574ea",
         "filename": "source/tools/icualign/icualign.cpp",
         "patchSetId": 12
