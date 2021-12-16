@@ -428,6 +428,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3eda4a3_40691db2",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2021-12-16T04:51:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3a3f5535_a640f366",
+      "revId": "1069cfea4858967ffa04590ccc665ac5dffbf1f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bea9ab0c_707574ea",
