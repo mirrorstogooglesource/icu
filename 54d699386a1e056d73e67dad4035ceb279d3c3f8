@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e6584362_768d428e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2021-12-16T00:55:41Z",
+      "side": 1,
+      "message": "This is a little strange to me. If we take this CL, then the chromeos will include \"is\" resources but not Chrome on Win/Mac/Linux/Android/iOS . Is that what should happen? Or should we also include \"is\" for other builds? Who should make such call?",
+      "revId": "54d699386a1e056d73e67dad4035ceb279d3c3f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
