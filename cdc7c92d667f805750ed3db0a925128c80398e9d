@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "60bfa9a0_ec6d721b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2021-12-16T15:00:47Z",
+      "side": 1,
+      "message": "LGTM with a comment. Defer to OWNER.",
+      "revId": "cdc7c92d667f805750ed3db0a925128c80398e9d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "96b7150b_f3623eca",
+        "filename": "source/tools/icualign/icualign.cpp",
+        "patchSetId": 18
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2021-12-16T15:00:47Z",
+      "side": 1,
+      "message": "could you check error?",
+      "revId": "cdc7c92d667f805750ed3db0a925128c80398e9d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
