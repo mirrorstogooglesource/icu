@@ -16,6 +16,24 @@
       "message": "This is a little strange to me. If we take this CL, then the chromeos will include \"is\" resources but not Chrome on Win/Mac/Linux/Android/iOS . Is that what should happen? Or should we also include \"is\" for other builds? Who should make such call?",
       "revId": "54d699386a1e056d73e67dad4035ceb279d3c3f8",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5164bf21_6b7a86dd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1394418
+      },
+      "writtenOn": "2021-12-16T01:06:54Z",
+      "side": 1,
+      "message": "Yes, this is intentional. https://crrev.com/c/2558099 added Icelandic for _only_ Chrome OS, so this should not affect other platforms.\n\nFor:\n\n- Win/Mac/Linux: Icelandic is not available on Chrome Browser.\n- Android: Icelandic has already been included in Android since late 2019 - see https://crrev.com/c/1952288. I assume that Icelandic ICU resources have already been added, but I might be wrong. Maybe Chrome on Android offloads most ICU-related work to the OS? I know https://source.chromium.org/chromium/chromium/src/+/main:ui/base/l10n/l10n_util.cc;l\u003d633-640;drc\u003dd1abcd09edbdf07d7877fbde3ebc282627e0bcd6 is one example.\n- iOS: Icelandic is not available on iOS Chrome.",
+      "parentUuid": "e6584362_768d428e",
+      "revId": "54d699386a1e056d73e67dad4035ceb279d3c3f8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
