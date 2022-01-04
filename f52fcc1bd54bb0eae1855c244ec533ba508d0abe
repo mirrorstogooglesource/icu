@@ -50,6 +50,24 @@
       "message": "please rebase and rebuild the dat file. Thanks for working on this",
       "revId": "f52fcc1bd54bb0eae1855c244ec533ba508d0abe",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed99f78c_2607ca71",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1394418
+      },
+      "writtenOn": "2022-01-04T06:33:38Z",
+      "side": 1,
+      "message": "Done. To confirm that it was successfully rebuilt, double check the size delta between patchset 4 and 5 is around the same as the size delta of https://crrev.com/c/3340681.\n\nFYI, you will most likely need to approve https://crrev.com/c/3337178/ too.",
+      "parentUuid": "6fad910c_51a7b681",
+      "revId": "f52fcc1bd54bb0eae1855c244ec533ba508d0abe",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
