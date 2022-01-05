@@ -16,6 +16,24 @@
       "message": "file under source are sync from ICU project- Please move your contribution to https://github.com/unicode-org/icu instead.",
       "revId": "acd326e0fb4950681eccccff6058bbcb9c2f37fa",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "06c0ec61_4972e27d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 19
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2022-01-05T03:09:07Z",
+      "side": 1,
+      "message": "As discussed in the design document, I will change this patch so that there\u0027s no overlap with upstream.",
+      "parentUuid": "8a570f47_70ede87b",
+      "revId": "acd326e0fb4950681eccccff6058bbcb9c2f37fa",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
