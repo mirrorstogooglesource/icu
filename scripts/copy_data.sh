@@ -70,6 +70,18 @@ function copy_android_extra {
 }
 
 
+function align_data {
+  echo "Aligning files in icudtl.dat for $1"
+
+  ORIGINAL="data/out/tmp/icudt${VERSION}l.dat"
+  ALIGNED="data/out/tmp/icudt${VERSION}l-aligned.dat"
+  bin/icualign "${ORIGINAL}" "${ALIGNED}"
+  mv "${ALIGNED}" "${ORIGINAL}"
+
+  echo "Done with aligning files in icudtl.dat for $1."
+}
+
+
 BACKUP_DIR="dataout/$1"
 function backup_outdir {
   rm -rf "${BACKUP_DIR}"
@@ -79,6 +91,7 @@ function backup_outdir {
 
 case "$1" in
   "chromeos")
+    align_data $1
     copy_data ChromeOS $1
     backup_outdir $1
     ;;
