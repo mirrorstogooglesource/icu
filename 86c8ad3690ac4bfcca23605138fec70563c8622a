@@ -33,6 +33,24 @@
       "message": "Please rebuild the dat file after your rebase",
       "revId": "86c8ad3690ac4bfcca23605138fec70563c8622a",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "de90a5c0_8e0f468a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2022-01-11T03:40:20Z",
+      "side": 1,
+      "message": "that is totally common due to locale fallback and resources fallback",
+      "parentUuid": "afa14f69_a77b6db2",
+      "revId": "86c8ad3690ac4bfcca23605138fec70563c8622a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
