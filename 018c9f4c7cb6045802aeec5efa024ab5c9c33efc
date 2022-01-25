@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "13f66d54_6596ca36",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1383098
+      },
+      "writtenOn": "2022-01-25T12:58:59Z",
+      "side": 1,
+      "message": "I rechecked the config. +2 from my side.",
+      "revId": "018c9f4c7cb6045802aeec5efa024ab5c9c33efc",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
