@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3625e20a_d2f1f951",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2022-01-31T08:29:58Z",
+      "side": 1,
+      "message": "I decided to write this in Python and place it in the scripts/ directory (where there are other Python scripts already). It seems like the path of least resistence here, as it doesn\u0027t require altering the upstream build process.",
+      "revId": "32ded02689cf70a3e70281d350bae20753865fd5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
