@@ -16,6 +16,24 @@
       "message": "let me first roll all the CrOS required one (up to 609143a639dcc0884a87c899614895ce129afdb8) to DEPS \nSee https://chromium-review.googlesource.com/c/chromium/src/+/3417816",
       "revId": "07da870598c1ba7a6127ff578a52d0247c555c10",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f94613f_0b346af2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1394418
+      },
+      "writtenOn": "2022-01-31T04:45:34Z",
+      "side": 1,
+      "message": "That CL has been merged.",
+      "parentUuid": "5cbef7c9_d6b297cd",
+      "revId": "07da870598c1ba7a6127ff578a52d0247c555c10",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
