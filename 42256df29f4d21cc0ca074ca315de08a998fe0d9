@@ -1,0 +1,169 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "04592afa_ad89283c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2022-02-01T13:15:49Z",
+      "side": 1,
+      "message": "Defer to owners.",
+      "revId": "42256df29f4d21cc0ca074ca315de08a998fe0d9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "305228ea_83b7a76a",
+        "filename": "scripts/copy_data.sh",
+        "patchSetId": 9
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2022-02-01T13:15:49Z",
+      "side": 1,
+      "message": "should we mark \"local\" for them?",
+      "range": {
+        "startLine": 84,
+        "startChar": 2,
+        "endLine": 85,
+        "endChar": 53
+      },
+      "revId": "42256df29f4d21cc0ca074ca315de08a998fe0d9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2f9fe89e_25d70f30",
+        "filename": "scripts/copy_data.sh",
+        "patchSetId": 9
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2022-02-01T13:15:49Z",
+      "side": 1,
+      "message": "nit: wrap by quotes and {}\n\n\"${TOPSRC}/scripts/icualign.py\" ...",
+      "revId": "42256df29f4d21cc0ca074ca315de08a998fe0d9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "22e7ee8c_4882cef3",
+        "filename": "scripts/copy_data.sh",
+        "patchSetId": 9
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2022-02-01T13:15:49Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "42256df29f4d21cc0ca074ca315de08a998fe0d9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "120bac8d_759c5a4d",
+        "filename": "scripts/copy_data.sh",
+        "patchSetId": 9
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2022-02-01T13:15:49Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "42256df29f4d21cc0ca074ca315de08a998fe0d9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aa6ad78b_5412463b",
+        "filename": "scripts/icualign.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2022-02-01T13:15:49Z",
+      "side": 1,
+      "message": "following style guide, could you import struct?\n\nhttps://google.github.io/styleguide/pyguide.html#22-imports\n\n(Note, icu may have different style guide, if so I\u0027m ok).",
+      "revId": "42256df29f4d21cc0ca074ca315de08a998fe0d9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "43d95cbe_fd21580d",
+        "filename": "scripts/icualign.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2022-02-01T13:15:49Z",
+      "side": 1,
+      "message": "with open(in_filename, \"rb\") as f:\n  data \u003d f.read()",
+      "revId": "42256df29f4d21cc0ca074ca315de08a998fe0d9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "92c6be00_6fc4a741",
+        "filename": "scripts/icuhash.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2022-02-01T13:15:49Z",
+      "side": 1,
+      "message": "nit: ditto for imports.",
+      "revId": "42256df29f4d21cc0ca074ca315de08a998fe0d9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dde12418_6e4d618a",
+        "filename": "scripts/icuhash.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1115919
+      },
+      "writtenOn": "2022-02-01T13:15:49Z",
+      "side": 1,
+      "message": "with open(in_filename, \"rb\") as f:\n  data \u003d f.read()\n...",
+      "range": {
+        "startLine": 52,
+        "startChar": 4,
+        "endLine": 54,
+        "endChar": 31
+      },
+      "revId": "42256df29f4d21cc0ca074ca315de08a998fe0d9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
