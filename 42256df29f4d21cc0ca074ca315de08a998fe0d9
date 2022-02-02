@@ -41,6 +41,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f5458f18_08725288",
+        "filename": "scripts/copy_data.sh",
+        "patchSetId": 9
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2022-02-02T04:28:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "305228ea_83b7a76a",
+      "range": {
+        "startLine": 84,
+        "startChar": 2,
+        "endLine": 85,
+        "endChar": 53
+      },
+      "revId": "42256df29f4d21cc0ca074ca315de08a998fe0d9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2f9fe89e_25d70f30",
@@ -54,6 +78,24 @@
       "writtenOn": "2022-02-01T13:15:49Z",
       "side": 1,
       "message": "nit: wrap by quotes and {}\n\n\"${TOPSRC}/scripts/icualign.py\" ...",
+      "revId": "42256df29f4d21cc0ca074ca315de08a998fe0d9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d88c70a4_e9c22e97",
+        "filename": "scripts/copy_data.sh",
+        "patchSetId": 9
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2022-02-02T04:28:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2f9fe89e_25d70f30",
       "revId": "42256df29f4d21cc0ca074ca315de08a998fe0d9",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -75,6 +117,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d34e9d3a_3b12712a",
+        "filename": "scripts/copy_data.sh",
+        "patchSetId": 9
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2022-02-02T04:28:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "22e7ee8c_4882cef3",
+      "revId": "42256df29f4d21cc0ca074ca315de08a998fe0d9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "120bac8d_759c5a4d",
@@ -88,6 +148,24 @@
       "writtenOn": "2022-02-01T13:15:49Z",
       "side": 1,
       "message": "ditto",
+      "revId": "42256df29f4d21cc0ca074ca315de08a998fe0d9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ab0b2e8_aa0c2db1",
+        "filename": "scripts/copy_data.sh",
+        "patchSetId": 9
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2022-02-02T04:28:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "120bac8d_759c5a4d",
       "revId": "42256df29f4d21cc0ca074ca315de08a998fe0d9",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -109,6 +187,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3dbb0432_f3660e63",
+        "filename": "scripts/icualign.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2022-02-02T04:28:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aa6ad78b_5412463b",
+      "revId": "42256df29f4d21cc0ca074ca315de08a998fe0d9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "43d95cbe_fd21580d",
@@ -122,6 +218,24 @@
       "writtenOn": "2022-02-01T13:15:49Z",
       "side": 1,
       "message": "with open(in_filename, \"rb\") as f:\n  data \u003d f.read()",
+      "revId": "42256df29f4d21cc0ca074ca315de08a998fe0d9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42b5354e_990f187d",
+        "filename": "scripts/icualign.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2022-02-02T04:28:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "43d95cbe_fd21580d",
       "revId": "42256df29f4d21cc0ca074ca315de08a998fe0d9",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -143,6 +257,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "edc11bc0_77a43b1c",
+        "filename": "scripts/icuhash.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2022-02-02T04:28:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "92c6be00_6fc4a741",
+      "revId": "42256df29f4d21cc0ca074ca315de08a998fe0d9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dde12418_6e4d618a",
@@ -156,6 +288,30 @@
       "writtenOn": "2022-02-01T13:15:49Z",
       "side": 1,
       "message": "with open(in_filename, \"rb\") as f:\n  data \u003d f.read()\n...",
+      "range": {
+        "startLine": 52,
+        "startChar": 4,
+        "endLine": 54,
+        "endChar": 31
+      },
+      "revId": "42256df29f4d21cc0ca074ca315de08a998fe0d9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5a9a0760_21381bcd",
+        "filename": "scripts/icuhash.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1527467
+      },
+      "writtenOn": "2022-02-02T04:28:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dde12418_6e4d618a",
       "range": {
         "startLine": 52,
         "startChar": 4,
