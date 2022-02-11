@@ -68,7 +68,24 @@
       "message": "Hi Frank, I don\u0027t have permission to submit this, are you happy to go ahead?\n\nThank you,\nAndrea",
       "revId": "5aa50326ecd84d0ef579965fa586fb7c86f6577a",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1312f5b0_a5c974c6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2022-02-11T22:10:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7b0986ce_7eec93b5",
+      "revId": "5aa50326ecd84d0ef579965fa586fb7c86f6577a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
-  ],
-  "submitRequirementResults": []
+  ]
 }
