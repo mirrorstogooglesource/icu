@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a24728f7_bd776b6f",
+        "filename": "BUILD.gn",
+        "patchSetId": 14
+      },
+      "lineNbr": 407,
+      "author": {
+        "id": 1323125
+      },
+      "writtenOn": "2022-02-15T14:46:39Z",
+      "side": 1,
+      "message": "Hello,\n\nThis CL has been been pulled as a dependency under V8: https://crrev.com/c/3460070\n\nIt is causing a compilation error on big endian platforms as `icudtb.dat.hash` doesn\u0027t exist.\n\nWould it be possible to guard this block by `is_chromeos`? if not then how can a big endian binary be generated in this case?",
+      "revId": "e94822cd43d01722869c19053303a18e893ecd00",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
