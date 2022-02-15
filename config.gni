@@ -10,6 +10,10 @@ declare_args() {
   # If true, compile icu into a standalone static library. Currently this is
   # only useful on Chrome OS.
   icu_disable_thin_archive = false
+
+  # If true, the Fuchsia build ("is_in_fuchsia==true") will use the ICU data
+  # file in //fuchsia.  If false, it will use the ICU data from //common.
+  fuchsia_uses_separate_icu_data = true
 }
 
 # Set to true if icu is being built from the Fuchsia tree.

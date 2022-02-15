@@ -321,7 +321,9 @@ if (is_android) {
   data_dir = "ios"
 } else if (is_chromeos) {
   data_dir = "chromeos"
-} else {
+} else if (icu_is_in_fuchsia && fuchsia_uses_separate_icu_data) {
+  data_dir = "fuchsia"
+}else {
   data_dir = "common"
 }
 
