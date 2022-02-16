@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6e75ea34_5ed79c1f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1323125
+      },
+      "writtenOn": "2022-02-16T13:35:47Z",
+      "side": 1,
+      "message": "Thanks for the patch, I don\u0027t have reviewing privileges in this repository.",
+      "revId": "481251ee534144b2f690bf3e6e613d9987c80bdb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
