@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e00d697_e37e3608",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1370517
+      },
+      "writtenOn": "2022-03-08T02:09:50Z",
+      "side": 1,
+      "message": "Hi Frank,\n\nPTAL at this CL. It adds two new languages to the common filters since they will be added to Windows/Mac/Linux builds.\n\nI update both the icudtb.dat and icudtl.dat files (copied from icudt70b.dat and icudt70l.dat).\n\nThanks!",
+      "revId": "fdb8a4063aec80e9576df7bcfc469851a18334cd",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
