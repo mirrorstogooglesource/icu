@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79ce18ac_9ab1cd51",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1250067
+      },
+      "writtenOn": "2022-03-18T19:01:30Z",
+      "side": 1,
+      "message": "Not sure if I should remove more things related to android_small now?",
+      "revId": "a38e358c40a5d84a4ebca3026027c810563b5fe1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
