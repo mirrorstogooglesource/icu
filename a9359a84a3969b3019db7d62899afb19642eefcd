@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c93f9b48_72eb0394",
+        "filename": "source/i18n/transreg.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1375392
+      },
+      "writtenOn": "2022-03-28T18:14:57Z",
+      "side": 0,
+      "message": "Would upstream ICU benefit from compiler options that would point these issues out?",
+      "revId": "a9359a84a3969b3019db7d62899afb19642eefcd",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
