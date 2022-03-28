@@ -34,6 +34,24 @@
       "parentUuid": "c19f9e0f_996fa4b0",
       "revId": "b20a2a6850eb79887d9f6ef71ebad40219015e8f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2fbe7821_a9cdf76d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1375392
+      },
+      "writtenOn": "2022-03-28T18:28:36Z",
+      "side": 1,
+      "message": "\u003e Yes, we would like to deploy it ASAP because Fuchsia toolchain builders are broken because of that.\n\nftang@ this is seemingly something for you, again. \n\nWe had https://chromium.googlesource.com/chromium/deps/icu/+/refs/heads/chromium/fuchsia2021aug last year, and may need to do something similar for this change.",
+      "parentUuid": "780d570b_aaf91713",
+      "revId": "b20a2a6850eb79887d9f6ef71ebad40219015e8f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
