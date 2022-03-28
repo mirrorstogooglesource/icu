@@ -16,6 +16,24 @@
       "message": "Would upstream ICU benefit from compiler options that would point these issues out?",
       "revId": "a9359a84a3969b3019db7d62899afb19642eefcd",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "622dfd3e_58baa211",
+        "filename": "source/i18n/transreg.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1515037
+      },
+      "writtenOn": "2022-03-28T18:20:41Z",
+      "side": 0,
+      "message": "That would be great if ICU can treat such compiler options as errors, so we don\u0027t need to change Chromium\u0027s copy whenever there is a new warning or a warning is improved in Clang.",
+      "parentUuid": "c93f9b48_72eb0394",
+      "revId": "a9359a84a3969b3019db7d62899afb19642eefcd",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

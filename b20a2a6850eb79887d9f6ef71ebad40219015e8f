@@ -16,6 +16,24 @@
       "message": "This LGTM, but (1) I\u0027m not an owner of Chromium ICU, so leaving to ftang@ to decide.\n\nAnd then - gulfem@, when do you expect to deploy this to Fuchsia\u0027s ICU? If the answer is \"very soon\" or some such, we may need another short-lived special Fuchsia branch to make it happen.",
       "revId": "b20a2a6850eb79887d9f6ef71ebad40219015e8f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "780d570b_aaf91713",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1515037
+      },
+      "writtenOn": "2022-03-28T18:20:41Z",
+      "side": 1,
+      "message": "Yes, we would like to deploy it ASAP because Fuchsia toolchain builders are broken because of that.",
+      "parentUuid": "c19f9e0f_996fa4b0",
+      "revId": "b20a2a6850eb79887d9f6ef71ebad40219015e8f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
