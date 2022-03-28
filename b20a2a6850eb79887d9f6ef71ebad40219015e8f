@@ -52,6 +52,23 @@
       "parentUuid": "780d570b_aaf91713",
       "revId": "b20a2a6850eb79887d9f6ef71ebad40219015e8f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4384e286_1822c211",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2022-03-28T23:31:56Z",
+      "side": 1,
+      "message": "1. Please also create a patch file under https://source.chromium.org/chromium/chromium/src/+/main:third_party/icu/patches/?q\u003dthird_party%2Ficu%2Fpatches\u0026ss\u003dchromium so we can replay these patch when we update to ICU 71.1\n2. Please document the changes in https://source.chromium.org/chromium/chromium/src/+/main:third_party/icu/README.chromium",
+      "revId": "b20a2a6850eb79887d9f6ef71ebad40219015e8f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
