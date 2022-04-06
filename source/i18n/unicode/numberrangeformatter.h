@@ -68,9 +68,6 @@ struct UFormattedNumberRangeImpl;
 
 } // namespace impl
 
-
-#if 0
-
 /**
  * \cond
  * Export an explicit template instantiation. See datefmt.h
@@ -86,8 +83,6 @@ U_NAMESPACE_BEGIN
 namespace number {  // icu::number
 #endif
 /** \endcond */
-
-#endif
 
 // Other helper classes would go here, but there are none.
 
