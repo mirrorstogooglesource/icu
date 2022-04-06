@@ -1,16 +1,16 @@
 Name: icu
 URL: https://github.com/unicode-org/icu
-Version: 70-1
-CPEPrefix: cpe:/a:icu-project:international_components_for_unicode:70.1
+Version: 71-rc
+CPEPrefix: cpe:/a:icu-project:international_components_for_unicode:71.rc
 License: MIT
 Security Critical: yes
 
 Description:
-This directory contains the source code of ICU 70.1 for C/C++.
+This directory contains the source code of ICU 71.rc for C/C++.
 
 A. How to update ICU
 
-1. Run "scripts/update.sh <version>" (e.g. 70-1).
+1. Run "scripts/update.sh <version>" (e.g. 71-rc).
    This will download ICU from the upstream git repository.
    It does preserve Chrome-specific build files and
    converter files. (see section C)
@@ -260,11 +260,4 @@ D. Local Modifications
     mv source/stubdata/BUILD source/stubdata/BUILD.unused
     mv source/tools/gennorm2/BUILD source/tools/gennorm2/BUILD.unused
     mv source/tools/toolutil/BUILD source/tools/toolutil/BUILD.unused
-
-11. Remove deprecated ctgmath header
-    patches/lstmbe-header.patch
-  - upstream PR:
-    https://github.com/unicode-org/icu/pull/1948
-  - upstream bug:
-    https://unicode-org.atlassian.net/browse/ICU-21865
 
