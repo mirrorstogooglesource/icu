@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c55c40a9_ec750d81",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2022-04-08T23:05:15Z",
+      "side": 1,
+      "message": "Could you prep a DEPS rolling CL following the style of https://chromium-review.googlesource.com/c/chromium/src/+/3564403 and send to me ASAP? Thanks",
+      "revId": "97d9bad87081bad66e2f6644bad0bd663411bf46",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
