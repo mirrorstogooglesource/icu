@@ -1403,10 +1403,10 @@ index 453954ad..55612b9d 100644
          "kw_GB",
          "ky_KG",
 diff --git a/source/data/misc/supplementalData.txt b/source/data/misc/supplementalData.txt
-index 5f7678d7..63d80b65 100644
+index b7322351..dc402967 100644
 --- a/source/data/misc/supplementalData.txt
 +++ b/source/data/misc/supplementalData.txt
-@@ -35463,6 +35463,24 @@ supplementalData:table(nofallback){
+@@ -35468,6 +35468,24 @@ supplementalData:table(nofallback){
              }
              preferred{"h"}
          }
