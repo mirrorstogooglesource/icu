@@ -3,6 +3,9 @@
 # found in the LICENSE file.
 
 declare_args() {
+  # Link against system icu instead of building from source
+  icu_use_system_library = false
+
   # Tells icu to load an external data file rather than rely on the icudata
   # being linked directly into the binary.
   icu_use_data_file = true
