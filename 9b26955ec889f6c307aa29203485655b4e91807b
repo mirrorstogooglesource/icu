@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a6b470d0_aa6a4398",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1171009
+      },
+      "writtenOn": "2022-04-19T19:28:13Z",
+      "side": 1,
+      "message": "friendly ping for review. It is currently breaking our tot toolchain builds in Chrome OS.",
+      "revId": "9b26955ec889f6c307aa29203485655b4e91807b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
