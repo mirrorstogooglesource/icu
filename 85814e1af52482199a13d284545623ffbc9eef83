@@ -22,6 +22,30 @@
       },
       "revId": "85814e1af52482199a13d284545623ffbc9eef83",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "978c317f_6fafb1c6",
+        "filename": "source/i18n/unicode/numfmt.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 1000805
+      },
+      "writtenOn": "2022-05-05T20:14:12Z",
+      "side": 0,
+      "message": "Markus emailed about the same thing.  This override is gone, but the base class method is not, so callers should still see the same available functionality.  isEqual() is a new implementation detail of that base class operator.",
+      "parentUuid": "aa3e37ef_26bfcdfc",
+      "range": {
+        "startLine": 271,
+        "startChar": 3,
+        "endLine": 277,
+        "endChar": 64
+      },
+      "revId": "85814e1af52482199a13d284545623ffbc9eef83",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
