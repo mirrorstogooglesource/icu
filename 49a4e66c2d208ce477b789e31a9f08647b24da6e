@@ -104,6 +104,24 @@
       "parentUuid": "de9686f9_008fccbc",
       "revId": "49a4e66c2d208ce477b789e31a9f08647b24da6e",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "03ded17a_f6fa9fb9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000805
+      },
+      "writtenOn": "2022-05-05T18:14:36Z",
+      "side": 1,
+      "message": "People who can compile against the old code should be able to compile against the new code unless I\u0027ve done something wrong.  What existing clients will break?\n\nI\u0027m not currently prepared to attend third-party orgs\u0027 meetings to discuss C++20 support -- can we work out the right solution between us, and you propose it on Google\u0027s behalf?",
+      "parentUuid": "adaf2394_27d937a9",
+      "revId": "49a4e66c2d208ce477b789e31a9f08647b24da6e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
