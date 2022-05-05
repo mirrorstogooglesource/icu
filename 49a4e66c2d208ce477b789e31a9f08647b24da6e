@@ -51,6 +51,24 @@
       "message": "ICU 72-1 will be released on 2022 Oct 19, Wed (see C133 of https://docs.google.com/spreadsheets/d/1N6inI5R84UoYlRwuCNPBOAP7ri4q2CmJmh8DC5g-S6c/edit#gid\u003d0 ) And I should be able to migrate to ICU72-1 by mid Nov 2022. Could we put your patch into ICU trunk and let it release on 72-1 and wait till then for chromium? ",
       "revId": "49a4e66c2d208ce477b789e31a9f08647b24da6e",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7861ccd1_7ac6cdb9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000805
+      },
+      "writtenOn": "2022-05-05T18:00:29Z",
+      "side": 1,
+      "message": "No, we\u0027d like to get C++20 support sooner than that if possible.  I can\u0027t finish compile support and begin testing things like compile time and binary size impact.",
+      "parentUuid": "fc7d297e_8a7930c2",
+      "revId": "49a4e66c2d208ce477b789e31a9f08647b24da6e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
