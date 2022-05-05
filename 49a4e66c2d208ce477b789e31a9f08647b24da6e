@@ -86,6 +86,24 @@
       "message": "upstream issue for icu filed in https://unicode-org.atlassian.net/browse/ICU-22014",
       "revId": "49a4e66c2d208ce477b789e31a9f08647b24da6e",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "adaf2394_27d937a9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2022-05-05T18:12:04Z",
+      "side": 1,
+      "message": "Your changes to source/i18n/unicode/*.h is changing public ICU API and therefore will break pre-existing client. Please come to ICU TC on 8-10am Thursday morning to discuss that with ICU TC. Changes as in the current shape is surely not acceptable.",
+      "parentUuid": "de9686f9_008fccbc",
+      "revId": "49a4e66c2d208ce477b789e31a9f08647b24da6e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
