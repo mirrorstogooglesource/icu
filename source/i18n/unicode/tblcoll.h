@@ -218,14 +218,6 @@ public:
     RuleBasedCollator& operator=(const RuleBasedCollator& other);
 
     /**
-     * Returns true if argument is the same as this object.
-     * @param other Collator object to be compared.
-     * @return true if arguments is the same as this object.
-     * @stable ICU 2.0
-     */
-    virtual bool operator==(const Collator& other) const override;
-
-    /**
      * Makes a copy of this object.
      * @return a copy of this object, owned by the caller
      * @stable ICU 2.0
@@ -807,6 +799,14 @@ protected:
     * @internal
     */
     virtual void setLocales(const Locale& requestedLocale, const Locale& validLocale, const Locale& actualLocale) override;
+
+    /**
+     * Returns true if argument is the same as this object.
+     * @param other Collator object to be compared.  Guaranteed to be a
+     *        RuleBasedCollator.
+     * @return true if arguments is the same as this object.
+     */
+    virtual bool isEqual(const Collator &other) const override;
 
 private:
     friend class CollationElementIterator;

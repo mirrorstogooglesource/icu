@@ -427,12 +427,9 @@ MeasureFormat::~MeasureFormat() {
     delete listFormatter;
 }
 
-bool MeasureFormat::operator==(const Format &other) const {
+bool MeasureFormat::isEqual(const Format &other) const {
     if (this == &other) { // Same object, equal
         return true;
-    }
-    if (!Format::operator==(other)) {
-        return false;
     }
     const MeasureFormat &rhs = static_cast<const MeasureFormat &>(other);
 

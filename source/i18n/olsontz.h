@@ -144,11 +144,6 @@ class U_I18N_API OlsonTimeZone: public BasicTimeZone {
     OlsonTimeZone& operator=(const OlsonTimeZone& other);
 
     /**
-     * Returns true if the two TimeZone objects are equal.
-     */
-    virtual bool operator==(const TimeZone& other) const override;
-
-    /**
      * TimeZone API.
      */
     virtual OlsonTimeZone* clone() const override;
@@ -284,14 +279,18 @@ class U_I18N_API OlsonTimeZone: public BasicTimeZone {
      */
     const UChar *getCanonicalID() const;
 
+protected:
+    /**
+     * Returns true if the two TimeZone objects are equal.
+     */
+    virtual bool isEqual(const TimeZone &other) const override;
+
 private:
     /**
      * Default constructor.  Creates a time zone with an empty ID and
      * a fixed GMT offset of zero.
      */
     OlsonTimeZone();
-
-private:
 
     void constructEmpty();
 

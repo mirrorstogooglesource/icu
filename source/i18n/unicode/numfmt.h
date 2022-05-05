@@ -268,14 +268,6 @@ public:
      */
     virtual NumberFormat* clone() const override = 0;
 
-    /**
-     * Return true if the given Format objects are semantically equal.
-     * Objects of different subclasses are considered unequal.
-     * @return    true if the given Format objects are semantically equal.
-     * @stable ICU 2.0
-     */
-    virtual bool operator==(const Format& other) const override;
-
 
     using Format::format;
 
@@ -1108,6 +1100,13 @@ protected:
      * @internal
      */
     virtual void getEffectiveCurrency(char16_t* result, UErrorCode& ec) const;
+
+    /**
+     * Return true if the given Format objects are semantically equal.
+     * `other` is guaranteed to be a NumberFormat.
+     * @return    true if the given Format objects are semantically equal.
+     */
+    virtual bool isEqual(const Format &other) const override;
 
 #ifndef U_HIDE_INTERNAL_API
     /**

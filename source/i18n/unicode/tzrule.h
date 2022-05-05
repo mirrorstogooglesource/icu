@@ -56,16 +56,7 @@ public:
      * @return  true if the given <code>TimeZoneRule</code> objects are semantically equal.
      * @stable ICU 3.8
      */
-    virtual bool operator==(const TimeZoneRule& that) const;
-
-    /**
-     * Return true if the given <code>TimeZoneRule</code> objects are semantically unequal. Objects
-     * of different subclasses are considered unequal.
-     * @param that  The object to be compared with.
-     * @return  true if the given <code>TimeZoneRule</code> objects are semantically unequal.
-     * @stable ICU 3.8
-     */
-    virtual bool operator!=(const TimeZoneRule& that) const;
+    bool operator==(const TimeZoneRule& that) const;
 
     /**
      * Fills in "name" with the name of this time zone.
@@ -187,6 +178,8 @@ protected:
      */
     TimeZoneRule& operator=(const TimeZoneRule& right);
 
+    virtual bool isEqual(const TimeZoneRule &that) const;
+
 private:
     UnicodeString fName; // time name
     int32_t fRawOffset;  // UTC offset of the standard time in milliseconds
@@ -239,24 +232,6 @@ public:
      * @stable ICU 3.8
      */
     InitialTimeZoneRule& operator=(const InitialTimeZoneRule& right);
-
-    /**
-     * Return true if the given <code>TimeZoneRule</code> objects are semantically equal. Objects
-     * of different subclasses are considered unequal.
-     * @param that  The object to be compared with.
-     * @return  true if the given <code>TimeZoneRule</code> objects are semantically equal.
-     * @stable ICU 3.8
-     */
-    virtual bool operator==(const TimeZoneRule& that) const override;
-
-    /**
-     * Return true if the given <code>TimeZoneRule</code> objects are semantically unequal. Objects
-     * of different subclasses are considered unequal.
-     * @param that  The object to be compared with.
-     * @return  true if the given <code>TimeZoneRule</code> objects are semantically unequal.
-     * @stable ICU 3.8
-     */
-    virtual bool operator!=(const TimeZoneRule& that) const override;
 
     /**
      * Gets the time when this rule takes effect in the given year.
@@ -452,24 +427,6 @@ public:
     AnnualTimeZoneRule& operator=(const AnnualTimeZoneRule& right);
 
     /**
-     * Return true if the given <code>TimeZoneRule</code> objects are semantically equal. Objects
-     * of different subclasses are considered unequal.
-     * @param that  The object to be compared with.
-     * @return  true if the given <code>TimeZoneRule</code> objects are semantically equal.
-     * @stable ICU 3.8
-     */
-    virtual bool operator==(const TimeZoneRule& that) const override;
-
-    /**
-     * Return true if the given <code>TimeZoneRule</code> objects are semantically unequal. Objects
-     * of different subclasses are considered unequal.
-     * @param that  The object to be compared with.
-     * @return  true if the given <code>TimeZoneRule</code> objects are semantically unequal.
-     * @stable ICU 3.8
-     */
-    virtual bool operator!=(const TimeZoneRule& that) const override;
-
-    /**
      * Gets the start date/time rule used by this rule.
      * @return  The <code>AnnualDateTimeRule</code> which represents the start date/time
      *          rule used by this time zone rule.
@@ -578,6 +535,16 @@ public:
         UBool inclusive, UDate& result) const override;
 
 
+protected:
+    /**
+     * Return true if the given <code>TimeZoneRule</code> objects are semantically equal.
+     * @param that  The object to be compared with. Guaranteed to be an
+     *              AnnualTimeZoneRule.
+     * @return  true if the given <code>TimeZoneRule</code> objects are semantically equal.
+     * @stable ICU 3.8
+     */
+    bool isEqual(const TimeZoneRule &that) const override;
+
 private:
     DateTimeRule* fDateTimeRule;
     int32_t fStartYear;
@@ -666,24 +633,6 @@ public:
      * @stable ICU 3.8
      */
     TimeArrayTimeZoneRule& operator=(const TimeArrayTimeZoneRule& right);
-
-    /**
-     * Return true if the given <code>TimeZoneRule</code> objects are semantically equal. Objects
-     * of different subclasses are considered unequal.
-     * @param that  The object to be compared with.
-     * @return  true if the given <code>TimeZoneRule</code> objects are semantically equal.
-     * @stable ICU 3.8
-     */
-    virtual bool operator==(const TimeZoneRule& that) const override;
-
-    /**
-     * Return true if the given <code>TimeZoneRule</code> objects are semantically unequal. Objects
-     * of different subclasses are considered unequal.
-     * @param that  The object to be compared with.
-     * @return  true if the given <code>TimeZoneRule</code> objects are semantically unequal.
-     * @stable ICU 3.8
-     */
-    virtual bool operator!=(const TimeZoneRule& that) const override;
 
     /**
      * Gets the time type of the start times used by this rule.  The return value
@@ -783,6 +732,14 @@ public:
     virtual UBool getPreviousStart(UDate base, int32_t prevRawOffset, int32_t prevDSTSavings,
         UBool inclusive, UDate& result) const override;
 
+protected:
+    /**
+     * Return true if the given <code>TimeZoneRule</code> objects are semantically equal.
+     * @param that  The object to be compared with. Guaranteed to be a
+     *              TimeArrayTimeZoneRule.
+     * @return  true if the given <code>TimeZoneRule</code> objects are semantically equal.
+     */
+    virtual bool isEqual(const TimeZoneRule &that) const override;
 
 private:
     enum { TIMEARRAY_STACK_BUFFER_SIZE = 32 };

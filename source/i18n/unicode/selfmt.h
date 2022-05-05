@@ -253,24 +253,6 @@ public:
     SelectFormat& operator=(const SelectFormat& other);
 
     /**
-     * Return true if another object is semantically equal to this one.
-     *
-     * @param other    the SelectFormat object to be compared with.
-     * @return         true if other is semantically equal to this.
-     * @stable ICU 4.4
-     */
-    virtual bool operator==(const Format& other) const override;
-
-    /**
-     * Return true if another object is semantically unequal to this one.
-     *
-     * @param other    the SelectFormat object to be compared with.
-     * @return         true if other is semantically unequal to this.
-     * @stable ICU 4.4
-     */
-    virtual bool operator!=(const Format& other) const;
-
-    /**
      * Clones this Format object polymorphically.  The caller owns the
      * result and should delete it when done.
      * @stable ICU 4.4
@@ -344,6 +326,15 @@ public:
      * @stable ICU 4.4
      */
     virtual UClassID getDynamicClassID() const override;
+
+protected:
+    /**
+     * Return true if another object is semantically equal to this one.
+     *
+     * @param other    the SelectFormat object to be compared with.
+     * @return         true if other is semantically equal to this.
+     */
+    virtual bool isEqual(const Format &other) const override;
 
 private:
     friend class MessageFormat;

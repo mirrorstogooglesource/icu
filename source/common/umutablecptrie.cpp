@@ -37,7 +37,7 @@ constexpr int32_t I_LIMIT = UNICODE_LIMIT >> UCPTRIE_SHIFT_3;
 constexpr int32_t BMP_I_LIMIT = BMP_LIMIT >> UCPTRIE_SHIFT_3;
 constexpr int32_t ASCII_I_LIMIT = ASCII_LIMIT >> UCPTRIE_SHIFT_3;
 
-constexpr int32_t SMALL_DATA_BLOCKS_PER_BMP_BLOCK = (1 << (UCPTRIE_FAST_SHIFT - UCPTRIE_SHIFT_3));
+constexpr int32_t SMALL_DATA_BLOCKS_PER_BMP_BLOCK = (1 << (int32_t{UCPTRIE_FAST_SHIFT} - UCPTRIE_SHIFT_3));
 
 // Flag values for data blocks.
 constexpr uint8_t ALL_SAME = 0;
@@ -1194,7 +1194,7 @@ int32_t MutableCodePointTrie::compactData(
 
 int32_t MutableCodePointTrie::compactIndex(int32_t fastILimit, MixedBlocks &mixedBlocks,
                                            UErrorCode &errorCode) {
-    int32_t fastIndexLength = fastILimit >> (UCPTRIE_FAST_SHIFT - UCPTRIE_SHIFT_3);
+    int32_t fastIndexLength = fastILimit >> (int32_t{UCPTRIE_FAST_SHIFT} - UCPTRIE_SHIFT_3);
     if ((highStart >> UCPTRIE_FAST_SHIFT) <= fastIndexLength) {
         // Only the linear fast index, no multi-stage index tables.
         index3NullOffset = UCPTRIE_NO_INDEX3_NULL_OFFSET;
@@ -1432,7 +1432,7 @@ int32_t MutableCodePointTrie::compactIndex(int32_t fastILimit, MixedBlocks &mixe
     if (index3NullOffset < 0) {
         index3NullOffset = UCPTRIE_NO_INDEX3_NULL_OFFSET;
     }
-    if (indexLength >= (UCPTRIE_NO_INDEX3_NULL_OFFSET + UCPTRIE_INDEX_3_BLOCK_LENGTH)) {
+    if (indexLength >= (int32_t{UCPTRIE_NO_INDEX3_NULL_OFFSET} + UCPTRIE_INDEX_3_BLOCK_LENGTH)) {
         // The index-3 offsets exceed 15 bits, or
         // the last one cannot be distinguished from the no-null-block value.
         errorCode = U_INDEX_OUTOFBOUNDS_ERROR;

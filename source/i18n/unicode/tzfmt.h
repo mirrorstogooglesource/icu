@@ -292,16 +292,6 @@ public:
     TimeZoneFormat& operator=(const TimeZoneFormat& other);
 
     /**
-     * Return true if the given Format objects are semantically equal.
-     * Objects of different subclasses are considered unequal.
-     * @param other The object to be compared with.
-     * @return Return true if the given Format objects are semantically equal.
-     *                Objects of different subclasses are considered unequal.
-     * @stable ICU 50
-     */
-    virtual bool operator==(const Format& other) const override;
-
-    /**
      * Clone this object polymorphically. The caller is responsible
      * for deleting the result when done.
      * @return A copy of the object
@@ -672,6 +662,14 @@ protected:
      * @stable ICU 50
      */
     TimeZoneFormat(const Locale& locale, UErrorCode& status);
+
+  /**
+   * Return true if the given Format objects are semantically equal.
+   * @param other The object to be compared with.  Guaranteed to be a
+   *              TimeZoneFormat.
+   * @return Return true if the given Format objects are semantically equal.
+   */
+  virtual bool isEqual(const Format &other) const override;
 
 private:
     /* Locale of this object */

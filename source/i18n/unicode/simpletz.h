@@ -103,17 +103,6 @@ public:
     virtual ~SimpleTimeZone();
 
     /**
-     * Returns true if the two TimeZone objects are equal; that is, they have
-     * the same ID, raw GMT offset, and DST rules.
-     *
-     * @param that  The SimpleTimeZone object to be compared with.
-     * @return      true if the given time zone is equal to this time zone; false
-     *              otherwise.
-     * @stable ICU 2.0
-     */
-    virtual bool operator==(const TimeZone& that) const override;
-
-    /**
      * Constructs a SimpleTimeZone with the given raw GMT offset and time zone ID,
      * and which doesn't observe daylight savings time.  Normally you should use
      * TimeZone::createInstance() to create a TimeZone instead of creating a
@@ -787,6 +776,17 @@ public:
      * @stable ICU 2.0
      */
     static UClassID U_EXPORT2 getStaticClassID(void);
+
+protected:
+    /**
+     * Returns true if the two TimeZone objects are equal; that is, they have
+     * the same ID, raw GMT offset, and DST rules.
+     *
+     * @param that  The SimpleTimeZone object to be compared with.
+     * @return      true if the given time zone is equal to this time zone; false
+     *              otherwise.
+     */
+    virtual bool isEqual(const TimeZone &that) const override;
 
 private:
     /**

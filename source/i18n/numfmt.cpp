@@ -286,7 +286,7 @@ NumberFormat::operator=(const NumberFormat& rhs)
 // -------------------------------------
 
 bool
-NumberFormat::operator==(const Format& that) const
+NumberFormat::isEqual(const Format& that) const
 {
     // Format::operator== guarantees this cast is safe
     NumberFormat* other = (NumberFormat*)&that;
@@ -295,10 +295,6 @@ NumberFormat::operator==(const Format& that) const
     // This code makes it easy to determine why two format objects that should
     // be equal aren't.
     UBool first = TRUE;
-    if (!Format::operator==(that)) {
-        if (first) { printf("[ "); first = FALSE; } else { printf(", "); }
-        debug("Format::!=");
-    }
     if (!(fMaxIntegerDigits == other->fMaxIntegerDigits &&
           fMinIntegerDigits == other->fMinIntegerDigits)) {
         if (first) { printf("[ "); first = FALSE; } else { printf(", "); }
@@ -332,17 +328,16 @@ NumberFormat::operator==(const Format& that) const
     if (!first) { printf(" ]"); }
 #endif
 
-    return ((this == &that) ||
-            ((Format::operator==(that) &&
-              fMaxIntegerDigits == other->fMaxIntegerDigits &&
-              fMinIntegerDigits == other->fMinIntegerDigits &&
-              fMaxFractionDigits == other->fMaxFractionDigits &&
-              fMinFractionDigits == other->fMinFractionDigits &&
-              fGroupingUsed == other->fGroupingUsed &&
-              fParseIntegerOnly == other->fParseIntegerOnly &&
-              u_strcmp(fCurrency, other->fCurrency) == 0 &&
-              fLenient == other->fLenient &&
-              fCapitalizationContext == other->fCapitalizationContext)));
+    return (this == &that) ||
+           (fMaxIntegerDigits == other->fMaxIntegerDigits &&
+            fMinIntegerDigits == other->fMinIntegerDigits &&
+            fMaxFractionDigits == other->fMaxFractionDigits &&
+            fMinFractionDigits == other->fMinFractionDigits &&
+            fGroupingUsed == other->fGroupingUsed &&
+            fParseIntegerOnly == other->fParseIntegerOnly &&
+            u_strcmp(fCurrency, other->fCurrency) == 0 &&
+            fLenient == other->fLenient &&
+            fCapitalizationContext == other->fCapitalizationContext);
 }
 
 // -------------------------------------

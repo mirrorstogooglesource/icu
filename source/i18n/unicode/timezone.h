@@ -499,26 +499,14 @@ public:
         UnicodeString& id, UErrorCode& status);
 
     /**
-     * Returns true if the two TimeZones are equal.  (The TimeZone version only compares
-     * IDs, but subclasses are expected to also compare the fields they add.)
+     * Returns true if the two TimeZones are equal.
      *
      * @param that  The TimeZone object to be compared with.
      * @return      true if the given TimeZone is equal to this TimeZone; false
      *              otherwise.
      * @stable ICU 2.0
      */
-    virtual bool operator==(const TimeZone& that) const;
-
-    /**
-     * Returns true if the two TimeZones are NOT equal; that is, if operator==() returns
-     * false.
-     *
-     * @param that  The TimeZone object to be compared with.
-     * @return      true if the given TimeZone is not equal to this TimeZone; false
-     *              otherwise.
-     * @stable ICU 2.0
-     */
-    bool operator!=(const TimeZone& that) const {return !operator==(that);}
+    bool operator==(const TimeZone& that) const;
 
     /**
      * Returns the TimeZone's adjusted GMT offset (i.e., the number of milliseconds to add
@@ -906,6 +894,8 @@ protected:
      * @stable ICU 2.0
      */
     TimeZone& operator=(const TimeZone& right);
+
+    virtual bool isEqual(const TimeZone &that) const;
 
 #ifndef U_HIDE_INTERNAL_API
     /**

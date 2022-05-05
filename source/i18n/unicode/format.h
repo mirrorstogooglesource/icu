@@ -111,16 +111,7 @@ public:
      *                 Objects of different subclasses are considered unequal.
      * @stable ICU 2.0
      */
-    virtual bool operator==(const Format& other) const = 0;
-
-    /**
-     * Return true if the given Format objects are not semantically
-     * equal.
-     * @param other    the object to be compared with.
-     * @return         Return true if the given Format objects are not semantically.
-     * @stable ICU 2.0
-     */
-    bool operator!=(const Format& other) const { return !operator==(other); }
+    bool operator==(const Format& other) const;
 
     /**
      * Clone this object polymorphically.  The caller is responsible
@@ -295,6 +286,8 @@ protected:
     static void syntaxError(const UnicodeString& pattern,
                             int32_t pos,
                             UParseError& parseError);
+
+    virtual bool isEqual(const Format &other) const = 0;
 
  private:
     char actualLocale[ULOC_FULLNAME_CAPACITY];

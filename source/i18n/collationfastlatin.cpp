@@ -52,7 +52,7 @@ CollationFastLatin::getOptions(const CollationData *data, const CollationSetting
         uint32_t digitStart = 0;
         uint32_t afterDigitStart = 0;
         for(int32_t group = UCOL_REORDER_CODE_FIRST;
-                group < UCOL_REORDER_CODE_FIRST + CollationData::MAX_NUM_SPECIAL_REORDER_CODES;
+                group < int32_t{UCOL_REORDER_CODE_FIRST} + CollationData::MAX_NUM_SPECIAL_REORDER_CODES;
                 ++group) {
             uint32_t start = data->getFirstPrimaryForGroup(group);
             start = settings.reorder(start);

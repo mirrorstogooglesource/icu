@@ -240,9 +240,8 @@ RuleBasedCollator &RuleBasedCollator::operator=(const RuleBasedCollator &other) 
 UOBJECT_DEFINE_RTTI_IMPLEMENTATION(RuleBasedCollator)
 
 bool
-RuleBasedCollator::operator==(const Collator& other) const {
+RuleBasedCollator::isEqual(const Collator& other) const {
     if(this == &other) { return true; }
-    if(!Collator::operator==(other)) { return false; }
     const RuleBasedCollator &o = static_cast<const RuleBasedCollator &>(other);
     if(*settings != *o.settings) { return false; }
     if(data == o.data) { return true; }
@@ -538,7 +537,7 @@ RuleBasedCollator::setMaxVariable(UColReorderCode group, UErrorCode &errorCode) 
     }
 
     if(group == UCOL_REORDER_CODE_DEFAULT) {
-        group = (UColReorderCode)(UCOL_REORDER_CODE_FIRST + defaultSettings.getMaxVariable());
+        group = (UColReorderCode)(int{UCOL_REORDER_CODE_FIRST} + defaultSettings.getMaxVariable());
     }
     uint32_t varTop = data->getLastPrimaryForGroup(group);
     U_ASSERT(varTop != 0);
@@ -556,7 +555,7 @@ RuleBasedCollator::setMaxVariable(UColReorderCode group, UErrorCode &errorCode) 
 
 UColReorderCode
 RuleBasedCollator::getMaxVariable() const {
-    return (UColReorderCode)(UCOL_REORDER_CODE_FIRST + settings->getMaxVariable());
+    return (UColReorderCode)(int{UCOL_REORDER_CODE_FIRST} + settings->getMaxVariable());
 }
 
 uint32_t

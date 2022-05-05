@@ -230,11 +230,9 @@ DateIntervalFormat::clone() const {
 
 
 bool
-DateIntervalFormat::operator==(const Format& other) const {
-    if (typeid(*this) != typeid(other)) {return false;}
+DateIntervalFormat::isEqual(const Format& other) const {
     const DateIntervalFormat* fmt = (DateIntervalFormat*)&other;
     if (this == fmt) {return true;}
-    if (!Format::operator==(other)) {return false;}
     if ((fInfo != fmt->fInfo) && (fInfo == nullptr || fmt->fInfo == nullptr)) {return false;}
     if (fInfo && fmt->fInfo && (*fInfo != *fmt->fInfo )) {return false;}
     {

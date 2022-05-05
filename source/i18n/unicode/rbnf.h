@@ -700,15 +700,6 @@ public:
    */
   virtual RuleBasedNumberFormat* clone() const override;
 
-  /**
-   * Return true if the given Format objects are semantically equal.
-   * Objects of different subclasses are considered unequal.
-   * @param other    the object to be compared with.
-   * @return        true if the given Format objects are semantically equal.
-   * @stable ICU 2.6
-   */
-  virtual bool operator==(const Format& other) const override;
-
 //-----------------------------------------------------------------------
 // public API functions
 //-----------------------------------------------------------------------
@@ -889,6 +880,16 @@ protected:
                                   UnicodeString& appendTo,
                                   FieldPosition& pos,
                                   UErrorCode& status) const override;
+
+    /**
+     * Return true if the given Format objects are semantically equal.
+     * Objects of different subclasses are considered unequal.
+     * @param other    the object to be compared with.  Guaranteed to be a
+     *                 RuleBasedNumberFormat.
+     * @return        true if the given Format objects are semantically equal.
+     */
+    virtual bool isEqual(const Format &other) const override;
+
 public:
 
   using NumberFormat::parse;
@@ -1073,7 +1074,7 @@ private:
     UnicodeString& format(int64_t number, NFRuleSet *ruleSet, UnicodeString& toAppendTo, UErrorCode& status) const;
     void format(double number, NFRuleSet& rs, UnicodeString& toAppendTo, UErrorCode& status) const;
 
-private:
+  private:
     NFRuleSet **fRuleSets;
     UnicodeString* ruleSetDescriptions;
     int32_t numRuleSets;

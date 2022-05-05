@@ -65,26 +65,6 @@ public:
     VTimeZone& operator=(const VTimeZone& right);
 
     /**
-     * Return true if the given <code>TimeZone</code> objects are
-     * semantically equal. Objects of different subclasses are considered unequal.
-     * @param that  The object to be compared with.
-     * @return  true if the given <code>TimeZone</code> objects are
-      *semantically equal.
-     * @stable ICU 3.8
-     */
-    virtual bool operator==(const TimeZone& that) const override;
-
-    /**
-     * Return true if the given <code>TimeZone</code> objects are
-     * semantically unequal. Objects of different subclasses are considered unequal.
-     * @param that  The object to be compared with.
-     * @return  true if the given <code>TimeZone</code> objects are
-     * semantically unequal.
-     * @stable ICU 3.8
-     */
-    virtual bool operator!=(const TimeZone& that) const;
-
-    /**
      * Create a <code>VTimeZone</code> instance by the time zone ID.
      * @param ID The time zone ID, such as America/New_York
      * @return A <code>VTimeZone</code> object initialized by the time zone ID,
@@ -374,6 +354,17 @@ public:
      */
     virtual void getTimeZoneRules(const InitialTimeZoneRule*& initial,
         const TimeZoneRule* trsrules[], int32_t& trscount, UErrorCode& status) const override;
+
+protected:
+    /**
+     * Return true if the given <code>TimeZone</code> objects are
+     * semantically equal.
+     * @param that  The object to be compared with. Guaranteed to be a
+     *              VTimeZone.
+     * @return  true if the given <code>TimeZone</code> objects are
+     *          semantically equal.
+     */
+    virtual bool isEqual(const TimeZone &that) const override;
 
 private:
     enum { DEFAULT_VTIMEZONE_LINES = 100 };

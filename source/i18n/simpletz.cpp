@@ -231,13 +231,9 @@ SimpleTimeZone::operator=(const SimpleTimeZone &right)
 
 // -------------------------------------
 
-bool
-SimpleTimeZone::operator==(const TimeZone& that) const
-{
+bool SimpleTimeZone::isEqual(const TimeZone &that) const {
     return ((this == &that) ||
-            (typeid(*this) == typeid(that) &&
-            TimeZone::operator==(that) &&
-            hasSameRules(that)));
+            (TimeZone::isEqual(that) && hasSameRules(that)));
 }
 
 // -------------------------------------
@@ -536,14 +532,14 @@ SimpleTimeZone::getOffsetFromLocal(UDate date, UTimeZoneLocalOption nonExistingT
 
     // Now we need some adjustment
     if (savingsDST > 0) {
-        if ((nonExistingTimeOpt & kStdDstMask) == kStandard
-            || ((nonExistingTimeOpt & kStdDstMask) != kDaylight && (nonExistingTimeOpt & kFormerLatterMask) != kLatter)) {
+        if ((int{nonExistingTimeOpt} & kStdDstMask) == kStandard
+            || ((int{nonExistingTimeOpt} & kStdDstMask) != kDaylight && (int{nonExistingTimeOpt} & kFormerLatterMask) != kLatter)) {
             date -= getDSTSavings();
             recalc = TRUE;
         }
     } else {
-        if ((duplicatedTimeOpt & kStdDstMask) == kDaylight
-                || ((duplicatedTimeOpt & kStdDstMask) != kStandard && (duplicatedTimeOpt & kFormerLatterMask) == kFormer)) {
+        if ((int{duplicatedTimeOpt} & kStdDstMask) == kDaylight
+                || ((int{duplicatedTimeOpt} & kStdDstMask) != kStandard && (int{duplicatedTimeOpt} & kFormerLatterMask) == kFormer)) {
             date -= getDSTSavings();
             recalc = TRUE;
         }

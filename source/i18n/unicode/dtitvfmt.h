@@ -436,24 +436,6 @@ public:
      */
     virtual DateIntervalFormat* clone() const override;
 
-    /**
-     * Return true if the given Format objects are semantically equal. Objects
-     * of different subclasses are considered unequal.
-     * @param other    the object to be compared with.
-     * @return         true if the given Format objects are semantically equal.
-     * @stable ICU 4.0
-     */
-    virtual bool operator==(const Format& other) const override;
-
-    /**
-     * Return true if the given Format objects are not semantically equal.
-     * Objects of different subclasses are considered unequal.
-     * @param other the object to be compared with.
-     * @return      true if the given Format objects are not semantically equal.
-     * @stable ICU 4.0
-     */
-    bool operator!=(const Format& other) const;
-
 
     using Format::format;
 
@@ -717,6 +699,14 @@ protected:
      * @stable ICU 4.0
      */
     DateIntervalFormat& operator=(const DateIntervalFormat&);
+
+    /**
+     * Return true if the given Format objects are semantically equal.
+     * @param other    the object to be compared with.  Guaranteed to be a
+     *                 DateIntervalFormat.
+     * @return         true if the given Format objects are semantically equal.
+     */
+    virtual bool isEqual(const Format &other) const override;
 
 private:
 
@@ -1196,11 +1186,6 @@ private:
      */
     UDisplayContext fCapitalizationContext;
 };
-
-inline bool
-DateIntervalFormat::operator!=(const Format& other) const  {
-    return !operator==(other);
-}
 
 U_NAMESPACE_END
 

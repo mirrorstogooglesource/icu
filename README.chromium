@@ -268,3 +268,8 @@ D. Local Modifications
     patches/formatted_string_builder.patch
   - https://github.com/unicode-org/icu/pull/2070
   - https://unicode-org.atlassian.net/browse/ICU-22005
+
+14. Patches to support compilation in -std=c++20 mode
+    patches/cxx20.patch
+  - ICU upstream has supposedly been fixed to be C++20-compatible, so this patch
+    should not be needed in the future.

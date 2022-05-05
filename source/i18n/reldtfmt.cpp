@@ -135,11 +135,11 @@ RelativeDateFormat* RelativeDateFormat::clone() const {
     return new RelativeDateFormat(*this);
 }
 
-bool RelativeDateFormat::operator==(const Format& other) const {
-    if(DateFormat::operator==(other)) {
-        // The DateFormat::operator== check for fCapitalizationContext equality above
+bool RelativeDateFormat::isEqual(const Format& other) const {
+    if (DateFormat::isEqual(other)) {
+        // The DateFormat::isEqual check for fCapitalizationContext equality above
         //   is sufficient to check equality of all derived context-related data.
-        // DateFormat::operator== guarantees following cast is safe
+        // Format::operator== guarantees following cast is safe
         RelativeDateFormat* that = (RelativeDateFormat*)&other;
         return (fDateStyle==that->fDateStyle   &&
                 fDatePattern==that->fDatePattern   &&

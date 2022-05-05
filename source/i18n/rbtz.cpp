@@ -95,12 +95,11 @@ RuleBasedTimeZone::operator=(const RuleBasedTimeZone& right) {
     return *this;
 }
 
-bool
-RuleBasedTimeZone::operator==(const TimeZone& that) const {
+bool RuleBasedTimeZone::isEqual(const TimeZone &that) const {
     if (this == &that) {
         return true;
     }
-    if (typeid(*this) != typeid(that) || !BasicTimeZone::operator==(that)) {
+    if (!BasicTimeZone::isEqual(that)) {
         return false;
     }
     RuleBasedTimeZone *rbtz = (RuleBasedTimeZone*)&that;
@@ -112,11 +111,6 @@ RuleBasedTimeZone::operator==(const TimeZone& that) const {
         return true;
     }
     return false;
-}
-
-bool
-RuleBasedTimeZone::operator!=(const TimeZone& that) const {
-    return !operator==(that);
 }
 
 void

@@ -483,7 +483,7 @@ TimeZoneFormat::operator=(const TimeZoneFormat& other) {
 
 
 bool
-TimeZoneFormat::operator==(const Format& other) const {
+TimeZoneFormat::isEqual(const Format& other) const {
     TimeZoneFormat* tzfmt = (TimeZoneFormat*)&other;
 
     bool isEqual =

@@ -423,15 +423,6 @@ public:
     virtual MessageFormat* clone() const override;
 
     /**
-     * Returns true if the given Format objects are semantically equal.
-     * Objects of different subclasses are considered unequal.
-     * @param other  the object to be compared with.
-     * @return       true if the given Format objects are semantically equal.
-     * @stable ICU 2.0
-     */
-    virtual bool operator==(const Format& other) const override;
-
-    /**
      * Sets the locale to be used for creating argument Format objects.
      * @param theLocale    the new locale value to be set.
      * @stable ICU 2.0
@@ -1083,12 +1074,19 @@ private:
     void resetPattern();
 
     /**
+     * Returns true if the given Format objects are semantically equal.
+     * @param other  the object to be compared with.  Guaranteed to be a
+     *               MessageFormat.
+     * @return       true if the given Format objects are semantically equal.
+     */
+    virtual bool isEqual(const Format &other) const override;
+
+    /**
      * A DummyFormatter that we use solely to store a NULL value. UHash does
      * not support storing NULL values.
      */
     class U_I18N_API DummyFormat : public Format {
     public:
-        virtual bool operator==(const Format&) const override;
         virtual DummyFormat* clone() const override;
         virtual UnicodeString& format(const Formattable& obj,
                               UnicodeString& appendTo,
@@ -1104,6 +1102,9 @@ private:
         virtual void parseObject(const UnicodeString&,
                                  Formattable&,
                                  ParsePosition&) const override;
+
+    protected:
+        virtual bool isEqual(const Format &) const override;
     };
 
     friend class MessageFormatAdapter; // getFormatTypeList() access

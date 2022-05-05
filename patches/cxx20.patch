@@ -1,0 +1,2047 @@
+diff --git a/source/common/characterproperties.cpp b/source/common/characterproperties.cpp
+index a84996b4..dbaf474a 100644
+--- a/source/common/characterproperties.cpp
++++ b/source/common/characterproperties.cpp
+@@ -36,7 +36,7 @@ namespace {
+ 
+ UBool U_CALLCONV characterproperties_cleanup();
+ 
+-constexpr int32_t NUM_INCLUSIONS = UPROPS_SRC_COUNT + UCHAR_INT_LIMIT - UCHAR_INT_START;
++constexpr int32_t NUM_INCLUSIONS = int32_t{UPROPS_SRC_COUNT} + UCHAR_INT_LIMIT - UCHAR_INT_START;
+ 
+ struct Inclusion {
+     UnicodeSet  *fSet = nullptr;
+@@ -210,7 +210,7 @@ const UnicodeSet *getInclusionsForSource(UPropertySource src, UErrorCode &errorC
+ void U_CALLCONV initIntPropInclusion(UProperty prop, UErrorCode &errorCode) {
+     // This function is invoked only via umtx_initOnce().
+     U_ASSERT(UCHAR_INT_START <= prop && prop < UCHAR_INT_LIMIT);
+-    int32_t inclIndex = UPROPS_SRC_COUNT + prop - UCHAR_INT_START;
++    int32_t inclIndex = int32_t{UPROPS_SRC_COUNT} + prop - UCHAR_INT_START;
+     U_ASSERT(gInclusions[inclIndex].fSet == nullptr);
+     UPropertySource src = uprops_getSource(prop);
+     const UnicodeSet *incl = getInclusionsForSource(src, errorCode);
+@@ -255,7 +255,7 @@ const UnicodeSet *CharacterProperties::getInclusionsForProperty(
+         UProperty prop, UErrorCode &errorCode) {
+     if (U_FAILURE(errorCode)) { return nullptr; }
+     if (UCHAR_INT_START <= prop && prop < UCHAR_INT_LIMIT) {
+-        int32_t inclIndex = UPROPS_SRC_COUNT + prop - UCHAR_INT_START;
++        int32_t inclIndex = int32_t{UPROPS_SRC_COUNT} + prop - UCHAR_INT_START;
+         Inclusion &i = gInclusions[inclIndex];
+         umtx_initOnce(i.fInitOnce, &initIntPropInclusion, prop, errorCode);
+         return i.fSet;
+diff --git a/source/common/umutablecptrie.cpp b/source/common/umutablecptrie.cpp
+index cdbe2708..52d7b384 100644
+--- a/source/common/umutablecptrie.cpp
++++ b/source/common/umutablecptrie.cpp
+@@ -37,7 +37,7 @@ constexpr int32_t I_LIMIT = UNICODE_LIMIT >> UCPTRIE_SHIFT_3;
+ constexpr int32_t BMP_I_LIMIT = BMP_LIMIT >> UCPTRIE_SHIFT_3;
+ constexpr int32_t ASCII_I_LIMIT = ASCII_LIMIT >> UCPTRIE_SHIFT_3;
+ 
+-constexpr int32_t SMALL_DATA_BLOCKS_PER_BMP_BLOCK = (1 << (UCPTRIE_FAST_SHIFT - UCPTRIE_SHIFT_3));
++constexpr int32_t SMALL_DATA_BLOCKS_PER_BMP_BLOCK = (1 << (int32_t{UCPTRIE_FAST_SHIFT} - UCPTRIE_SHIFT_3));
+ 
+ // Flag values for data blocks.
+ constexpr uint8_t ALL_SAME = 0;
+@@ -1194,7 +1194,7 @@ int32_t MutableCodePointTrie::compactData(
+ 
+ int32_t MutableCodePointTrie::compactIndex(int32_t fastILimit, MixedBlocks &mixedBlocks,
+                                            UErrorCode &errorCode) {
+-    int32_t fastIndexLength = fastILimit >> (UCPTRIE_FAST_SHIFT - UCPTRIE_SHIFT_3);
++    int32_t fastIndexLength = fastILimit >> (int32_t{UCPTRIE_FAST_SHIFT} - UCPTRIE_SHIFT_3);
+     if ((highStart >> UCPTRIE_FAST_SHIFT) <= fastIndexLength) {
+         // Only the linear fast index, no multi-stage index tables.
+         index3NullOffset = UCPTRIE_NO_INDEX3_NULL_OFFSET;
+@@ -1432,7 +1432,7 @@ int32_t MutableCodePointTrie::compactIndex(int32_t fastILimit, MixedBlocks &mixe
+     if (index3NullOffset < 0) {
+         index3NullOffset = UCPTRIE_NO_INDEX3_NULL_OFFSET;
+     }
+-    if (indexLength >= (UCPTRIE_NO_INDEX3_NULL_OFFSET + UCPTRIE_INDEX_3_BLOCK_LENGTH)) {
++    if (indexLength >= (int32_t{UCPTRIE_NO_INDEX3_NULL_OFFSET} + UCPTRIE_INDEX_3_BLOCK_LENGTH)) {
+         // The index-3 offsets exceed 15 bits, or
+         // the last one cannot be distinguished from the no-null-block value.
+         errorCode = U_INDEX_OUTOFBOUNDS_ERROR;
+diff --git a/source/common/uniset_props.cpp b/source/common/uniset_props.cpp
+index 49d6caab..468a3a26 100644
+--- a/source/common/uniset_props.cpp
++++ b/source/common/uniset_props.cpp
+@@ -272,7 +272,7 @@ void UnicodeSet::applyPattern(RuleCharacterIterator& chars,
+ 
+     // Recognized special forms for chars, sets: c-c s-s s&s
+ 
+-    int32_t opts = RuleCharacterIterator::PARSE_VARIABLES |
++    int32_t opts = int32_t{RuleCharacterIterator::PARSE_VARIABLES} |
+                    RuleCharacterIterator::PARSE_ESCAPES;
+     if ((options & USET_IGNORE_SPACE) != 0) {
+         opts |= RuleCharacterIterator::SKIP_WHITESPACE;
+diff --git a/source/i18n/calendar.cpp b/source/i18n/calendar.cpp
+index 8405d08d..717338b5 100644
+--- a/source/i18n/calendar.cpp
++++ b/source/i18n/calendar.cpp
+@@ -2929,16 +2929,16 @@ const UFieldResolutionTable Calendar::kDatePrecedence[] =
+         { UCAL_WEEK_OF_MONTH, UCAL_DOW_LOCAL, kResolveSTOP },
+         { UCAL_DAY_OF_WEEK_IN_MONTH, UCAL_DOW_LOCAL, kResolveSTOP },
+         { UCAL_DAY_OF_YEAR, kResolveSTOP },
+-        { kResolveRemap | UCAL_DAY_OF_MONTH, UCAL_YEAR, kResolveSTOP },  // if YEAR is set over YEAR_WOY use DAY_OF_MONTH
+-        { kResolveRemap | UCAL_WEEK_OF_YEAR, UCAL_YEAR_WOY, kResolveSTOP },  // if YEAR_WOY is set,  calc based on WEEK_OF_YEAR
++        { int32_t{kResolveRemap} | UCAL_DAY_OF_MONTH, UCAL_YEAR, kResolveSTOP },  // if YEAR is set over YEAR_WOY use DAY_OF_MONTH
++        { int32_t{kResolveRemap} | UCAL_WEEK_OF_YEAR, UCAL_YEAR_WOY, kResolveSTOP },  // if YEAR_WOY is set,  calc based on WEEK_OF_YEAR
+         { kResolveSTOP }
+     },
+     {
+         { UCAL_WEEK_OF_YEAR, kResolveSTOP },
+         { UCAL_WEEK_OF_MONTH, kResolveSTOP },
+         { UCAL_DAY_OF_WEEK_IN_MONTH, kResolveSTOP },
+-        { kResolveRemap | UCAL_DAY_OF_WEEK_IN_MONTH, UCAL_DAY_OF_WEEK, kResolveSTOP },
+-        { kResolveRemap | UCAL_DAY_OF_WEEK_IN_MONTH, UCAL_DOW_LOCAL, kResolveSTOP },
++        { int32_t{kResolveRemap} | UCAL_DAY_OF_WEEK_IN_MONTH, UCAL_DAY_OF_WEEK, kResolveSTOP },
++        { int32_t{kResolveRemap} | UCAL_DAY_OF_WEEK_IN_MONTH, UCAL_DOW_LOCAL, kResolveSTOP },
+         { kResolveSTOP }
+     },
+     {{kResolveSTOP}}
+diff --git a/source/i18n/chnsecal.cpp b/source/i18n/chnsecal.cpp
+index f8fb4a40..0fd04347 100644
+--- a/source/i18n/chnsecal.cpp
++++ b/source/i18n/chnsecal.cpp
+@@ -284,15 +284,15 @@ const UFieldResolutionTable ChineseCalendar::CHINESE_DATE_PRECEDENCE[] =
+         { UCAL_WEEK_OF_MONTH, UCAL_DOW_LOCAL, kResolveSTOP },
+         { UCAL_DAY_OF_WEEK_IN_MONTH, UCAL_DOW_LOCAL, kResolveSTOP },
+         { UCAL_DAY_OF_YEAR, kResolveSTOP },
+-        { kResolveRemap | UCAL_DAY_OF_MONTH, UCAL_IS_LEAP_MONTH, kResolveSTOP },
++        { int32_t{kResolveRemap} | UCAL_DAY_OF_MONTH, UCAL_IS_LEAP_MONTH, kResolveSTOP },
+         { kResolveSTOP }
+     },
+     {
+         { UCAL_WEEK_OF_YEAR, kResolveSTOP },
+         { UCAL_WEEK_OF_MONTH, kResolveSTOP },
+         { UCAL_DAY_OF_WEEK_IN_MONTH, kResolveSTOP },
+-        { kResolveRemap | UCAL_DAY_OF_WEEK_IN_MONTH, UCAL_DAY_OF_WEEK, kResolveSTOP },
+-        { kResolveRemap | UCAL_DAY_OF_WEEK_IN_MONTH, UCAL_DOW_LOCAL, kResolveSTOP },
++        { int32_t{kResolveRemap} | UCAL_DAY_OF_WEEK_IN_MONTH, UCAL_DAY_OF_WEEK, kResolveSTOP },
++        { int32_t{kResolveRemap} | UCAL_DAY_OF_WEEK_IN_MONTH, UCAL_DOW_LOCAL, kResolveSTOP },
+         { kResolveSTOP }
+     },
+     {{kResolveSTOP}}
+diff --git a/source/i18n/choicfmt.cpp b/source/i18n/choicfmt.cpp
+index d06eec35..31ed8af5 100644
+--- a/source/i18n/choicfmt.cpp
++++ b/source/i18n/choicfmt.cpp
+@@ -133,10 +133,10 @@ ChoiceFormat::ChoiceFormat(const UnicodeString& newPattern,
+ // -------------------------------------
+ 
+ bool
+-ChoiceFormat::operator==(const Format& that) const
++ChoiceFormat::isEqual(const Format& that) const
+ {
+     if (this == &that) return true;
+-    if (!NumberFormat::operator==(that)) return false;
++    if (!NumberFormat::isEqual(that)) return false;
+     ChoiceFormat& thatAlias = (ChoiceFormat&)that;
+     return msgPattern == thatAlias.msgPattern;
+ }
+diff --git a/source/i18n/coll.cpp b/source/i18n/coll.cpp
+index fe73118d..fd177d14 100644
+--- a/source/i18n/coll.cpp
++++ b/source/i18n/coll.cpp
+@@ -372,7 +372,7 @@ void setAttributesFromKeywords(const Locale &loc, Collator &coll, UErrorCode &er
+         return;
+     }
+     if (length != 0) {
+-        int32_t codes[USCRIPT_CODE_LIMIT + UCOL_REORDER_CODE_LIMIT - UCOL_REORDER_CODE_FIRST];
++        int32_t codes[size_t{USCRIPT_CODE_LIMIT} + UCOL_REORDER_CODE_LIMIT - UCOL_REORDER_CODE_FIRST];
+         int32_t codesLength = 0;
+         char *scriptName = value;
+         for (;;) {
+@@ -638,13 +638,7 @@ Collator::Collator(const Collator &other)
+ 
+ bool Collator::operator==(const Collator& other) const
+ {
+-    // Subclasses: Call this method and then add more specific checks.
+-    return typeid(*this) == typeid(other);
+-}
+-
+-bool Collator::operator!=(const Collator& other) const
+-{
+-    return !operator==(other);
++    return typeid(*this) == typeid(other) && isEqual(other);
+ }
+ 
+ int32_t U_EXPORT2 Collator::getBound(const uint8_t       *source,
+diff --git a/source/i18n/collationdatareader.cpp b/source/i18n/collationdatareader.cpp
+index 0eb18613..15e96f8c 100644
+--- a/source/i18n/collationdatareader.cpp
++++ b/source/i18n/collationdatareader.cpp
+@@ -436,7 +436,7 @@ CollationDataReader::read(const CollationTailoring *base, const uint8_t *inBytes
+     settings->options = options;
+     // Set variableTop from options and scripts data.
+     settings->variableTop = tailoring.data->getLastPrimaryForGroup(
+-            UCOL_REORDER_CODE_FIRST + settings->getMaxVariable());
++            int32_t{UCOL_REORDER_CODE_FIRST} + settings->getMaxVariable());
+     if(settings->variableTop == 0) {
+         errorCode = U_INVALID_FORMAT_ERROR;
+         return;
+diff --git a/source/i18n/collationfastlatin.cpp b/source/i18n/collationfastlatin.cpp
+index b98b8457..63b547bb 100644
+--- a/source/i18n/collationfastlatin.cpp
++++ b/source/i18n/collationfastlatin.cpp
+@@ -52,7 +52,7 @@ CollationFastLatin::getOptions(const CollationData *data, const CollationSetting
+         uint32_t digitStart = 0;
+         uint32_t afterDigitStart = 0;
+         for(int32_t group = UCOL_REORDER_CODE_FIRST;
+-                group < UCOL_REORDER_CODE_FIRST + CollationData::MAX_NUM_SPECIAL_REORDER_CODES;
++                group < int32_t{UCOL_REORDER_CODE_FIRST} + CollationData::MAX_NUM_SPECIAL_REORDER_CODES;
+                 ++group) {
+             uint32_t start = data->getFirstPrimaryForGroup(group);
+             start = settings.reorder(start);
+diff --git a/source/i18n/datefmt.cpp b/source/i18n/datefmt.cpp
+index fed8f79a..8608b7ee 100644
+--- a/source/i18n/datefmt.cpp
++++ b/source/i18n/datefmt.cpp
+@@ -173,20 +173,15 @@ DateFormat::~DateFormat()
+ //----------------------------------------------------------------------
+ 
+ bool
+-DateFormat::operator==(const Format& other) const
++DateFormat::isEqual(const Format& other) const
+ {
+-    // This protected comparison operator should only be called by subclasses
+-    // which have confirmed that the other object being compared against is
+-    // an instance of a sublcass of DateFormat.  THIS IS IMPORTANT.
+-
+     // Format::operator== guarantees that this cast is safe
+     DateFormat* fmt = (DateFormat*)&other;
+ 
+     return (this == fmt) ||
+-        (Format::operator==(other) &&
+-         fCalendar&&(fCalendar->isEquivalentTo(*fmt->fCalendar)) &&
++        (fCalendar&&(fCalendar->isEquivalentTo(*fmt->fCalendar)) &&
+          (fNumberFormat && *fNumberFormat == *fmt->fNumberFormat) &&
+-         (fCapitalizationContext == fmt->fCapitalizationContext) );
++         (fCapitalizationContext == fmt->fCapitalizationContext));
+ }
+ 
+ //----------------------------------------------------------------------
+diff --git a/source/i18n/decimfmt.cpp b/source/i18n/decimfmt.cpp
+index bca33366..eb145df9 100644
+--- a/source/i18n/decimfmt.cpp
++++ b/source/i18n/decimfmt.cpp
+@@ -497,17 +497,14 @@ DecimalFormat* DecimalFormat::clone() const {
+     return nullptr;
+ }
+ 
+-bool DecimalFormat::operator==(const Format& other) const {
+-    auto* otherDF = dynamic_cast<const DecimalFormat*>(&other);
+-    if (otherDF == nullptr) {
+-        return false;
+-    }
++bool DecimalFormat::isEqual(const Format& other) const {
++    const auto& otherDF = static_cast<const DecimalFormat&>(other);
+     // If either object is in an invalid state, prevent dereferencing nullptr below.
+     // Additionally, invalid objects should not be considered equal to anything.
+-    if (fields == nullptr || otherDF->fields == nullptr) {
++    if (fields == nullptr || otherDF.fields == nullptr) {
+         return false;
+     }
+-    return fields->properties == otherDF->fields->properties && *getDecimalFormatSymbols() == *otherDF->getDecimalFormatSymbols();
++    return fields->properties == otherDF.fields->properties && *getDecimalFormatSymbols() == *otherDF.getDecimalFormatSymbols();
+ }
+ 
+ UnicodeString& DecimalFormat::format(double number, UnicodeString& appendTo, FieldPosition& pos) const {
+diff --git a/source/i18n/dtitvfmt.cpp b/source/i18n/dtitvfmt.cpp
+index df9d23bd..498152c0 100644
+--- a/source/i18n/dtitvfmt.cpp
++++ b/source/i18n/dtitvfmt.cpp
+@@ -230,11 +230,9 @@ DateIntervalFormat::clone() const {
+ 
+ 
+ bool
+-DateIntervalFormat::operator==(const Format& other) const {
+-    if (typeid(*this) != typeid(other)) {return false;}
++DateIntervalFormat::isEqual(const Format& other) const {
+     const DateIntervalFormat* fmt = (DateIntervalFormat*)&other;
+     if (this == fmt) {return true;}
+-    if (!Format::operator==(other)) {return false;}
+     if ((fInfo != fmt->fInfo) && (fInfo == nullptr || fmt->fInfo == nullptr)) {return false;}
+     if (fInfo && fmt->fInfo && (*fInfo != *fmt->fInfo )) {return false;}
+     {
+diff --git a/source/i18n/format.cpp b/source/i18n/format.cpp
+index 10856a4a..879d74fd 100644
+--- a/source/i18n/format.cpp
++++ b/source/i18n/format.cpp
+@@ -158,8 +158,7 @@ Format::parseObject(const UnicodeString& source,
+ bool
+ Format::operator==(const Format& that) const
+ {
+-    // Subclasses: Call this method and then add more specific checks.
+-    return typeid(*this) == typeid(that);
++    return typeid(*this) == typeid(that) && isEqual(that);
+ }
+ //---------------------------------------
+ 
+diff --git a/source/i18n/gregoimp.cpp b/source/i18n/gregoimp.cpp
+index 537aa19d..33d90823 100644
+--- a/source/i18n/gregoimp.cpp
++++ b/source/i18n/gregoimp.cpp
+@@ -144,7 +144,7 @@ void Grego::timeToFields(UDate time, int32_t& year, int32_t& month,
+ 
+ int32_t Grego::dayOfWeek(double day) {
+     int32_t dow;
+-    ClockMath::floorDivide(day + UCAL_THURSDAY, 7, dow);
++    ClockMath::floorDivide(day + double{UCAL_THURSDAY}, 7, dow);
+     return (dow == 0) ? UCAL_SATURDAY : dow;
+ }
+ 
+diff --git a/source/i18n/measfmt.cpp b/source/i18n/measfmt.cpp
+index a9a56a3b..978111ab 100644
+--- a/source/i18n/measfmt.cpp
++++ b/source/i18n/measfmt.cpp
+@@ -427,13 +427,10 @@ MeasureFormat::~MeasureFormat() {
+     delete listFormatter;
+ }
+ 
+-bool MeasureFormat::operator==(const Format &other) const {
++bool MeasureFormat::isEqual(const Format &other) const {
+     if (this == &other) { // Same object, equal
+         return true;
+     }
+-    if (!Format::operator==(other)) {
+-        return false;
+-    }
+     const MeasureFormat &rhs = static_cast<const MeasureFormat &>(other);
+ 
+     // Note: Since the ListFormatter depends only on Locale and width, we
+diff --git a/source/i18n/measunit.cpp b/source/i18n/measunit.cpp
+index 5ad39919..cff11560 100644
+--- a/source/i18n/measunit.cpp
++++ b/source/i18n/measunit.cpp
+@@ -2196,15 +2196,14 @@ const char *MeasureUnit::getIdentifier() const {
+     return fImpl ? fImpl->identifier.data() : gSubTypes[getOffset()];
+ }
+ 
+-bool MeasureUnit::operator==(const UObject& other) const {
++bool MeasureUnit::operator==(const MeasureUnit& other) const {
+     if (this == &other) {  // Same object, equal
+         return true;
+     }
+     if (typeid(*this) != typeid(other)) { // Different types, not equal
+         return false;
+     }
+-    const MeasureUnit &rhs = static_cast<const MeasureUnit&>(other);
+-    return uprv_strcmp(getIdentifier(), rhs.getIdentifier()) == 0;
++    return uprv_strcmp(getIdentifier(), other.getIdentifier()) == 0;
+ }
+ 
+ int32_t MeasureUnit::getAvailable(
+diff --git a/source/i18n/measure.cpp b/source/i18n/measure.cpp
+index b9c47fd4..22182bbb 100644
+--- a/source/i18n/measure.cpp
++++ b/source/i18n/measure.cpp
+@@ -60,17 +60,16 @@ Measure::~Measure() {
+     delete unit;
+ }
+ 
+-bool Measure::operator==(const UObject& other) const {
++bool Measure::operator==(const Measure& other) const {
+     if (this == &other) {  // Same object, equal
+         return true;
+     }
+     if (typeid(*this) != typeid(other)) { // Different types, not equal
+         return false;
+     }
+-    const Measure &m = static_cast<const Measure&>(other);
+-    return number == m.number &&
+-        ((unit == NULL) == (m.unit == NULL)) &&
+-        (unit == NULL || *unit == *m.unit);
++    return number == other.number &&
++        ((unit == NULL) == (other.unit == NULL)) &&
++        (unit == NULL || *unit == *other.unit);
+ }
+ 
+ U_NAMESPACE_END
+diff --git a/source/i18n/msgfmt.cpp b/source/i18n/msgfmt.cpp
+index 13a5a089..fbde269e 100644
+--- a/source/i18n/msgfmt.cpp
++++ b/source/i18n/msgfmt.cpp
+@@ -390,15 +390,13 @@ MessageFormat::operator=(const MessageFormat& that)
+ }
+ 
+ bool
+-MessageFormat::operator==(const Format& rhs) const
++MessageFormat::isEqual(const Format& rhs) const
+ {
+     if (this == &rhs) return true;
+ 
+     MessageFormat& that = (MessageFormat&)rhs;
+ 
+-    // Check class ID before checking MessageFormat members
+-    if (!Format::operator==(rhs) ||
+-        msgPattern != that.msgPattern ||
++    if (msgPattern != that.msgPattern ||
+         fLocale != that.fLocale) {
+         return false;
+     }
+@@ -1871,7 +1869,7 @@ UBool MessageFormat::equalFormats(const void* left, const void* right) {
+ }
+ 
+ 
+-bool MessageFormat::DummyFormat::operator==(const Format&) const {
++bool MessageFormat::DummyFormat::isEqual(const Format&) const {
+     return true;
+ }
+ 
+diff --git a/source/i18n/number_asformat.cpp b/source/i18n/number_asformat.cpp
+index 8f2314d6..6f639af1 100644
+--- a/source/i18n/number_asformat.cpp
++++ b/source/i18n/number_asformat.cpp
+@@ -32,15 +32,12 @@ LocalizedNumberFormatterAsFormat::LocalizedNumberFormatterAsFormat(
+ 
+ LocalizedNumberFormatterAsFormat::~LocalizedNumberFormatterAsFormat() = default;
+ 
+-bool LocalizedNumberFormatterAsFormat::operator==(const Format& other) const {
+-    auto* _other = dynamic_cast<const LocalizedNumberFormatterAsFormat*>(&other);
+-    if (_other == nullptr) {
+-        return false;
+-    }
++bool LocalizedNumberFormatterAsFormat::isEqual(const Format& other) const {
++    const auto& _other = static_cast<const LocalizedNumberFormatterAsFormat&>(other);
+     // TODO: Change this to use LocalizedNumberFormatter::operator== if it is ever proposed.
+     // This implementation is fine, but not particularly efficient.
+     UErrorCode localStatus = U_ZERO_ERROR;
+-    return fFormatter.toSkeleton(localStatus) == _other->fFormatter.toSkeleton(localStatus);
++    return fFormatter.toSkeleton(localStatus) == _other.fFormatter.toSkeleton(localStatus);
+ }
+ 
+ LocalizedNumberFormatterAsFormat* LocalizedNumberFormatterAsFormat::clone() const {
+diff --git a/source/i18n/number_asformat.h b/source/i18n/number_asformat.h
+index 394b9a81..39c8b5df 100644
+--- a/source/i18n/number_asformat.h
++++ b/source/i18n/number_asformat.h
+@@ -36,11 +36,6 @@ class U_I18N_API LocalizedNumberFormatterAsFormat : public Format {
+      */
+     ~LocalizedNumberFormatterAsFormat() U_OVERRIDE;
+ 
+-    /**
+-     * Equals operator.
+-     */
+-    bool operator==(const Format& other) const U_OVERRIDE;
+-
+     /**
+      * Creates a copy of this object.
+      */
+@@ -89,6 +84,12 @@ class U_I18N_API LocalizedNumberFormatterAsFormat : public Format {
+     UClassID getDynamicClassID() const U_OVERRIDE;
+     static UClassID U_EXPORT2 getStaticClassID();
+ 
++  protected:
++    /**
++     * Equals operator.
++     */
++    bool isEqual(const Format &other) const U_OVERRIDE;
++
+   private:
+     LocalizedNumberFormatter fFormatter;
+ 
+diff --git a/source/i18n/numfmt.cpp b/source/i18n/numfmt.cpp
+index b8ce1c93..4f7bf184 100644
+--- a/source/i18n/numfmt.cpp
++++ b/source/i18n/numfmt.cpp
+@@ -286,7 +286,7 @@ NumberFormat::operator=(const NumberFormat& rhs)
+ // -------------------------------------
+ 
+ bool
+-NumberFormat::operator==(const Format& that) const
++NumberFormat::isEqual(const Format& that) const
+ {
+     // Format::operator== guarantees this cast is safe
+     NumberFormat* other = (NumberFormat*)&that;
+@@ -295,10 +295,6 @@ NumberFormat::operator==(const Format& that) const
+     // This code makes it easy to determine why two format objects that should
+     // be equal aren't.
+     UBool first = TRUE;
+-    if (!Format::operator==(that)) {
+-        if (first) { printf("[ "); first = FALSE; } else { printf(", "); }
+-        debug("Format::!=");
+-    }
+     if (!(fMaxIntegerDigits == other->fMaxIntegerDigits &&
+           fMinIntegerDigits == other->fMinIntegerDigits)) {
+         if (first) { printf("[ "); first = FALSE; } else { printf(", "); }
+@@ -332,17 +328,16 @@ NumberFormat::operator==(const Format& that) const
+     if (!first) { printf(" ]"); }
+ #endif
+ 
+-    return ((this == &that) ||
+-            ((Format::operator==(that) &&
+-              fMaxIntegerDigits == other->fMaxIntegerDigits &&
+-              fMinIntegerDigits == other->fMinIntegerDigits &&
+-              fMaxFractionDigits == other->fMaxFractionDigits &&
+-              fMinFractionDigits == other->fMinFractionDigits &&
+-              fGroupingUsed == other->fGroupingUsed &&
+-              fParseIntegerOnly == other->fParseIntegerOnly &&
+-              u_strcmp(fCurrency, other->fCurrency) == 0 &&
+-              fLenient == other->fLenient &&
+-              fCapitalizationContext == other->fCapitalizationContext)));
++    return (this == &that) ||
++           (fMaxIntegerDigits == other->fMaxIntegerDigits &&
++            fMinIntegerDigits == other->fMinIntegerDigits &&
++            fMaxFractionDigits == other->fMaxFractionDigits &&
++            fMinFractionDigits == other->fMinFractionDigits &&
++            fGroupingUsed == other->fGroupingUsed &&
++            fParseIntegerOnly == other->fParseIntegerOnly &&
++            u_strcmp(fCurrency, other->fCurrency) == 0 &&
++            fLenient == other->fLenient &&
++            fCapitalizationContext == other->fCapitalizationContext);
+ }
+ 
+ // -------------------------------------
+diff --git a/source/i18n/olsontz.cpp b/source/i18n/olsontz.cpp
+index cae471a5..f212422e 100644
+--- a/source/i18n/olsontz.cpp
++++ b/source/i18n/olsontz.cpp
+@@ -311,11 +311,9 @@ OlsonTimeZone::~OlsonTimeZone() {
+ /**
+  * Returns true if the two TimeZone objects are equal.
+  */
+-bool OlsonTimeZone::operator==(const TimeZone& other) const {
++bool OlsonTimeZone::isEqual(const TimeZone &other) const {
+     return ((this == &other) ||
+-            (typeid(*this) == typeid(other) &&
+-            TimeZone::operator==(other) &&
+-            hasSameRules(other)));
++            (TimeZone::isEqual(other) && hasSameRules(other)));
+ }
+ 
+ /**
+diff --git a/source/i18n/olsontz.h b/source/i18n/olsontz.h
+index 75d86781..f8f97590 100644
+--- a/source/i18n/olsontz.h
++++ b/source/i18n/olsontz.h
+@@ -143,11 +143,6 @@ class U_I18N_API OlsonTimeZone: public BasicTimeZone {
+      */
+     OlsonTimeZone& operator=(const OlsonTimeZone& other);
+ 
+-    /**
+-     * Returns true if the two TimeZone objects are equal.
+-     */
+-    virtual bool operator==(const TimeZone& other) const override;
+-
+     /**
+      * TimeZone API.
+      */
+@@ -284,6 +279,12 @@ class U_I18N_API OlsonTimeZone: public BasicTimeZone {
+      */
+     const UChar *getCanonicalID() const;
+ 
++protected:
++    /**
++     * Returns true if the two TimeZone objects are equal.
++     */
++    virtual bool isEqual(const TimeZone &other) const override;
++
+ private:
+     /**
+      * Default constructor.  Creates a time zone with an empty ID and
+@@ -291,8 +292,6 @@ private:
+      */
+     OlsonTimeZone();
+ 
+-private:
+-
+     void constructEmpty();
+ 
+     void getHistoricalOffset(UDate date, UBool local,
+diff --git a/source/i18n/plurfmt.cpp b/source/i18n/plurfmt.cpp
+index 65e275ee..7411aaad 100644
+--- a/source/i18n/plurfmt.cpp
++++ b/source/i18n/plurfmt.cpp
+@@ -382,13 +382,10 @@ PluralFormat::operator=(const PluralFormat& other) {
+ }
+ 
+ bool
+-PluralFormat::operator==(const Format& other) const {
++PluralFormat::isEqual(const Format& other) const {
+     if (this == &other) {
+         return true;
+     }
+-    if (!Format::operator==(other)) {
+-        return false;
+-    }
+     const PluralFormat& o = (const PluralFormat&)other;
+     return
+         locale == o.locale &&
+@@ -400,11 +397,6 @@ PluralFormat::operator==(const Format& other) const {
+             *pluralRulesWrapper.pluralRules == *o.pluralRulesWrapper.pluralRules);
+ }
+ 
+-bool
+-PluralFormat::operator!=(const Format& other) const {
+-    return  !operator==(other);
+-}
+-
+ void
+ PluralFormat::parseObject(const UnicodeString& /*source*/,
+                         Formattable& /*result*/,
+diff --git a/source/i18n/rbnf.cpp b/source/i18n/rbnf.cpp
+index 7f54fd7a..3d699463 100644
+--- a/source/i18n/rbnf.cpp
++++ b/source/i18n/rbnf.cpp
+@@ -937,38 +937,36 @@ RuleBasedNumberFormat::clone() const
+ }
+ 
+ bool
+-RuleBasedNumberFormat::operator==(const Format& other) const
++RuleBasedNumberFormat::isEqual(const Format& other) const
+ {
+     if (this == &other) {
+         return true;
+     }
+ 
+-    if (typeid(*this) == typeid(other)) {
+-        const RuleBasedNumberFormat& rhs = (const RuleBasedNumberFormat&)other;
+-        // test for capitalization info equality is adequately handled
+-        // by the NumberFormat test for fCapitalizationContext equality;
+-        // the info here is just derived from that.
+-        if (locale == rhs.locale &&
+-            lenient == rhs.lenient &&
+-            (localizations == NULL 
+-                ? rhs.localizations == NULL 
+-                : (rhs.localizations == NULL 
+-                    ? false
+-                    : *localizations == rhs.localizations))) {
+-
+-            NFRuleSet** p = fRuleSets;
+-            NFRuleSet** q = rhs.fRuleSets;
+-            if (p == NULL) {
+-                return q == NULL;
+-            } else if (q == NULL) {
+-                return false;
+-            }
+-            while (*p && *q && (**p == **q)) {
+-                ++p;
+-                ++q;
+-            }
+-            return *q == NULL && *p == NULL;
++    const RuleBasedNumberFormat& rhs = (const RuleBasedNumberFormat&)other;
++    // test for capitalization info equality is adequately handled
++    // by the NumberFormat test for fCapitalizationContext equality;
++    // the info here is just derived from that.
++    if (locale == rhs.locale &&
++        lenient == rhs.lenient &&
++        (localizations == NULL 
++            ? rhs.localizations == NULL 
++            : (rhs.localizations == NULL 
++                ? false
++                : *localizations == rhs.localizations))) {
++
++        NFRuleSet** p = fRuleSets;
++        NFRuleSet** q = rhs.fRuleSets;
++        if (p == NULL) {
++            return q == NULL;
++        } else if (q == NULL) {
++            return false;
++        }
++        while (*p && *q && (**p == **q)) {
++            ++p;
++            ++q;
+         }
++        return *q == NULL && *p == NULL;
+     }
+ 
+     return false;
+diff --git a/source/i18n/rbtz.cpp b/source/i18n/rbtz.cpp
+index 495d8310..e558cb56 100644
+--- a/source/i18n/rbtz.cpp
++++ b/source/i18n/rbtz.cpp
+@@ -95,12 +95,11 @@ RuleBasedTimeZone::operator=(const RuleBasedTimeZone& right) {
+     return *this;
+ }
+ 
+-bool
+-RuleBasedTimeZone::operator==(const TimeZone& that) const {
++bool RuleBasedTimeZone::isEqual(const TimeZone &that) const {
+     if (this == &that) {
+         return true;
+     }
+-    if (typeid(*this) != typeid(that) || !BasicTimeZone::operator==(that)) {
++    if (!BasicTimeZone::isEqual(that)) {
+         return false;
+     }
+     RuleBasedTimeZone *rbtz = (RuleBasedTimeZone*)&that;
+@@ -114,11 +113,6 @@ RuleBasedTimeZone::operator==(const TimeZone& that) const {
+     return false;
+ }
+ 
+-bool
+-RuleBasedTimeZone::operator!=(const TimeZone& that) const {
+-    return !operator==(that);
+-}
+-
+ void
+ RuleBasedTimeZone::addTransitionRule(TimeZoneRule* rule, UErrorCode& status) {
+     LocalPointer<TimeZoneRule>lpRule(rule);
+diff --git a/source/i18n/reldtfmt.cpp b/source/i18n/reldtfmt.cpp
+index 5fdef1c0..587feafb 100644
+--- a/source/i18n/reldtfmt.cpp
++++ b/source/i18n/reldtfmt.cpp
+@@ -135,11 +135,11 @@ RelativeDateFormat* RelativeDateFormat::clone() const {
+     return new RelativeDateFormat(*this);
+ }
+ 
+-bool RelativeDateFormat::operator==(const Format& other) const {
+-    if(DateFormat::operator==(other)) {
+-        // The DateFormat::operator== check for fCapitalizationContext equality above
++bool RelativeDateFormat::isEqual(const Format& other) const {
++    if (DateFormat::isEqual(other)) {
++        // The DateFormat::isEqual check for fCapitalizationContext equality above
+         //   is sufficient to check equality of all derived context-related data.
+-        // DateFormat::operator== guarantees following cast is safe
++        // Format::operator== guarantees following cast is safe
+         RelativeDateFormat* that = (RelativeDateFormat*)&other;
+         return (fDateStyle==that->fDateStyle   &&
+                 fDatePattern==that->fDatePattern   &&
+diff --git a/source/i18n/reldtfmt.h b/source/i18n/reldtfmt.h
+index 98b333a0..54fbd8cd 100644
+--- a/source/i18n/reldtfmt.h
++++ b/source/i18n/reldtfmt.h
+@@ -73,15 +73,6 @@ public:
+      */
+     virtual RelativeDateFormat* clone() const override;
+ 
+-    /**
+-     * Return true if the given Format objects are semantically equal. Objects
+-     * of different subclasses are considered unequal.
+-     * @param other    the object to be compared with.
+-     * @return         true if the given Format objects are semantically equal.
+-     * @internal ICU 3.8
+-     */
+-    virtual bool operator==(const Format& other) const override;
+-
+ 
+     using DateFormat::format;
+ 
+@@ -247,6 +238,16 @@ public:
+      */
+     virtual void setContext(UDisplayContext value, UErrorCode& status) override;
+ 
++protected:
++    /**
++     * Return true if the given Format objects are semantically equal. Objects
++     * of different subclasses are considered unequal.
++     * @param other    the object to be compared with.  This is guaranteed to be a
++     *                 RelativeDateFormat.
++     * @return         true if the given Format objects are semantically equal.
++     */
++    virtual bool isEqual(const Format &other) const override;
++
+ private:
+     SimpleDateFormat *fDateTimeFormatter;
+     UnicodeString fDatePattern;
+@@ -302,7 +303,7 @@ private:
+      */
+     Calendar* initializeCalendar(TimeZone* adoptZone, const Locale& locale, UErrorCode& status);
+ 
+-public:
++  public:
+     /**
+      * Return the class ID for this class. This is useful only for comparing to
+      * a return value from getDynamicClassID(). For example:
+diff --git a/source/i18n/rulebasedcollator.cpp b/source/i18n/rulebasedcollator.cpp
+index 5e5cc3db..45b9b70e 100644
+--- a/source/i18n/rulebasedcollator.cpp
++++ b/source/i18n/rulebasedcollator.cpp
+@@ -240,9 +240,8 @@ RuleBasedCollator &RuleBasedCollator::operator=(const RuleBasedCollator &other)
+ UOBJECT_DEFINE_RTTI_IMPLEMENTATION(RuleBasedCollator)
+ 
+ bool
+-RuleBasedCollator::operator==(const Collator& other) const {
++RuleBasedCollator::isEqual(const Collator& other) const {
+     if(this == &other) { return true; }
+-    if(!Collator::operator==(other)) { return false; }
+     const RuleBasedCollator &o = static_cast<const RuleBasedCollator &>(other);
+     if(*settings != *o.settings) { return false; }
+     if(data == o.data) { return true; }
+@@ -538,7 +537,7 @@ RuleBasedCollator::setMaxVariable(UColReorderCode group, UErrorCode &errorCode)
+     }
+ 
+     if(group == UCOL_REORDER_CODE_DEFAULT) {
+-        group = (UColReorderCode)(UCOL_REORDER_CODE_FIRST + defaultSettings.getMaxVariable());
++        group = (UColReorderCode)(int{UCOL_REORDER_CODE_FIRST} + defaultSettings.getMaxVariable());
+     }
+     uint32_t varTop = data->getLastPrimaryForGroup(group);
+     U_ASSERT(varTop != 0);
+@@ -556,7 +555,7 @@ RuleBasedCollator::setMaxVariable(UColReorderCode group, UErrorCode &errorCode)
+ 
+ UColReorderCode
+ RuleBasedCollator::getMaxVariable() const {
+-    return (UColReorderCode)(UCOL_REORDER_CODE_FIRST + settings->getMaxVariable());
++    return (UColReorderCode)(int{UCOL_REORDER_CODE_FIRST} + settings->getMaxVariable());
+ }
+ 
+ uint32_t
+diff --git a/source/i18n/selfmt.cpp b/source/i18n/selfmt.cpp
+index bb18e84e..beb039ce 100644
+--- a/source/i18n/selfmt.cpp
++++ b/source/i18n/selfmt.cpp
+@@ -165,22 +165,14 @@ SelectFormat::operator=(const SelectFormat& other) {
+ }
+ 
+ bool
+-SelectFormat::operator==(const Format& other) const {
++SelectFormat::isEqual(const Format& other) const {
+     if (this == &other) {
+         return true;
+     }
+-    if (!Format::operator==(other)) {
+-        return false;
+-    }
+     const SelectFormat& o = (const SelectFormat&)other;
+     return msgPattern == o.msgPattern;
+ }
+ 
+-bool
+-SelectFormat::operator!=(const Format& other) const {
+-    return  !operator==(other);
+-}
+-
+ void
+ SelectFormat::parseObject(const UnicodeString& /*source*/,
+                         Formattable& /*result*/,
+diff --git a/source/i18n/simpletz.cpp b/source/i18n/simpletz.cpp
+index d9b0cd8e..572dadcf 100644
+--- a/source/i18n/simpletz.cpp
++++ b/source/i18n/simpletz.cpp
+@@ -231,13 +231,9 @@ SimpleTimeZone::operator=(const SimpleTimeZone &right)
+ 
+ // -------------------------------------
+ 
+-bool
+-SimpleTimeZone::operator==(const TimeZone& that) const
+-{
++bool SimpleTimeZone::isEqual(const TimeZone &that) const {
+     return ((this == &that) ||
+-            (typeid(*this) == typeid(that) &&
+-            TimeZone::operator==(that) &&
+-            hasSameRules(that)));
++            (TimeZone::isEqual(that) && hasSameRules(that)));
+ }
+ 
+ // -------------------------------------
+@@ -536,14 +532,14 @@ SimpleTimeZone::getOffsetFromLocal(UDate date, UTimeZoneLocalOption nonExistingT
+ 
+     // Now we need some adjustment
+     if (savingsDST > 0) {
+-        if ((nonExistingTimeOpt & kStdDstMask) == kStandard
+-            || ((nonExistingTimeOpt & kStdDstMask) != kDaylight && (nonExistingTimeOpt & kFormerLatterMask) != kLatter)) {
++        if ((int{nonExistingTimeOpt} & kStdDstMask) == kStandard
++            || ((int{nonExistingTimeOpt} & kStdDstMask) != kDaylight && (int{nonExistingTimeOpt} & kFormerLatterMask) != kLatter)) {
+             date -= getDSTSavings();
+             recalc = TRUE;
+         }
+     } else {
+-        if ((duplicatedTimeOpt & kStdDstMask) == kDaylight
+-                || ((duplicatedTimeOpt & kStdDstMask) != kStandard && (duplicatedTimeOpt & kFormerLatterMask) == kFormer)) {
++        if ((int{duplicatedTimeOpt} & kStdDstMask) == kDaylight
++                || ((int{duplicatedTimeOpt} & kStdDstMask) != kStandard && (int{duplicatedTimeOpt} & kFormerLatterMask) == kFormer)) {
+             date -= getDSTSavings();
+             recalc = TRUE;
+         }
+diff --git a/source/i18n/smpdtfmt.cpp b/source/i18n/smpdtfmt.cpp
+index c1e943a0..c4757d7f 100644
+--- a/source/i18n/smpdtfmt.cpp
++++ b/source/i18n/smpdtfmt.cpp
+@@ -659,12 +659,12 @@ SimpleDateFormat::clone() const
+ //----------------------------------------------------------------------
+ 
+ bool
+-SimpleDateFormat::operator==(const Format& other) const
++SimpleDateFormat::isEqual(const Format& other) const
+ {
+-    if (DateFormat::operator==(other)) {
+-        // The DateFormat::operator== check for fCapitalizationContext equality above
++    if (DateFormat::isEqual(other)) {
++        // The DateFormat::isEqual check for fCapitalizationContext equality above
+         //   is sufficient to check equality of all derived context-related data.
+-        // DateFormat::operator== guarantees following cast is safe
++        // Format::operator== guarantees following cast is safe
+         SimpleDateFormat* that = (SimpleDateFormat*)&other;
+         return (fPattern             == that->fPattern &&
+                 fSymbols             != NULL && // Check for pathological object
+diff --git a/source/i18n/timezone.cpp b/source/i18n/timezone.cpp
+index 8115a45e..c9370c26 100644
+--- a/source/i18n/timezone.cpp
++++ b/source/i18n/timezone.cpp
+@@ -376,11 +376,12 @@ TimeZone::operator=(const TimeZone &right)
+ 
+ // -------------------------------------
+ 
+-bool
+-TimeZone::operator==(const TimeZone& that) const
+-{
+-    return typeid(*this) == typeid(that) &&
+-        fID == that.fID;
++bool TimeZone::operator==(const TimeZone &that) const {
++    return typeid(*this) == typeid(that) && isEqual(that);
++}
++
++bool TimeZone::isEqual(const TimeZone &that) const {
++    return fID == that.fID;
+ }
+ 
+ // -------------------------------------
+diff --git a/source/i18n/tmutamt.cpp b/source/i18n/tmutamt.cpp
+index 2753c293..12c973e9 100644
+--- a/source/i18n/tmutamt.cpp
++++ b/source/i18n/tmutamt.cpp
+@@ -45,11 +45,6 @@ TimeUnitAmount::operator=(const TimeUnitAmount& other) {
+ }
+ 
+ 
+-bool
+-TimeUnitAmount::operator==(const UObject& other) const {
+-    return Measure::operator==(other);
+-}
+-
+ TimeUnitAmount* 
+ TimeUnitAmount::clone() const {
+     return new TimeUnitAmount(*this);
+diff --git a/source/i18n/tzfmt.cpp b/source/i18n/tzfmt.cpp
+index 9d046c30..7776a0d5 100644
+--- a/source/i18n/tzfmt.cpp
++++ b/source/i18n/tzfmt.cpp
+@@ -483,7 +483,7 @@ TimeZoneFormat::operator=(const TimeZoneFormat& other) {
+ 
+ 
+ bool
+-TimeZoneFormat::operator==(const Format& other) const {
++TimeZoneFormat::isEqual(const Format& other) const {
+     TimeZoneFormat* tzfmt = (TimeZoneFormat*)&other;
+ 
+     bool isEqual =
+diff --git a/source/i18n/tzrule.cpp b/source/i18n/tzrule.cpp
+index a60fffbe..54eeadf2 100644
+--- a/source/i18n/tzrule.cpp
++++ b/source/i18n/tzrule.cpp
+@@ -53,18 +53,14 @@ TimeZoneRule::operator=(const TimeZoneRule& right) {
+     return *this;
+ }
+ 
+-bool
+-TimeZoneRule::operator==(const TimeZoneRule& that) const {
+-    return ((this == &that) ||
+-            (typeid(*this) == typeid(that) &&
+-            fName == that.fName &&
+-            fRawOffset == that.fRawOffset &&
+-            fDSTSavings == that.fDSTSavings));
++bool TimeZoneRule::operator==(const TimeZoneRule &that) const {
++    return (this == &that) || (typeid(*this) == typeid(that) && isEqual(that));
+ }
+ 
+-bool
+-TimeZoneRule::operator!=(const TimeZoneRule& that) const {
+-    return !operator==(that);
++bool TimeZoneRule::isEqual(const TimeZoneRule &that) const {
++  return fName == that.fName &&
++         fRawOffset == that.fRawOffset &&
++         fDSTSavings == that.fDSTSavings;
+ }
+ 
+ UnicodeString&
+@@ -120,18 +116,6 @@ InitialTimeZoneRule::operator=(const InitialTimeZoneRule& right) {
+     return *this;
+ }
+ 
+-bool
+-InitialTimeZoneRule::operator==(const TimeZoneRule& that) const {
+-    return ((this == &that) ||
+-            (typeid(*this) == typeid(that) &&
+-            TimeZoneRule::operator==(that)));
+-}
+-
+-bool
+-InitialTimeZoneRule::operator!=(const TimeZoneRule& that) const {
+-    return !operator==(that);
+-}
+-
+ UBool
+ InitialTimeZoneRule::isEquivalentTo(const TimeZoneRule& other) const {
+     if (this == &other) {
+@@ -227,24 +211,13 @@ AnnualTimeZoneRule::operator=(const AnnualTimeZoneRule& right) {
+ }
+ 
+ bool
+-AnnualTimeZoneRule::operator==(const TimeZoneRule& that) const {
+-    if (this == &that) {
+-        return true;
+-    }
+-    if (typeid(*this) != typeid(that)) {
+-        return false;
+-    }
++AnnualTimeZoneRule::isEqual(const TimeZoneRule& that) const {
+     AnnualTimeZoneRule *atzr = (AnnualTimeZoneRule*)&that;
+     return (*fDateTimeRule == *(atzr->fDateTimeRule) &&
+             fStartYear == atzr->fStartYear &&
+             fEndYear == atzr->fEndYear);
+ }
+ 
+-bool
+-AnnualTimeZoneRule::operator!=(const TimeZoneRule& that) const {
+-    return !operator==(that);
+-}
+-
+ const DateTimeRule*
+ AnnualTimeZoneRule::getRule() const {
+     return fDateTimeRule;
+@@ -446,11 +419,8 @@ TimeArrayTimeZoneRule::operator=(const TimeArrayTimeZoneRule& right) {
+ }
+ 
+ bool
+-TimeArrayTimeZoneRule::operator==(const TimeZoneRule& that) const {
+-    if (this == &that) {
+-        return true;
+-    }
+-    if (typeid(*this) != typeid(that) || !TimeZoneRule::operator==(that)) {
++TimeArrayTimeZoneRule::isEqual(const TimeZoneRule& that) const {
++    if (!TimeZoneRule::isEqual(that)) {
+         return false;
+     }
+     TimeArrayTimeZoneRule *tatzr = (TimeArrayTimeZoneRule*)&that;
+@@ -469,11 +439,6 @@ TimeArrayTimeZoneRule::operator==(const TimeZoneRule& that) const {
+     return res;
+ }
+ 
+-bool
+-TimeArrayTimeZoneRule::operator!=(const TimeZoneRule& that) const {
+-    return !operator==(that);
+-}
+-
+ DateTimeRule::TimeRuleType
+ TimeArrayTimeZoneRule::getTimeType(void) const {
+     return fTimeRuleType;
+diff --git a/source/i18n/unicode/choicfmt.h b/source/i18n/unicode/choicfmt.h
+index 0e7ae186..5fd44fe8 100644
+--- a/source/i18n/unicode/choicfmt.h
++++ b/source/i18n/unicode/choicfmt.h
+@@ -253,16 +253,6 @@ public:
+      */
+     virtual ChoiceFormat* clone() const override;
+ 
+-    /**
+-     * Returns true if the given Format objects are semantically equal.
+-     * Objects of different subclasses are considered unequal.
+-     *
+-     * @param other    ChoiceFormat object to be compared
+-     * @return         true if other is the same as this.
+-     * @deprecated ICU 49 Use MessageFormat instead, with plural and select arguments.
+-     */
+-    virtual bool operator==(const Format& other) const override;
+-
+     /**
+      * Sets the pattern.
+      * @param pattern   The pattern to be applied.
+@@ -469,6 +459,16 @@ public:
+      */
+     static UClassID U_EXPORT2 getStaticClassID(void);
+ 
++protected:
++    /**
++     * Returns true if the given Format objects are semantically equal.
++     * Objects of different subclasses are considered unequal.
++     *
++     * @param other    ChoiceFormat object to be compared
++     * @return         true if other is the same as this.
++     */
++    virtual bool isEqual(const Format &other) const override;
++
+ private:
+     /**
+      * Converts a double value to a string.
+diff --git a/source/i18n/unicode/coll.h b/source/i18n/unicode/coll.h
+index 9e0050ba..941d1ec9 100644
+--- a/source/i18n/unicode/coll.h
++++ b/source/i18n/unicode/coll.h
+@@ -238,31 +238,11 @@ public:
+     /**
+      * Returns true if "other" is the same as "this".
+      *
+-     * The base class implementation returns true if "other" has the same type/class as "this":
+-     * `typeid(*this) == typeid(other)`.
+-     *
+-     * Subclass implementations should do something like the following:
+-     *
+-     *     if (this == &other) { return true; }
+-     *     if (!Collator::operator==(other)) { return false; }  // not the same class
+-     *
+-     *     const MyCollator &o = (const MyCollator&)other;
+-     *     (compare this vs. o's subclass fields)
+-     *
+      * @param other Collator object to be compared
+      * @return true if other is the same as this.
+      * @stable ICU 2.0
+      */
+-    virtual bool operator==(const Collator& other) const;
+-
+-    /**
+-     * Returns true if "other" is not the same as "this".
+-     * Calls ! operator==(const Collator&) const which works for all subclasses.
+-     * @param other Collator object to be compared
+-     * @return true if other is not the same as this.
+-     * @stable ICU 2.0
+-     */
+-    virtual bool operator!=(const Collator& other) const;
++    bool operator==(const Collator& other) const;
+ 
+     /**
+      * Makes a copy of this object.
+@@ -1123,6 +1103,8 @@ protected:
+     */
+     Collator(const Collator& other);
+ 
++    virtual bool isEqual(const Collator &other) const = 0;
++
+ public:
+    /**
+     * Used internally by registration to define the requested and valid locales.
+diff --git a/source/i18n/unicode/datefmt.h b/source/i18n/unicode/datefmt.h
+index 027fb171..d227e254 100644
+--- a/source/i18n/unicode/datefmt.h
++++ b/source/i18n/unicode/datefmt.h
+@@ -231,12 +231,6 @@ public:
+      */
+     virtual DateFormat* clone() const override = 0;
+ 
+-    /**
+-     * Equality operator.  Returns true if the two formats have the same behavior.
+-     * @stable ICU 2.0
+-     */
+-    virtual bool operator==(const Format&) const override;
+-
+ 
+     using Format::format;
+ 
+@@ -863,6 +857,11 @@ protected:
+      */
+     DateFormat& operator=(const DateFormat&);
+ 
++    /**
++     * Equality operator.  Returns true if the two formats have the same behavior.
++     */
++    virtual bool isEqual(const Format &) const override;
++
+     /**
+      * The calendar that DateFormat uses to produce the time field values needed
+      * to implement date/time formatting. Subclasses should generally initialize
+diff --git a/source/i18n/unicode/decimfmt.h b/source/i18n/unicode/decimfmt.h
+index ab6cd14e..55a71d56 100644
+--- a/source/i18n/unicode/decimfmt.h
++++ b/source/i18n/unicode/decimfmt.h
+@@ -901,16 +901,6 @@ class U_I18N_API DecimalFormat : public NumberFormat {
+      */
+     DecimalFormat* clone() const U_OVERRIDE;
+ 
+-    /**
+-     * Return true if the given Format objects are semantically equal.
+-     * Objects of different subclasses are considered unequal.
+-     *
+-     * @param other    the object to be compared with.
+-     * @return         true if the given Format objects are semantically equal.
+-     * @stable ICU 2.0
+-     */
+-    bool operator==(const Format& other) const U_OVERRIDE;
+-
+ 
+     using NumberFormat::format;
+ 
+@@ -2139,6 +2129,17 @@ class U_I18N_API DecimalFormat : public NumberFormat {
+      */
+     UClassID getDynamicClassID(void) const U_OVERRIDE;
+ 
++  protected:
++    /**
++     * Return true if the given Format objects are semantically equal.
++     * Objects of different subclasses are considered unequal.
++     *
++     * @param other    the object to be compared with. Guaranteed to be a
++     *                 DecimalFormat.
++     * @return         true if the given Format objects are semantically equal.
++     */
++    bool isEqual(const Format &other) const U_OVERRIDE;
++
+   private:
+ 
+     /** Rebuilds the formatter object from the property bag. */
+diff --git a/source/i18n/unicode/dtitvfmt.h b/source/i18n/unicode/dtitvfmt.h
+index 85a1b365..de5c56ac 100644
+--- a/source/i18n/unicode/dtitvfmt.h
++++ b/source/i18n/unicode/dtitvfmt.h
+@@ -436,24 +436,6 @@ public:
+      */
+     virtual DateIntervalFormat* clone() const override;
+ 
+-    /**
+-     * Return true if the given Format objects are semantically equal. Objects
+-     * of different subclasses are considered unequal.
+-     * @param other    the object to be compared with.
+-     * @return         true if the given Format objects are semantically equal.
+-     * @stable ICU 4.0
+-     */
+-    virtual bool operator==(const Format& other) const override;
+-
+-    /**
+-     * Return true if the given Format objects are not semantically equal.
+-     * Objects of different subclasses are considered unequal.
+-     * @param other the object to be compared with.
+-     * @return      true if the given Format objects are not semantically equal.
+-     * @stable ICU 4.0
+-     */
+-    bool operator!=(const Format& other) const;
+-
+ 
+     using Format::format;
+ 
+@@ -718,6 +700,14 @@ protected:
+      */
+     DateIntervalFormat& operator=(const DateIntervalFormat&);
+ 
++    /**
++     * Return true if the given Format objects are semantically equal.
++     * @param other    the object to be compared with.  Guaranteed to be a
++     *                 DateIntervalFormat.
++     * @return         true if the given Format objects are semantically equal.
++     */
++    virtual bool isEqual(const Format &other) const override;
++
+ private:
+ 
+     /*
+@@ -1197,11 +1187,6 @@ private:
+     UDisplayContext fCapitalizationContext;
+ };
+ 
+-inline bool
+-DateIntervalFormat::operator!=(const Format& other) const  {
+-    return !operator==(other);
+-}
+-
+ U_NAMESPACE_END
+ 
+ #endif /* #if !UCONFIG_NO_FORMATTING */
+diff --git a/source/i18n/unicode/format.h b/source/i18n/unicode/format.h
+index a21e61ad..cdd7a7c0 100644
+--- a/source/i18n/unicode/format.h
++++ b/source/i18n/unicode/format.h
+@@ -111,16 +111,7 @@ public:
+      *                 Objects of different subclasses are considered unequal.
+      * @stable ICU 2.0
+      */
+-    virtual bool operator==(const Format& other) const = 0;
+-
+-    /**
+-     * Return true if the given Format objects are not semantically
+-     * equal.
+-     * @param other    the object to be compared with.
+-     * @return         Return true if the given Format objects are not semantically.
+-     * @stable ICU 2.0
+-     */
+-    bool operator!=(const Format& other) const { return !operator==(other); }
++    bool operator==(const Format& other) const;
+ 
+     /**
+      * Clone this object polymorphically.  The caller is responsible
+@@ -296,6 +287,8 @@ protected:
+                             int32_t pos,
+                             UParseError& parseError);
+ 
++    virtual bool isEqual(const Format &other) const = 0;
++
+  private:
+     char actualLocale[ULOC_FULLNAME_CAPACITY];
+     char validLocale[ULOC_FULLNAME_CAPACITY];
+diff --git a/source/i18n/unicode/measfmt.h b/source/i18n/unicode/measfmt.h
+index 89307614..5e565923 100644
+--- a/source/i18n/unicode/measfmt.h
++++ b/source/i18n/unicode/measfmt.h
+@@ -144,12 +144,6 @@ class U_I18N_API MeasureFormat : public Format {
+      */
+     virtual ~MeasureFormat();
+ 
+-    /**
+-     * Return true if given Format objects are semantically equal.
+-     * @stable ICU 53
+-     */
+-    virtual bool operator==(const Format &other) const override;
+-
+     /**
+      * Clones this object polymorphically.
+      * @stable ICU 53
+@@ -295,6 +289,11 @@ class U_I18N_API MeasureFormat : public Format {
+      */
+     MeasureFormat();
+ 
++    /**
++     * Return true if given Format objects are semantically equal.
++     */
++    virtual bool isEqual(const Format &other) const override;
++
+ #ifndef U_HIDE_INTERNAL_API 
+ 
+     /**
+diff --git a/source/i18n/unicode/measunit.h b/source/i18n/unicode/measunit.h
+index b7e8e167..786c3daf 100644
+--- a/source/i18n/unicode/measunit.h
++++ b/source/i18n/unicode/measunit.h
+@@ -432,16 +432,8 @@ class U_I18N_API MeasureUnit: public UObject {
+      * to the given object.
+      * @stable ICU 3.0
+      */
+-    virtual bool operator==(const UObject& other) const;
++    bool operator==(const MeasureUnit& other) const;
+ 
+-    /**
+-     * Inequality operator.  Return true if this object is not equal
+-     * to the given object.
+-     * @stable ICU 53
+-     */
+-    bool operator!=(const UObject& other) const {
+-        return !(*this == other);
+-    }
+ 
+     /**
+      * Get the type.
+diff --git a/source/i18n/unicode/measure.h b/source/i18n/unicode/measure.h
+index 7b118acf..8c1ac00e 100644
+--- a/source/i18n/unicode/measure.h
++++ b/source/i18n/unicode/measure.h
+@@ -87,7 +87,7 @@ class U_I18N_API Measure: public UObject {
+      * to the given object.
+      * @stable ICU 3.0
+      */
+-    bool operator==(const UObject& other) const;
++    bool operator==(const Measure& other) const;
+ 
+     /**
+      * Return a reference to the numeric value of this object.  The
+diff --git a/source/i18n/unicode/msgfmt.h b/source/i18n/unicode/msgfmt.h
+index c949132f..aed2ae8f 100644
+--- a/source/i18n/unicode/msgfmt.h
++++ b/source/i18n/unicode/msgfmt.h
+@@ -422,15 +422,6 @@ public:
+      */
+     virtual MessageFormat* clone() const override;
+ 
+-    /**
+-     * Returns true if the given Format objects are semantically equal.
+-     * Objects of different subclasses are considered unequal.
+-     * @param other  the object to be compared with.
+-     * @return       true if the given Format objects are semantically equal.
+-     * @stable ICU 2.0
+-     */
+-    virtual bool operator==(const Format& other) const override;
+-
+     /**
+      * Sets the locale to be used for creating argument Format objects.
+      * @param theLocale    the new locale value to be set.
+@@ -1082,13 +1073,20 @@ private:
+      */
+     void resetPattern();
+ 
++    /**
++     * Returns true if the given Format objects are semantically equal.
++     * @param other  the object to be compared with.  Guaranteed to be a
++     *               MessageFormat.
++     * @return       true if the given Format objects are semantically equal.
++     */
++    virtual bool isEqual(const Format &other) const override;
++
+     /**
+      * A DummyFormatter that we use solely to store a NULL value. UHash does
+      * not support storing NULL values.
+      */
+     class U_I18N_API DummyFormat : public Format {
+     public:
+-        virtual bool operator==(const Format&) const override;
+         virtual DummyFormat* clone() const override;
+         virtual UnicodeString& format(const Formattable& obj,
+                               UnicodeString& appendTo,
+@@ -1104,6 +1102,9 @@ private:
+         virtual void parseObject(const UnicodeString&,
+                                  Formattable&,
+                                  ParsePosition&) const override;
++
++    protected:
++        virtual bool isEqual(const Format &) const override;
+     };
+ 
+     friend class MessageFormatAdapter; // getFormatTypeList() access
+diff --git a/source/i18n/unicode/numfmt.h b/source/i18n/unicode/numfmt.h
+index 135fe5b6..c6ce5566 100644
+--- a/source/i18n/unicode/numfmt.h
++++ b/source/i18n/unicode/numfmt.h
+@@ -268,14 +268,6 @@ public:
+      */
+     virtual NumberFormat* clone() const override = 0;
+ 
+-    /**
+-     * Return true if the given Format objects are semantically equal.
+-     * Objects of different subclasses are considered unequal.
+-     * @return    true if the given Format objects are semantically equal.
+-     * @stable ICU 2.0
+-     */
+-    virtual bool operator==(const Format& other) const override;
+-
+ 
+     using Format::format;
+ 
+@@ -1109,6 +1101,13 @@ protected:
+      */
+     virtual void getEffectiveCurrency(char16_t* result, UErrorCode& ec) const;
+ 
++    /**
++     * Return true if the given Format objects are semantically equal.
++     * `other` is guaranteed to be a NumberFormat.
++     * @return    true if the given Format objects are semantically equal.
++     */
++    virtual bool isEqual(const Format &other) const override;
++
+ #ifndef U_HIDE_INTERNAL_API
+     /**
+      * Creates the specified number format style of the desired locale.
+diff --git a/source/i18n/unicode/plurfmt.h b/source/i18n/unicode/plurfmt.h
+index db160546..dc85192e 100644
+--- a/source/i18n/unicode/plurfmt.h
++++ b/source/i18n/unicode/plurfmt.h
+@@ -427,24 +427,6 @@ public:
+        */
+     PluralFormat& operator=(const PluralFormat& other);
+ 
+-    /**
+-      * Return true if another object is semantically equal to this one.
+-      *
+-      * @param other    the PluralFormat object to be compared with.
+-      * @return         true if other is semantically equal to this.
+-      * @stable ICU 4.0
+-      */
+-    virtual bool operator==(const Format& other) const override;
+-
+-    /**
+-     * Return true if another object is semantically unequal to this one.
+-     *
+-     * @param other    the PluralFormat object to be compared with.
+-     * @return         true if other is semantically unequal to this.
+-     * @stable ICU 4.0
+-     */
+-    virtual bool operator!=(const Format& other) const;
+-
+     /**
+      * Clones this Format object polymorphically.  The caller owns the
+      * result and should delete it when done.
+@@ -520,12 +502,21 @@ public:
+      *
+      * @stable ICU 4.0
+      */
+-     virtual UClassID getDynamicClassID() const override;
++    virtual UClassID getDynamicClassID() const override;
++
++protected:
++    /**
++     * Return true if another object is semantically equal to this one.
++     *
++     * @param other    the PluralFormat object to be compared with.
++     * @return         true if other is semantically equal to this.
++     */
++    virtual bool isEqual(const Format &other) const override;
+ 
+ private:
+-     /**
+-      * @internal (private)
+-      */
++    /**
++     * @internal (private)
++     */
+     class U_I18N_API PluralSelector : public UMemory {
+       public:
+         virtual ~PluralSelector();
+diff --git a/source/i18n/unicode/rbnf.h b/source/i18n/unicode/rbnf.h
+index 0a5a378e..4ec5d0b0 100644
+--- a/source/i18n/unicode/rbnf.h
++++ b/source/i18n/unicode/rbnf.h
+@@ -700,15 +700,6 @@ public:
+    */
+   virtual RuleBasedNumberFormat* clone() const override;
+ 
+-  /**
+-   * Return true if the given Format objects are semantically equal.
+-   * Objects of different subclasses are considered unequal.
+-   * @param other    the object to be compared with.
+-   * @return        true if the given Format objects are semantically equal.
+-   * @stable ICU 2.6
+-   */
+-  virtual bool operator==(const Format& other) const override;
+-
+ //-----------------------------------------------------------------------
+ // public API functions
+ //-----------------------------------------------------------------------
+@@ -889,6 +880,16 @@ protected:
+                                   UnicodeString& appendTo,
+                                   FieldPosition& pos,
+                                   UErrorCode& status) const override;
++
++    /**
++     * Return true if the given Format objects are semantically equal.
++     * Objects of different subclasses are considered unequal.
++     * @param other    the object to be compared with.  Guaranteed to be a
++     *                 RuleBasedNumberFormat.
++     * @return        true if the given Format objects are semantically equal.
++     */
++    virtual bool isEqual(const Format &other) const override;
++
+ public:
+ 
+   using NumberFormat::parse;
+@@ -1073,7 +1074,7 @@ private:
+     UnicodeString& format(int64_t number, NFRuleSet *ruleSet, UnicodeString& toAppendTo, UErrorCode& status) const;
+     void format(double number, NFRuleSet& rs, UnicodeString& toAppendTo, UErrorCode& status) const;
+ 
+-private:
++  private:
+     NFRuleSet **fRuleSets;
+     UnicodeString* ruleSetDescriptions;
+     int32_t numRuleSets;
+diff --git a/source/i18n/unicode/rbtz.h b/source/i18n/unicode/rbtz.h
+index 4fbf330c..76a0c8f7 100644
+--- a/source/i18n/unicode/rbtz.h
++++ b/source/i18n/unicode/rbtz.h
+@@ -68,26 +68,6 @@ public:
+      */
+     RuleBasedTimeZone& operator=(const RuleBasedTimeZone& right);
+ 
+-    /**
+-     * Return true if the given <code>TimeZone</code> objects are
+-     * semantically equal. Objects of different subclasses are considered unequal.
+-     * @param that  The object to be compared with.
+-     * @return  true if the given <code>TimeZone</code> objects are
+-      *semantically equal.
+-     * @stable ICU 3.8
+-     */
+-    virtual bool operator==(const TimeZone& that) const override;
+-
+-    /**
+-     * Return true if the given <code>TimeZone</code> objects are
+-     * semantically unequal. Objects of different subclasses are considered unequal.
+-     * @param that  The object to be compared with.
+-     * @return  true if the given <code>TimeZone</code> objects are
+-     * semantically unequal.
+-     * @stable ICU 3.8
+-     */
+-    virtual bool operator!=(const TimeZone& that) const;
+-
+     /**
+      * Adds the `TimeZoneRule` which represents time transitions.
+      * The `TimeZoneRule` must have start times, that is, the result
+@@ -312,6 +292,17 @@ public:
+         UTimeZoneLocalOption duplicatedTimeOpt,
+         int32_t& rawOffset, int32_t& dstOffset, UErrorCode& status) const override;
+ 
++protected:
++    /**
++     * Return true if the given <code>TimeZone</code> objects are
++     * semantically equal.
++     * @param that  The object to be compared with. Guaranteed to be a
++     *              RuleBasedTimeZone.
++     * @return  true if the given <code>TimeZone</code> objects are
++     *          semantically equal.
++     */
++    virtual bool isEqual(const TimeZone &that) const override;
++
+ private:
+     void deleteRules(void);
+     void deleteTransitions(void);
+diff --git a/source/i18n/unicode/selfmt.h b/source/i18n/unicode/selfmt.h
+index bdce00e5..ac0aa5a9 100644
+--- a/source/i18n/unicode/selfmt.h
++++ b/source/i18n/unicode/selfmt.h
+@@ -252,24 +252,6 @@ public:
+      */
+     SelectFormat& operator=(const SelectFormat& other);
+ 
+-    /**
+-     * Return true if another object is semantically equal to this one.
+-     *
+-     * @param other    the SelectFormat object to be compared with.
+-     * @return         true if other is semantically equal to this.
+-     * @stable ICU 4.4
+-     */
+-    virtual bool operator==(const Format& other) const override;
+-
+-    /**
+-     * Return true if another object is semantically unequal to this one.
+-     *
+-     * @param other    the SelectFormat object to be compared with.
+-     * @return         true if other is semantically unequal to this.
+-     * @stable ICU 4.4
+-     */
+-    virtual bool operator!=(const Format& other) const;
+-
+     /**
+      * Clones this Format object polymorphically.  The caller owns the
+      * result and should delete it when done.
+@@ -345,6 +327,15 @@ public:
+      */
+     virtual UClassID getDynamicClassID() const override;
+ 
++protected:
++    /**
++     * Return true if another object is semantically equal to this one.
++     *
++     * @param other    the SelectFormat object to be compared with.
++     * @return         true if other is semantically equal to this.
++     */
++    virtual bool isEqual(const Format &other) const override;
++
+ private:
+     friend class MessageFormat;
+ 
+diff --git a/source/i18n/unicode/simpletz.h b/source/i18n/unicode/simpletz.h
+index f73d823e..4cf0292b 100644
+--- a/source/i18n/unicode/simpletz.h
++++ b/source/i18n/unicode/simpletz.h
+@@ -102,17 +102,6 @@ public:
+      */
+     virtual ~SimpleTimeZone();
+ 
+-    /**
+-     * Returns true if the two TimeZone objects are equal; that is, they have
+-     * the same ID, raw GMT offset, and DST rules.
+-     *
+-     * @param that  The SimpleTimeZone object to be compared with.
+-     * @return      true if the given time zone is equal to this time zone; false
+-     *              otherwise.
+-     * @stable ICU 2.0
+-     */
+-    virtual bool operator==(const TimeZone& that) const override;
+-
+     /**
+      * Constructs a SimpleTimeZone with the given raw GMT offset and time zone ID,
+      * and which doesn't observe daylight savings time.  Normally you should use
+@@ -788,6 +777,17 @@ public:
+      */
+     static UClassID U_EXPORT2 getStaticClassID(void);
+ 
++protected:
++    /**
++     * Returns true if the two TimeZone objects are equal; that is, they have
++     * the same ID, raw GMT offset, and DST rules.
++     *
++     * @param that  The SimpleTimeZone object to be compared with.
++     * @return      true if the given time zone is equal to this time zone; false
++     *              otherwise.
++     */
++    virtual bool isEqual(const TimeZone &that) const override;
++
+ private:
+     /**
+      * Constants specifying values of startMode and endMode.
+diff --git a/source/i18n/unicode/smpdtfmt.h b/source/i18n/unicode/smpdtfmt.h
+index 733a1cff..217cc144 100644
+--- a/source/i18n/unicode/smpdtfmt.h
++++ b/source/i18n/unicode/smpdtfmt.h
+@@ -869,15 +869,6 @@ public:
+      */
+     virtual SimpleDateFormat* clone() const override;
+ 
+-    /**
+-     * Return true if the given Format objects are semantically equal. Objects
+-     * of different subclasses are considered unequal.
+-     * @param other    the object to be compared with.
+-     * @return         true if the given Format objects are semantically equal.
+-     * @stable ICU 2.0
+-     */
+-    virtual bool operator==(const Format& other) const override;
+-
+ 
+     using DateFormat::format;
+ 
+@@ -1218,6 +1209,16 @@ public:
+     const Locale& getSmpFmtLocale(void) const;
+ #endif  /* U_HIDE_INTERNAL_API */
+ 
++protected:
++    /**
++     * Return true if the given Format objects are semantically equal. Objects
++     * of different subclasses are considered unequal.
++     * @param other    the object to be compared with. This is guaranteed to be a
++     *                 SimpleDateFormat.
++     * @return         true if the given Format objects are semantically equal.
++     */
++    virtual bool isEqual(const Format &other) const override;
++
+ private:
+     friend class DateFormat;
+     friend class DateIntervalFormat;
+diff --git a/source/i18n/unicode/tblcoll.h b/source/i18n/unicode/tblcoll.h
+index 2de1af85..d7f80b55 100644
+--- a/source/i18n/unicode/tblcoll.h
++++ b/source/i18n/unicode/tblcoll.h
+@@ -217,14 +217,6 @@ public:
+      */
+     RuleBasedCollator& operator=(const RuleBasedCollator& other);
+ 
+-    /**
+-     * Returns true if argument is the same as this object.
+-     * @param other Collator object to be compared.
+-     * @return true if arguments is the same as this object.
+-     * @stable ICU 2.0
+-     */
+-    virtual bool operator==(const Collator& other) const override;
+-
+     /**
+      * Makes a copy of this object.
+      * @return a copy of this object, owned by the caller
+@@ -808,6 +800,14 @@ protected:
+     */
+     virtual void setLocales(const Locale& requestedLocale, const Locale& validLocale, const Locale& actualLocale) override;
+ 
++    /**
++     * Returns true if argument is the same as this object.
++     * @param other Collator object to be compared.  Guaranteed to be a
++     *        RuleBasedCollator.
++     * @return true if arguments is the same as this object.
++     */
++    virtual bool isEqual(const Collator &other) const override;
++
+ private:
+     friend class CollationElementIterator;
+     friend class Collator;
+diff --git a/source/i18n/unicode/timezone.h b/source/i18n/unicode/timezone.h
+index 382ad97d..77a7c944 100644
+--- a/source/i18n/unicode/timezone.h
++++ b/source/i18n/unicode/timezone.h
+@@ -499,26 +499,14 @@ public:
+         UnicodeString& id, UErrorCode& status);
+ 
+     /**
+-     * Returns true if the two TimeZones are equal.  (The TimeZone version only compares
+-     * IDs, but subclasses are expected to also compare the fields they add.)
++     * Returns true if the two TimeZones are equal.
+      *
+      * @param that  The TimeZone object to be compared with.
+      * @return      true if the given TimeZone is equal to this TimeZone; false
+      *              otherwise.
+      * @stable ICU 2.0
+      */
+-    virtual bool operator==(const TimeZone& that) const;
+-
+-    /**
+-     * Returns true if the two TimeZones are NOT equal; that is, if operator==() returns
+-     * false.
+-     *
+-     * @param that  The TimeZone object to be compared with.
+-     * @return      true if the given TimeZone is not equal to this TimeZone; false
+-     *              otherwise.
+-     * @stable ICU 2.0
+-     */
+-    bool operator!=(const TimeZone& that) const {return !operator==(that);}
++    bool operator==(const TimeZone& that) const;
+ 
+     /**
+      * Returns the TimeZone's adjusted GMT offset (i.e., the number of milliseconds to add
+@@ -907,6 +895,8 @@ protected:
+      */
+     TimeZone& operator=(const TimeZone& right);
+ 
++    virtual bool isEqual(const TimeZone &that) const;
++
+ #ifndef U_HIDE_INTERNAL_API
+     /**
+      * Utility function. For internally loading rule data.
+diff --git a/source/i18n/unicode/tmutamt.h b/source/i18n/unicode/tmutamt.h
+index 88e892fb..2b86a5b4 100644
+--- a/source/i18n/unicode/tmutamt.h
++++ b/source/i18n/unicode/tmutamt.h
+@@ -97,24 +97,6 @@ public:
+     virtual ~TimeUnitAmount();
+ 
+     
+-    /** 
+-     * Equality operator.  
+-     * @param other  the object to compare to.
+-     * @return       true if this object is equal to the given object.
+-     * @stable ICU 4.2
+-     */
+-    virtual bool operator==(const UObject& other) const;
+-
+-
+-    /** 
+-     * Not-equality operator.  
+-     * @param other  the object to compare to.
+-     * @return       true if this object is not equal to the given object.
+-     * @stable ICU 4.2
+-     */
+-    bool operator!=(const UObject& other) const;
+-
+-
+     /**
+      * Return the class ID for this class. This is useful only for comparing to
+      * a return value from getDynamicClassID(). For example:
+@@ -160,11 +142,6 @@ public:
+ 
+ 
+ 
+-inline bool
+-TimeUnitAmount::operator!=(const UObject& other) const {
+-    return !operator==(other);
+-}
+-
+ U_NAMESPACE_END
+ 
+ #endif /* #if !UCONFIG_NO_FORMATTING */
+diff --git a/source/i18n/unicode/tzfmt.h b/source/i18n/unicode/tzfmt.h
+index 6db84770..b688b4a9 100644
+--- a/source/i18n/unicode/tzfmt.h
++++ b/source/i18n/unicode/tzfmt.h
+@@ -291,16 +291,6 @@ public:
+      */
+     TimeZoneFormat& operator=(const TimeZoneFormat& other);
+ 
+-    /**
+-     * Return true if the given Format objects are semantically equal.
+-     * Objects of different subclasses are considered unequal.
+-     * @param other The object to be compared with.
+-     * @return Return true if the given Format objects are semantically equal.
+-     *                Objects of different subclasses are considered unequal.
+-     * @stable ICU 50
+-     */
+-    virtual bool operator==(const Format& other) const override;
+-
+     /**
+      * Clone this object polymorphically. The caller is responsible
+      * for deleting the result when done.
+@@ -673,6 +663,14 @@ protected:
+      */
+     TimeZoneFormat(const Locale& locale, UErrorCode& status);
+ 
++  /**
++   * Return true if the given Format objects are semantically equal.
++   * @param other The object to be compared with.  Guaranteed to be a
++   *              TimeZoneFormat.
++   * @return Return true if the given Format objects are semantically equal.
++   */
++  virtual bool isEqual(const Format &other) const override;
++
+ private:
+     /* Locale of this object */
+     Locale fLocale;
+diff --git a/source/i18n/unicode/tzrule.h b/source/i18n/unicode/tzrule.h
+index ab0b97b6..379ad11d 100644
+--- a/source/i18n/unicode/tzrule.h
++++ b/source/i18n/unicode/tzrule.h
+@@ -56,16 +56,7 @@ public:
+      * @return  true if the given <code>TimeZoneRule</code> objects are semantically equal.
+      * @stable ICU 3.8
+      */
+-    virtual bool operator==(const TimeZoneRule& that) const;
+-
+-    /**
+-     * Return true if the given <code>TimeZoneRule</code> objects are semantically unequal. Objects
+-     * of different subclasses are considered unequal.
+-     * @param that  The object to be compared with.
+-     * @return  true if the given <code>TimeZoneRule</code> objects are semantically unequal.
+-     * @stable ICU 3.8
+-     */
+-    virtual bool operator!=(const TimeZoneRule& that) const;
++    bool operator==(const TimeZoneRule& that) const;
+ 
+     /**
+      * Fills in "name" with the name of this time zone.
+@@ -187,6 +178,8 @@ protected:
+      */
+     TimeZoneRule& operator=(const TimeZoneRule& right);
+ 
++    virtual bool isEqual(const TimeZoneRule &that) const;
++
+ private:
+     UnicodeString fName; // time name
+     int32_t fRawOffset;  // UTC offset of the standard time in milliseconds
+@@ -240,24 +233,6 @@ public:
+      */
+     InitialTimeZoneRule& operator=(const InitialTimeZoneRule& right);
+ 
+-    /**
+-     * Return true if the given <code>TimeZoneRule</code> objects are semantically equal. Objects
+-     * of different subclasses are considered unequal.
+-     * @param that  The object to be compared with.
+-     * @return  true if the given <code>TimeZoneRule</code> objects are semantically equal.
+-     * @stable ICU 3.8
+-     */
+-    virtual bool operator==(const TimeZoneRule& that) const override;
+-
+-    /**
+-     * Return true if the given <code>TimeZoneRule</code> objects are semantically unequal. Objects
+-     * of different subclasses are considered unequal.
+-     * @param that  The object to be compared with.
+-     * @return  true if the given <code>TimeZoneRule</code> objects are semantically unequal.
+-     * @stable ICU 3.8
+-     */
+-    virtual bool operator!=(const TimeZoneRule& that) const override;
+-
+     /**
+      * Gets the time when this rule takes effect in the given year.
+      * @param year              The Gregorian year, with 0 == 1 BCE, -1 == 2 BCE, etc.
+@@ -451,24 +426,6 @@ public:
+      */
+     AnnualTimeZoneRule& operator=(const AnnualTimeZoneRule& right);
+ 
+-    /**
+-     * Return true if the given <code>TimeZoneRule</code> objects are semantically equal. Objects
+-     * of different subclasses are considered unequal.
+-     * @param that  The object to be compared with.
+-     * @return  true if the given <code>TimeZoneRule</code> objects are semantically equal.
+-     * @stable ICU 3.8
+-     */
+-    virtual bool operator==(const TimeZoneRule& that) const override;
+-
+-    /**
+-     * Return true if the given <code>TimeZoneRule</code> objects are semantically unequal. Objects
+-     * of different subclasses are considered unequal.
+-     * @param that  The object to be compared with.
+-     * @return  true if the given <code>TimeZoneRule</code> objects are semantically unequal.
+-     * @stable ICU 3.8
+-     */
+-    virtual bool operator!=(const TimeZoneRule& that) const override;
+-
+     /**
+      * Gets the start date/time rule used by this rule.
+      * @return  The <code>AnnualDateTimeRule</code> which represents the start date/time
+@@ -578,6 +535,16 @@ public:
+         UBool inclusive, UDate& result) const override;
+ 
+ 
++protected:
++    /**
++     * Return true if the given <code>TimeZoneRule</code> objects are semantically equal.
++     * @param that  The object to be compared with. Guaranteed to be an
++     *              AnnualTimeZoneRule.
++     * @return  true if the given <code>TimeZoneRule</code> objects are semantically equal.
++     * @stable ICU 3.8
++     */
++    bool isEqual(const TimeZoneRule &that) const override;
++
+ private:
+     DateTimeRule* fDateTimeRule;
+     int32_t fStartYear;
+@@ -667,24 +634,6 @@ public:
+      */
+     TimeArrayTimeZoneRule& operator=(const TimeArrayTimeZoneRule& right);
+ 
+-    /**
+-     * Return true if the given <code>TimeZoneRule</code> objects are semantically equal. Objects
+-     * of different subclasses are considered unequal.
+-     * @param that  The object to be compared with.
+-     * @return  true if the given <code>TimeZoneRule</code> objects are semantically equal.
+-     * @stable ICU 3.8
+-     */
+-    virtual bool operator==(const TimeZoneRule& that) const override;
+-
+-    /**
+-     * Return true if the given <code>TimeZoneRule</code> objects are semantically unequal. Objects
+-     * of different subclasses are considered unequal.
+-     * @param that  The object to be compared with.
+-     * @return  true if the given <code>TimeZoneRule</code> objects are semantically unequal.
+-     * @stable ICU 3.8
+-     */
+-    virtual bool operator!=(const TimeZoneRule& that) const override;
+-
+     /**
+      * Gets the time type of the start times used by this rule.  The return value
+      * is either <code>DateTimeRule::WALL_TIME</code> or <code>STANDARD_TIME</code>
+@@ -783,6 +732,14 @@ public:
+     virtual UBool getPreviousStart(UDate base, int32_t prevRawOffset, int32_t prevDSTSavings,
+         UBool inclusive, UDate& result) const override;
+ 
++protected:
++    /**
++     * Return true if the given <code>TimeZoneRule</code> objects are semantically equal.
++     * @param that  The object to be compared with. Guaranteed to be a
++     *              TimeArrayTimeZoneRule.
++     * @return  true if the given <code>TimeZoneRule</code> objects are semantically equal.
++     */
++    virtual bool isEqual(const TimeZoneRule &that) const override;
+ 
+ private:
+     enum { TIMEARRAY_STACK_BUFFER_SIZE = 32 };
+diff --git a/source/i18n/unicode/vtzone.h b/source/i18n/unicode/vtzone.h
+index ecf335bb..9dc4650b 100644
+--- a/source/i18n/unicode/vtzone.h
++++ b/source/i18n/unicode/vtzone.h
+@@ -64,26 +64,6 @@ public:
+      */
+     VTimeZone& operator=(const VTimeZone& right);
+ 
+-    /**
+-     * Return true if the given <code>TimeZone</code> objects are
+-     * semantically equal. Objects of different subclasses are considered unequal.
+-     * @param that  The object to be compared with.
+-     * @return  true if the given <code>TimeZone</code> objects are
+-      *semantically equal.
+-     * @stable ICU 3.8
+-     */
+-    virtual bool operator==(const TimeZone& that) const override;
+-
+-    /**
+-     * Return true if the given <code>TimeZone</code> objects are
+-     * semantically unequal. Objects of different subclasses are considered unequal.
+-     * @param that  The object to be compared with.
+-     * @return  true if the given <code>TimeZone</code> objects are
+-     * semantically unequal.
+-     * @stable ICU 3.8
+-     */
+-    virtual bool operator!=(const TimeZone& that) const;
+-
+     /**
+      * Create a <code>VTimeZone</code> instance by the time zone ID.
+      * @param ID The time zone ID, such as America/New_York
+@@ -375,6 +355,17 @@ public:
+     virtual void getTimeZoneRules(const InitialTimeZoneRule*& initial,
+         const TimeZoneRule* trsrules[], int32_t& trscount, UErrorCode& status) const override;
+ 
++protected:
++    /**
++     * Return true if the given <code>TimeZone</code> objects are
++     * semantically equal.
++     * @param that  The object to be compared with. Guaranteed to be a
++     *              VTimeZone.
++     * @return  true if the given <code>TimeZone</code> objects are
++     *          semantically equal.
++     */
++    virtual bool isEqual(const TimeZone &that) const override;
++
+ private:
+     enum { DEFAULT_VTIMEZONE_LINES = 100 };
+ 
+diff --git a/source/i18n/vtzone.cpp b/source/i18n/vtzone.cpp
+index 06f0b84c..e4f6d3c1 100644
+--- a/source/i18n/vtzone.cpp
++++ b/source/i18n/vtzone.cpp
+@@ -1039,11 +1039,11 @@ VTimeZone::operator=(const VTimeZone& right) {
+ }
+ 
+ bool
+-VTimeZone::operator==(const TimeZone& that) const {
++VTimeZone::isEqual(const TimeZone& that) const {
+     if (this == &that) {
+         return true;
+     }
+-    if (typeid(*this) != typeid(that) || !BasicTimeZone::operator==(that)) {
++    if (!BasicTimeZone::isEqual(that)) {
+         return false;
+     }
+     VTimeZone *vtz = (VTimeZone*)&that;
+@@ -1057,11 +1057,6 @@ VTimeZone::operator==(const TimeZone& that) const {
+     return false;
+ }
+ 
+-bool
+-VTimeZone::operator!=(const TimeZone& that) const {
+-    return !operator==(that);
+-}
+-
+ VTimeZone*
+ VTimeZone::createVTimeZoneByID(const UnicodeString& ID) {
+     VTimeZone *vtz = new VTimeZone();

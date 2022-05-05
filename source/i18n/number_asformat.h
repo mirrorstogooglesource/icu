@@ -37,11 +37,6 @@ class U_I18N_API LocalizedNumberFormatterAsFormat : public Format {
     ~LocalizedNumberFormatterAsFormat() U_OVERRIDE;
 
     /**
-     * Equals operator.
-     */
-    bool operator==(const Format& other) const U_OVERRIDE;
-
-    /**
      * Creates a copy of this object.
      */
     LocalizedNumberFormatterAsFormat* clone() const U_OVERRIDE;
@@ -88,6 +83,12 @@ class U_I18N_API LocalizedNumberFormatterAsFormat : public Format {
 
     UClassID getDynamicClassID() const U_OVERRIDE;
     static UClassID U_EXPORT2 getStaticClassID();
+
+  protected:
+    /**
+     * Equals operator.
+     */
+    bool isEqual(const Format &other) const U_OVERRIDE;
 
   private:
     LocalizedNumberFormatter fFormatter;

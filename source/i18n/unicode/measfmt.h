@@ -145,12 +145,6 @@ class U_I18N_API MeasureFormat : public Format {
     virtual ~MeasureFormat();
 
     /**
-     * Return true if given Format objects are semantically equal.
-     * @stable ICU 53
-     */
-    virtual bool operator==(const Format &other) const override;
-
-    /**
      * Clones this object polymorphically.
      * @stable ICU 53
      */
@@ -294,6 +288,11 @@ class U_I18N_API MeasureFormat : public Format {
      * @stable ICU 3.0
      */
     MeasureFormat();
+
+    /**
+     * Return true if given Format objects are semantically equal.
+     */
+    virtual bool isEqual(const Format &other) const override;
 
 #ifndef U_HIDE_INTERNAL_API 
 

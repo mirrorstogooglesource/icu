@@ -2929,16 +2929,16 @@ const UFieldResolutionTable Calendar::kDatePrecedence[] =
         { UCAL_WEEK_OF_MONTH, UCAL_DOW_LOCAL, kResolveSTOP },
         { UCAL_DAY_OF_WEEK_IN_MONTH, UCAL_DOW_LOCAL, kResolveSTOP },
         { UCAL_DAY_OF_YEAR, kResolveSTOP },
-        { kResolveRemap | UCAL_DAY_OF_MONTH, UCAL_YEAR, kResolveSTOP },  // if YEAR is set over YEAR_WOY use DAY_OF_MONTH
-        { kResolveRemap | UCAL_WEEK_OF_YEAR, UCAL_YEAR_WOY, kResolveSTOP },  // if YEAR_WOY is set,  calc based on WEEK_OF_YEAR
+        { int32_t{kResolveRemap} | UCAL_DAY_OF_MONTH, UCAL_YEAR, kResolveSTOP },  // if YEAR is set over YEAR_WOY use DAY_OF_MONTH
+        { int32_t{kResolveRemap} | UCAL_WEEK_OF_YEAR, UCAL_YEAR_WOY, kResolveSTOP },  // if YEAR_WOY is set,  calc based on WEEK_OF_YEAR
         { kResolveSTOP }
     },
     {
         { UCAL_WEEK_OF_YEAR, kResolveSTOP },
         { UCAL_WEEK_OF_MONTH, kResolveSTOP },
         { UCAL_DAY_OF_WEEK_IN_MONTH, kResolveSTOP },
-        { kResolveRemap | UCAL_DAY_OF_WEEK_IN_MONTH, UCAL_DAY_OF_WEEK, kResolveSTOP },
-        { kResolveRemap | UCAL_DAY_OF_WEEK_IN_MONTH, UCAL_DOW_LOCAL, kResolveSTOP },
+        { int32_t{kResolveRemap} | UCAL_DAY_OF_WEEK_IN_MONTH, UCAL_DAY_OF_WEEK, kResolveSTOP },
+        { int32_t{kResolveRemap} | UCAL_DAY_OF_WEEK_IN_MONTH, UCAL_DOW_LOCAL, kResolveSTOP },
         { kResolveSTOP }
     },
     {{kResolveSTOP}}

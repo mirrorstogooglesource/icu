@@ -231,12 +231,6 @@ public:
      */
     virtual DateFormat* clone() const override = 0;
 
-    /**
-     * Equality operator.  Returns true if the two formats have the same behavior.
-     * @stable ICU 2.0
-     */
-    virtual bool operator==(const Format&) const override;
-
 
     using Format::format;
 
@@ -862,6 +856,11 @@ protected:
      * @stable ICU 2.0
      */
     DateFormat& operator=(const DateFormat&);
+
+    /**
+     * Equality operator.  Returns true if the two formats have the same behavior.
+     */
+    virtual bool isEqual(const Format &) const override;
 
     /**
      * The calendar that DateFormat uses to produce the time field values needed

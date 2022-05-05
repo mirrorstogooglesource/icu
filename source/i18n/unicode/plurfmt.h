@@ -428,24 +428,6 @@ public:
     PluralFormat& operator=(const PluralFormat& other);
 
     /**
-      * Return true if another object is semantically equal to this one.
-      *
-      * @param other    the PluralFormat object to be compared with.
-      * @return         true if other is semantically equal to this.
-      * @stable ICU 4.0
-      */
-    virtual bool operator==(const Format& other) const override;
-
-    /**
-     * Return true if another object is semantically unequal to this one.
-     *
-     * @param other    the PluralFormat object to be compared with.
-     * @return         true if other is semantically unequal to this.
-     * @stable ICU 4.0
-     */
-    virtual bool operator!=(const Format& other) const;
-
-    /**
      * Clones this Format object polymorphically.  The caller owns the
      * result and should delete it when done.
      * @stable ICU 4.0
@@ -520,12 +502,21 @@ public:
      *
      * @stable ICU 4.0
      */
-     virtual UClassID getDynamicClassID() const override;
+    virtual UClassID getDynamicClassID() const override;
+
+protected:
+    /**
+     * Return true if another object is semantically equal to this one.
+     *
+     * @param other    the PluralFormat object to be compared with.
+     * @return         true if other is semantically equal to this.
+     */
+    virtual bool isEqual(const Format &other) const override;
 
 private:
-     /**
-      * @internal (private)
-      */
+    /**
+     * @internal (private)
+     */
     class U_I18N_API PluralSelector : public UMemory {
       public:
         virtual ~PluralSelector();

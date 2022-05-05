@@ -497,17 +497,14 @@ DecimalFormat* DecimalFormat::clone() const {
     return nullptr;
 }
 
-bool DecimalFormat::operator==(const Format& other) const {
-    auto* otherDF = dynamic_cast<const DecimalFormat*>(&other);
-    if (otherDF == nullptr) {
-        return false;
-    }
+bool DecimalFormat::isEqual(const Format& other) const {
+    const auto& otherDF = static_cast<const DecimalFormat&>(other);
     // If either object is in an invalid state, prevent dereferencing nullptr below.
     // Additionally, invalid objects should not be considered equal to anything.
-    if (fields == nullptr || otherDF->fields == nullptr) {
+    if (fields == nullptr || otherDF.fields == nullptr) {
         return false;
     }
-    return fields->properties == otherDF->fields->properties && *getDecimalFormatSymbols() == *otherDF->getDecimalFormatSymbols();
+    return fields->properties == otherDF.fields->properties && *getDecimalFormatSymbols() == *otherDF.getDecimalFormatSymbols();
 }
 
 UnicodeString& DecimalFormat::format(double number, UnicodeString& appendTo, FieldPosition& pos) const {

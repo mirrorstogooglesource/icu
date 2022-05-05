@@ -32,15 +32,12 @@ LocalizedNumberFormatterAsFormat::LocalizedNumberFormatterAsFormat(
 
 LocalizedNumberFormatterAsFormat::~LocalizedNumberFormatterAsFormat() = default;
 
-bool LocalizedNumberFormatterAsFormat::operator==(const Format& other) const {
-    auto* _other = dynamic_cast<const LocalizedNumberFormatterAsFormat*>(&other);
-    if (_other == nullptr) {
-        return false;
-    }
+bool LocalizedNumberFormatterAsFormat::isEqual(const Format& other) const {
+    const auto& _other = static_cast<const LocalizedNumberFormatterAsFormat&>(other);
     // TODO: Change this to use LocalizedNumberFormatter::operator== if it is ever proposed.
     // This implementation is fine, but not particularly efficient.
     UErrorCode localStatus = U_ZERO_ERROR;
-    return fFormatter.toSkeleton(localStatus) == _other->fFormatter.toSkeleton(localStatus);
+    return fFormatter.toSkeleton(localStatus) == _other.fFormatter.toSkeleton(localStatus);
 }
 
 LocalizedNumberFormatterAsFormat* LocalizedNumberFormatterAsFormat::clone() const {

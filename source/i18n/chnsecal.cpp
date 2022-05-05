@@ -284,15 +284,15 @@ const UFieldResolutionTable ChineseCalendar::CHINESE_DATE_PRECEDENCE[] =
         { UCAL_WEEK_OF_MONTH, UCAL_DOW_LOCAL, kResolveSTOP },
         { UCAL_DAY_OF_WEEK_IN_MONTH, UCAL_DOW_LOCAL, kResolveSTOP },
         { UCAL_DAY_OF_YEAR, kResolveSTOP },
-        { kResolveRemap | UCAL_DAY_OF_MONTH, UCAL_IS_LEAP_MONTH, kResolveSTOP },
+        { int32_t{kResolveRemap} | UCAL_DAY_OF_MONTH, UCAL_IS_LEAP_MONTH, kResolveSTOP },
         { kResolveSTOP }
     },
     {
         { UCAL_WEEK_OF_YEAR, kResolveSTOP },
         { UCAL_WEEK_OF_MONTH, kResolveSTOP },
         { UCAL_DAY_OF_WEEK_IN_MONTH, kResolveSTOP },
-        { kResolveRemap | UCAL_DAY_OF_WEEK_IN_MONTH, UCAL_DAY_OF_WEEK, kResolveSTOP },
-        { kResolveRemap | UCAL_DAY_OF_WEEK_IN_MONTH, UCAL_DOW_LOCAL, kResolveSTOP },
+        { int32_t{kResolveRemap} | UCAL_DAY_OF_WEEK_IN_MONTH, UCAL_DAY_OF_WEEK, kResolveSTOP },
+        { int32_t{kResolveRemap} | UCAL_DAY_OF_WEEK_IN_MONTH, UCAL_DOW_LOCAL, kResolveSTOP },
         { kResolveSTOP }
     },
     {{kResolveSTOP}}

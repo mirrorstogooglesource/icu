@@ -376,11 +376,12 @@ TimeZone::operator=(const TimeZone &right)
 
 // -------------------------------------
 
-bool
-TimeZone::operator==(const TimeZone& that) const
-{
-    return typeid(*this) == typeid(that) &&
-        fID == that.fID;
+bool TimeZone::operator==(const TimeZone &that) const {
+    return typeid(*this) == typeid(that) && isEqual(that);
+}
+
+bool TimeZone::isEqual(const TimeZone &that) const {
+    return fID == that.fID;
 }
 
 // -------------------------------------

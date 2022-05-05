@@ -73,15 +73,6 @@ public:
      */
     virtual RelativeDateFormat* clone() const override;
 
-    /**
-     * Return true if the given Format objects are semantically equal. Objects
-     * of different subclasses are considered unequal.
-     * @param other    the object to be compared with.
-     * @return         true if the given Format objects are semantically equal.
-     * @internal ICU 3.8
-     */
-    virtual bool operator==(const Format& other) const override;
-
 
     using DateFormat::format;
 
@@ -247,6 +238,16 @@ public:
      */
     virtual void setContext(UDisplayContext value, UErrorCode& status) override;
 
+protected:
+    /**
+     * Return true if the given Format objects are semantically equal. Objects
+     * of different subclasses are considered unequal.
+     * @param other    the object to be compared with.  This is guaranteed to be a
+     *                 RelativeDateFormat.
+     * @return         true if the given Format objects are semantically equal.
+     */
+    virtual bool isEqual(const Format &other) const override;
+
 private:
     SimpleDateFormat *fDateTimeFormatter;
     UnicodeString fDatePattern;
@@ -302,7 +303,7 @@ private:
      */
     Calendar* initializeCalendar(TimeZone* adoptZone, const Locale& locale, UErrorCode& status);
 
-public:
+  public:
     /**
      * Return the class ID for this class. This is useful only for comparing to
      * a return value from getDynamicClassID(). For example:

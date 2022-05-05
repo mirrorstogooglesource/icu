@@ -382,12 +382,9 @@ PluralFormat::operator=(const PluralFormat& other) {
 }
 
 bool
-PluralFormat::operator==(const Format& other) const {
+PluralFormat::isEqual(const Format& other) const {
     if (this == &other) {
         return true;
-    }
-    if (!Format::operator==(other)) {
-        return false;
     }
     const PluralFormat& o = (const PluralFormat&)other;
     return
@@ -398,11 +395,6 @@ PluralFormat::operator==(const Format& other) const {
         (pluralRulesWrapper.pluralRules == NULL) == (o.pluralRulesWrapper.pluralRules == NULL) &&
         (pluralRulesWrapper.pluralRules == NULL ||
             *pluralRulesWrapper.pluralRules == *o.pluralRulesWrapper.pluralRules);
-}
-
-bool
-PluralFormat::operator!=(const Format& other) const {
-    return  !operator==(other);
 }
 
 void

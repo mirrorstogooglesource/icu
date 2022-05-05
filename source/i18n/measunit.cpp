@@ -2196,15 +2196,14 @@ const char *MeasureUnit::getIdentifier() const {
     return fImpl ? fImpl->identifier.data() : gSubTypes[getOffset()];
 }
 
-bool MeasureUnit::operator==(const UObject& other) const {
+bool MeasureUnit::operator==(const MeasureUnit& other) const {
     if (this == &other) {  // Same object, equal
         return true;
     }
     if (typeid(*this) != typeid(other)) { // Different types, not equal
         return false;
     }
-    const MeasureUnit &rhs = static_cast<const MeasureUnit&>(other);
-    return uprv_strcmp(getIdentifier(), rhs.getIdentifier()) == 0;
+    return uprv_strcmp(getIdentifier(), other.getIdentifier()) == 0;
 }
 
 int32_t MeasureUnit::getAvailable(

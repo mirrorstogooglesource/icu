@@ -69,26 +69,6 @@ public:
     RuleBasedTimeZone& operator=(const RuleBasedTimeZone& right);
 
     /**
-     * Return true if the given <code>TimeZone</code> objects are
-     * semantically equal. Objects of different subclasses are considered unequal.
-     * @param that  The object to be compared with.
-     * @return  true if the given <code>TimeZone</code> objects are
-      *semantically equal.
-     * @stable ICU 3.8
-     */
-    virtual bool operator==(const TimeZone& that) const override;
-
-    /**
-     * Return true if the given <code>TimeZone</code> objects are
-     * semantically unequal. Objects of different subclasses are considered unequal.
-     * @param that  The object to be compared with.
-     * @return  true if the given <code>TimeZone</code> objects are
-     * semantically unequal.
-     * @stable ICU 3.8
-     */
-    virtual bool operator!=(const TimeZone& that) const;
-
-    /**
      * Adds the `TimeZoneRule` which represents time transitions.
      * The `TimeZoneRule` must have start times, that is, the result
      * of `isTransitionRule()` must be true. Otherwise, U_ILLEGAL_ARGUMENT_ERROR
@@ -311,6 +291,17 @@ public:
         UDate date, UTimeZoneLocalOption nonExistingTimeOpt,
         UTimeZoneLocalOption duplicatedTimeOpt,
         int32_t& rawOffset, int32_t& dstOffset, UErrorCode& status) const override;
+
+protected:
+    /**
+     * Return true if the given <code>TimeZone</code> objects are
+     * semantically equal.
+     * @param that  The object to be compared with. Guaranteed to be a
+     *              RuleBasedTimeZone.
+     * @return  true if the given <code>TimeZone</code> objects are
+     *          semantically equal.
+     */
+    virtual bool isEqual(const TimeZone &that) const override;
 
 private:
     void deleteRules(void);

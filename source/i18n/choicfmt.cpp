@@ -133,10 +133,10 @@ ChoiceFormat::ChoiceFormat(const UnicodeString& newPattern,
 // -------------------------------------
 
 bool
-ChoiceFormat::operator==(const Format& that) const
+ChoiceFormat::isEqual(const Format& that) const
 {
     if (this == &that) return true;
-    if (!NumberFormat::operator==(that)) return false;
+    if (!NumberFormat::isEqual(that)) return false;
     ChoiceFormat& thatAlias = (ChoiceFormat&)that;
     return msgPattern == thatAlias.msgPattern;
 }

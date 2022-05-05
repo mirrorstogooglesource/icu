@@ -937,38 +937,36 @@ RuleBasedNumberFormat::clone() const
 }
 
 bool
-RuleBasedNumberFormat::operator==(const Format& other) const
+RuleBasedNumberFormat::isEqual(const Format& other) const
 {
     if (this == &other) {
         return true;
     }
 
-    if (typeid(*this) == typeid(other)) {
-        const RuleBasedNumberFormat& rhs = (const RuleBasedNumberFormat&)other;
-        // test for capitalization info equality is adequately handled
-        // by the NumberFormat test for fCapitalizationContext equality;
-        // the info here is just derived from that.
-        if (locale == rhs.locale &&
-            lenient == rhs.lenient &&
-            (localizations == NULL 
-                ? rhs.localizations == NULL 
-                : (rhs.localizations == NULL 
-                    ? false
-                    : *localizations == rhs.localizations))) {
+    const RuleBasedNumberFormat& rhs = (const RuleBasedNumberFormat&)other;
+    // test for capitalization info equality is adequately handled
+    // by the NumberFormat test for fCapitalizationContext equality;
+    // the info here is just derived from that.
+    if (locale == rhs.locale &&
+        lenient == rhs.lenient &&
+        (localizations == NULL 
+            ? rhs.localizations == NULL 
+            : (rhs.localizations == NULL 
+                ? false
+                : *localizations == rhs.localizations))) {
 
-            NFRuleSet** p = fRuleSets;
-            NFRuleSet** q = rhs.fRuleSets;
-            if (p == NULL) {
-                return q == NULL;
-            } else if (q == NULL) {
-                return false;
-            }
-            while (*p && *q && (**p == **q)) {
-                ++p;
-                ++q;
-            }
-            return *q == NULL && *p == NULL;
+        NFRuleSet** p = fRuleSets;
+        NFRuleSet** q = rhs.fRuleSets;
+        if (p == NULL) {
+            return q == NULL;
+        } else if (q == NULL) {
+            return false;
         }
+        while (*p && *q && (**p == **q)) {
+            ++p;
+            ++q;
+        }
+        return *q == NULL && *p == NULL;
     }
 
     return false;

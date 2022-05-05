@@ -60,17 +60,16 @@ Measure::~Measure() {
     delete unit;
 }
 
-bool Measure::operator==(const UObject& other) const {
+bool Measure::operator==(const Measure& other) const {
     if (this == &other) {  // Same object, equal
         return true;
     }
     if (typeid(*this) != typeid(other)) { // Different types, not equal
         return false;
     }
-    const Measure &m = static_cast<const Measure&>(other);
-    return number == m.number &&
-        ((unit == NULL) == (m.unit == NULL)) &&
-        (unit == NULL || *unit == *m.unit);
+    return number == other.number &&
+        ((unit == NULL) == (other.unit == NULL)) &&
+        (unit == NULL || *unit == *other.unit);
 }
 
 U_NAMESPACE_END

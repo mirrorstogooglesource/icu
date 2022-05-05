@@ -238,31 +238,11 @@ public:
     /**
      * Returns true if "other" is the same as "this".
      *
-     * The base class implementation returns true if "other" has the same type/class as "this":
-     * `typeid(*this) == typeid(other)`.
-     *
-     * Subclass implementations should do something like the following:
-     *
-     *     if (this == &other) { return true; }
-     *     if (!Collator::operator==(other)) { return false; }  // not the same class
-     *
-     *     const MyCollator &o = (const MyCollator&)other;
-     *     (compare this vs. o's subclass fields)
-     *
      * @param other Collator object to be compared
      * @return true if other is the same as this.
      * @stable ICU 2.0
      */
-    virtual bool operator==(const Collator& other) const;
-
-    /**
-     * Returns true if "other" is not the same as "this".
-     * Calls ! operator==(const Collator&) const which works for all subclasses.
-     * @param other Collator object to be compared
-     * @return true if other is not the same as this.
-     * @stable ICU 2.0
-     */
-    virtual bool operator!=(const Collator& other) const;
+    bool operator==(const Collator& other) const;
 
     /**
      * Makes a copy of this object.
@@ -1122,6 +1102,8 @@ protected:
     * @stable ICU 2.0
     */
     Collator(const Collator& other);
+
+    virtual bool isEqual(const Collator &other) const = 0;
 
 public:
    /**

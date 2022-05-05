@@ -97,24 +97,6 @@ public:
     virtual ~TimeUnitAmount();
 
     
-    /** 
-     * Equality operator.  
-     * @param other  the object to compare to.
-     * @return       true if this object is equal to the given object.
-     * @stable ICU 4.2
-     */
-    virtual bool operator==(const UObject& other) const;
-
-
-    /** 
-     * Not-equality operator.  
-     * @param other  the object to compare to.
-     * @return       true if this object is not equal to the given object.
-     * @stable ICU 4.2
-     */
-    bool operator!=(const UObject& other) const;
-
-
     /**
      * Return the class ID for this class. This is useful only for comparing to
      * a return value from getDynamicClassID(). For example:
@@ -159,11 +141,6 @@ public:
 };
 
 
-
-inline bool
-TimeUnitAmount::operator!=(const UObject& other) const {
-    return !operator==(other);
-}
 
 U_NAMESPACE_END
 

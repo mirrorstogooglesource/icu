@@ -901,16 +901,6 @@ class U_I18N_API DecimalFormat : public NumberFormat {
      */
     DecimalFormat* clone() const U_OVERRIDE;
 
-    /**
-     * Return true if the given Format objects are semantically equal.
-     * Objects of different subclasses are considered unequal.
-     *
-     * @param other    the object to be compared with.
-     * @return         true if the given Format objects are semantically equal.
-     * @stable ICU 2.0
-     */
-    bool operator==(const Format& other) const U_OVERRIDE;
-
 
     using NumberFormat::format;
 
@@ -2138,6 +2128,17 @@ class U_I18N_API DecimalFormat : public NumberFormat {
      * @stable ICU 2.0
      */
     UClassID getDynamicClassID(void) const U_OVERRIDE;
+
+  protected:
+    /**
+     * Return true if the given Format objects are semantically equal.
+     * Objects of different subclasses are considered unequal.
+     *
+     * @param other    the object to be compared with. Guaranteed to be a
+     *                 DecimalFormat.
+     * @return         true if the given Format objects are semantically equal.
+     */
+    bool isEqual(const Format &other) const U_OVERRIDE;
 
   private:
 

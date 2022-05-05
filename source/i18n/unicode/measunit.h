@@ -432,16 +432,8 @@ class U_I18N_API MeasureUnit: public UObject {
      * to the given object.
      * @stable ICU 3.0
      */
-    virtual bool operator==(const UObject& other) const;
+    bool operator==(const MeasureUnit& other) const;
 
-    /**
-     * Inequality operator.  Return true if this object is not equal
-     * to the given object.
-     * @stable ICU 53
-     */
-    bool operator!=(const UObject& other) const {
-        return !(*this == other);
-    }
 
     /**
      * Get the type.

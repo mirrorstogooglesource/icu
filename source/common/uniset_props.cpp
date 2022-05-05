@@ -272,7 +272,7 @@ void UnicodeSet::applyPattern(RuleCharacterIterator& chars,
 
     // Recognized special forms for chars, sets: c-c s-s s&s
 
-    int32_t opts = RuleCharacterIterator::PARSE_VARIABLES |
+    int32_t opts = int32_t{RuleCharacterIterator::PARSE_VARIABLES} |
                    RuleCharacterIterator::PARSE_ESCAPES;
     if ((options & USET_IGNORE_SPACE) != 0) {
         opts |= RuleCharacterIterator::SKIP_WHITESPACE;

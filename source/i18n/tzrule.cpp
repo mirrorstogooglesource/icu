@@ -53,18 +53,14 @@ TimeZoneRule::operator=(const TimeZoneRule& right) {
     return *this;
 }
 
-bool
-TimeZoneRule::operator==(const TimeZoneRule& that) const {
-    return ((this == &that) ||
-            (typeid(*this) == typeid(that) &&
-            fName == that.fName &&
-            fRawOffset == that.fRawOffset &&
-            fDSTSavings == that.fDSTSavings));
+bool TimeZoneRule::operator==(const TimeZoneRule &that) const {
+    return (this == &that) || (typeid(*this) == typeid(that) && isEqual(that));
 }
 
-bool
-TimeZoneRule::operator!=(const TimeZoneRule& that) const {
-    return !operator==(that);
+bool TimeZoneRule::isEqual(const TimeZoneRule &that) const {
+  return fName == that.fName &&
+         fRawOffset == that.fRawOffset &&
+         fDSTSavings == that.fDSTSavings;
 }
 
 UnicodeString&
@@ -118,18 +114,6 @@ InitialTimeZoneRule::operator=(const InitialTimeZoneRule& right) {
         TimeZoneRule::operator=(right);
     }
     return *this;
-}
-
-bool
-InitialTimeZoneRule::operator==(const TimeZoneRule& that) const {
-    return ((this == &that) ||
-            (typeid(*this) == typeid(that) &&
-            TimeZoneRule::operator==(that)));
-}
-
-bool
-InitialTimeZoneRule::operator!=(const TimeZoneRule& that) const {
-    return !operator==(that);
 }
 
 UBool
@@ -227,22 +211,11 @@ AnnualTimeZoneRule::operator=(const AnnualTimeZoneRule& right) {
 }
 
 bool
-AnnualTimeZoneRule::operator==(const TimeZoneRule& that) const {
-    if (this == &that) {
-        return true;
-    }
-    if (typeid(*this) != typeid(that)) {
-        return false;
-    }
+AnnualTimeZoneRule::isEqual(const TimeZoneRule& that) const {
     AnnualTimeZoneRule *atzr = (AnnualTimeZoneRule*)&that;
     return (*fDateTimeRule == *(atzr->fDateTimeRule) &&
             fStartYear == atzr->fStartYear &&
             fEndYear == atzr->fEndYear);
-}
-
-bool
-AnnualTimeZoneRule::operator!=(const TimeZoneRule& that) const {
-    return !operator==(that);
 }
 
 const DateTimeRule*
@@ -446,11 +419,8 @@ TimeArrayTimeZoneRule::operator=(const TimeArrayTimeZoneRule& right) {
 }
 
 bool
-TimeArrayTimeZoneRule::operator==(const TimeZoneRule& that) const {
-    if (this == &that) {
-        return true;
-    }
-    if (typeid(*this) != typeid(that) || !TimeZoneRule::operator==(that)) {
+TimeArrayTimeZoneRule::isEqual(const TimeZoneRule& that) const {
+    if (!TimeZoneRule::isEqual(that)) {
         return false;
     }
     TimeArrayTimeZoneRule *tatzr = (TimeArrayTimeZoneRule*)&that;
@@ -467,11 +437,6 @@ TimeArrayTimeZoneRule::operator==(const TimeZoneRule& that) const {
         }
     }
     return res;
-}
-
-bool
-TimeArrayTimeZoneRule::operator!=(const TimeZoneRule& that) const {
-    return !operator==(that);
 }
 
 DateTimeRule::TimeRuleType

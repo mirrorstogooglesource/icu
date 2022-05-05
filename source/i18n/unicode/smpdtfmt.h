@@ -869,15 +869,6 @@ public:
      */
     virtual SimpleDateFormat* clone() const override;
 
-    /**
-     * Return true if the given Format objects are semantically equal. Objects
-     * of different subclasses are considered unequal.
-     * @param other    the object to be compared with.
-     * @return         true if the given Format objects are semantically equal.
-     * @stable ICU 2.0
-     */
-    virtual bool operator==(const Format& other) const override;
-
 
     using DateFormat::format;
 
@@ -1217,6 +1208,16 @@ public:
      */
     const Locale& getSmpFmtLocale(void) const;
 #endif  /* U_HIDE_INTERNAL_API */
+
+protected:
+    /**
+     * Return true if the given Format objects are semantically equal. Objects
+     * of different subclasses are considered unequal.
+     * @param other    the object to be compared with. This is guaranteed to be a
+     *                 SimpleDateFormat.
+     * @return         true if the given Format objects are semantically equal.
+     */
+    virtual bool isEqual(const Format &other) const override;
 
 private:
     friend class DateFormat;
