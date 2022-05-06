@@ -46,6 +46,30 @@
       },
       "revId": "85814e1af52482199a13d284545623ffbc9eef83",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b3b3ebfa_48fa1b90",
+        "filename": "source/i18n/unicode/numfmt.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2022-05-06T15:50:09Z",
+      "side": 0,
+      "message": "Aha. I should have looked at format.{cpp,h}.   Then, wouldn\u0027t it be better to make isEqual() private (I hope there is no need to call it directly)?",
+      "parentUuid": "978c317f_6fafb1c6",
+      "range": {
+        "startLine": 271,
+        "startChar": 3,
+        "endLine": 277,
+        "endChar": 64
+      },
+      "revId": "85814e1af52482199a13d284545623ffbc9eef83",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
