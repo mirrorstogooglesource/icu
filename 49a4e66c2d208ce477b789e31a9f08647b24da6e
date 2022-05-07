@@ -122,6 +122,23 @@
       "parentUuid": "adaf2394_27d937a9",
       "revId": "49a4e66c2d208ce477b789e31a9f08647b24da6e",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3c53504e_454ea473",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1249238
+      },
+      "writtenOn": "2022-05-07T15:31:48Z",
+      "side": 1,
+      "message": "For the issues that can be fixed without breaking public API I submitted changes in public ICU: https://github.com/unicode-org/icu/pull/2084\n\nFor the operator\u003d\u003d() issues, please consider using `-Wno-ambiguous-reversed-operator`. Otherwise it looks like we would be forced to break stable subclassing API.",
+      "revId": "49a4e66c2d208ce477b789e31a9f08647b24da6e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
