@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce966b39_0f8d61aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2022-05-09T16:20:16Z",
+      "side": 1,
+      "message": "LICENSE file comes from the upstream.  We\u0027d better file an upstream bug to change it. \n\nYou can file a bug at https://unicode-org.atlassian.net/jira/software/c/projects/ICU/issues/ and make a pull request at https://github.com/unicode-org/icu/tree/main/icu4c . \n\nIf this is urgent, we can make a local change by noting the local change (+ upstream bug reference) in README.chromium  with a patch file added to patches/ directory ",
+      "revId": "a59ab517bd4d2c65a131496cf0594079f7c90f03",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
