@@ -34,6 +34,24 @@
       "parentUuid": "ce966b39_0f8d61aa",
       "revId": "a59ab517bd4d2c65a131496cf0594079f7c90f03",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "94de5b09_007c326d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1514252
+      },
+      "writtenOn": "2022-05-18T13:57:26Z",
+      "side": 1,
+      "message": "Bug reference: https://unicode-org.atlassian.net/browse/ICU-22022",
+      "parentUuid": "43bd6b50_01d2feb7",
+      "revId": "a59ab517bd4d2c65a131496cf0594079f7c90f03",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
