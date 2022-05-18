@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea9bb476_0c9e63a9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2022-05-18T17:37:04Z",
+      "side": 1,
+      "message": "Thank you, Chidera !\n\nFrank, can you take a look at https://unicode-org.atlassian.net/browse/ICU-22022 ?  ",
+      "revId": "9b01331ee983f798b36cb0dd026c0f7ef305d13b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
