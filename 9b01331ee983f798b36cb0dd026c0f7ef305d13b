@@ -33,6 +33,24 @@
       "message": "Why do we need this. ICU come with autoconf script which meet the exceptional clause.",
       "revId": "9b01331ee983f798b36cb0dd026c0f7ef305d13b",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a9e7fa5_1e69ec21",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1514252
+      },
+      "writtenOn": "2022-05-23T10:38:48Z",
+      "side": 1,
+      "message": "Thanks for following this Frank. I spoke with the license team and agreed we would be keeping our own downstream patch.",
+      "parentUuid": "6c7aed90_7d435d6d",
+      "revId": "9b01331ee983f798b36cb0dd026c0f7ef305d13b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
