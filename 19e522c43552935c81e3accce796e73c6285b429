@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d8180e0_10ff9aba",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000336
+      },
+      "writtenOn": "2022-07-18T23:54:40Z",
+      "side": 1,
+      "message": "This affects only Fuchsia builds.",
+      "revId": "19e522c43552935c81e3accce796e73c6285b429",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
