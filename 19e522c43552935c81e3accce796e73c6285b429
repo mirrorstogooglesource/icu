@@ -16,6 +16,23 @@
       "message": "This affects only Fuchsia builds.",
       "revId": "19e522c43552935c81e3accce796e73c6285b429",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b1a81c2_b7bc9d89",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002225
+      },
+      "writtenOn": "2022-07-19T01:08:55Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "19e522c43552935c81e3accce796e73c6285b429",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
