@@ -97,5 +97,33 @@ for i in range(len(split)):
     output.write(",")
   output.write(value)
 
+# Furthermore we add code to create proper BTI and PAC tags when BTI or PAC is enabled for
+# compilation. For details see
+# https://github.com/ARM-software/abi-aa/blob/main/aaelf64/aaelf64.rst#program-property
+output.write("\n\n"
+             "#if defined(__ARM_FEATURE_BTI_DEFAULT) && (__ARM_FEATURE_BTI_DEFAULT == 1)\n"
+             "#define ENABLE_BTI 1\n"
+             "#else\n"
+             "#define ENABLE_BTI 0\n"
+             "#endif\n"
+             "#if defined(__ARM_FEATURE_PAC_DEFAULT) && __ARM_FEATURE_PAC_DEFAULT\n"
+             "#define ENABLE_PAC 1\n"
+             "#else\n"
+             "#define ENABLE_PAC 0\n"
+             "#endif\n"
+             "#if ENABLE_PAC || ENABLE_BTI\n"
+             ".pushsection .note.gnu.property, \"a\";\n"
+             ".balign 8\n"
+             ".long 4\n"
+             ".long 0x10\n"
+             ".long 0x5\n"
+             ".asciz \"GNU\"\n"
+             ".long 0xc0000000 /* GNU_PROPERTY_AARCH64_FEATURE_1_AND */\n"
+             ".long 4\n"
+             ".long ((ENABLE_PAC)<<1) | ((ENABLE_BTI)<<0) /* Enable BTI and PAC tags */\n"
+             ".long 0\n"
+             ".popsection\n"
+             "#endif\n")
+
 output.write("\n")
 output.close()
