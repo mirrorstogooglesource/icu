@@ -33,6 +33,23 @@
       "message": "Hej Frank,\n\njust a small reminder for this CL. Do you have some time for review? Or better ask \nJungshik Shin?\n\nThanks \u0026 Best Regards,\nAndre",
       "revId": "87547b9b98df36a4fff11462220fb19d4ee8ea98",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a730039c_20e72d88",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1502478
+      },
+      "writtenOn": "2022-08-31T16:33:34Z",
+      "side": 1,
+      "message": "Hej Jungshik,\n\nwould you mind to have a look at this CL? I didn\u0027t get any response from Frank on this.\n\nThanks for your help.\n\nBest Regards,\nAndre",
+      "revId": "87547b9b98df36a4fff11462220fb19d4ee8ea98",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
