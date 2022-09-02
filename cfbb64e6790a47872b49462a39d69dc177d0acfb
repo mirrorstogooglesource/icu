@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6258ebd6_06d1ef16",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1375392
+      },
+      "writtenOn": "2022-09-02T19:32:49Z",
+      "side": 1,
+      "message": "Thanks for the reviews! Would you mind merging both this and https://chromium-review.googlesource.com/c/chromium/deps/icu/+/3868531 since I am not permitted to?",
+      "revId": "cfbb64e6790a47872b49462a39d69dc177d0acfb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
