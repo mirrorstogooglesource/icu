@@ -50,6 +50,29 @@
       "message": "Hej Jungshik,\n\nwould you mind to have a look at this CL? I didn\u0027t get any response from Frank on this.\n\nThanks for your help.\n\nBest Regards,\nAndre",
       "revId": "87547b9b98df36a4fff11462220fb19d4ee8ea98",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fe2d9765_baf6872b",
+        "filename": "scripts/make_data_assembly.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2022-09-02T19:21:30Z",
+      "side": 1,
+      "message": "line 109 and line 104 are a bit different in that the former does not have a check for \u0027\u003d\u003d1\u0027. Is it intended? perhaps, there\u0027s no difference, but do you want to be consistent?",
+      "range": {
+        "startLine": 109,
+        "startChar": 56,
+        "endLine": 109,
+        "endChar": 82
+      },
+      "revId": "87547b9b98df36a4fff11462220fb19d4ee8ea98",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
