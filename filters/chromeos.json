@@ -635,8 +635,7 @@
         "-/ExemplarCharactersNumbers",
         "-/ExemplarCharactersPunctuation",
         "-/measurementSystemNames",
-        "-/NumberElements/minimalPairs",
-        "-/delimiters"
+        "-/NumberElements/minimalPairs"
       ]
     },
 // Based on filter_display_language_names
@@ -1473,6 +1472,9 @@
         "+/*/*/meter",
         "-/*/*/meter/case",
         "-/*/*/meter/gender",
+        "+/*/*/microsecond",
+        "-/*/*/microsecond/case",
+        "-/*/*/microsecond/gender",
         "+/*/*/mile",
         "-/*/*/mile/case",
         "-/*/*/mile/gender",
@@ -1494,6 +1496,9 @@
         "+/*/*/month",
         "-/*/*/month/case",
         "-/*/*/month/gender",
+        "+/*/*/nanosecond",
+        "-/*/*/nanosecond/case",
+        "-/*/*/nanosecond/gender",
         "+/*/*/ounce",
         "-/*/*/ounce/case",
         "-/*/*/ounce/gender",

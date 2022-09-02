@@ -195,7 +195,7 @@ D. Local Modifications
      windowsZones.txt
      zoneinfo64.txt
 
-  As of October 6, 2021, the latest version is 2021a1 (a reduced version of 2021b)
+  As of Aug 18, 2022, the latest version is 2022b
   and the above files are available at the ICU github repos.
 
 4. Build-related changes
@@ -291,3 +291,14 @@ D. Local Modifications
     patches/timezone-rawoffset.patch
   - https://github.com/unicode-org/icu/pull/2096
   - https://unicode-org.atlassian.net/browse/ICU-22041
+
+18. Patch NumberRangeFormatter to fix numbering system resolution.
+    patches/number_range_format.patch
+  - https://github.com/unicode-org/icu/pull/2085
+  - https://unicode-org.atlassian.net/browse/ICU-22017
+
+19. Patch Calendar to return error ASAP to avoid incorrect assert
+    patches/calendar_return_error_early.patch
+  - https://github.com/unicode-org/icu/pull/2177
+  - https://unicode-org.atlassian.net/browse/ICU-22070
+

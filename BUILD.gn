@@ -3,8 +3,8 @@
 # found in the LICENSE file.
 
 import("//build/config/host_byteorder.gni")
-import("//third_party/icu/config.gni")
-import("//third_party/icu/sources.gni")
+import("config.gni")
+import("sources.gni")
 
 if (is_android) {
   import("//build/config/android/rules.gni")
@@ -148,6 +148,11 @@ config("icu_code") {
       # Used for conditional changes to the compilation process that
       # are only needed for the Fuchsia toolchain.
       "-DICU_IS_IN_FUCHSIA",
+
+      # Can be removed after
+      # https://unicode-org.atlassian.net/browse/ICU-22113 is fixed.
+      "-Wno-unknown-warning-option",
+      "-Wno-enum-constexpr-conversion",
     ]
   }
   if (current_cpu == "wasm") {
@@ -267,6 +272,11 @@ template("generate_icui18n") {
 
     defines = [ "U_I18N_IMPLEMENTATION" ]
     deps = icuuc_deps
+
+    # TODO(fxbug.dev/98632): workaround for toolchain issues, see bug
+    if (icu_is_in_fuchsia && is_fuchsia) {
+      deps += [ "//build/config/fuchsia:uses-outline-atomics-fxbug98632" ]
+    }
   }
 }
 
@@ -312,6 +322,11 @@ template("generate_icuuc") {
     }
 
     defines += [ "U_ICUDATAENTRY_IN_COMMON" ]
+
+    # TODO(fxbug.dev/98632): workaround for toolchain issues, see bug
+    if (icu_is_in_fuchsia && is_fuchsia) {
+      deps += [ "//build/config/fuchsia:uses-outline-atomics-fxbug98632" ]
+    }
   }
 }
 
@@ -397,7 +412,7 @@ if (icu_use_data_file) {
 
   if (is_chromeos) {
     copy("icudata_hash") {
-      sources = [ "//third_party/icu/chromeos/icudtl.dat.hash" ]
+      sources = [ "chromeos/icudtl.dat.hash" ]
       outputs = [ "$root_out_dir/icudtl.dat.hash" ]
     }
   }
