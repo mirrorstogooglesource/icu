@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "00642dd4_47ab8902",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1502478
+      },
+      "writtenOn": "2022-09-12T05:09:50Z",
+      "side": 1,
+      "message": "Good Morning Jungshik.\n\nI am sorry for the delay in this CL. We found a solution which addresses the issue more elegantly and also solves the the discrepancy that you observed.\n\nSo, instead of creating the required sections manually we now generate the BTI flag using a compiler flag. We add the flag to the data file only intentionally. This way we ensure if ICU ever introduces assembly files which include functions we still get a warning. \n\nWhat do you think?\n\nGreeting and Best Regards,\nAndré\n",
+      "revId": "32450375bff15281889f0bc81e207b467b42e161",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
