@@ -16,6 +16,24 @@
       "message": "Do we really need this for anything?\n\nThe chromium discussion about that clang change was in https://bugs.chromium.org/p/chromium/issues/detail?id\u003d1351575 and IIRC we felt no action was needed after the final tweaks to the warning.\n\nDo things build with this reverted too?",
       "revId": "b3070c52557323463e6b9827e2343e60e1b91f85",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f5441304_c3500f4e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1515037
+      },
+      "writtenOn": "2022-09-16T22:03:52Z",
+      "side": 1,
+      "message": "`-Wenum-constexpr-conversion` has been revised a few times, and I think it does not trigger a warning in `ICU` in the latest version of this warning. The code that originally caused the issue`(UBiDiDirection)-1` has still undefined behavior, right? https://reviews.llvm.org/D131528 mentioned that \"The initial patch effected a lot of users and several third party packages and so I am trying to narrow the impact by restricting the error to those cases that are constant expression contexts only.\". So, my impression is that we might still see this issue in `ICU` when this warning is fully enabled.",
+      "parentUuid": "0928015d_96c0790f",
+      "revId": "b3070c52557323463e6b9827e2343e60e1b91f85",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
