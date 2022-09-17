@@ -51,6 +51,24 @@
       "message": "it doesn\u0027t currently fire, so i don\u0027t think we need to suppress it. changing the code to not have this problem makes sense to me, but suppressing a warning that only fired in a HEAD version of clang that nobody uses seems unnecessary.",
       "revId": "b3070c52557323463e6b9827e2343e60e1b91f85",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "43a8b5e4_ba2560ab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1515037
+      },
+      "writtenOn": "2022-09-17T03:12:11Z",
+      "side": 1,
+      "message": "Yes, we don\u0027t need to suppress it anymore, so I\u0027m going to revert this change. I commented on https://unicode-org.atlassian.net/browse/ICU-22113 for a proper fix before that warning starts firing again.",
+      "parentUuid": "a0069479_2f5787aa",
+      "revId": "b3070c52557323463e6b9827e2343e60e1b91f85",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
