@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1503fe77_400f3b9a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1375392
+      },
+      "writtenOn": "2022-09-22T20:40:20Z",
+      "side": 1,
+      "message": "Cherrypicking https://chromium.googlesource.com/chromium/deps/icu/+/20f8ac695af59b6c830def7d4e95bfeb13dd7be5 to M106",
+      "revId": "15ee3bed24f841f9f2700970786453f8944f993b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
