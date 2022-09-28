@@ -33,6 +33,24 @@
       "message": "Are you going to deps-roll to this in Chrome\u0027s 106 branch ?",
       "revId": "08dab9a5ae72d22c6384cce2b6737351711c3fd7",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "87747153_3fc62f87",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1375392
+      },
+      "writtenOn": "2022-09-28T21:37:10Z",
+      "side": 1,
+      "message": "No, that is not necessary. For Chromium, it can sit there until you need to merge a next patch. \n\nI only need it so I can roll Fuchsia to there.",
+      "parentUuid": "c73f82a5_92cfd16d",
+      "revId": "08dab9a5ae72d22c6384cce2b6737351711c3fd7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
