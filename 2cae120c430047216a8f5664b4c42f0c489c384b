@@ -33,6 +33,24 @@
       "message": "srinivassista@,  can you +1 this CL? \n\nThis is to update IANA tz db for M106 branch. This is an ICU side branch. Once it\u0027s submitted, I\u0027ll make another CL to roll DEPS in 106 branch to this.",
       "revId": "2cae120c430047216a8f5664b4c42f0c489c384b",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b2c3cf8_858c6246",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2022-10-15T07:52:40Z",
+      "side": 1,
+      "message": "Note that the ICU tot already has the equivalent change landed ( https://chromium-review.googlesource.com/c/chromium/src/+/3956895 ).",
+      "parentUuid": "08ee25dc_3cbf0572",
+      "revId": "2cae120c430047216a8f5664b4c42f0c489c384b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
