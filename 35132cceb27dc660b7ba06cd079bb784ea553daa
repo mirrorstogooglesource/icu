@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "32ec95f2_39296e5a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2022-10-21T01:32:30Z",
+      "side": 1,
+      "message": "Gulfem, I submitted this to ICU. Pls, feel free to roll DEPS if you want to. Or, we can just roll this in with other changes later.",
+      "revId": "35132cceb27dc660b7ba06cd079bb784ea553daa",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
