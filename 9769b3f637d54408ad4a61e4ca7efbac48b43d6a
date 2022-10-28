@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "89296f07_c49d3aa6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1158013
+      },
+      "writtenOn": "2022-10-28T00:04:49Z",
+      "side": 1,
+      "message": "For context, see https://github.com/unicode-org/icu/commit/505535813fd539800de0930883cdb0e0ba678842",
+      "revId": "9769b3f637d54408ad4a61e4ca7efbac48b43d6a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
