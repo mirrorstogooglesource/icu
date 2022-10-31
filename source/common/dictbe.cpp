@@ -119,7 +119,7 @@ public:
     // Select the currently marked candidate, point after it in the text, and invalidate self
     int32_t   acceptMarked( UText *text );
   
-    // Back up from the current candidate to the next shorter one; return TRUE if that exists
+    // Back up from the current candidate to the next shorter one; return true if that exists
     // and point the text after it
     UBool     backUp( UText *text );
   
@@ -165,9 +165,9 @@ UBool
 PossibleWord::backUp( UText *text ) {
     if (current > 0) {
         utext_setNativeIndex(text, offset + cuLengths[--current]);
-        return TRUE;
+        return true;
     }
-    return FALSE;
+    return false;
 }
 
 /*
@@ -818,11 +818,11 @@ foundBest:
 static const int32_t KHMER_LOOKAHEAD = 3;
 
 // Will not combine a non-word with a preceding dictionary word longer than this
-static const int32_t KHMER_ROOT_COMBINE_THRESHOLD = 10;
+static const int32_t KHMER_ROOT_COMBINE_THRESHOLD = 3;
 
 // Will not combine a non-word that shares at least this much prefix with a
 // dictionary word, with a preceding word
-static const int32_t KHMER_PREFIX_COMBINE_THRESHOLD = 5;
+static const int32_t KHMER_PREFIX_COMBINE_THRESHOLD = 3;
 
 // Minimum word size
 static const int32_t KHMER_MIN_WORD = 2;
@@ -1146,7 +1146,7 @@ CjkBreakEngine::divideUpDictionaryRange( UText *inText,
 
         // Input UText is in one contiguous UTF-16 chunk.
         // Use Read-only aliasing UnicodeString.
-        inString.setTo(FALSE,
+        inString.setTo(false,
                        inText->chunkContents + rangeStart - inText->chunkNativeStart,
                        rangeEnd - rangeStart);
     } else {

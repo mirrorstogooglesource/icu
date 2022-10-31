@@ -68,9 +68,6 @@ struct UFormattedNumberRangeImpl;
 
 } // namespace impl
 
-
-#if 0
-
 /**
  * \cond
  * Export an explicit template instantiation. See datefmt.h
@@ -86,8 +83,6 @@ U_NAMESPACE_BEGIN
 namespace number {  // icu::number
 #endif
 /** \endcond */
-
-#endif
 
 // Other helper classes would go here, but there are none.
 
@@ -565,8 +560,6 @@ class U_I18N_API LocalizedNumberRangeFormatter
 
     LocalizedNumberRangeFormatter(impl::RangeMacroProps &&macros, const Locale &locale);
 
-    void clear();
-
     // To give the fluent setters access to this class's constructor:
     friend class NumberRangeFormatterSettings<UnlocalizedNumberRangeFormatter>;
     friend class NumberRangeFormatterSettings<LocalizedNumberRangeFormatter>;
@@ -646,14 +639,12 @@ class U_I18N_API FormattedNumberRange : public UMemory, public FormattedValue {
      */
     UNumberRangeIdentityResult getIdentityResult(UErrorCode& status) const;
 
-#ifndef U_HIDE_DRAFT_API
     /**
      * Default constructor; makes an empty FormattedNumberRange.
-     * @draft ICU 70
+     * @stable ICU 70
      */
     FormattedNumberRange()
         : fData(nullptr), fErrorCode(U_INVALID_STATE_ERROR) {}
-#endif  /* U_HIDE_DRAFT_API */
 
     /**
      * Copying not supported; use move constructor instead.
@@ -700,8 +691,6 @@ class U_I18N_API FormattedNumberRange : public UMemory, public FormattedValue {
 
     explicit FormattedNumberRange(UErrorCode errorCode)
         : fData(nullptr), fErrorCode(errorCode) {}
-
-    void getAllFieldPositionsImpl(FieldPositionIteratorHandler& fpih, UErrorCode& status) const;
 
     void getDecimalNumbers(ByteSink& sink1, ByteSink& sink2, UErrorCode& status) const;
 

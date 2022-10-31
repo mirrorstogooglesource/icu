@@ -18,7 +18,6 @@ U_NAMESPACE_BEGIN
 ResourceTracer::~ResourceTracer() = default;
 
 void ResourceTracer::trace(const char* resType) const {
-#if U_ENABLE_RESOURCE_TRACING
     U_ASSERT(fResB || fParent);
     UTRACE_ENTRY(UTRACE_UDATA_RESOURCE);
     UErrorCode status = U_ZERO_ERROR;
@@ -41,11 +40,9 @@ void ResourceTracer::trace(const char* resType) const {
         filePath.data(),
         resPath.data());
     UTRACE_EXIT_STATUS(status);
-#endif  // U_ENABLE_RESOURCE_TRACING
 }
 
 void ResourceTracer::traceOpen() const {
-#if U_ENABLE_RESOURCE_TRACING
     U_ASSERT(fResB);
     UTRACE_ENTRY(UTRACE_UDATA_BUNDLE);
     UErrorCode status = U_ZERO_ERROR;
@@ -53,7 +50,6 @@ void ResourceTracer::traceOpen() const {
     CharString filePath;
     UTRACE_DATA1(UTRACE_VERBOSE, "%s", getFilePath(filePath, status).data());
     UTRACE_EXIT_STATUS(status);
-#endif  // U_ENABLE_RESOURCE_TRACING
 }
 
 CharString& ResourceTracer::getFilePath(CharString& output, UErrorCode& status) const {
@@ -119,7 +115,6 @@ void FileTracer::traceOpenDataFile(const char* path, const char* type, const cha
 }
 
 void FileTracer::traceOpenResFile(const char* path, const char* name) {
-#if U_ENABLE_RESOURCE_TRACING
     UTRACE_ENTRY(UTRACE_UDATA_RES_FILE);
     UErrorCode status = U_ZERO_ERROR;
 
@@ -131,7 +126,6 @@ void FileTracer::traceOpenResFile(const char* path, const char* name) {
 
     UTRACE_DATA1(UTRACE_VERBOSE, "%s", filePath.data());
     UTRACE_EXIT_STATUS(status);
-#endif  // U_ENABLE_RESOURCE_TRACING
 }
 
 U_NAMESPACE_END
