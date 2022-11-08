@@ -1,16 +1,16 @@
 Name: icu
 URL: https://github.com/unicode-org/icu
-Version: 72-rc
-CPEPrefix: cpe:/a:icu-project:international_components_for_unicode:72.rc
+Version: 72-1
+CPEPrefix: cpe:/a:icu-project:international_components_for_unicode:72.1
 License: MIT
 Security Critical: yes
 
 Description:
-This directory contains the source code of ICU 72.rc for C/C++.
+This directory contains the source code of ICU 72.1 for C/C++.
 
 A. How to update ICU
 
-1. Run "scripts/update.sh <version>" (e.g. 72-rc).
+1. Run "scripts/update.sh <version>" (e.g. 72-1).
    This will download ICU from the upstream git repository.
    It does preserve Chrome-specific build files and
    converter files. (see section C)
