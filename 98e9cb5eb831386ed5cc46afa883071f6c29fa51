@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "48db1c7b_f3c2bcbe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1375392
+      },
+      "writtenOn": "2022-11-18T19:33:06Z",
+      "side": 1,
+      "message": "Fuchsia is already migrated to a state that will be able to roll this change with success.",
+      "revId": "98e9cb5eb831386ed5cc46afa883071f6c29fa51",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
