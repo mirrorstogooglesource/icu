@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "120ad47e_dc0ffcb5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1375392
+      },
+      "writtenOn": "2022-12-20T23:35:12Z",
+      "side": 1,
+      "message": "Can you merge, please, I do not have merge rights?",
+      "revId": "a46e7459aebebe538cbbcccc204a7071c96f95d9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
