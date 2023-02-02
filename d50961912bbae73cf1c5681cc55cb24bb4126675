@@ -16,6 +16,24 @@
       "message": "could you give me some context about when will we build blink on iOS? or should I just include the necessary thing you need in blink to the iOS build filter instead?\nsince the common is much bigger than the ios one\nor you do not care that much about the size in that particular usage\nsince it is a 67% size increase of the ICU data if you use common\n6303728 vs 10541264 uncompressed\n\nWe did filter out chinese and japanese dictionary on ios and android which is needed for correct word break but not important for linebreak",
       "revId": "d50961912bbae73cf1c5681cc55cb24bb4126675",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "87a513c1_10e64a99",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1123071
+      },
+      "writtenOn": "2023-02-02T22:50:05Z",
+      "side": 1,
+      "message": "We do not care about size right now. This is merely a prototype.",
+      "parentUuid": "2c15e0d6_f52be9cf",
+      "revId": "d50961912bbae73cf1c5681cc55cb24bb4126675",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
