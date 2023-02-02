@@ -119,6 +119,12 @@ config("icu_code") {
       # ICU has decided not to fix this warning as doing so would break its
       # stable API.
       "-Wno-ambiguous-reversed-operator",
+
+      # Clang adds -Wtype-limits to -Wextra for gcc compatibility, which generates
+      # a lots of warnings when building ICU, as it contains a large number of if
+      # checks on whether an enum value is less than 0. These checks are necessary
+      # for compilers that use the signed enum types so we should suppress this warning.
+      "-Wno-type-limits",
     ]
   }
   if (is_clang || is_linux || is_chromeos || is_android || icu_is_in_fuchsia) {
