@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a836ad6_5352cc6c",
+        "filename": "BUILD.gn",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1375392
+      },
+      "writtenOn": "2023-02-06T20:37:50Z",
+      "side": 1,
+      "message": "Hi folks, this breaks Fuchsia\u0027s build because we don\u0027t have this .gni. Should I copy it over?",
+      "revId": "266a46937f05303da1ac4c68f2c94f9a1caa3f76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
