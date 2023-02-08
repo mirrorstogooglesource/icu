@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e7a66fb1_4145d87c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1375392
+      },
+      "writtenOn": "2023-02-08T20:43:13Z",
+      "side": 1,
+      "message": "This seems to be a fix forward. I compiled locally to confirm that the change\ndoes indeed fix the build.\n\nIf you would rather revert first, \nthen please merge https://chromium-review.googlesource.com/c/chromium/deps/icu/+/4233201 instead, and I\u0027ll do what\u0027s\nnecessary to re-submit for review.",
+      "revId": "6649e5d7fcb8fa51fc97518f659796f5c55e8abc",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
