@@ -16,6 +16,24 @@
       "message": "Thank you, Mark ! I assumed that you also tried running the script on Linux as well.",
       "revId": "a3cfbd1c0c72f477c8d794bdf0f95744dadb16c4",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "572c0be1_dd79a517",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1174099
+      },
+      "writtenOn": "2023-02-10T18:37:16Z",
+      "side": 1,
+      "message": "\u003e Thank you, Mark ! I assumed that you also tried running the script on Linux as well.\n\nYes, it still works on Linux and, with this change, produces bit-for-bit identical output to what it used to produce.",
+      "parentUuid": "14eb5c67_54e8b8e6",
+      "revId": "a3cfbd1c0c72f477c8d794bdf0f95744dadb16c4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
