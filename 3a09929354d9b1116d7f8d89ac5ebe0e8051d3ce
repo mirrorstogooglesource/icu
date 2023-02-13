@@ -16,6 +16,23 @@
       "message": "I decided to diff the macOS-generated (with https://chromium-review.googlesource.com/c/4241138) and Linux-generated `icudtl.dat` and found that there were two tiny differences. When expanded, these differences appear in `cnvalias.icu`. It seems that there are two byte positions where the macOS output is exactly 0x16\u003d22 less than the Linux output. I dug further into `gencnval` and found that this seems to be caused by how the alias list is sorted. It compares names using `ucnv_compareNames` as a comparator function to `qsort`. A number of names compare identically according to this comparator, such as the pairs (`iso-8859-1`, `iso_8859-1`) and (`Shift_JIS`, `shift-jis`). `qsort` comes from the system’s C standard library and does not guarantee sort order for elements that compare identically. In some cases, macOS Libc `qsort` and Linux glibc `qsort` produce different results. Although it does produce a small difference in the generated data files based on the specific behavior of `qsort` on the system that ran `getcnval`, as far as I can tell, ICU won’t care at runtime, because it considers these names to be equivalent. I discussed with Jungshik and he agreed, also saying that it must be fine because Apple runs `getcnval` for its own ICU builds on macOS.\n\nNevertheless, due to inertia and a desire to play it safe, and since I had already generated them anyway, I switched this change to use generated-on-Linux versions of ICU data.",
       "revId": "3a09929354d9b1116d7f8d89ac5ebe0e8051d3ce",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab542890_f7d21895",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1174099
+      },
+      "writtenOn": "2023-02-13T19:08:21Z",
+      "side": 1,
+      "message": "Frank, Jungshik has already reviewed, but he’s asked for your review on this as well. Can you please take a look?",
+      "revId": "3a09929354d9b1116d7f8d89ac5ebe0e8051d3ce",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
