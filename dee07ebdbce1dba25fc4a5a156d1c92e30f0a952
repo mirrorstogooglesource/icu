@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed7774dd_7bc939c3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-02-24T22:02:12Z",
+      "side": 1,
+      "message": "Do we have a CLDR bug on this issue? (apparently vetters didn\u0027t refer to the Canadian standard ??) IF so, refer to that in the CL description",
+      "revId": "dee07ebdbce1dba25fc4a5a156d1c92e30f0a952",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
