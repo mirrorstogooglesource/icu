@@ -7,6 +7,7 @@
 # Mac OS X.
 #
 set -e # exit if fail
+set -x
 
 if [ $# -lt 1 ];
 then
@@ -28,14 +29,14 @@ function copy_common {
   echo "Copying icudtl.dat and icudtlb.dat"
   for endian in l b
   do
-    rm "${TOPSRC}/common/icudt${endian}.dat"
+    rm -f "${TOPSRC}/common/icudt${endian}.dat"
     cp "${DATA_PREFIX}${endian}.dat" "${TOPSRC}/common/icudt${endian}.dat"
   done
 
   echo "Copying metaZones.res, timezoneTypes.res, zoneinfo64.res"
   for tzfile in metaZones timezoneTypes zoneinfo64
   do
-    rm "${TOPSRC}/tzres/${tzfile}.res"
+    rm -f "${TOPSRC}/tzres/${tzfile}.res"
     cp "${TZRES_PREFIX}/${tzfile}.res" "${TOPSRC}/tzres/${tzfile}.res"
   done
 
@@ -45,7 +46,7 @@ function copy_common {
 function copy_data {
   echo "Copying icudtl.dat for $1"
 
-  rm "${TOPSRC}/$2/icudtl.dat"
+  rm -f "${TOPSRC}/$2/icudtl.dat"
   cp "data/out/tmp/icudt${VERSION}l.dat" "${TOPSRC}/$2/icudtl.dat"
 
   echo "Done with copying pre-built ICU data file for $1."

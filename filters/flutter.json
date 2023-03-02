@@ -10,7 +10,7 @@
 //  thaidict.txt
 // Filtered by android/brkitr.patch        "cjdict",
     "brkitr_dictionaries": {
-      "includelist": [ "burmesedict", "laodict", "thaidict", "khmerdict" ]
+      "includelist": [ "burmesedict", "cjdict", "laodict", "thaidict", "khmerdict" ]
     },
 // # List of break iterator files (brk).
 // BRK_SOURCE = char.txt line.txt line_loose.txt line_loose_cj.txt\
@@ -18,13 +18,11 @@
 //  word.txt
 // Added by android/brkitr.patch
     "brkitr_rules": {
-      "includelist": [ "char", "line_normal", "line_normal_cj", "word", "word_ja" ]
+      "includelist": [ "char", "line", "line_loose", "line_loose_cj", "line_normal", "line_normal_cj", "sent", "title", "word", "word_ja" ]
     },
 // Need to explicitly add "root"
     "brkitr_tree": { "includelist": [ "root", "ja" ] },
     "conversion_mappings": { "filterType": "exclude" },
-    "coll_tree": { "filterType": "exclude" },
-    "coll_ucadata": { "filterType": "exclude" },
     "confusables": { "filterType": "exclude" },
     "curr_tree": { "filterType": "exclude" },
     "lang_tree": { "filterType": "exclude" },
