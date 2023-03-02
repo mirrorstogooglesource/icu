@@ -25,40 +25,14 @@ echo "Build the necessary tools"
     --prefix="$(pwd)"
 make -j 120
 
-echo "Build the filtered data for common"
-(cd data && make clean)
-config_data common
-make -j 120
-$ICUROOT/scripts/copy_data.sh common
-
-echo "Build the filtered data for chromeos"
-(cd data && make clean)
-config_data chromeos
-make -j 120
-$ICUROOT/scripts/copy_data.sh chromeos
-
-echo "Build the filtered data for Cast"
-(cd data && make clean)
-config_data cast
-$ICUROOT/cast/patch_locale.sh && make -j 120
-$ICUROOT/scripts/copy_data.sh cast
-
-echo "Build the filtered data for Android"
-(cd data && make clean)
-config_data android
-make -j 120
-$ICUROOT/scripts/copy_data.sh android
-
-echo "Build the filtered data for iOS"
-(cd data && make clean)
-config_data ios
-make -j 120
-$ICUROOT/scripts/copy_data.sh ios
-
 echo "Build the filtered data for Flutter"
 (cd data && make clean)
 config_data flutter
-$ICUROOT/flutter/patch_brkitr.sh && make -j 120
+#$ICUROOT/flutter/patch_brkitr.sh && 
+make -j 120
+rm ../stubdata/libicudata.so
+rm ../stubdata/libicudata.so.72
+rm ../stubdata/libicudata.so.72.1
 $ICUROOT/scripts/copy_data.sh flutter
 
 echo "Clean up the git"
