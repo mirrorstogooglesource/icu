@@ -23,8 +23,7 @@
 // Need to explicitly add "root"
     "brkitr_tree": { "includelist": [ "root", "ja" ] },
     "conversion_mappings": { "filterType": "exclude" },
-    "coll_tree": { "filterType": "exclude" },
-    "coll_ucadata": { "filterType": "exclude" },
+    "coll_tree": { "includelist": [ "root", "en", "en_US" ] },
     "confusables": { "filterType": "exclude" },
     "curr_tree": { "filterType": "exclude" },
     "lang_tree": { "filterType": "exclude" },
