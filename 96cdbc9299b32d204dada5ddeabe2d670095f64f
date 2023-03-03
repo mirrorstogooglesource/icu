@@ -16,6 +16,40 @@
       "message": "Adds the root, English, and English US collation to the ICU data for Flutter.",
       "revId": "96cdbc9299b32d204dada5ddeabe2d670095f64f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91ec56b8_529d77ee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1187134
+      },
+      "writtenOn": "2023-03-03T20:04:59Z",
+      "side": 1,
+      "message": "Please add a flutter_desktop target rather than modifying the existing flutter target, which the mobile embedders use.",
+      "revId": "96cdbc9299b32d204dada5ddeabe2d670095f64f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bc2c26b0_14e658fc",
+        "filename": "filters/flutter.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1187134
+      },
+      "writtenOn": "2023-03-03T20:04:59Z",
+      "side": 1,
+      "message": "We\u0027ll need to create a separate build for Flutter desktop, since we don\u0027t want to regress the size of mobile apps.",
+      "revId": "96cdbc9299b32d204dada5ddeabe2d670095f64f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
