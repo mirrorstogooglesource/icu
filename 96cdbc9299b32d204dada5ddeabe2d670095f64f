@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "adaa7f84_d1de4f1d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1573402
+      },
+      "writtenOn": "2023-03-03T18:08:31Z",
+      "side": 1,
+      "message": "Adds the root, English, and English US collation to the ICU data for Flutter.",
+      "revId": "96cdbc9299b32d204dada5ddeabe2d670095f64f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
