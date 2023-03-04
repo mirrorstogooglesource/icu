@@ -1,0 +1,11 @@
+# Copyright 2023 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+# Separate file, so unbundle toolchains that replace gn files
+# can replace just this file and override the default
+declare_args() {
+  # If true, find icu with pkgconf and use as shared libraries.
+  # Useful for Linux distribution repository builds.
+  use_system_icu = false
+}
