@@ -50,6 +50,24 @@
       "message": "We\u0027ll need to create a separate build for Flutter desktop, since we don\u0027t want to regress the size of mobile apps.",
       "revId": "96cdbc9299b32d204dada5ddeabe2d670095f64f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "15c5aee7_81d5bcf1",
+        "filename": "filters/flutter.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1573402
+      },
+      "writtenOn": "2023-03-07T16:11:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bc2c26b0_14e658fc",
+      "revId": "96cdbc9299b32d204dada5ddeabe2d670095f64f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

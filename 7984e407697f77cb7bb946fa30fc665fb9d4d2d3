@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d690293c_f7b2f12e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1573402
+      },
+      "writtenOn": "2023-03-07T16:11:15Z",
+      "side": 1,
+      "message": "Added flutter desktop target",
+      "revId": "7984e407697f77cb7bb946fa30fc665fb9d4d2d3",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
