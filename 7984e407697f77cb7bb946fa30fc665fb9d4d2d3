@@ -16,6 +16,57 @@
       "message": "Added flutter desktop target",
       "revId": "7984e407697f77cb7bb946fa30fc665fb9d4d2d3",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "15db6772_531a3204",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1187134
+      },
+      "writtenOn": "2023-03-07T22:30:00Z",
+      "side": 1,
+      "message": "Just a couple more nits.\n\nThe description just says English collation but do we have an idea of how much it would cost to build in the full set of supported Flutter locales? If that\u0027s a very large difference, I wonder how much it would cost to do everything but CJK?",
+      "revId": "7984e407697f77cb7bb946fa30fc665fb9d4d2d3",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0008614f_510d0324",
+        "filename": "scripts/make_data_all.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1187134
+      },
+      "writtenOn": "2023-03-07T22:30:00Z",
+      "side": 1,
+      "message": "Remove before committing.",
+      "revId": "7984e407697f77cb7bb946fa30fc665fb9d4d2d3",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1fb43679_7284fc29",
+        "filename": "scripts/make_data_all.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1187134
+      },
+      "writtenOn": "2023-03-07T22:30:00Z",
+      "side": 1,
+      "message": "Since we\u0027re applying patches in previous steps, we should probably run the scripts/clean_up_data_source.sh script before we build here.\n\nRealistically we should probably do that before each step to avoid order-dependent behaviour, but I think that could be added in a separate, orthogonal patch.",
+      "revId": "7984e407697f77cb7bb946fa30fc665fb9d4d2d3",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
