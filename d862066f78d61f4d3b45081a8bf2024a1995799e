@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9507a10f_a37e02e2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1187134
+      },
+      "writtenOn": "2023-03-08T17:48:42Z",
+      "side": 1,
+      "message": "lgtm for the Flutter side, though I don\u0027t have review/commit rights. ftang@ for ICU review/approval.",
+      "revId": "d862066f78d61f4d3b45081a8bf2024a1995799e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
