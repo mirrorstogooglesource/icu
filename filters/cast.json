@@ -1340,7 +1340,11 @@
       ],
       "rules": [
         "-/UCARules",
-	"-/collations/*/Sequence"
+	"-/collations/*/Sequence",
+        "-/collations/big5han",
+        "-/collations/gb2312han",
+        "-/collations/private-unihan",
+        "-/collations/unihan"
       ]
     },
 // Based on
