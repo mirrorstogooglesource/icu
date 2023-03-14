@@ -1343,6 +1343,20 @@
 	"-/collations/*/Sequence"
       ]
     },
+// Remove unihan
+    {
+      "categories": [
+        "coll_tree"
+      ],
+      "files": {
+        "includelist": [
+          "root"
+        ]
+      },
+      "rules": [
+        "-/*/private-unihan"
+      ]
+    },
 // Based on
 // https://cs.chromium.org/chromium/src/third_party/icu/source/data/translit/root_subset.txt?rcl=797b7c
     {
