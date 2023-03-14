@@ -1321,25 +1321,11 @@
       ],
       "rules": [
         "-/UCARules",
-        "-/collations/*/Sequence"
-      ]
-    },
-// The following rules must be placed below "-/collations/*/Sequence" to avoid keeping empty unihan, big5han and gb2312han
-// Based on remove_legacy_chinese_codepoint_collation
-// # big5han and gb2312han collation do not make any sense and nobody uses them.
-    {
-      "categories": [
-        "coll_tree"
-      ],
-      "files": {
-        "includelist": [
-          "zh"
-        ]
-      },
-      "rules": [
-        "-/*/unihan",
-        "-/*/big5han",
-        "-/*/gb2312han"
+        "-/collations/*/Sequence",
+        "-/collations/big5han",
+        "-/collations/gb2312han",
+        "-/collations/private-unihan",
+        "-/collations/unihan"
       ]
     },
     {
