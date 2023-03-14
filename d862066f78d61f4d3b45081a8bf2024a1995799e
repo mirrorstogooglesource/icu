@@ -50,6 +50,24 @@
       "message": "why do you want to do this clean up here? This will undo some of the patches and make fluttr_desktop differ more than flutter. Are you sure you want to do this?",
       "revId": "d862066f78d61f4d3b45081a8bf2024a1995799e",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aa55aaa6_6170f02d",
+        "filename": "scripts/make_data_all.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1187134
+      },
+      "writtenOn": "2023-03-14T19:43:31Z",
+      "side": 1,
+      "message": "Primarily to make this more hermetic and a bit safer; i.e. ensuring that if someone applies a future mobile-only patch to the flutter target, it doesn\u0027t affect the flutter_desktop target unless they intentionally also apply it to flutter_desktop. \n\nFlutter mobile is *very* size sensitive since the devices in question are often quite storage-constrained (particularly in certain markets). Flutter Desktop ships only on destkop-calibre devices, where adding a few extra MB isn\u0027t an issue, but those devices are much more text-input heavy, so we have a lot of requests for input-related issues like collation, CJK word-break support etc.",
+      "parentUuid": "a40aa392_e3f30fd5",
+      "revId": "d862066f78d61f4d3b45081a8bf2024a1995799e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
