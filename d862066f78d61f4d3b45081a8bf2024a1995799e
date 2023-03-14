@@ -35,6 +35,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "458beb21_f6446871",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1187134
+      },
+      "writtenOn": "2023-03-14T19:46:32Z",
+      "side": 1,
+      "message": "Adding collation tables (specifically for case/accent-insenstive comparisons at the moment, which was raised as part of an a11y bug for desktop screenreaders). We have a few other requests out there for e.g. CJK workbreak support, but those are still a fair bit further down the list than a11y issues.",
+      "parentUuid": "9acdf6c5_2bda6246",
+      "revId": "d862066f78d61f4d3b45081a8bf2024a1995799e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a40aa392_e3f30fd5",
