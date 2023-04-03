@@ -10,6 +10,7 @@
     'use_system_icu%': 0,
     'icu_use_data_file_flag%': 0,
     'want_separate_host_toolset%': 1,
+    'python%': 'python3'
   },
   'target_defaults': {
     'direct_dependent_settings': {
@@ -171,9 +172,9 @@
                  [ 'OS == "mac" or OS == "ios" or '
                    '((OS == "android" or OS == "qnx") and '
                    '_toolset == "host" and host_os == "mac")', {
-                   'action': ['python', '<@(_inputs)', '<@(_outputs)', '--mac'],
+                   'action': ['<(python)', '<@(_inputs)', '<@(_outputs)', '--mac'],
                  } , {
-                   'action': ['python', '<@(_inputs)', '<@(_outputs)'],
+                   'action': ['<(python)', '<@(_inputs)', '<@(_outputs)'],
                  }],
               ],
             },
