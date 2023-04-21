@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "88681866_b1353da8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1535487
+      },
+      "writtenOn": "2023-04-21T21:04:40Z",
+      "side": 1,
+      "message": "I don\u0027t have write access to this repo, so please submit this on my behalf once you approve it.",
+      "revId": "0863424a2e5a6ecd32c26b76a28b158cb70d0b24",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
