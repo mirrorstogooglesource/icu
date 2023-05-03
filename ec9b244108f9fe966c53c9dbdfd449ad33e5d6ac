@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b1f781d4_04b85c78",
+        "filename": "filters/common.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 827,
+      "author": {
+        "id": 1370517
+      },
+      "writtenOn": "2023-05-03T23:38:23Z",
+      "side": 1,
+      "message": "Are all of these country specific locals needed? Do we need to match the ones that are on the Accept-Language list[1]?  There are quite a few missing and some extra ones.\n\n[1] https://source.chromium.org/chromium/chromium/src/+/main:ui/base/l10n/l10n_util.cc;drc\u003d1e80ef2ea06578815bb30071e22e7b5b00f4c4c5;l\u003d92",
+      "range": {
+        "startLine": 806,
+        "startChar": 1,
+        "endLine": 827,
+        "endChar": 22
+      },
+      "revId": "ec9b244108f9fe966c53c9dbdfd449ad33e5d6ac",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

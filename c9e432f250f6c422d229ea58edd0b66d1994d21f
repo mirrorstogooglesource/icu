@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bbda5e46_9e044125",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1370517
+      },
+      "writtenOn": "2023-05-03T23:38:23Z",
+      "side": 1,
+      "message": "Hi Frank,\n\nI believe this is ready for review now. The chromeos filter should probably be updated as well but I want to make sure common.json is correct first before doing that.\n\nI\u0027m not actually sure the Android and iOS filters need to be updated since they use the platform for language name resolution.  In fact I believe all languages except UI languages could be removed from the Android and iOS filters - but that should not be done in this CL.",
+      "revId": "c9e432f250f6c422d229ea58edd0b66d1994d21f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c3b6f77_9d76d428",
+        "filename": "filters/common.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1370517
+      },
+      "writtenOn": "2023-05-03T23:38:23Z",
+      "side": 1,
+      "message": "I am unsure if \"iw\", \"jw\", and \"tl\" should be on these lists. They are currently inconsistent. I think cleaning these up in a following CL is best, since I want to test exactly what happens if they are missing. (I think the binary size for including them is close to zero since they are just aliases for \"he\", \"jv\", and \"fil\").",
+      "range": {
+        "startLine": 71,
+        "startChar": 4,
+        "endLine": 71,
+        "endChar": 11
+      },
+      "revId": "c9e432f250f6c422d229ea58edd0b66d1994d21f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
