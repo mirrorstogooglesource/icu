@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a4b68f9_17c7af46",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1370517
+      },
+      "writtenOn": "2023-05-04T23:45:29Z",
+      "side": 1,
+      "message": "Hi Frank and Jungshik,\n\nHere is a follow up CL to add the new translate languages to Chrome.\n\nTranslate uses the language code `gom` but that does not have great coverage in ICU (there are only 27 languages it\u0027s localized into) so I\u0027m going to use `kok` which is the macrolanguage that includes `gom`.\n\nMy main questions are what we should do with other platforms. My guess is that Android and iOS are fine as is but that we need to update the ChromeOS filter.\n\nPTAL, thanks.",
+      "revId": "8ce88786eff4145e0c22581ff150c4cd23b8faa5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
