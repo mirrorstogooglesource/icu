@@ -39,6 +39,30 @@
       },
       "revId": "c9e432f250f6c422d229ea58edd0b66d1994d21f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d5a5d721_ac79bf61",
+        "filename": "filters/common.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1370517
+      },
+      "writtenOn": "2023-05-05T14:38:54Z",
+      "side": 1,
+      "message": "So for now they need to be on the Accept-Language list because we use the Translate versions of the codes to get the name to display in the Translate UI.\n\nI am going to change it so that we do not need these locales at all but they can not be deleted yet.",
+      "parentUuid": "1c3b6f77_9d76d428",
+      "range": {
+        "startLine": 71,
+        "startChar": 4,
+        "endLine": 71,
+        "endChar": 11
+      },
+      "revId": "c9e432f250f6c422d229ea58edd0b66d1994d21f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

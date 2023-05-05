@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2c30cd1d_e0a564d0",
+        "filename": "filters/common.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 1370517
+      },
+      "writtenOn": "2023-05-05T14:38:54Z",
+      "side": 0,
+      "message": "I\u0027ve removed \"en\" here and added it the language filter below. My understanding is that the purpose of this unionOf is so that the locale \"en_US\" can be added which can\u0027t be on a language filter.\n\nI think it logically makes sense to keep all the lists as lists of UI languages.",
+      "range": {
+        "startLine": 267,
+        "startChar": 12,
+        "endLine": 267,
+        "endChar": 17
+      },
+      "revId": "d8daa943f64cd5dd2a55e9baf2e655ab4bfa5ae9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
