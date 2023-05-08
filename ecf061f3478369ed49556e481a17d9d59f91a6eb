@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8ab4a3c_1b293275",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1370517
+      },
+      "writtenOn": "2023-05-08T17:10:43Z",
+      "side": 1,
+      "message": "Hi Frank,\n\nThis CL adds \"is\" which is not a UI language on Desktop to the common.json filter.\n\nI have left \u0027Is\" off the the region_tree and lang_tree filters which means that the only locale that can be displayed in Icelandic is \"is\".  My understanding is that for this but it is the NumberFormat and DateTime features of the Intl library that javascript developers are missing. So this covers that and saves about 35kb.\n\nPTAL, thanks!",
+      "revId": "ecf061f3478369ed49556e481a17d9d59f91a6eb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
