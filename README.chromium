@@ -250,5 +250,11 @@ D. Local Modifications
     patches/fuchsia.patch
   - context bug: https://bugs.chromium.org/p/chromium/issues/detail?id=1184527
 
-10 Patch source/common/propname.h so it accepts nameChoice above 1
-   patches/getPropertyValue.patch
+10. Patch ICU to fix missing libc++ include to fix build breakage with libc++
+    Clang modules.
+  - patches/include-utility.patch
+  - https://github.com/unicode-org/icu/pull/2344
+  
+11. Patch source/common/propname.h so it accepts nameChoice above 1
+    context bug: https://github.com/unicode-org/icu/pull/2416
+    patches/getPropertyValue.patch
