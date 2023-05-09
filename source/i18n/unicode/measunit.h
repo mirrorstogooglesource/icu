@@ -19,7 +19,6 @@
 
 #if !UCONFIG_NO_FORMATTING
 
-#include <utility>
 #include "unicode/unistr.h"
 #include "unicode/localpointer.h"
 
