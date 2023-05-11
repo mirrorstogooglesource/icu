@@ -249,6 +249,4 @@ D. Local Modifications
 9.  Patch source/common/uposixdefs.h so it compiles on Fuchsia on Macs.
     patches/fuchsia.patch
   - context bug: https://bugs.chromium.org/p/chromium/issues/detail?id=1184527
-
-10 Patch source/common/propname.h so it accepts nameChoice above 1
-   patches/getPropertyValue.patch
+  
