@@ -33,6 +33,23 @@
       "message": "I think chromeos.json has to be updated as well. Android and iOS get the language display names from the OS API so that they can be left alone.",
       "revId": "8ce88786eff4145e0c22581ff150c4cd23b8faa5",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2901db4_3298c728",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-23T16:32:55Z",
+      "side": 1,
+      "message": "nit: The CL description has the following lines, but they\u0027re not listed. \n\n\u003e The following 12 languages are used by Translate so need to be added\nto the Accept-Language list.\n\nPlease, list 12 languages in the CL description.",
+      "revId": "8ce88786eff4145e0c22581ff150c4cd23b8faa5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
