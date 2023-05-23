@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d0da31fc_5cc6b5cb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-23T16:41:22Z",
+      "side": 1,
+      "message": "More or less the same change has to be made for chromeosjson as well.",
+      "revId": "2f6ac72cfd848865631ae0cefe68925129a24a26",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
