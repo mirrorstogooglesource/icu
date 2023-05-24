@@ -1,5 +1,5 @@
 # iw->he.
-# Put both sh (for lang display name) and sr_Latn (locale data trim target) 
+# Put both sh (for lang display name) and sr_Latn (locale data trim target)
 # and keep no (for lang display name). Keep both tl and fil.
 ach
 af
