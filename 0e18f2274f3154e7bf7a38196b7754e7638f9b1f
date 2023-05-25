@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d106c19_38e6a5e1",
+        "filename": "filters/chromeos.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 1010,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-25T22:34:23Z",
+      "side": 1,
+      "message": "should be \u0027kok\u0027",
+      "range": {
+        "startLine": 1010,
+        "startChar": 117,
+        "endLine": 1010,
+        "endChar": 119
+      },
+      "revId": "0e18f2274f3154e7bf7a38196b7754e7638f9b1f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "207600ec_f9ab7412",
+        "filename": "filters/chromeos.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 1023,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-25T22:34:23Z",
+      "side": 1,
+      "message": "should be \u0027mo\u0027.",
+      "range": {
+        "startLine": 1023,
+        "startChar": 116,
+        "endLine": 1023,
+        "endChar": 118
+      },
+      "revId": "0e18f2274f3154e7bf7a38196b7754e7638f9b1f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "033fc08b_3a2c4e7a",
+        "filename": "filters/chromeos.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 1039,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-25T22:34:23Z",
+      "side": 1,
+      "message": "Likewise, it should be \u0027sh\u0027",
+      "range": {
+        "startLine": 1039,
+        "startChar": 116,
+        "endLine": 1039,
+        "endChar": 119
+      },
+      "revId": "0e18f2274f3154e7bf7a38196b7754e7638f9b1f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "18131e63_7216c817",
+        "filename": "filters/chromeos.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 1050,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-25T22:34:23Z",
+      "side": 1,
+      "message": "Because source/data/lang/tl.txt just has ALIAS line, it doesn\u0027t matter, but for the sake of consistency, \u0027sd\u0027 above had better be changed to \u0027tl\u0027. It seems that it\u0027s a copy\u0027n\u0027paste typo (from line 1038).",
+      "range": {
+        "startLine": 1050,
+        "startChar": 116,
+        "endLine": 1050,
+        "endChar": 118
+      },
+      "revId": "0e18f2274f3154e7bf7a38196b7754e7638f9b1f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
