@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6fc075eb_3eeb880a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-25T17:28:37Z",
+      "side": 1,
+      "message": "Now that chromeos.json is changed, chromeos ICU data file has to be rebuilt and included in this CL.",
+      "revId": "efd4bf08c610126e59759e3c1ee0b383a7710acd",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
