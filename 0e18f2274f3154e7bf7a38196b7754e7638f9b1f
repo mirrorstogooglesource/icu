@@ -24,6 +24,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "04720e4e_68d8d3d0",
+        "filename": "filters/chromeos.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 1010,
+      "author": {
+        "id": 1130690
+      },
+      "writtenOn": "2023-05-25T23:39:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0d106c19_38e6a5e1",
+      "range": {
+        "startLine": 1010,
+        "startChar": 117,
+        "endLine": 1010,
+        "endChar": 119
+      },
+      "revId": "0e18f2274f3154e7bf7a38196b7754e7638f9b1f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "207600ec_f9ab7412",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-05-25T22:34:23Z",
       "side": 1,
       "message": "should be \u0027mo\u0027.",
+      "range": {
+        "startLine": 1023,
+        "startChar": 116,
+        "endLine": 1023,
+        "endChar": 118
+      },
+      "revId": "0e18f2274f3154e7bf7a38196b7754e7638f9b1f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa65793c_02622bea",
+        "filename": "filters/chromeos.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 1023,
+      "author": {
+        "id": 1130690
+      },
+      "writtenOn": "2023-05-25T23:39:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "207600ec_f9ab7412",
       "range": {
         "startLine": 1023,
         "startChar": 116,
@@ -70,6 +118,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1bbfb5f_c2c6eb89",
+        "filename": "filters/chromeos.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 1039,
+      "author": {
+        "id": 1130690
+      },
+      "writtenOn": "2023-05-25T23:39:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "033fc08b_3a2c4e7a",
+      "range": {
+        "startLine": 1039,
+        "startChar": 116,
+        "endLine": 1039,
+        "endChar": 119
+      },
+      "revId": "0e18f2274f3154e7bf7a38196b7754e7638f9b1f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "18131e63_7216c817",
@@ -88,6 +160,53 @@
         "startChar": 116,
         "endLine": 1050,
         "endChar": 118
+      },
+      "revId": "0e18f2274f3154e7bf7a38196b7754e7638f9b1f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b70c73a_43fd8839",
+        "filename": "filters/chromeos.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 1050,
+      "author": {
+        "id": 1130690
+      },
+      "writtenOn": "2023-05-25T23:39:29Z",
+      "side": 1,
+      "message": "Ya it looks like I just forgot about the second language code when adding these",
+      "parentUuid": "18131e63_7216c817",
+      "range": {
+        "startLine": 1050,
+        "startChar": 116,
+        "endLine": 1050,
+        "endChar": 118
+      },
+      "revId": "0e18f2274f3154e7bf7a38196b7754e7638f9b1f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1bb156d9_654516f3",
+        "filename": "filters/common.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 916,
+      "author": {
+        "id": 1130690
+      },
+      "writtenOn": "2023-05-25T23:39:29Z",
+      "side": 1,
+      "message": "I think I got into a weird state when trying to use the above diff command and then realizing that the lists weren\u0027t up to date so the diff failed. I went back and removed some of these random adds so this matches Trevor\u0027s original cl.",
+      "range": {
+        "startLine": 916,
+        "startChar": 11,
+        "endLine": 916,
+        "endChar": 18
       },
       "revId": "0e18f2274f3154e7bf7a38196b7754e7638f9b1f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
