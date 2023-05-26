@@ -52,6 +52,149 @@
       "parentUuid": "807c16d2_7eed54ce",
       "revId": "7d220a5ad29140e8302e8edc0f62d9f6445db163",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f95885b0_15016190",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-26T18:52:41Z",
+      "side": 1,
+      "message": "For languages with even the minimal locale data (that is, the display name of the language in the language), we have to add them in this CL. \n\nFor instance, for ay, we can add a file, source/data/lang/ay.txt with the following content:\n\nay{\n    Languages{\n        ay{\"Aymar\"}\n    }\n}\n\nI can\u0027t figure out how \u0027Aymara\u0027 language is referred to in Aymara. I looked at\n\nhttps://ay.wikipedia.org/wiki/Aymar_aru\n\nand https://en.wikipedia.org/wiki/Aymara_language .\n\nI also went to the language menu of translate.google.com/?hl\u003day (Aymara interface), but the language list does not have Aymara there even though the English interface has Aymara.",
+      "revId": "7d220a5ad29140e8302e8edc0f62d9f6445db163",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1085eb6c_b0b1b40c",
+        "filename": "filters/common.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-26T18:52:41Z",
+      "side": 1,
+      "message": "Currently, CLDR/ICU does not have the display name for \u0027ay\u0027 in \u0027ay\u0027 locale. That is, source/data/lang/ay.txt is missing. \n\nIt does have the display name for \u0027ay\u0027 in Chrome\u0027s UI locales (e.g. en, ko, etc). \n\nIf translate team has the data, it has to be added here while being upstreamed to the CLDR (from which ICU data is derived).",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 11
+      },
+      "revId": "7d220a5ad29140e8302e8edc0f62d9f6445db163",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "65bc93cf_88aa629a",
+        "filename": "filters/common.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-26T18:52:41Z",
+      "side": 1,
+      "message": "dv.txt is also missing.",
+      "range": {
+        "startLine": 42,
+        "startChar": 7,
+        "endLine": 42,
+        "endChar": 9
+      },
+      "revId": "7d220a5ad29140e8302e8edc0f62d9f6445db163",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8e51e8be_d5dce57f",
+        "filename": "filters/common.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-26T18:52:41Z",
+      "side": 1,
+      "message": "same is true of ilo",
+      "revId": "7d220a5ad29140e8302e8edc0f62d9f6445db163",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d64fb59_253f2519",
+        "filename": "filters/common.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-26T18:52:41Z",
+      "side": 1,
+      "message": "ditto for lus",
+      "revId": "7d220a5ad29140e8302e8edc0f62d9f6445db163",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9cd7ebc6_f39df958",
+        "filename": "filters/common.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-26T18:52:41Z",
+      "side": 1,
+      "message": "ditto for mni",
+      "range": {
+        "startLine": 103,
+        "startChar": 0,
+        "endLine": 103,
+        "endChar": 12
+      },
+      "revId": "7d220a5ad29140e8302e8edc0f62d9f6445db163",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a061cc9_c9f49d38",
+        "filename": "filters/common.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-26T18:52:41Z",
+      "side": 1,
+      "message": "ditto for \u0027ts\u0027",
+      "range": {
+        "startLine": 153,
+        "startChar": 0,
+        "endLine": 153,
+        "endChar": 11
+      },
+      "revId": "7d220a5ad29140e8302e8edc0f62d9f6445db163",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
