@@ -106,6 +106,24 @@
       "parentUuid": "21bbdc0c_e82ea5c1",
       "revId": "efd4bf08c610126e59759e3c1ee0b383a7710acd",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "05203cdd_ffd7300d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-26T00:32:25Z",
+      "side": 1,
+      "message": "Ok. chromeos.json has already correct entries wrt them. \n\nWith PS#6, I got this. My local build also generated identical files. \n\n10560960 icudtb.dat\n10560960 icudtl.dat\n \n11718496 icudtl.dat\n\nSo, this now makes sense.  I think PS#4 has somehow stale data files for common (not built from the changed json file) because common/icudt* I locally generated with PS#4 is different from and bigger than common/icudt* in PS#4.",
+      "parentUuid": "5fdba478_86e18055",
+      "revId": "efd4bf08c610126e59759e3c1ee0b383a7710acd",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
