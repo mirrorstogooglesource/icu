@@ -16,6 +16,24 @@
       "message": "LGTM with the merge conflict resolved.",
       "revId": "7d220a5ad29140e8302e8edc0f62d9f6445db163",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "807c16d2_7eed54ce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-26T16:49:19Z",
+      "side": 1,
+      "message": "Make sure to rebuild the data files with the merge conflict resolved.",
+      "parentUuid": "699c93fe_79b40548",
+      "revId": "7d220a5ad29140e8302e8edc0f62d9f6445db163",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
