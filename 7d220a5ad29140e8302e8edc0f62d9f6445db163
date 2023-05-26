@@ -73,6 +73,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "824a50b7_c2c1e85d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-26T18:57:19Z",
+      "side": 1,
+      "message": "\u003e For languages with even the minimal locale data (that is, the display name of the language in the language), we have to add them in this CL.\n\nI meant: For languages **without** even the minimal locale data ....",
+      "parentUuid": "f95885b0_15016190",
+      "revId": "7d220a5ad29140e8302e8edc0f62d9f6445db163",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1085eb6c_b0b1b40c",
         "filename": "filters/common.json",
         "patchSetId": 5
