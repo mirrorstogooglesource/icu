@@ -34,6 +34,24 @@
       "parentUuid": "699c93fe_79b40548",
       "revId": "7d220a5ad29140e8302e8edc0f62d9f6445db163",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a72ba9ad_9590d0e0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-26T16:53:40Z",
+      "side": 1,
+      "message": "oh merge conflict is just due to the parent data files being updated. So, just rebuilding data files should resolve the conflict.",
+      "parentUuid": "807c16d2_7eed54ce",
+      "revId": "7d220a5ad29140e8302e8edc0f62d9f6445db163",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
