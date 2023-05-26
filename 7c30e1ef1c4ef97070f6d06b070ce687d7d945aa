@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "56ee8764_aa47d782",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1130690
+      },
+      "writtenOn": "2023-05-26T16:33:41Z",
+      "side": 1,
+      "message": "Cl description update fixed things. I\u0027m surprised it puts one as author from updating the description!",
+      "revId": "7c30e1ef1c4ef97070f6d06b070ce687d7d945aa",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
