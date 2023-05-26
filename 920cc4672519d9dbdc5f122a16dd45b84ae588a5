@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f1d8040_5f9b0756",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-26T16:15:55Z",
+      "side": 1,
+      "message": "As I told you in the chat, my edit of the CL description seems to have made my +1 not count because I became the uploader (apparently).  Sorry about that. \n\nI guess this can be resolved if you upload once more or just make a nominal change in the CL description such as adding thousand separators (commas) in the following: \n \n---------cut----here---------\nData size impact:\n\ncommon: 10544880 \u003d\u003e 10560960 (15.7 KiB increase)\nchrome: 11702112 \u003d\u003e 11718496 (16 KiB increase)\n--------Cut------here--------\n\n\nIf you upload once more, the CL description may revert to your local copy and lose my edit, which is to add the above lines. So, in that case, it\u0027d be great if you add them back. \n\nThank you",
+      "revId": "920cc4672519d9dbdc5f122a16dd45b84ae588a5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
