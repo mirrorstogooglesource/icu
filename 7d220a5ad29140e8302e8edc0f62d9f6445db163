@@ -163,6 +163,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6fb01611_1ca601cc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-30T23:18:32Z",
+      "side": 1,
+      "message": "BTW, the data file size difference is a bit strange. The size delta for common and chromeos are comparable (see my previous comment. see also https://chromium-review.googlesource.com/c/chromium/deps/icu/+/4568611 ), but they\u0027re 8 KiB vs 12 KiB in the latest PS.   Can you just rebuild data with the latest json changes?",
+      "parentUuid": "550f4832_c70df62c",
+      "revId": "7d220a5ad29140e8302e8edc0f62d9f6445db163",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1085eb6c_b0b1b40c",
         "filename": "filters/common.json",
         "patchSetId": 5
