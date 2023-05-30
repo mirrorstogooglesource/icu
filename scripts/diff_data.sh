@@ -45,7 +45,12 @@ rm -rf $SIZEFILE
 for res in $(cat "${SORTED_ICUDATA_LST2}")
 do
   # diff the txt file
-  STAT1=`stat --printf="%s" ${RESDIR1}/$res`
+  if [[ -e "${RESDIR1}/$res" ]]; then
+    STAT1=`stat --printf="%s" ${RESDIR1}/$res`
+  else
+    # Handle cases when a file is only present in tree 2.
+    STAT1=0
+  fi
   STAT2=`stat --printf="%s" ${RESDIR2}/$res`
   SIZEDIFF=`expr $STAT2 - $STAT1`
   echo $SIZEDIFF $STAT1 $STAT2 $res >> $SIZEFILE
@@ -54,6 +59,26 @@ do
   then
     count=0
     echo -n "."
+  fi
+done
+
+# Go over files in the tree 1 to account for any file
+# removed in the tree 2.
+for res in $(cat "${SORTED_ICUDATA_LST1}")
+do
+  STAT1=`stat --printf="%s" ${RESDIR1}/$res`
+  # Handle files only present in tree 1 because files present in
+  # both trees are already dealt with in the previous for-loop.
+  if [[ ! -e "${RESDIR2}/$res" ]]; then
+    STAT2=0
+    SIZEDIFF=`expr $STAT2 - $STAT1`
+    echo $SIZEDIFF $STAT1 $STAT2 $res >> $SIZEFILE
+    count=`expr $count + 1`
+    if [ $count -gt 100 ]
+    then
+      count=0
+      echo -n "."
+    fi
   fi
 done
 
