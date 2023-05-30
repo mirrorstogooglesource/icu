@@ -143,6 +143,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "550f4832_c70df62c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-30T23:12:15Z",
+      "side": 1,
+      "message": "Thank you. \n\nBTW, can you add the following lines to the CL description?\n\n    The data size difference is as follows:\n    \n             Old      New      Delta\n    chromeos 11718496 11730784 12288\n    common   10560960 10573104 12144\n\nThen, I\u0027ll LGTM it.",
+      "parentUuid": "2c8b1db9_3ab59a8a",
+      "revId": "7d220a5ad29140e8302e8edc0f62d9f6445db163",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1085eb6c_b0b1b40c",
