@@ -125,6 +125,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c8b1db9_3ab59a8a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1130690
+      },
+      "writtenOn": "2023-05-30T22:23:05Z",
+      "side": 1,
+      "message": "There are several languages that already exist that don\u0027t have display in their own language in settings, I remember Trevor saying that he didn\u0027t add them because of this, but this CL description seems to contradict that. Thanks for doing the work for us so that we can have these in the native language!",
+      "parentUuid": "7e6db922_9b537fc5",
+      "revId": "7d220a5ad29140e8302e8edc0f62d9f6445db163",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1085eb6c_b0b1b40c",
