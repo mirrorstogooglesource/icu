@@ -109,6 +109,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7e6db922_9b537fc5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-30T17:37:33Z",
+      "side": 1,
+      "message": "Chrome\u0027s UI for accept-language in Settings needs the display name of a language in its own language, which is why this CL adds lines like this:\n\n   {\"categories\":[\"lang_tree\"],\"files\":{\"includelist\":[\"ay\"]},\"rules\":[\"-/*\",\"+/%%ALIAS\",\"+/%%Parent\",\"+/Languages/ay\"] },\n   \n\nNote also that the CL description has the following lines:\n\n\u003e We only need the language name from ICU in all UI languages and the\n*native name of each of the languages*.\n\nAnyway, I added the native names for 5 languages and rebuild the data files. The revised CL is available at: \n   \nhttps://chromium-review.googlesource.com/c/chromium/deps/icu/+/4568611\n\nWhy don\u0027t grab my CL above and either revise this CL by adding 5 new resource files (lang/{dv,lus,....}.txt and updating data files or create a new CL by cloning my cl above?  Then, I\u0027ll lgtm it. \n\nIf I did that, it couldn\u0027t be landed because there\u0027s no more TBR and self-approval.",
+      "parentUuid": "be079bfd_1c30f2af",
+      "revId": "7d220a5ad29140e8302e8edc0f62d9f6445db163",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1085eb6c_b0b1b40c",
         "filename": "filters/common.json",
         "patchSetId": 5
