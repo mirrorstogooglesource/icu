@@ -16,6 +16,23 @@
       "message": "Thank you !",
       "revId": "9c7fcd2eeeef5da5e3f4e4b27dbee9e425b0b2ac",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "56e262dd_09659517",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-05-31T00:27:35Z",
+      "side": 1,
+      "message": "Just add this size report to the CL description\n\n           Old       New   Delta\nchromeos 11823280 11831472  8192\ncommon   10619712 10631872 12160",
+      "revId": "9c7fcd2eeeef5da5e3f4e4b27dbee9e425b0b2ac",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ],
   "submitRequirementResults": [
