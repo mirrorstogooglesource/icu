@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b6173794_2c69ecd1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1130690
+      },
+      "writtenOn": "2023-06-01T21:40:58Z",
+      "side": 1,
+      "message": "Correct size difference        \n         Old       New     Delta\nchromeos 11823280 11831472 8192\ncommon   10619712 10631872 12160",
+      "revId": "709d56e26482982f7390e49f98ef7a91101f137e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
