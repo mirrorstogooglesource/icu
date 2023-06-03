@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e7a709e_d75e53fd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-06-03T00:21:23Z",
+      "side": 1,
+      "message": "David, when you update to ICU 73.1, please make sure to include 5 new files in source/data/lang/ (see README.chromium for details).",
+      "revId": "e825d277ad93df9f63358727461f768da606ff0e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
