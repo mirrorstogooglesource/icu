@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0314a16d_211e8c4a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2023-06-12T23:04:08Z",
+      "side": 1,
+      "message": "There was a merge conflict when I tried just relanding the revert hence I\u0027m updating 73staging again to verify later and then checking into main.",
+      "revId": "39f0750fac172180159815eac791056c92123f8c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
