@@ -16,6 +16,23 @@
       "message": "Is this ok?",
       "revId": "8b70c520672b448761aed2bdddd365de3b99e27b",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8bf603a_a16cdc96",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1128431
+      },
+      "writtenOn": "2023-06-14T17:26:15Z",
+      "side": 1,
+      "message": "Note, I don\u0027t mean to land without you, we all need more help from you apparently, but there might be some easy work (such as re-landing) we can help without spending your time.\n\nIf you feel it should be after we work together more, that\u0027s fine, I\u0027ll abandon this, so please feel free to say so.",
+      "revId": "8b70c520672b448761aed2bdddd365de3b99e27b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
