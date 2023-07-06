@@ -78,6 +78,8 @@ config("icu_code") {
     # No dependency on the default platform encoding.
     # Will cut down the code size.
     "U_CHARSET_IS_UTF8=1",
+
+    "UCONFIG_USE_ML_PHRASE_BREAKING=1",
   ]
 
   if (is_win) {
