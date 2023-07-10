@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1bf628c_d63823a1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1128431
+      },
+      "writtenOn": "2023-07-10T15:20:26Z",
+      "side": 1,
+      "message": "PTAL. Sorry making this two separated patch and requiring your reviews twice.",
+      "revId": "09e4a1fe576774779d96c5539c021607ddcf40ef",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
