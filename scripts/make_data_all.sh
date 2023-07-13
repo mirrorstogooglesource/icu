@@ -17,6 +17,14 @@ function config_data {
     Linux/gcc --disable-tests  --disable-layoutex --enable-rpath \
     --prefix="$(pwd)" || \
     { echo "failed to configure data for $1" >&2; exit 1; }
+
+  CJDICT_SRC="${ICUROOT}/filters/cjdict.txt"
+  CJDICT_DST="${ICUROOT}/source/data/brkitr/dictionaries/cjdict.txt"
+  if [ -f "$CJDICT_SRC" ]; then
+    cp "$CJDICT_SRC" "$CJDICT_DST"
+  else
+    git checkout HEAD -- "$CJDICT_DST"
+  fi
 }
 
 echo "Build the necessary tools"
