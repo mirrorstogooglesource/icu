@@ -3,6 +3,7 @@
 set -x -e # stop if fail
 
 ICUROOT="$(dirname "$0")/.."
+CJDICT="${ICUROOT}/source/data/brkitr/dictionaries/cjdict.txt"
 
 function config_data {
   if [ $# -lt 1 ];
@@ -17,6 +18,13 @@ function config_data {
     Linux/gcc --disable-tests  --disable-layoutex --enable-rpath \
     --prefix="$(pwd)" || \
     { echo "failed to configure data for $1" >&2; exit 1; }
+
+  CJDICT_SRC="${ICUROOT}/$1/cjdict.txt"
+  if [ -f "$CJDICT_SRC" ]; then
+    cp "$CJDICT_SRC" "$CJDICT"
+  else
+    git checkout HEAD -- "$CJDICT"
+  fi
 }
 
 echo "Build the necessary tools"
