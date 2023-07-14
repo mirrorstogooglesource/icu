@@ -3,6 +3,7 @@
 set -x -e # stop if fail
 
 ICUROOT="$(dirname "$0")/.."
+CJDICT="${ICUROOT}/source/data/brkitr/dictionaries/cjdict.txt"
 
 function config_data {
   if [ $# -lt 1 ];
@@ -25,6 +26,11 @@ echo "Build the necessary tools"
     --prefix="$(pwd)"
 make -j 120
 
+# Patch for all builds after this point.
+# TODO(kojii): Move to before `cast`.
+$ICUROOT/cast/patch_locale.sh || exit 1
+cp "${ICUROOT}/filters/cjdict-empty.txt" "$CJDICT"
+
 echo "Build the filtered data for common"
 (cd data && make clean)
 config_data common
@@ -40,7 +46,8 @@ $ICUROOT/scripts/copy_data.sh chromeos
 echo "Build the filtered data for Cast"
 (cd data && make clean)
 config_data cast
-$ICUROOT/cast/patch_locale.sh && make -j 120
+# $ICUROOT/cast/patch_locale.sh && make -j 120
+make -j 120
 $ICUROOT/scripts/copy_data.sh cast
 
 echo "Build the filtered data for Android"
