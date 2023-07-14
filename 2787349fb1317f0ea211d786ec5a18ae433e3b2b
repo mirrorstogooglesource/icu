@@ -22,6 +22,30 @@
       },
       "revId": "2787349fb1317f0ea211d786ec5a18ae433e3b2b",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "930e6d73_e24f24c5",
+        "filename": "scripts/make_data_all.sh",
+        "patchSetId": 14
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1128431
+      },
+      "writtenOn": "2023-07-14T15:43:13Z",
+      "side": 1,
+      "message": "\u003e Instead of the above, you can use ICU data configuration to replace cjdict.txt with your custom version. \n\u003e \n\u003e See https://unicode-org.github.io/icu/userguide/icu_data/buildtool.html#file-substitution . I\u0027ve learned about it from sffc@ recently.\n\nThanks, this is interesting. In this case, we want to apply the change to all subsequent configs, so I guess patching the file seems easier to maintain.\n\n\u003e I also suggest that a local custom copy of cjdict.txt be put not in icu/filters but icu/\u003csome better name\u003e (dict? maybe).\n\nFurther investigation turned out that it\u0027s paired with `cast/brkitr.patch`, so I moved it into `cast/patch_locale.sh`.",
+      "parentUuid": "d6db1f07_91887781",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 1
+      },
+      "revId": "2787349fb1317f0ea211d786ec5a18ae433e3b2b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
