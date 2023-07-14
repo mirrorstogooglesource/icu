@@ -16,15 +16,12 @@
 
 function preamble {
 cat <<PREAMBLE
-# ***************************************************************************
-# *
-# *   Copyright (C) 1995-2014, International Business Machines
-# *   Corporation and others.  All Rights Reserved.
-# *
-# *   Generated per the algorithm for EUC-JP
-# *   described at https://encoding.spec.whatwg.org/#euc-jp.
-# *
-# ***************************************************************************
+# Copyright (C) 2016 and later: Unicode, Inc. and others.
+# License & terms of use: http://www.unicode.org/copyright.html
+#
+#   Generated per the algorithm for EUC-JP
+#   described at https://encoding.spec.whatwg.org/#euc-jp.
+#
 <code_set_name>               "euc-jp-html"
 <char_name_mask>              "AXXXX"
 <mb_cur_max>                  3

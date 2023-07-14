@@ -11,15 +11,12 @@
 
 function preamble {
 cat <<PREAMBLE
-# ***************************************************************************
-# *
-# *   Copyright (C) 1995-2015, International Business Machines
-# *   Corporation and others.  All Rights Reserved.
-# *
-# *   Generated per the algorithm for EUC-KR
-# *   described at http://encoding.spec.whatwg.org/#euc-kr
-# *
-# ***************************************************************************
+# Copyright (C) 2016 and later: Unicode, Inc. and others.
+# License & terms of use: http://www.unicode.org/copyright.html
+#
+#   Generated per the algorithm for EUC-KR
+#   described at http://encoding.spec.whatwg.org/#euc-kr
+#
 <code_set_name>               "euc-kr-html"
 <mb_cur_max>                  2
 <mb_cur_min>                  1
@@ -27,7 +24,7 @@ cat <<PREAMBLE
 <subchar>                     \x3F
 <icu:charsetFamily>           "ASCII"
 
-# 81-fe in states 2 and 3 can be tigher and a1-fe, but
+# 81-fe in states 2 and 3 can be tighter and a1-fe, but
 # to be compliant to HTML5 spec, it should be 81-fe.
 <icu:state>                  0-7f, 81-c5:1, c6:2, c7-fe:3
 <icu:state>                  41-5a, 61-7a, 81-fe

@@ -11,15 +11,12 @@
 
 function preamble {
 cat <<PREAMBLE
-# ***************************************************************************
-# *
-# *   Copyright (C) 1995-2014, International Business Machines
-# *   Corporation and others.  All Rights Reserved.
-# *
-# *   Generated per the algorithm for Big5
-# *   described at http://encoding.spec.whatwg.org/#big5
-# *
-# ***************************************************************************
+# Copyright (C) 2016 and later: Unicode, Inc. and others.
+# License & terms of use: http://www.unicode.org/copyright.html
+#
+#   Generated per the algorithm for Big5
+#   described at http://encoding.spec.whatwg.org/#big5
+#
 <code_set_name>               "big5-html"
 <char_name_mask>              "AXXXX"
 <mb_cur_max>                  2
@@ -33,7 +30,7 @@ cat <<PREAMBLE
 # Big5 has a lot of small holes in the 2nd byte. If it's in the ASCII range,
 # the 2nd byte has to be added back to the stream to be compliant to the
 # encoding spec. Each state adds 1kB in the data size.
-# See http://userguide.icu-project.org/conversion/data.
+# See https://unicode-org.github.io/icu/userguide/conversion/data#state-table-syntax-in-ucm-files
 <icu:state>                   0-7f, a1-fe:1, 87-a0:2, c8:2, fa-fe:2, 87:3, 89:4, 8a:5, 8b:6, 8d:7, 9b:8, 9f:9, a0:a
 <icu:state>                   40-7e, a1-fe
 <icu:state>                   40-7e.p, a1-fe.p

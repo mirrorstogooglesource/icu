@@ -1,11 +1,11 @@
-# ***************************************************************************
-# *
-# *   Generated from index-windows-874.txt (
-# *   https://encoding.spec.whatwg.org/index-windows-874.txt )
-# *   following the algorithm for the single byte legacy encoding
-# *   described at http://encoding.spec.whatwg.org/#single-byte-decoder
-# *
-# ***************************************************************************
+# Copyright (C) 2016 and later: Unicode, Inc. and others.
+# License & terms of use: http://www.unicode.org/copyright.html
+#
+#   Generated from index-windows-874.txt (
+#   https://encoding.spec.whatwg.org/index-windows-874.txt )
+#   following the algorithm for the single byte legacy encoding
+#   described at http://encoding.spec.whatwg.org/#single-byte-decoder
+
 <code_set_name>               "windows-874-html"
 <char_name_mask>              "AXXXX"
 <mb_cur_max>                  1

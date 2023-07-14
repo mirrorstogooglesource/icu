@@ -12,16 +12,13 @@
 
 function preamble {
 cat <<PREAMBLE
-# ***************************************************************************
-# *
-# *   Copyright (C) 1995-2014, International Business Machines
-# *   Corporation and others.  All Rights Reserved.
-# *
-# *   Generated per the algorithm for Shift_JIS
-# *   described at https://encoding.spec.whatwg.org/#shift_jis
-# *
-# ***************************************************************************
-<code_set_name>               "shift_jis-html5"
+# Copyright (C) 2016 and later: Unicode, Inc. and others.
+# License & terms of use: http://www.unicode.org/copyright.html
+#
+#   Generated per the algorithm for Shift_JIS
+#   described at https://encoding.spec.whatwg.org/#shift_jis
+#
+<code_set_name>               "shift_jis-html"
 <char_name_mask>              "AXXXX"
 <mb_cur_max>                  2
 <mb_cur_min>                  1

@@ -1,0 +1,336 @@
+# Copyright (C) 2016 and later: Unicode, Inc. and others.
+# License & terms of use: http://www.unicode.org/copyright.html
+# ******************************************************************************
+# *
+# *   Copyright (C) 1995-2014, International Business Machines
+# *   Corporation and others.  All Rights Reserved.
+# *
+# ******************************************************************************
+
+# This converter alias table is an alternative to the default alias table,
+# convrtrs.txt. It is tailored to match converter names and aliases defined
+# by "Encoding - Living Standard" (https://encoding.spec.whatwg.org/).
+
+# For more details on the syntax and other information, see comments
+# in convrtrs.txt.
+
+# This alias file can be used by specifying fileReplacement rule in the
+# data configuration file as follows:
+# See
+https://unicode-org.github.io/icu/userguide/icu_data/buildtool.html#file-substitution
+
+#   fileReplacements: {
+#     directory: "$SRC/mappings"
+#     replacements: [
+#       {
+#         src: "converters-html.txt"
+#         dest: "mappings/convrtrs.txt"
+#       },
+#     ]
+#   }
+#
+{
+    HTML            # WHATWG's encoding spec; https://encoding.spec.whatwg.org
+    }
+
+UTF-8 { HTML* }
+    unicode-1-1-utf-8
+    utf8
+
+utf-16be { HTML* }
+
+utf-16le { HTML* }
+    utf-16
+
+ibm866-html
+    IBM866 { HTML* }
+    866
+    cp866
+    csibm866
+
+iso-8859-2-html
+    ISO-8859-2 { HTML* }
+    csisolatin2
+    iso-ir-101
+    iso8859-2
+    iso88592
+    iso_8859-2
+    iso_8859-2:1987
+    l2
+    latin2
+
+iso-8859-3-html
+    ISO-8859-3 { HTML* }
+    csisolatin3
+    iso-ir-109
+    iso8859-3
+    iso88593
+    iso_8859-3
+    iso_8859-3:1988
+    l3
+    latin3
+
+iso-8859-4-html
+    ISO-8859-4 { HTML* }
+    csisolatin4
+    iso-ir-110
+    iso8859-4
+    iso88594
+    iso_8859-4
+    iso_8859-4:1988
+    l4
+    latin4
+
+iso-8859-5-html
+    ISO-8859-5 { HTML* }
+    csisolatincyrillic
+    cyrillic
+    iso-ir-144
+    iso8859-5
+    iso88595
+    iso_8859-5
+    iso_8859-5:1988
+
+iso-8859-6-html
+    ISO-8859-6 { HTML* }
+    arabic
+    asmo-708
+    csiso88596e
+    csiso88596i
+    csisolatinarabic
+    ecma-114
+    iso-8859-6-e
+    iso-8859-6-i
+    iso-ir-127
+    iso8859-6
+    iso88596
+    iso_8859-6
+    iso_8859-6:1987
+
+iso-8859-7-html
+    ISO-8859-7 { HTML* }
+    csisolatingreek
+    ecma-118
+    elot_928
+    greek
+    greek8
+    iso-ir-126
+    iso8859-7
+    iso88597
+    iso_8859-7
+    iso_8859-7:1987
+    sun_eu_greek
+
+iso-8859-8-html
+    ISO-8859-8 { HTML* }
+    csiso88598e
+    csisolatinhebrew
+    hebrew
+    ISO-8859-8-E
+    ISO-8859-8-I
+    iso-ir-138
+    iso8859-8
+    iso88598
+    iso_8859-8
+    iso_8859-8:1988
+    visual
+    # adding this one leads to a failure in encoding-labels.html
+#   csiso88598i
+
+
+# This alias has to be dealt with by TextCodecICU unless
+# multiple encodings can share a single mapping table.
+#ISO-8859-8-I { HTML* }
+#   csiso88598i
+#   logical
+
+iso-8859-10-html
+    ISO-8859-10 { HTML* }
+    csisolatin6
+    iso-ir-157
+    iso8859-10
+    iso885910
+    l6
+    latin6
+
+iso-8859-13-html
+    ISO-8859-13 { HTML* }
+    iso8859-13
+    iso885913
+
+iso-8859-14-html
+    ISO-8859-14 { HTML* }
+    iso8859-14
+    iso885914
+
+iso-8859-15-html
+    ISO-8859-15 { HTML* }
+    csisolatin9
+    iso8859-15
+    iso885915
+    iso_8859-15
+    l9
+
+iso-8859-16-html
+    ISO-8859-16 { HTML* }
+
+koi8-r-html
+    KOI8-R { HTML* }
+    cskoi8r
+    koi
+    koi8
+    koi8_r
+
+koi8-u-html
+    KOI8-U { HTML* }
+    koi8-ru
+
+macintosh-html
+    macintosh { HTML* }
+    csmacintosh
+    mac
+    x-mac-roman
+
+windows-874-html
+    windows-874 { HTML* }
+    dos-874
+    iso-8859-11
+    iso8859-11
+    iso885911
+    tis-620
+
+windows-1250-html
+    windows-1250 { HTML* }
+    cp1250
+    x-cp1250
+
+windows-1251-html
+    windows-1251 { HTML* }
+    cp1251
+    x-cp1251
+
+windows-1252-html
+    windows-1252 { HTML* }
+    ansi_x3.4-1968
+    ascii
+    cp1252
+    cp819
+    csisolatin1
+    ibm819
+    iso-8859-1
+    iso-ir-100
+    iso8859-1
+    iso88591
+    iso_8859-1
+    iso_8859-1:1987
+    l1
+    latin1
+    us-ascii
+    x-cp1252
+
+windows-1253-html
+    windows-1253 { HTML* }
+    cp1253
+    x-cp1253
+
+windows-1254-html
+    windows-1254 { HTML* }
+    cp1254
+    csisolatin5
+    iso-8859-9
+    iso-ir-148
+    iso8859-9
+    iso88599
+    iso_8859-9
+    iso_8859-9:1989
+    l5
+    latin5
+    x-cp1254
+
+windows-1255-html
+    windows-1255 { HTML* }
+    cp1255
+    x-cp1255
+
+windows-1256-html
+    windows-1256 { HTML* }
+    cp1256
+    x-cp1256
+
+windows-1257-html
+    windows-1257 { HTML* }
+    cp1257
+    x-cp1257
+
+windows-1258-html
+    windows-1258 { HTML* }
+    cp1258
+    x-cp1258
+
+x-mac-cyrillic-html
+    x-mac-cyrillic { HTML* }
+    x-mac-ukrainian
+
+# Keep GBK and GB18030 separate for now until we decide
+# what to do about them: crbug.com/339862
+# The encoding spec requires that decoding to Unicode should use GB18030
+# while encoding from Unicode should use GBK.
+
+gbk-html
+                       GBK { HTML* }
+                       chinese
+                       iso-ir-58
+                       GB2312
+                       GB_2312-80
+                       gb_2312
+                       csGB2312
+                       csiso58gb231280
+                       x-gbk
+
+# GB 18030 is partly algorithmic, using the MBCS converter
+gb18030 { HTML* }
+
+big5-html
+    Big5 { HTML* }
+    cn-big5
+    csbig5
+    x-x-big5
+    Big5-HKSCS
+
+euc-jp-html
+    EUC-JP { HTML* }
+    cseucpkdfmtjapanese
+    x-euc-jp
+
+ISO_2022,locale=ja,version=0
+    ISO-2022-JP { HTML* }
+    csiso2022jp
+
+shift_jis-html
+    Shift_JIS { HTML* }
+    csshiftjis
+    ms_kanji
+    ms932
+    shift-jis
+    sjis
+    windows-31j
+    x-sjis
+
+euc-kr-html
+    EUC-KR { HTML* }
+    cseuckr
+    csksc56011987
+    iso-ir-149
+    korean
+    ks_c_5601-1987
+    ks_c_5601-1989
+    ksc5601
+    ksc_5601
+    windows-949
+
+# We need to keep these aliases so that documents labelled with them
+# are converted to a single U+FFFD instead of being rendered as a gibberish.
+ISO-2022-KR { HTML* } csISO2022KR
+ISO-2022-CN { HTML* } csISO2022CN  x-ISO-2022-CN-GB
+ISO-2022-CN-EXT { HTML* }
+HZ-GB-2312 { HTML* } HZ

@@ -7,14 +7,14 @@ function preamble {
 
 encoding="$1"
 cat <<PREAMBLE
-# ***************************************************************************
-# *
-# *   Generated from index-$encoding.txt (
-# *   https://encoding.spec.whatwg.org/index-${encoding}.txt )
-# *   following the algorithm for the single byte legacy encoding
-# *   described at http://encoding.spec.whatwg.org/#single-byte-decoder
-# *
-# ***************************************************************************
+# Copyright (C) 2016 and later: Unicode, Inc. and others.
+# License & terms of use: http://www.unicode.org/copyright.html
+#
+#   Generated from index-$encoding.txt (
+#   https://encoding.spec.whatwg.org/index-${encoding}.txt )
+#   following the algorithm for the single byte legacy encoding
+#   described at http://encoding.spec.whatwg.org/#single-byte-decoder
+
 <code_set_name>               "${encoding}-html"
 <char_name_mask>              "AXXXX"
 <mb_cur_max>                  1
