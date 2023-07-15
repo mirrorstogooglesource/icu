@@ -1,5 +1,5 @@
 diff --git a/source/data/brkitr/ja.txt b/source/data/brkitr/ja.txt
-index dba2fdcf..71f090da 100644
+index 363a74f6..7ae4b8f6 100644
 --- a/source/data/brkitr/ja.txt
 +++ b/source/data/brkitr/ja.txt
 @@ -11,6 +11,7 @@ ja{
@@ -10,25 +10,11 @@ index dba2fdcf..71f090da 100644
      }
      extensions{
      }
-diff --git a/source/data/brkitr/root.txt b/source/data/brkitr/root.txt
-index cb87c7ff..ef60ab6f 100644
---- a/source/data/brkitr/root.txt
-+++ b/source/data/brkitr/root.txt
-@@ -13,9 +13,6 @@ root{
-         word:process(dependency){"word.brk"}
-     }
-     dictionaries{
--        Hani:process(dependency){"cjdict.dict"}
--        Hira:process(dependency){"cjdict.dict"}
--        Kana:process(dependency){"cjdict.dict"}
-         Khmr:process(dependency){"khmerdict.dict"}
-         Laoo:process(dependency){"laodict.dict"}
-         Mymr:process(dependency){"burmesedict.dict"}
 diff --git a/source/data/brkitr/rules/word.txt b/source/data/brkitr/rules/word.txt
-index 5bffd5d7..7ce80da2 100644
+index b4603823..58c18cbc 100644
 --- a/source/data/brkitr/rules/word.txt
 +++ b/source/data/brkitr/rules/word.txt
-@@ -67,13 +67,11 @@ $Control        = [\p{Grapheme_Cluster_Break = Control}];
+@@ -84,13 +84,11 @@ $Control        = [\p{Grapheme_Cluster_Break = Control}];
  $HangulSyllable = [\uac00-\ud7a3];
  $ComplexContext = [:LineBreak = Complex_Context:];
  $KanaKanji      = [$Han $Hiragana $Katakana];
@@ -44,7 +30,7 @@ index 5bffd5d7..7ce80da2 100644
  
  
  ## -------------------------------------------------
-@@ -168,10 +166,6 @@ $ExtendNumLet  $ExFm* $Katakana     {400};    #  (13b)
+@@ -185,10 +183,6 @@ $ExtendNumLet  $ExFm* $Katakana     {400};    #  (13b)
  #
  ^$Regional_Indicator $ExFm* $Regional_Indicator;
  
