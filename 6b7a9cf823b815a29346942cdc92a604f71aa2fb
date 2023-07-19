@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b7364c35_a64d031d",
+        "filename": "common/cjdict.txt",
+        "patchSetId": 28
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2023-07-19T20:49:07Z",
+      "side": 1,
+      "message": "why do you need to change common/cjdict.txt here?",
+      "range": {
+        "startLine": 1,
+        "startChar": 1,
+        "endLine": 1,
+        "endChar": 2
+      },
+      "revId": "6b7a9cf823b815a29346942cdc92a604f71aa2fb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
