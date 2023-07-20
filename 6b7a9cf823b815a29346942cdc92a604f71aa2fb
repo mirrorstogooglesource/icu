@@ -22,6 +22,30 @@
       },
       "revId": "6b7a9cf823b815a29346942cdc92a604f71aa2fb",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3c4639e_f78c2755",
+        "filename": "common/cjdict.txt",
+        "patchSetId": 28
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1128431
+      },
+      "writtenOn": "2023-07-20T03:49:06Z",
+      "side": 1,
+      "message": "Good catch, thanks, removed. This is a left over when I copied this to cjdict.txt, but now `cast/patch_locale.sh` generates it, so this is no longer needed.",
+      "parentUuid": "b7364c35_a64d031d",
+      "range": {
+        "startLine": 1,
+        "startChar": 1,
+        "endLine": 1,
+        "endChar": 2
+      },
+      "revId": "6b7a9cf823b815a29346942cdc92a604f71aa2fb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
