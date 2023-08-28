@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ae82c2b_647db608",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1370517
+      },
+      "writtenOn": "2023-08-28T19:09:11Z",
+      "side": 1,
+      "message": "I\u0027m back from leave and updated this to remove the merge dependencies. If you read the bug there are many Icelandic web-developers asking for this since they are manually setting \"is\" in the Javascript localization.\n\nPTAL at the bug and let me know if this CL is appropriate - thanks.",
+      "revId": "c45969c23e4f7eba7f28c8ecb88e246ad1ce559a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
