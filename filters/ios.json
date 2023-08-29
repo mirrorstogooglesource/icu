@@ -651,6 +651,7 @@
         "coll_tree"
       ],
       "rules": [
+        "-/*/private-unihan",
         "-/UCARules",
 	"-/collations/*/Sequence"
       ]
