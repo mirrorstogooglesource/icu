@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2409d72c_b4735e4c",
+        "filename": "cast/patch_locale.sh",
+        "patchSetId": 30
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2023-08-29T03:20:09Z",
+      "side": 1,
+      "message": "This line is wrong. I got into a problem. I think the ${treeroot}/ should be removed since we alread cd into ${treeroot} in line 7",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 6
+      },
+      "revId": "de4ce0071eb47ed54cbda54869001210cf3a8ae5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
