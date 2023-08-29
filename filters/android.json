@@ -890,6 +890,21 @@
         "-/*/gb2312han"
       ]
     },
+// private-unihan in root is only used by unihan in other brkiter rule files.
+// Since we filter out all unihan rule, we can also filter out root private-unihan
+    {
+      "categories": [
+        "coll_tree"
+      ],
+      "files": {
+        "includelist": [
+	  "root"
+	]
+      },
+      "rules": [
+        "-/*/private-unihan"
+      ]
+    },
 // Based on filter_unit_data
 // # Keep only duration and compound in units* sections.
     {
