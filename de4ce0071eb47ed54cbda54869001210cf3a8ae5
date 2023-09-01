@@ -22,6 +22,30 @@
       },
       "revId": "de4ce0071eb47ed54cbda54869001210cf3a8ae5",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b8dd1874_7cc108ab",
+        "filename": "cast/patch_locale.sh",
+        "patchSetId": 30
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1128431
+      },
+      "writtenOn": "2023-09-01T04:37:14Z",
+      "side": 1,
+      "message": "Either way should be ok with me though, are you preparing a patch, or do you want me to do? Can you explain what kind of the problem is? True we already `cd`, but I can\u0027t imagine how having it can fail. I guess I\u0027ll need to understand the problem if you expect me to write a patch.",
+      "parentUuid": "2409d72c_b4735e4c",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 6
+      },
+      "revId": "de4ce0071eb47ed54cbda54869001210cf3a8ae5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
