@@ -1,3 +1,6 @@
+Name: icu
+License File: LICENSE
+
 # Notes specific to building ICU in Fuchsia tree
 
 This note is specific to compiling ICU for Fuchsia as a target, but only within
