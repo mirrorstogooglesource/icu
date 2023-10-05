@@ -261,3 +261,8 @@ D. Local Modifications
     patches/ultag_parse-double-free.patch
   - https://unicode-org.atlassian.net/browse/ICU-22475
   - https://github.com/unicode-org/icu/pull/2567
+
+11. Patch fix to support TimeZone GMT-16:00 ... GMT-23:59.
+    patches/gmt24.patch
+  - https://unicode-org.atlassian.net/browse/ICU-22526
+  - https://github.com/unicode-org/icu/pull/2646
