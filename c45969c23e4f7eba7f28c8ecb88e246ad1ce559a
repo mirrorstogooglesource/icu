@@ -16,6 +16,23 @@
       "message": "I\u0027m back from leave and updated this to remove the merge dependencies. If you read the bug there are many Icelandic web-developers asking for this since they are manually setting \"is\" in the Javascript localization.\n\nPTAL at the bug and let me know if this CL is appropriate - thanks.",
       "revId": "c45969c23e4f7eba7f28c8ecb88e246ad1ce559a",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6b2cb820_5c6a450b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2023-10-05T20:36:35Z",
+      "side": 1,
+      "message": "This will increase the data 60K for every users. Is this what Chrome team PM decide to increase the locale support?",
+      "revId": "c45969c23e4f7eba7f28c8ecb88e246ad1ce559a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
