@@ -16,6 +16,24 @@
       "message": "have you filed an upstream bug?  Please, do so and include that in CL description and README.chromium.",
       "revId": "ccf3a5f9262dcaa9095c8a09c0a14bced3fed46a",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "89adf352_8527276e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2023-10-11T17:46:20Z",
+      "side": 1,
+      "message": "Sorry you did. Can you include the reference to the CL description as well?",
+      "parentUuid": "36772223_5a4e8f44",
+      "revId": "ccf3a5f9262dcaa9095c8a09c0a14bced3fed46a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
