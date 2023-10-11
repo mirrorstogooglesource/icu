@@ -266,3 +266,10 @@ D. Local Modifications
     patches/gmt24.patch
   - https://unicode-org.atlassian.net/browse/ICU-22526
   - https://github.com/unicode-org/icu/pull/2646
+  
+12. Patch fix of Etc/Unknown being returned for 
+    Intl.DateTimeFormat().resolvedOptions().timeZone on macOS 14.
+    patches/uprv_tzname.patch
+  - https://bugs.chromium.org/p/chromium/issues/detail?id=1473422
+    Fix is to revert the following:
+  - https://github.com/unicode-org/icu/pull/2323
