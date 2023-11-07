@@ -482,7 +482,11 @@ if (icu_use_data_file) {
       if (is_mac || is_ios) {
         args += [ "--mac" ]
       } else if (is_win) {
-        args += [ "--win" ]
+        if (host_os == "linux") {
+          args += [ "--win-on-linux" ]
+        } else {
+          args += [ "--win" ]
+        }
       }
     }
   }
