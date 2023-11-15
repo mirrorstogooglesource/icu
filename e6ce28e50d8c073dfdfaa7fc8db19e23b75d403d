@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "589a5902_56f528b8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1255853
+      },
+      "writtenOn": "2023-11-15T23:45:10Z",
+      "side": 1,
+      "message": "@Jungshik @Frank Can you do a review of this CL? It is currently blocking the GN build of Node.js.",
+      "revId": "e6ce28e50d8c073dfdfaa7fc8db19e23b75d403d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
