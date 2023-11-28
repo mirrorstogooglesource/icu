@@ -16,6 +16,23 @@
       "message": "@Jungshik @Frank Can you do a review of this CL? It is currently blocking the GN build of Node.js.",
       "revId": "e6ce28e50d8c073dfdfaa7fc8db19e23b75d403d",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4797e140_e3d44893",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1255853
+      },
+      "writtenOn": "2023-11-28T01:05:40Z",
+      "side": 1,
+      "message": "Ping code owners of ICU for review after the holiday. @jshin @ftang @syg @dayeung",
+      "revId": "e6ce28e50d8c073dfdfaa7fc8db19e23b75d403d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
