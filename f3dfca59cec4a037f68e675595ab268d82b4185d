@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e21d31c6_f624a5bd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1255853
+      },
+      "writtenOn": "2023-12-06T12:15:20Z",
+      "side": 1,
+      "message": "Sorry for immediately staring a new CL after https://chromium-review.googlesource.com/c/chromium/deps/icu/+/5004573 got committed, but after testing Node.js GN build on Windows for more targets I realized that my fix was wrong: the leading underscore in symbol names depends on CPU arch instead of compiler on Windows.\n\nI can\u0027t promise this is the final fix as there are still quite a lot of undone job about Node.js GN build, but for now this fixes the Windows build for all arches on both win/linux hosts, a fast review will be appreciated since this is blocking me on making Node.js GN build work on Windows.",
+      "revId": "f3dfca59cec4a037f68e675595ab268d82b4185d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
