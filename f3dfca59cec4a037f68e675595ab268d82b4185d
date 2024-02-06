@@ -33,6 +33,24 @@
       "message": "I do not have the expertise to review this. Frank, does this look right?",
       "revId": "f3dfca59cec4a037f68e675595ab268d82b4185d",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "491a7f80_8796eb0f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1255853
+      },
+      "writtenOn": "2024-02-06T00:45:19Z",
+      "side": 1,
+      "message": "The `icu_use_data_file\u003dfalse` arg which used the code in this CL, was introduced purely to make the GN build of Node.js (node-ci) work, there is no other project in Chromium using it as far as I know.\n\nThe node-ci currently only runs for Linux, so I believe merging this CL won\u0027t have any affect to existing Chromium projects. In the meanwhile node-ci needs this change to work on Windows.\n\nI think it is probably hard to find an owner familiar with this part of code, maybe I can find some developers from V8 to review this and then have the owners approve it?",
+      "parentUuid": "8962b575_1b0e6f36",
+      "revId": "f3dfca59cec4a037f68e675595ab268d82b4185d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
