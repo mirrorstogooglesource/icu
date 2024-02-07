@@ -51,6 +51,24 @@
       "parentUuid": "8962b575_1b0e6f36",
       "revId": "f3dfca59cec4a037f68e675595ab268d82b4185d",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "38980659_ac2a6902",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1377944
+      },
+      "writtenOn": "2024-02-07T08:31:21Z",
+      "side": 1,
+      "message": "I am not familiar with make_data_assembly and icu_use_data_file.\n\nI can only confirm what Cheng has said: if we are using them only for node-ci on Windows, then this has never worked (at least not since I took over in 2019):\nhttps://ci.chromium.org/ui/p/node-ci/builders/ci/Node-CI%20Win64\n\nI am also not sure if we run any anything with --win-on-linux.\n\nI guess this must be related to https://issues.chromium.org/issues/40616594\nMaybe Frank or Yang knows more...",
+      "parentUuid": "491a7f80_8796eb0f",
+      "revId": "f3dfca59cec4a037f68e675595ab268d82b4185d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
