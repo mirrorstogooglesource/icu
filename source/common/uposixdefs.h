@@ -33,7 +33,7 @@
  */
 #ifdef _XOPEN_SOURCE
     /* Use the predefined value. */
-#elif !defined(ICU_IS_IN_FUCHSIA) || !defined(__APPLE__)
+#else
     /*
      * Version 6.0:
      * The Open Group Base Specifications Issue 6 (IEEE Std 1003.1, 2004 Edition)
@@ -48,7 +48,7 @@
 #endif
 
 /*
- * Make sure things like readlink and such functions work.
+ * Make sure things like realpath and such functions work.
  * Poorly upgraded Solaris machines can't have this defined.
  * Cleanly installed Solaris can use this #define.
  *

@@ -25,20 +25,20 @@ repo="${repoprefix}${version}/icu4c"
 treeroot="$(dirname "$0")/.."
 
 # Check if the repo for $version is available.
-svn ls "${repo}" > /dev/null 2>&1  || \
-    { echo "${repo} does not exist." >&2; exit 2; }
+# svn ls "${repo}" > /dev/null 2>&1  || \
+#     { echo "${repo} does not exist." >&2; exit 2; }
 
-echo "Cleaning up source/ ..."
-for file in source LICENSE license.html readme.html APIChangeReport.html
-do
-  rm -rf "${treeroot}/${file}"
-done
+# echo "Cleaning up source/ ..."
+# for file in source LICENSE license.html readme.html APIChangeReport.html
+# do
+#   rm -rf "${treeroot}/${file}"
+# done
 
-echo "Download ${version} from the upstream repository ..."
-for file in source LICENSE license.html readme.html APIChangeReport.html
-do
-  svn export --native-eol LF "${repo}/${file}" "${treeroot}/${file}"
-done
+# echo "Download ${version} from the upstream repository ..."
+# for file in source LICENSE license.html readme.html APIChangeReport.html
+# do
+#   svn export --native-eol LF "${repo}/${file}" "${treeroot}/${file}"
+# done
 
 echo "deleting directories we don't care about ..."
 for d in layoutex data/xml allinone

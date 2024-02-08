@@ -42,7 +42,7 @@ DictionaryBreakEngine::~DictionaryBreakEngine() {
 }
 
 UBool
-DictionaryBreakEngine::handles(UChar32 c) const {
+DictionaryBreakEngine::handles(UChar32 c, const char*) const {
     return fSet.contains(c);
 }
 
@@ -54,13 +54,13 @@ DictionaryBreakEngine::findBreaks( UText *text,
                                  UBool isPhraseBreaking,
                                  UErrorCode& status) const {
     if (U_FAILURE(status)) return 0;
-    (void)startPos;            // TODO: remove this param?
     int32_t result = 0;
 
     // Find the span of characters included in the set.
     //   The span to break begins at the current position in the text, and
     //   extends towards the start or end of the text, depending on 'reverse'.
 
+    utext_setNativeIndex(text, startPos);
     int32_t start = (int32_t)utext_getNativeIndex(text);
     int32_t current;
     int32_t rangeStart;
@@ -818,11 +818,11 @@ foundBest:
 static const int32_t KHMER_LOOKAHEAD = 3;
 
 // Will not combine a non-word with a preceding dictionary word longer than this
-static const int32_t KHMER_ROOT_COMBINE_THRESHOLD = 10;
+static const int32_t KHMER_ROOT_COMBINE_THRESHOLD = 3;
 
 // Will not combine a non-word that shares at least this much prefix with a
 // dictionary word, with a preceding word
-static const int32_t KHMER_PREFIX_COMBINE_THRESHOLD = 5;
+static const int32_t KHMER_PREFIX_COMBINE_THRESHOLD = 3;
 
 // Minimum word size
 static const int32_t KHMER_MIN_WORD = 2;
