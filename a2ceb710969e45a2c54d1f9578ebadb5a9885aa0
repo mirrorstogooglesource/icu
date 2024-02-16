@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6a182b5d_296067f0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1362925
+      },
+      "writtenOn": "2024-02-16T00:05:30Z",
+      "side": 1,
+      "message": "PTAL. I\u0027ve locally confirmed on my glinux machine this fixes the issue.",
+      "revId": "a2ceb710969e45a2c54d1f9578ebadb5a9885aa0",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
