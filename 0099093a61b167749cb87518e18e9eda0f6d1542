@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da58a96e_c11068ac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-02-20T23:12:23Z",
+      "side": 1,
+      "message": "Hey Frank, ICU 74 is still in progress but figured we could do a patch in the meantime if this is a pressing issue.",
+      "revId": "0099093a61b167749cb87518e18e9eda0f6d1542",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
