@@ -1,0 +1,107 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f8a1978e_6252b09e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2024-02-21T18:30:26Z",
+      "side": 1,
+      "message": "Sorry for my late reply. I think you need to read the README.chromium file and update it more carefully. It seems the changes of some of the patch is already in 74-2 and we no longer need the patch. In that case, we need to remove that patch file and update the README.chromium  file to remove that process. In other cases, it seems the 74-2 is without that fix but you didn\u0027t apply the patch to change that in this cl and you need to do so to make sure the 74-2 in stating have those changes.",
+      "revId": "f5a50ca0a3ca65223ab91309ac16b783c17d93da",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d98ab233_9fb68499",
+        "filename": "README.chromium",
+        "patchSetId": 2
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2024-02-21T18:30:26Z",
+      "side": 1,
+      "message": "It seems 74-2 didn\u0027t come with this fix and you didn\u0027t apply this patch to fix your 74-2 tree in this cl. Please apply this patch otherwise the fixed bug will show up",
+      "revId": "f5a50ca0a3ca65223ab91309ac16b783c17d93da",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dcecfeb5_7760482a",
+        "filename": "README.chromium",
+        "patchSetId": 2
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2024-02-21T18:30:26Z",
+      "side": 1,
+      "message": "So... it seems the 74-2 tree already come with the changes in this patch so we no longer need to apply this patch while update. I think you should remove this patch file (ultag_parse-double-free.patch) and remove item 10 from this file.",
+      "range": {
+        "startLine": 261,
+        "startChar": 4,
+        "endLine": 261,
+        "endChar": 11
+      },
+      "revId": "f5a50ca0a3ca65223ab91309ac16b783c17d93da",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8465c3e8_b3e1a5b9",
+        "filename": "README.chromium",
+        "patchSetId": 2
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2024-02-21T18:30:26Z",
+      "side": 1,
+      "message": "So... it seems the 74-2 tree already come with the changes in this patch so we no longer need to apply this patch while update. I think you should remove this patch file (gmt24.patch) and remove item 11 from this file.",
+      "range": {
+        "startLine": 265,
+        "startChar": 3,
+        "endLine": 268,
+        "endChar": 48
+      },
+      "revId": "f5a50ca0a3ca65223ab91309ac16b783c17d93da",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fe1aab96_889480ad",
+        "filename": "README.chromium",
+        "patchSetId": 2
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2024-02-21T18:30:26Z",
+      "side": 1,
+      "message": "It seems 74-2 didn\u0027t come with this fix and you didn\u0027t apply this patch to fix your 74-2 tree in this cl. Please apply this patch otherwise the fixed bug will show up",
+      "range": {
+        "startLine": 270,
+        "startChar": 4,
+        "endLine": 274,
+        "endChar": 54
+      },
+      "revId": "f5a50ca0a3ca65223ab91309ac16b783c17d93da",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
