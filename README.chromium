@@ -274,4 +274,5 @@ D. Local Modifications
   - https://unicode-org.atlassian.net/browse/ICU-22541
 
 13. Patch fix of uloc_tag.cpp
+    patches/uloc_tag_buffer_overflow.patch
   - https://github.com/unicode-org/icu/pull/2600/files
