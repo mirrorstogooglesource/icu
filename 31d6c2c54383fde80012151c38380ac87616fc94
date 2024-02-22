@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6779c47b_baa03cb1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-02-22T18:46:12Z",
+      "side": 1,
+      "message": "This mainly switches away from SVN and moving towards a curl + tar approach.",
+      "revId": "31d6c2c54383fde80012151c38380ac87616fc94",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
