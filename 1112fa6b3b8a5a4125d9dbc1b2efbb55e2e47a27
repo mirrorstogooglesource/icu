@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6542cb4_4a4e0d59",
+        "filename": "patches/include-utility.patch",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-02-23T00:27:38Z",
+      "side": 0,
+      "message": "This patch is already upstream in 73-1 and can be removed.",
+      "revId": "1112fa6b3b8a5a4125d9dbc1b2efbb55e2e47a27",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e3e4eda_027f2c1f",
+        "filename": "patches/isvalidenum.patch",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-02-23T00:27:38Z",
+      "side": 0,
+      "message": "This patch file is not referenced in README.chromium hence I\u0027m deleting it. Based on https://unicode-org.atlassian.net/browse/ICU-13509, it looks like it is no longer necessary.",
+      "revId": "1112fa6b3b8a5a4125d9dbc1b2efbb55e2e47a27",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
