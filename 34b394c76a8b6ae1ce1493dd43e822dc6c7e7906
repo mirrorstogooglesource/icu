@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "31f9901c_2345783a",
+        "filename": "scripts/data_files_to_preserve.txt",
+        "patchSetId": 7
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2024-02-23T01:45:30Z",
+      "side": 1,
+      "message": "Hmm.... we don\u0027t want to use the latest version of likelySubtags ? Or did I do this? (I don\u0027t remember ...)",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 22
+      },
+      "revId": "34b394c76a8b6ae1ce1493dd43e822dc6c7e7906",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "df57b8b5_817dd1f0",
+        "filename": "scripts/update.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2024-02-23T01:45:30Z",
+      "side": 1,
+      "message": "nit: output_path",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 10
+      },
+      "revId": "34b394c76a8b6ae1ce1493dd43e822dc6c7e7906",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2a509325_7b4a86b2",
+        "filename": "scripts/update.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2024-02-23T01:45:30Z",
+      "side": 1,
+      "message": "If $tmp_dir and $treeroot are in different file systems, mv wouldn\u0027t work, would it? \n\nHow about combining line 40 with line 49-51 like this? \n\nfor file in source LICENSE license.html readme.html APIChangeReport.html\n  tar -xf \"${tmp_dir}/source.tar.gz\" -C \"${treeroot}\" \\\n   \"icu-release-${version}/icu4c/${file}\" --strip-components\u003d3\n   \nWith that, actually you don\u0027t need to create $tmpdir. Just download the tarball and extract directories/files and delete the tar ball.",
+      "range": {
+        "startLine": 51,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 47
+      },
+      "revId": "34b394c76a8b6ae1ce1493dd43e822dc6c7e7906",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
