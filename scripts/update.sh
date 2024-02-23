@@ -20,13 +20,24 @@ readonly major_minor_version=(${version//-/ })
 # Just the major part of the ICU version number, e.g. "68".
 readonly major_version="${major_minor_version[0]}"
 
-repoprefix="https://github.com/unicode-org/icu/tags/release-"
-repo="${repoprefix}${version}/icu4c"
+tmp_dir=~/tmp/icu-${version}
+repo_url="https://github.com/unicode-org/icu/archive/refs/tags/release-${version}.tar.gz"
+output_url="${tmp_dir}/source.tar.gz"
 treeroot="$(dirname "$0")/.."
 
 # Check if the repo for $version is available.
-svn ls "${repo}" > /dev/null 2>&1  || \
-    { echo "${repo} does not exist." >&2; exit 2; }
+if ! wget --spider $repo_url 2>/dev/null; then
+  echo "$repo_url does not exists"
+  exit 1
+fi
+
+echo "Download ${version} from the upstream repository to tmp directory"
+mkdir -p $tmp_dir
+echo curl -L $repo_url --output $output_url
+curl -L "https://github.com/unicode-org/icu/archive/refs/tags/release-${version}.tar.gz" --output "${tmp_dir}/source.tar.gz"
+
+echo "Extracting tmp directory"
+tar -xf "${tmp_dir}/source.tar.gz" -C "${tmp_dir}" "icu-release-${version}/icu4c" --strip-components=2
 
 echo "Cleaning up source/ ..."
 for file in source LICENSE license.html readme.html APIChangeReport.html
@@ -34,11 +45,14 @@ do
   rm -rf "${treeroot}/${file}"
 done
 
-echo "Download ${version} from the upstream repository ..."
+echo "Moving ${version} from tmp to ICU tree root"
 for file in source LICENSE license.html readme.html APIChangeReport.html
 do
-  svn export --native-eol LF "${repo}/${file}" "${treeroot}/${file}"
+  mv "${tmp_dir}/${file}" "${treeroot}/${file}"
 done
+
+echo "Cleaning up tmp directory"
+rm -rf $tmp_dir
 
 echo "deleting directories we don't care about ..."
 for d in layoutex data/xml allinone
