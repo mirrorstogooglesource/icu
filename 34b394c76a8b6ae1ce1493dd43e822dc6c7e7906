@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b712290e_2f02ec75",
+        "filename": "scripts/data_files_to_preserve.txt",
+        "patchSetId": 7
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-02-23T19:01:45Z",
+      "side": 1,
+      "message": "I added this during the 73-1 upgrade. ftang@chromium.org noticed there was a high diff in res files because of likelySubtags.txt and langInfo.txt and suggested excluding those files. During the roll to 73-1, I manually modified langInfo and likelySubtags to 72-1 instead of leveraging the update script and this slipped by. It seems like they\u0027re not necessary for chromium ICU but I\u0027m not positive. \n\nhttps://chromium-review.googlesource.com/c/chromium/deps/icu/+/4475715",
+      "parentUuid": "31f9901c_2345783a",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 22
+      },
+      "revId": "34b394c76a8b6ae1ce1493dd43e822dc6c7e7906",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "df57b8b5_817dd1f0",
         "filename": "scripts/update.sh",
         "patchSetId": 7
@@ -37,6 +61,30 @@
       "writtenOn": "2024-02-23T01:45:30Z",
       "side": 1,
       "message": "nit: output_path",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 10
+      },
+      "revId": "34b394c76a8b6ae1ce1493dd43e822dc6c7e7906",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e99c2bd3_aaf2b991",
+        "filename": "scripts/update.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-02-23T19:01:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "df57b8b5_817dd1f0",
       "range": {
         "startLine": 25,
         "startChar": 0,
@@ -60,6 +108,30 @@
       "writtenOn": "2024-02-23T01:45:30Z",
       "side": 1,
       "message": "If $tmp_dir and $treeroot are in different file systems, mv wouldn\u0027t work, would it? \n\nHow about combining line 40 with line 49-51 like this? \n\nfor file in source LICENSE license.html readme.html APIChangeReport.html\n  tar -xf \"${tmp_dir}/source.tar.gz\" -C \"${treeroot}\" \\\n   \"icu-release-${version}/icu4c/${file}\" --strip-components\u003d3\n   \nWith that, actually you don\u0027t need to create $tmpdir. Just download the tarball and extract directories/files and delete the tar ball.",
+      "range": {
+        "startLine": 51,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 47
+      },
+      "revId": "34b394c76a8b6ae1ce1493dd43e822dc6c7e7906",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "431dded0_573640c5",
+        "filename": "scripts/update.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-02-23T19:01:45Z",
+      "side": 1,
+      "message": "Good suggestion! Done.",
+      "parentUuid": "2a509325_7b4a86b2",
       "range": {
         "startLine": 51,
         "startChar": 0,
