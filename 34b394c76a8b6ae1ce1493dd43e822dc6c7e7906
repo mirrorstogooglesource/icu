@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e29d78ee_61d93439",
+        "filename": "scripts/data_files_to_preserve.txt",
+        "patchSetId": 7
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1151758
+      },
+      "writtenOn": "2024-02-25T06:42:56Z",
+      "side": 1,
+      "message": "I\u0027m not sure why \u0027large diff\u0027 alone warrants keeping them in the old version. The bug referenced there is not accessible to me so I really can\u0027t tell the reasoning. \n(why is the bug access restricted ?  does it have anything to do with security?)\n\nHow about filing a bug about those two files and what to do about them?",
+      "parentUuid": "b712290e_2f02ec75",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 22
+      },
+      "revId": "34b394c76a8b6ae1ce1493dd43e822dc6c7e7906",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "df57b8b5_817dd1f0",
         "filename": "scripts/update.sh",
         "patchSetId": 7
