@@ -72,6 +72,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c37bc50_651e0f5c",
+        "filename": "scripts/data_files_to_preserve.txt",
+        "patchSetId": 7
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-02-26T17:43:10Z",
+      "side": 1,
+      "message": "The bug was just a tracking bug for the ICU update - no idea why its restricted. Frank probably knows the most. I think the problem was that we\u0027ve increased the binary size of ICU such that it triggered some warnings in the CQ process. If we wanted to push it in, I think we could\u0027ve had an exception. \n\nIt didn\u0027t seem like those files were necessary for Chromium hence why it was ignored. Added a bug to investigate here (https://crbug.com/326968854)",
+      "parentUuid": "e29d78ee_61d93439",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 22
+      },
+      "revId": "34b394c76a8b6ae1ce1493dd43e822dc6c7e7906",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "df57b8b5_817dd1f0",
