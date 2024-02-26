@@ -96,6 +96,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7668e9c1_b33e4307",
+        "filename": "scripts/data_files_to_preserve.txt",
+        "patchSetId": 7
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-02-26T17:46:50Z",
+      "side": 1,
+      "message": "To clarify, I mean Frank would be the correct person to ask about why we\u0027re ignoring those two files. \n\nI\u0027m not sure why the bug had restricted view access and I don\u0027t see any labels that would make it as such.",
+      "parentUuid": "2c37bc50_651e0f5c",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 22
+      },
+      "revId": "34b394c76a8b6ae1ce1493dd43e822dc6c7e7906",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "df57b8b5_817dd1f0",
