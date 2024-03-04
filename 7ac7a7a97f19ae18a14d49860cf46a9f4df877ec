@@ -16,6 +16,24 @@
       "message": "Since the staging branch for 74 has the ICU upgrades I decided to just check in directly to the ICU main branch. Let me know if this needs to be in a different staging branch.",
       "revId": "7ac7a7a97f19ae18a14d49860cf46a9f4df877ec",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bbb65755_dbddbe9f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-03-04T22:08:11Z",
+      "side": 1,
+      "message": "scripts/update_tz.sh also needs to be fixed (still using SVN on github). Just manually moved over the files for now.",
+      "parentUuid": "dbf10dda_cacc81f0",
+      "revId": "7ac7a7a97f19ae18a14d49860cf46a9f4df877ec",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
