@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "01d133df_1a2c7345",
+        "filename": "BUILD.gn",
+        "patchSetId": 2
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-03-06T23:45:22Z",
+      "side": 1,
+      "message": "Not really familiar with build files but if `configs -\u003d icu_fuchsia_remove_configs` will break if `icu_fuchsia_remove_configs` is empty, how does adding an empty `icu_fuchsia_remove_configs` help? Wouldn\u0027t both of them be empty containers?",
+      "range": {
+        "startLine": 208,
+        "startChar": 8,
+        "endLine": 209,
+        "endChar": 58
+      },
+      "revId": "dc46f4e6ba3eb1b29061d501deed8f447b831b1f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
