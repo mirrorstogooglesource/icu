@@ -22,6 +22,30 @@
       },
       "revId": "dc46f4e6ba3eb1b29061d501deed8f447b831b1f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "161ad509_1c2c47db",
+        "filename": "BUILD.gn",
+        "patchSetId": 2
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 1375392
+      },
+      "writtenOn": "2024-03-06T23:52:02Z",
+      "side": 1,
+      "message": "No it\u0027s not about empty things, it\u0027s about attempting to remove things that aren\u0027t already there.\n\nTo wit.\n\nIf `configs \u003d [ \"foo\" ]` then `configs -\u003d [ \"bar\" ]` is an error not a no-op as one would expect. This is a GN quirk.\n\nAnother non-obvious quirk. If `configs \u003d [ \"foo\" ]`, then `configs +\u003d [ \"foo\" ]` ends up with `configs \u003d [ \"foo\" ]`. That is, `configs` behaves like a *set*, not like a *list*.\n\nSo, from these two rules, a robust way to remove something from a list of labels, no matter whether it\u0027s there or not to begin with, is to first add it, then remove it.\n\nThis is an algebraic game that I personally don\u0027t like very much, but it\u0027s well known enough in GN that it\u0027s become somewhat of an idiom.\n\n:/",
+      "parentUuid": "01d133df_1a2c7345",
+      "range": {
+        "startLine": 208,
+        "startChar": 8,
+        "endLine": 209,
+        "endChar": 58
+      },
+      "revId": "dc46f4e6ba3eb1b29061d501deed8f447b831b1f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
