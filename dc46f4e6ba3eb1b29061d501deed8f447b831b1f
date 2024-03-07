@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "633db82c_c227ee10",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1375392
+      },
+      "writtenOn": "2024-03-07T21:27:24Z",
+      "side": 1,
+      "message": "Would you mind merging this when able? I don\u0027t seem to have merge rights.",
+      "revId": "dc46f4e6ba3eb1b29061d501deed8f447b831b1f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "01d133df_1a2c7345",
