@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "39918e85_f8d682ee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1545138
+      },
+      "writtenOn": "2024-03-11T22:57:31Z",
+      "side": 1,
+      "message": "ochang@ is no longer a committer so he cannot approve. Weird that our scripts didn\u0027t remove him as an OWNER when he lost comittership",
+      "revId": "8d2000457de5f04272e09b9d27eab1869d9b8acf",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
