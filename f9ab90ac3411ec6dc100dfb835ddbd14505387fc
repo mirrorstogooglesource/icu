@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3083b41c_33c3a883",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1375392
+      },
+      "writtenOn": "2024-03-19T20:51:26Z",
+      "side": 1,
+      "message": "Note, this is not urgent - we have a way to fix fuchsia compilation ahead of a roll using `icu_fuchsia_extra_compile_flags`.",
+      "revId": "f9ab90ac3411ec6dc100dfb835ddbd14505387fc",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
