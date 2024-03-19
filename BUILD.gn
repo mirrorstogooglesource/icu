@@ -345,10 +345,12 @@ template("generate_icuuc") {
                            ])
 
     sources = icuuc_sources
-    public_deps = [ ":icuuc_public" ]
+    public_deps = [
+      ":icudata",
+      ":icuuc_public",
+    ]
 
     defines = [ "U_COMMON_IMPLEMENTATION" ]
-    deps = [ ":icudata" ]
 
     if (is_chromeos) {
       deps += [ ":icudata_hash" ]
@@ -459,7 +461,12 @@ if (icu_copy_icudata_to_root_build_dir) {
     sources = [ "$data_dir/$data_bundle" ]
     outputs = [ "$root_out_dir/$data_bundle" ]
     data = [ "$root_out_dir/$data_bundle" ]
+    public_configs = [ ":icu_copy_config" ]
   }
+}
+
+config("icu_copy_config") {
+  inputs = get_target_outputs(":copy_icudata")
 }
 
 if (icu_use_data_file) {
