@@ -151,6 +151,12 @@ config("icu_code") {
       # Used for conditional changes to the compilation process that
       # are only needed for the Fuchsia toolchain.
       "-DICU_IS_IN_FUCHSIA",
+
+      # Fuchsia's default compilation config makes
+      # no-newline-after-eof an error. While in ICU it
+      # probably does not matter. So we instruct Fuchsia
+      # to lower its standards when compiling ICU.
+      "-Wno-newline-eof",
     ] + icu_fuchsia_extra_compile_flags
   }
   if (current_cpu == "wasm") {
