@@ -70,6 +70,24 @@
       "parentUuid": "4b5fbc1e_988f0c6b",
       "revId": "5ae60ba128b3d593307a221dc9322e83b0e9647f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d6344110_dcfbe1fa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1375392
+      },
+      "writtenOn": "2024-03-26T20:25:51Z",
+      "side": 1,
+      "message": "Error at https://chromium-review.googlesource.com/c/chromium/src/+/5330158?checksRunsSelected\u003dfuchsia-x64-cast-receiver-rel\u0026tab\u003dchecks is:\n\n```\n[ RUN      ] AlternateTestParams/PartitionAllocTest.CheckReservationType/0\n../../base/allocator/partition_allocator/src/partition_alloc/partition_alloc_unittest.cc:4963: Failure\nValue of: IsManagedByNormalBuckets(address_to_check)\n  Actual: true\nExpected: false\nStack trace:\n{{{module:0:\u003cexecutable\u003e:elf:308edc134392b0c0}}}\n{{{mmap:0x33ffc6c9000:0x812ef0:load:0:r:0x0}}}\n{{{mmap:0x33ffcedc000:0x16a4a10:load:0:rx:0x813000}}}\n{{{mmap:0x33ffe581000:0x30000:load:0:rw:0x1eb8000}}}\n{{{mmap:0x33ffe5b1000:0x96068:load:0:rw:0x1ee8000}}}\n{{{bt:0:0x33ffdc0559a}}}\n{{{reset}}}\n\n../../base/allocator/partition_allocator/src/partition_alloc/partition_alloc_unittest.cc:4965: Failure\nValue of: IsManagedByNormalBucketsOrDirectMap(address_to_check)\n  Actual: true\nExpected: false\nStack trace:\n{{{module:0:\u003cexecutable\u003e:elf:308edc134392b0c0}}}\n{{{mmap:0x33ffc6c9000:0x812ef0:load:0:r:0x0}}}\n{{{mmap:0x33ffcedc000:0x16a4a10:load:0:rx:0x813000}}}\n{{{mmap:0x33ffe581000:0x30000:load:0:rw:0x1eb8000}}}\n{{{mmap:0x33ffe5b1000:0x96068:load:0:rw:0x1ee8000}}}\n{{{bt:0:0x33ffdc05882}}}\n{{{reset}}}\n\n[  FAILED  ] AlternateTestParams/PartitionAllocTest.CheckReservationType/0, where GetParam() \u003d 2-byte object \u003c00-00\u003e (54 ms)\n```",
+      "parentUuid": "0c3e346b_c6a539c0",
+      "revId": "5ae60ba128b3d593307a221dc9322e83b0e9647f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
