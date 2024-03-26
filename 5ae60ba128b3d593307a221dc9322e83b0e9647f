@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da27eaba_1ae08060",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1375392
+      },
+      "writtenOn": "2024-03-26T19:41:47Z",
+      "side": 1,
+      "message": "Hi folks. This breaks Fuchsia licensing checks.\n\nThe checkout here only includes the dir //icu/icu4c of the ICU repository. The ICU repository has changed //icu/icu4c/LICENSE to be a symlink to //icu/LICENSE. This makes the LICENSE file absent/wrong in the Chromium\u0027s ICU fork.\n\nThis is probably not a good situation, and we should be fixing it.",
+      "revId": "5ae60ba128b3d593307a221dc9322e83b0e9647f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
