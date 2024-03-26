@@ -52,6 +52,24 @@
       "parentUuid": "da27eaba_1ae08060",
       "revId": "5ae60ba128b3d593307a221dc9322e83b0e9647f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0c3e346b_c6a539c0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1375392
+      },
+      "writtenOn": "2024-03-26T20:24:30Z",
+      "side": 1,
+      "message": "OK, took a look at https://chromium-review.googlesource.com/c/chromium/src/+/5330158?checksRunsSelected\u003dfuchsia-x64-cast-receiver-rel\u0026tab\u003dchecks\n\nThat is an unrelated failure, and seems like a legit test fail.\nDoes not seem to be obviously related to ICU or Fuchsia, however.\nMaybe it\u0027s a flaky test?",
+      "parentUuid": "4b5fbc1e_988f0c6b",
+      "revId": "5ae60ba128b3d593307a221dc9322e83b0e9647f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
