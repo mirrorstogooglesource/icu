@@ -16,6 +16,24 @@
       "message": "Hi folks. This breaks Fuchsia licensing checks.\n\nThe checkout here only includes the dir //icu/icu4c of the ICU repository. The ICU repository has changed //icu/icu4c/LICENSE to be a symlink to //icu/LICENSE. This makes the LICENSE file absent/wrong in the Chromium\u0027s ICU fork.\n\nThis is probably not a good situation, and we should be fixing it.",
       "revId": "5ae60ba128b3d593307a221dc9322e83b0e9647f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "38d58e5d_33c00f5b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-03-26T20:19:42Z",
+      "side": 1,
+      "message": "Thanks Filip for finding this issue! I\u0027ll have a CL to update the license.\n\nIs this related to the Fuchsia UT I\u0027m seeing here updating the roll ICU in chromium?\nhttps://chromium-review.googlesource.com/c/chromium/src/+/5330158?checksRunsSelected\u003dfuchsia-x64-cast-receiver-rel\u0026tab\u003dchecks",
+      "parentUuid": "da27eaba_1ae08060",
+      "revId": "5ae60ba128b3d593307a221dc9322e83b0e9647f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
