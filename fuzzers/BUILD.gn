@@ -28,6 +28,14 @@ fuzzer_test("icu_uregex_open_fuzzer") {
   libfuzzer_options = [ "max_len=128" ]
 }
 
+fuzzer_test("icu_uregex_match_fuzzer") {
+  sources = [ "icu_uregex_match_fuzzer.cc" ]
+  deps = [ ":fuzzer_support" ]
+
+  #dict = "icu_regex.dict"
+  #libfuzzer_options = [ "max_len=128" ]
+}
+
 fuzzer_test("icu_unicode_string_codepage_create_fuzzer") {
   sources = [ "icu_unicode_string_codepage_create_fuzzer.cc" ]
   deps = [ ":fuzzer_support" ]
