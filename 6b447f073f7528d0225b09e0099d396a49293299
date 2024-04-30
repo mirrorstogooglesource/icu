@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ce29f68e_931413c3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1545138
+      },
+      "writtenOn": "2024-04-30T13:23:07Z",
+      "side": 1,
+      "message": "40071695",
+      "revId": "6b447f073f7528d0225b09e0099d396a49293299",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5752f1fe_e3583fa7",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 3
@@ -14,6 +31,58 @@
       "writtenOn": "2024-04-26T15:04:40Z",
       "side": 1,
       "message": "Brendon, WDYT about adding a fuzzer like this? (It might need a few minor cleanups to be compatible with code standards).\n\nUnfortunately it seems like the icu regex algorithm (unlike re2) can get into an infinite loop in backtracking, and this fuzzer eventually hangs.\n\nSo I\u0027m not sure we can land this, but I\u0027m wondering if you have any cunning ideas about landing something similar. I can\u0027t think of one...",
+      "revId": "6b447f073f7528d0225b09e0099d396a49293299",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1561d13f_f8798482",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1545138
+      },
+      "writtenOn": "2024-04-30T13:23:07Z",
+      "side": 1,
+      "message": "I\u0027m not sure if it matters that much if it hangs, sometimes. Many of our fuzzers produce testcases that cause the fuzzer to infinite loop and libFuzzer will just handle those testcases as a failure cases.\n\nHowever, I\u0027m not sure if it is ever called with arbitrary user supplied regex [1]. If it is infinite looping too often maybe we could create a predefined list of regexes to test against maybe taken from `autofill_regexes.cc` and use FuzzDataProducer to choose a random regex from that list? \n\n[1] https://source.chromium.org/chromium/chromium/src/+/main:components/autofill/core/browser/form_parsing/phone_field_parser.cc;l\u003d189;drc\u003d6f3f85b321146cfc0f9eb81a74c7c2257821461e",
+      "parentUuid": "5752f1fe_e3583fa7",
+      "revId": "6b447f073f7528d0225b09e0099d396a49293299",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c3e7f7f7_4ef3eada",
+        "filename": "fuzzers/icu_uregex_match_fuzzer.cc",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1545138
+      },
+      "writtenOn": "2024-04-30T13:23:07Z",
+      "side": 1,
+      "message": "2024",
+      "revId": "6b447f073f7528d0225b09e0099d396a49293299",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f1931701_daa18324",
+        "filename": "fuzzers/icu_uregex_match_fuzzer.cc",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1545138
+      },
+      "writtenOn": "2024-04-30T13:23:07Z",
+      "side": 1,
+      "message": "nit: there are codepaths that call `find` with invlid regexes so it might be worth removing the if statement here.",
       "revId": "6b447f073f7528d0225b09e0099d396a49293299",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
