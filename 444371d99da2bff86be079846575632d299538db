@@ -16,6 +16,24 @@
       "message": "David, PTAL.\n\nTo make sure I understand how to test if we can remove it, the steps are:\n\n1. Land this CL.\n2. Make a CL in chromium/src updating the DEP and run the bots\n3a. If step 2 succeeds, land the chromium/src CL.\n3b. If step 3 fails, revert this CL.\n\nIs that right?",
       "revId": "444371d99da2bff86be079846575632d299538db",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cd91b81c_72e615cf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-05-07T23:47:14Z",
+      "side": 1,
+      "message": "Yup, that\u0027s correct.",
+      "parentUuid": "26e2f058_8f18d037",
+      "revId": "444371d99da2bff86be079846575632d299538db",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
