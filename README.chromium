@@ -216,10 +216,6 @@ D. Local Modifications
     * Remove a section of configure that will cause breakage while
       running runConfigureICU.
 
-  - patches/wpo.patch (only needed when icudata dll is used).
-    upstream bugs : https://unicode-org.atlassian.net/browse/ICU-8043
-                    https://unicode-org.atlassian.net/browse/ICU-5701
-
   - patches/data_symb.patch :
       Put ICU_DATA_ENTRY_POINT(icudtXX_dat) in common when we use
       the icu data file or icudt.dll
