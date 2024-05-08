@@ -16,6 +16,24 @@
       "message": "We also need to update README.chromium \n\nhttps://crsrc.org/c/third_party/icu/README.chromium;drc\u003d5ae60ba128b3d593307a221dc9322e83b0e9647f;l\u003d219",
       "revId": "364118a1d9da24bb5b770ac3d762ac144d6da5a4",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d41d82cd_aeb741f3",
+        "filename": "patches/wpo.patch",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1362925
+      },
+      "writtenOn": "2024-05-08T00:04:22Z",
+      "side": 0,
+      "message": "Good catch, done.",
+      "parentUuid": "fdf91f6c_1eeb6e09",
+      "revId": "364118a1d9da24bb5b770ac3d762ac144d6da5a4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
