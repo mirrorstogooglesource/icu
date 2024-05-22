@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "78d10995_4b2731ee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1249238
+      },
+      "writtenOn": "2024-05-22T15:44:19Z",
+      "side": 1,
+      "message": "David: This says there is a merge conflict.\nFrank: It looks like this has been waiting for your approval.\nI don\u0027t have permission to approve.",
+      "revId": "1f3a12d7b875993499d1239875abc4090661daab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
