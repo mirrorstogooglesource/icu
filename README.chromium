@@ -262,3 +262,8 @@ D. Local Modifications
 11. Patch source/common/locid.cpp to resolve crashes in DecimalFormatting.
     patches/locid.patch
   - https://issues.chromium.org/issues/333453962
+
+12. Patch source/common/messagepattern.ccp/.h to resolve stack overflow.
+    patches/limit_message_pattern.patch
+  - https://issues.chromium.org/343280855
+  - https://unicode-org.atlassian.net/browse/ICU-22798
