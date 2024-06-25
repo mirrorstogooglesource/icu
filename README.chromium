@@ -267,3 +267,8 @@ D. Local Modifications
     patches/limit_message_pattern.patch
   - https://issues.chromium.org/343280855
   - https://unicode-org.atlassian.net/browse/ICU-22798
+
+13. Patch source/common/ubidiwrt.cpp to resolve a bidi buffer overflow.
+    patches/bidi_buffer_overflow.patch
+  - https://issues.chromium.org/u/1/issues/345352978
+  - https://unicode-org.atlassian.net/browse/ICU-22768
