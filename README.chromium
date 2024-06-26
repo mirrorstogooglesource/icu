@@ -277,3 +277,8 @@ D. Local Modifications
     patches/remove_format_overflow_warning.patch
   - https://unicode-org.atlassian.net/browse/ICU-21589
   - https://issues.chromium.org/u/1/issues/345352978
+
+15. Patch source/i18n/japancal.cpp to fix an extended year int32 overflow.
+    patches/ja_extended_year_overflow.patch
+  - https://issues.chromium.org/u/1/issues/345352978
+  - https://unicode-org.atlassian.net/browse/ICU-22730
