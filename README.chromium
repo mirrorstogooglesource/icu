@@ -278,3 +278,8 @@ D. Local Modifications
     patches/bidi_buffer_overflow.patch
   - https://issues.chromium.org/u/1/issues/345352978
   - https://unicode-org.atlassian.net/browse/ICU-22768
+
+14. Patch source/tools/pkgdata/pkgdata.cpp to remove a format-overflow warning.
+    patches/remove_format_overflow_warning.patch
+  - https://unicode-org.atlassian.net/browse/ICU-21589
+  - https://issues.chromium.org/u/1/issues/345352978
