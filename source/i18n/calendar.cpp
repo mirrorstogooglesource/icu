@@ -1566,7 +1566,7 @@ void Calendar::computeGregorianFields(int32_t julianDay, UErrorCode& ec) {
         return;
     }
     int32_t gregorianDayOfWeekUnused;
-    Grego::dayToFields(julianDay - kEpochStartAsJulianDay, fGregorianYear, fGregorianMonth, fGregorianDayOfMonth, gregorianDayOfWeekUnused, fGregorianDayOfYear);
+    Grego::dayToFields(julianDay - kEpochStartAsJulianDay, fGregorianYear, fGregorianMonth, fGregorianDayOfMonth, gregorianDayOfWeekUnused, fGregorianDayOfYear, ec);
 }
 
 /**
