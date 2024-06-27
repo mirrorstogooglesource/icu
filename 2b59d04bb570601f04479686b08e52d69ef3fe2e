@@ -16,6 +16,24 @@
       "message": "More of a rubberstamp on this one.\n\nBTW is the plan to remove these patches with the new release?",
       "revId": "2b59d04bb570601f04479686b08e52d69ef3fe2e",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "103532cb_41720a8f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-06-27T19:34:07Z",
+      "side": 1,
+      "message": "Yes, all of the patches have already been checked in to upstream ICU in later releases. I think this specific patch is in v75.",
+      "parentUuid": "e1483ed5_9525d736",
+      "revId": "2b59d04bb570601f04479686b08e52d69ef3fe2e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
