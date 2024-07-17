@@ -11,6 +11,7 @@ ja{
         line_phrase:process(dependency){"line_phrase_cj.brk"}
         line_strict:process(dependency){"line.brk"}
         line_strict_phrase:process(dependency){"line_phrase_cj.brk"}
+	word:process(dependency){"word_ja.brk"}
     }
     extensions{
     }
