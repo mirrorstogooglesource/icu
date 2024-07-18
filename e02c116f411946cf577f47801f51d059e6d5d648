@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "16c813fb_67e16024",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-07-18T17:57:45Z",
+      "side": 1,
+      "message": "What is the M120 branch used for? Why doesn\u0027t LTS take in the latest ICU updates?",
+      "revId": "e02c116f411946cf577f47801f51d059e6d5d648",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d0bc94c0_e15235f5",
+        "filename": "README.chromium",
+        "patchSetId": 1
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-07-18T17:57:45Z",
+      "side": 1,
+      "message": "Remove",
+      "range": {
+        "startLine": 275,
+        "startChar": 2,
+        "endLine": 275,
+        "endChar": 54
+      },
+      "revId": "e02c116f411946cf577f47801f51d059e6d5d648",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
