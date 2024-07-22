@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d47a9534_67a543d0",
+        "filename": "source/data/brkitr/ja.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2024-07-22T23:07:43Z",
+      "side": 1,
+      "message": "This is unrelated to TZ",
+      "revId": "24b15784b7173205a208cc2e3d94e427d7edf9a2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "474f4046_6b2626f5",
+        "filename": "source/data/brkitr/rules/word.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1291594
+      },
+      "writtenOn": "2024-07-22T23:07:43Z",
+      "side": 1,
+      "message": "This change is unrelated to TimeZone",
+      "revId": "24b15784b7173205a208cc2e3d94e427d7edf9a2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
