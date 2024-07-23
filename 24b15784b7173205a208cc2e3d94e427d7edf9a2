@@ -18,6 +18,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cf0ad1ee_66fc99dc",
+        "filename": "source/data/brkitr/ja.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1550677
+      },
+      "writtenOn": "2024-07-23T03:20:01Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "d47a9534_67a543d0",
+      "revId": "24b15784b7173205a208cc2e3d94e427d7edf9a2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "474f4046_6b2626f5",
@@ -31,6 +49,24 @@
       "writtenOn": "2024-07-22T23:07:43Z",
       "side": 1,
       "message": "This change is unrelated to TimeZone",
+      "revId": "24b15784b7173205a208cc2e3d94e427d7edf9a2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "634553c1_1f65b778",
+        "filename": "source/data/brkitr/rules/word.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1550677
+      },
+      "writtenOn": "2024-07-23T03:20:01Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "474f4046_6b2626f5",
       "revId": "24b15784b7173205a208cc2e3d94e427d7edf9a2",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
