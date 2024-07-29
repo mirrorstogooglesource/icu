@@ -63,6 +63,30 @@
       },
       "revId": "e02c116f411946cf577f47801f51d059e6d5d648",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0e9d35c0_466e0ccb",
+        "filename": "README.chromium",
+        "patchSetId": 1
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-07-29T17:13:18Z",
+      "side": 1,
+      "message": "Gotcha, sounds good.\n\n`https://unicode-org.atlassian.net/browse/ICU-22541` should be removed, it\u0027s the same link as line 274.",
+      "parentUuid": "1d4ddbf7_d17f6a97",
+      "range": {
+        "startLine": 275,
+        "startChar": 2,
+        "endLine": 275,
+        "endChar": 54
+      },
+      "revId": "e02c116f411946cf577f47801f51d059e6d5d648",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
