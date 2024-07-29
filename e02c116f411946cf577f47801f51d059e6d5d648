@@ -39,6 +39,30 @@
       },
       "revId": "e02c116f411946cf577f47801f51d059e6d5d648",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1d4ddbf7_d17f6a97",
+        "filename": "README.chromium",
+        "patchSetId": 1
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 1516057
+      },
+      "writtenOn": "2024-07-29T17:07:08Z",
+      "side": 1,
+      "message": "Hi David, it\u0027s used for the CrOS LTS release, we don\u0027t take all the updates of the depencies and cherry-pick only the security/critical changes",
+      "parentUuid": "d0bc94c0_e15235f5",
+      "range": {
+        "startLine": 275,
+        "startChar": 2,
+        "endLine": 275,
+        "endChar": 54
+      },
+      "revId": "e02c116f411946cf577f47801f51d059e6d5d648",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
