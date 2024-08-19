@@ -2,6 +2,7 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
+import("//build/config/custom_linux_build.gni")
 import("//build/config/host_byteorder.gni")
 import("//third_party/icu/config.gni")
 import("//third_party/icu/sources.gni")
@@ -340,10 +341,18 @@ if (icu_use_data_file) {
       outputs = [ "{{bundle_resources_dir}}/{{source_file_part}}" ]
     }
   } else {
-    copy("icudata") {
-      sources = [ "$data_dir/$data_bundle" ]
-      outputs = [ "$root_out_dir/$data_bundle" ]
-      data = [ "$root_out_dir/$data_bundle" ]
+    if (is_custom_linux) {
+      copy("icudata") {
+        sources = [ "$data_dir/$data_bundle.zip" ]
+        outputs = [ "$root_out_dir/$data_bundle" ]
+        data = [ "$root_out_dir/$data_bundle" ]
+      }
+    } else {
+      copy("icudata") {
+        sources = [ "$data_dir/$data_bundle" ]
+        outputs = [ "$root_out_dir/$data_bundle" ]
+        data = [ "$root_out_dir/$data_bundle" ]
+      }
     }
   }
 
