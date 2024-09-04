@@ -41,6 +41,12 @@ config_data cast
 $ICUROOT/cast/patch_locale.sh && make -j 120
 $ICUROOT/scripts/copy_data.sh cast
 
+echo "Build the filtered data for Chromecast Video"
+(cd data && make clean)
+config_data chromecast_video
+make -j 120
+$ICUROOT/scripts/copy_data.sh chromecast_video
+
 echo "Build the filtered data for Android"
 (cd data && make clean)
 config_data android

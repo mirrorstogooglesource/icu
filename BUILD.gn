@@ -321,6 +321,8 @@ if (is_android) {
   data_dir = "ios"
 } else if (is_chromeos) {
   data_dir = "chromeos"
+} else if (icu_chromecast_video) {
+  data_dir = "chromecast_video"
 } else {
   data_dir = "common"
 }

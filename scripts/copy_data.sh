@@ -10,7 +10,7 @@ set -e # exit if fail
 
 if [ $# -lt 1 ];
 then
-  echo "Usage: "$0" (android|android_extra|android_small|cast|chromeos|common|flutter|ios)" >&2
+  echo "Usage: "$0" (android|android_extra|android_small|cast|chromecast_video|chromeos|common|flutter|ios)" >&2
   exit 1
 fi
 
@@ -104,6 +104,10 @@ case "$1" in
     ;;
   "cast")
     copy_data Cast $1
+    backup_outdir $1
+    ;;
+  "chromecast_video")
+    copy_data ChromecastVideo $1
     backup_outdir $1
     ;;
   "flutter")
