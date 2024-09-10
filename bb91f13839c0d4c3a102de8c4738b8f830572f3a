@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8edc3e3c_d4d4cc60",
+        "filename": "filters/chromecast_video.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1581873
+      },
+      "writtenOn": "2024-09-10T18:36:40Z",
+      "side": 1,
+      "message": "I\u0027m glad you commented on this, I was trying to figure out why running `make_data_all.sh` kept failing even though our local variant appeared to work. even though I couldn\u0027t see any obvious syntax issues for the json file. I\u0027d left it actually as a 1:1 copy of the previous `cast/filters.json`... this\u0027s now corrected to be cobalts variant like I intended (and the description implies).\n\nalso for the failures: apparently ICU has a preprocess step for the JSON to strip all comments, but they don\u0027t handle whitespace at all, so any comment with whitespace preceeding it will cause a rather opaque syntax failure to be thrown.\n\nis `2024 the chromium project authors` the correct tag to use?",
+      "parentUuid": "02ab8e4a_6946b506",
+      "range": {
+        "startLine": 1,
+        "startChar": 13,
+        "endLine": 1,
+        "endChar": 17
+      },
+      "revId": "bb91f13839c0d4c3a102de8c4738b8f830572f3a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a1d4c9c1_4c3d1629",
         "filename": "scripts/copy_data.sh",
         "patchSetId": 1
