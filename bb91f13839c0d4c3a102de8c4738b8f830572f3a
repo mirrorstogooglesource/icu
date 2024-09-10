@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67fd5ee9_83b6e025",
+        "filename": "filters/chromecast_video.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-09-10T17:23:02Z",
+      "side": 1,
+      "message": "Update year",
+      "range": {
+        "startLine": 1,
+        "startChar": 13,
+        "endLine": 1,
+        "endChar": 17
+      },
+      "revId": "bb91f13839c0d4c3a102de8c4738b8f830572f3a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a1d4c9c1_4c3d1629",
+        "filename": "scripts/copy_data.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-09-10T17:23:02Z",
+      "side": 1,
+      "message": "What\u0027s the difference between chromecast and cast?",
+      "range": {
+        "startLine": 79,
+        "startChar": 3,
+        "endLine": 79,
+        "endChar": 7
+      },
+      "revId": "bb91f13839c0d4c3a102de8c4738b8f830572f3a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "626151d6_4a6a7115",
+        "filename": "scripts/copy_data.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-09-10T17:23:02Z",
+      "side": 1,
+      "message": "This might be a question for @jshin@chromium.org or @ftang@chromium.org but do we have any guidelines when adding a custom dat file?\n\nI\u0027m worried that this is another OS that needs to be maintained in a repo that isn\u0027t really funded. For context, the responsibility of upgrading ICU has been moved from i18n to a Chromium team a couple of years ago (mainly compromised of volunteers). Upgrading ICU usually comes with API changes and there have been a couple of times already when other consumers blocked or delayed roll out of a new version. \n\nI\u0027m not sure what the right balance is. At a minimum, this seems like we\u0027d need a contact from chromecast_video incase there are issues during upgrade.",
+      "range": {
+        "startLine": 83,
+        "startChar": 3,
+        "endLine": 83,
+        "endChar": 19
+      },
+      "revId": "bb91f13839c0d4c3a102de8c4738b8f830572f3a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
