@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2e41d914_4e5ccc97",
+        "filename": "filters/chromecast_video.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 395,
+      "author": {
+        "id": 1581873
+      },
+      "writtenOn": "2024-09-12T17:15:18Z",
+      "side": 1,
+      "message": "this was just mass formatting fixes for whatever status Cobalt has. I\u0027d prefer to keep (minus formatting deltas) it as close as possible to what Cobalt has, as the file is somewhat unwieldy to me.",
+      "parentUuid": "7fc51472_62929f7b",
+      "range": {
+        "startLine": 395,
+        "startChar": 0,
+        "endLine": 395,
+        "endChar": 15
+      },
+      "revId": "6f8dcbe2398d424e9dbf85286a53a45b1fd94111",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9d5b5b88_3d9eb133",
         "filename": "filters/chromecast_video.json",
         "patchSetId": 2
@@ -37,6 +61,24 @@
       "writtenOn": "2024-09-12T17:05:21Z",
       "side": 1,
       "message": "nit. remove spacing",
+      "revId": "6f8dcbe2398d424e9dbf85286a53a45b1fd94111",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "db436e55_54340e26",
+        "filename": "filters/chromecast_video.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 559,
+      "author": {
+        "id": 1581873
+      },
+      "writtenOn": "2024-09-12T17:15:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9d5b5b88_3d9eb133",
       "revId": "6f8dcbe2398d424e9dbf85286a53a45b1fd94111",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
