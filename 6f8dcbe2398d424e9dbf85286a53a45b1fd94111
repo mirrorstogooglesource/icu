@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7fc51472_62929f7b",
+        "filename": "filters/chromecast_video.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 395,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-09-12T17:05:21Z",
+      "side": 1,
+      "message": "Are these the issues you\u0027ve mentioned earlier with make_data_sh? Remove or potentially move locales if you feel they\u0027ll be added later.",
+      "range": {
+        "startLine": 395,
+        "startChar": 0,
+        "endLine": 395,
+        "endChar": 15
+      },
+      "revId": "6f8dcbe2398d424e9dbf85286a53a45b1fd94111",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9d5b5b88_3d9eb133",
+        "filename": "filters/chromecast_video.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 559,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-09-12T17:05:21Z",
+      "side": 1,
+      "message": "nit. remove spacing",
+      "revId": "6f8dcbe2398d424e9dbf85286a53a45b1fd94111",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

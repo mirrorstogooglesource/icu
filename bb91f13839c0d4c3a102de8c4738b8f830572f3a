@@ -74,6 +74,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6858d137_ccf9f8f6",
+        "filename": "filters/chromecast_video.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-09-12T17:05:21Z",
+      "side": 1,
+      "message": "I would keep the V8 licensing to be consistent with other filters.\n\nWe don\u0027t have any try bots for this repo so build errors probably won\u0027t popup until the next upgrade. I\u0027m curious what errors were you seeing?",
+      "parentUuid": "8edc3e3c_d4d4cc60",
+      "range": {
+        "startLine": 1,
+        "startChar": 13,
+        "endLine": 1,
+        "endChar": 17
+      },
+      "revId": "bb91f13839c0d4c3a102de8c4738b8f830572f3a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a1d4c9c1_4c3d1629",
         "filename": "scripts/copy_data.sh",
         "patchSetId": 1
@@ -121,6 +145,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "90c8eca1_189c3ac2",
+        "filename": "scripts/copy_data.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-09-12T17:05:21Z",
+      "side": 1,
+      "message": "And to double check, there are different locales/rules between the two hence the need for a separate dat file?",
+      "parentUuid": "966f8aef_0859f8df",
+      "range": {
+        "startLine": 79,
+        "startChar": 3,
+        "endLine": 79,
+        "endChar": 7
+      },
+      "revId": "bb91f13839c0d4c3a102de8c4738b8f830572f3a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "626151d6_4a6a7115",
         "filename": "scripts/copy_data.sh",
         "patchSetId": 1
@@ -156,6 +204,30 @@
       "side": 1,
       "message": "fwiw this\u0027s a proactive cl, there\u0027s ongoing work to upstream Cast into chromium @antoniori@google.com, which would be when this is desired. however at the same time; it could be argued that when cast-as-a-feature is completed @elvin@google.com the split out is not needed, as OEM chromium installs would prefer a single ICU file over multiple variants.",
       "parentUuid": "626151d6_4a6a7115",
+      "range": {
+        "startLine": 83,
+        "startChar": 3,
+        "endLine": 83,
+        "endChar": 19
+      },
+      "revId": "bb91f13839c0d4c3a102de8c4738b8f830572f3a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc555ef3_f8b9f939",
+        "filename": "scripts/copy_data.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-09-12T17:05:21Z",
+      "side": 1,
+      "message": "Sounds good, it doesn\u0027t seem like there\u0027s much guidance here so for now I\u0027ll just contact your team if there are any issues during upgrade. \n\nWould this be upstreaming Cast + chromecast_video?",
+      "parentUuid": "267f0cbb_079f04fd",
       "range": {
         "startLine": 83,
         "startChar": 3,
