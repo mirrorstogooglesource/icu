@@ -120,6 +120,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "eaebd014_55d53bef",
+        "filename": "filters/chromecast_video.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-09-12T18:34:09Z",
+      "side": 1,
+      "message": "I\u0027m okay with letting this pass but if there are issues during upgrade, I may need to revert this change or perhaps just skip this dat file. Having a clean build for ICU should be good enough.",
+      "parentUuid": "d51fd843_664ce544",
+      "range": {
+        "startLine": 1,
+        "startChar": 13,
+        "endLine": 1,
+        "endChar": 17
+      },
+      "revId": "bb91f13839c0d4c3a102de8c4738b8f830572f3a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a1d4c9c1_4c3d1629",
@@ -205,6 +229,30 @@
       "side": 1,
       "message": "@shawnq@google.com would be better able to clarify, but iirc `cast` had issues when we were trying to use the cast icudtl.dat for our eureka (based on old fork of chromium). I don\u0027t know what lineformatting rules/other internationalization issues particullarly occured.\n\nthe desire for a new icudtl.dat that we could use (instead of cast) was brought on by an OEM requesting us to shrink our disk footprint, and culling unused data out of icudtl.dat and zipping it was the easiest route to some disk gains.\n\nThere were some comments that `cast` filterlist may be unused now since `cast` was only used for audio devices, and that\u0027s now handled by the `castlite` project instead... - I\u0027m not entirely sure on this status.",
       "parentUuid": "90c8eca1_189c3ac2",
+      "range": {
+        "startLine": 79,
+        "startChar": 3,
+        "endLine": 79,
+        "endChar": 7
+      },
+      "revId": "bb91f13839c0d4c3a102de8c4738b8f830572f3a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "887a56ba_caca9d4a",
+        "filename": "scripts/copy_data.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-09-12T18:34:09Z",
+      "side": 1,
+      "message": "Shrinking dat size seems valid. \n\nIt would be good to know if we can remove `cast`. Is there a contact to confirm? This can be adjacent to this CL.",
+      "parentUuid": "fb546f6f_23a064b4",
       "range": {
         "startLine": 79,
         "startChar": 3,
