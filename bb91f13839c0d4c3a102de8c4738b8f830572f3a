@@ -144,6 +144,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "81fa8d59_faf8799e",
+        "filename": "filters/chromecast_video.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1581873
+      },
+      "writtenOn": "2024-09-13T16:53:20Z",
+      "side": 1,
+      "message": "I think that\u0027s fair, it makes sense for whoever is asking for these things to be responsible for them, and if it\u0027s blocking to just pave it and tell the team to fix it.",
+      "parentUuid": "eaebd014_55d53bef",
+      "range": {
+        "startLine": 1,
+        "startChar": 13,
+        "endLine": 1,
+        "endChar": 17
+      },
+      "revId": "bb91f13839c0d4c3a102de8c4738b8f830572f3a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a1d4c9c1_4c3d1629",
@@ -253,6 +277,30 @@
       "side": 1,
       "message": "Shrinking dat size seems valid. \n\nIt would be good to know if we can remove `cast`. Is there a contact to confirm? This can be adjacent to this CL.",
       "parentUuid": "fb546f6f_23a064b4",
+      "range": {
+        "startLine": 79,
+        "startChar": 3,
+        "endLine": 79,
+        "endChar": 7
+      },
+      "revId": "bb91f13839c0d4c3a102de8c4738b8f830572f3a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9be755fc_7ca0e2fa",
+        "filename": "scripts/copy_data.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1581873
+      },
+      "writtenOn": "2024-09-13T16:53:20Z",
+      "side": 1,
+      "message": "Checking with cast eng",
+      "parentUuid": "887a56ba_caca9d4a",
       "range": {
         "startLine": 79,
         "startChar": 3,
