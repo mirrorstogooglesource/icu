@@ -39,6 +39,30 @@
       },
       "revId": "62a86ab6d5597f7335a8c8db1df9fb8f6e5ed6d1",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fe5cb73a_66e5fa74",
+        "filename": "source/data/misc/zoneinfo64.txt",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-10-02T20:39:02Z",
+      "side": 1,
+      "message": "Good question, yes it is recommend to update separately. Timezone data requires more immediate changes but actually have less intrusive behavior. (i.e. Some countries no longer use day light savings time but instead of updating all of ICU to v76, we\u0027d only update the timezone changes).",
+      "parentUuid": "7839d341_429bf778",
+      "range": {
+        "startLine": 9,
+        "startChar": 16,
+        "endLine": 9,
+        "endChar": 22
+      },
+      "revId": "62a86ab6d5597f7335a8c8db1df9fb8f6e5ed6d1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
