@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3db81dc1_10b73c52",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1362925
+      },
+      "writtenOn": "2024-10-02T20:26:48Z",
+      "side": 1,
+      "message": "more of a rubberstamp",
+      "revId": "62a86ab6d5597f7335a8c8db1df9fb8f6e5ed6d1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7839d341_429bf778",
+        "filename": "source/data/misc/zoneinfo64.txt",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1362925
+      },
+      "writtenOn": "2024-10-02T20:26:48Z",
+      "side": 1,
+      "message": "It\u0027s fine to independently update tzdb data from the ICU version?",
+      "range": {
+        "startLine": 9,
+        "startChar": 16,
+        "endLine": 9,
+        "endChar": 22
+      },
+      "revId": "62a86ab6d5597f7335a8c8db1df9fb8f6e5ed6d1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
