@@ -14,7 +14,11 @@
 # https://stackoverflow.com/questions/160608/do-a-git-export-like-svn-export/19689284#19689284
 # about 'svn export' and github.
 
-branch="trunk"
+branch="blob/main"
+
+tmp_dir=~/tmp/icu-tz
+repo_url="https://github.com/unicode-org/icu/archive/refs/tags/release-${version}.tar.gz"
+tarball="${tmp_dir}/source.tar.gz"
 
 # ICU tz file is sometimes updated in the maintenance branch long before
 # being updated in trunk.
