@@ -16,6 +16,24 @@
       "message": "Why can\u0027t git be used? I\u0027m missing something I feel like.",
       "revId": "adfc33966278ce3b9cfc8f49785a3979d443650d",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c396c893_5c12db20",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-10-07T20:08:10Z",
+      "side": 1,
+      "message": "The script is essentially downloading from upstream ICU aka (https://github.com/unicode-org/icu) and moving the following files\n`metaZones.txt timezoneTypes.txt windowsZones.txt zoneinfo64.txt` to the local chromium ICU. It use to use \"svn export\" to do that but github no longer supports SVN. We did a very similar thing to the update.sh script but I never updated update_tz.sh",
+      "parentUuid": "38a6fd20_6983ada5",
+      "revId": "adfc33966278ce3b9cfc8f49785a3979d443650d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
