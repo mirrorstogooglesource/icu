@@ -74,6 +74,30 @@
       },
       "revId": "adfc33966278ce3b9cfc8f49785a3979d443650d",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c69f8a3c_1b3f4bd0",
+        "filename": "scripts/update_tz.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-10-07T21:07:50Z",
+      "side": 1,
+      "message": "Correct. Unicode latest stable (i.e. V75) only has timezone data at the time the build was cut. They do not have a separate timezone release.\n\nFor example if you use \nhttps://github.com/unicode-org/icu/releases/latest\nit will go to v75.1 which still has the 2024a timezone data.\n\nI ran into this [bug](https://g-issues.chromium.org/issues/327475245) last year which led me to be more proactive about the timezone change.\n\nThere\u0027s a separate question of if ICU hasn\u0027t shipped its timezone data in a stable build, perhaps we shouldn\u0027t consume it even if there\u0027s a customer report. I don\u0027t have an answer to that question. For this CL though it should be okay to just use tip of tree since the script behavior is the same.",
+      "parentUuid": "d0a2fce2_6c0813d1",
+      "range": {
+        "startLine": 19,
+        "startChar": 64,
+        "endLine": 19,
+        "endChar": 68
+      },
+      "revId": "adfc33966278ce3b9cfc8f49785a3979d443650d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
