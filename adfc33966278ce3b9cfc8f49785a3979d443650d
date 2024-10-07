@@ -34,6 +34,46 @@
       "parentUuid": "38a6fd20_6983ada5",
       "revId": "adfc33966278ce3b9cfc8f49785a3979d443650d",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6adaa7f7_efa5e2d0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1362925
+      },
+      "writtenOn": "2024-10-07T20:24:52Z",
+      "side": 1,
+      "message": "lgtm % question about main",
+      "revId": "adfc33966278ce3b9cfc8f49785a3979d443650d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d0a2fce2_6c0813d1",
+        "filename": "scripts/update_tz.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1362925
+      },
+      "writtenOn": "2024-10-07T20:24:52Z",
+      "side": 1,
+      "message": "So this always gets the tip-of-tree off `main`? I see the old script worked off `trunk` too. Does Unicode have some notion of a \"latest stable\" or something, or is the tip of `main` really the correct choice?",
+      "range": {
+        "startLine": 19,
+        "startChar": 64,
+        "endLine": 19,
+        "endChar": 68
+      },
+      "revId": "adfc33966278ce3b9cfc8f49785a3979d443650d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
