@@ -5,9 +5,9 @@
 # TODO(ICU-20301): Remove this.
 from __future__ import print_function
 
-from icutools.databuilder import *
-from icutools.databuilder import utils
-from icutools.databuilder.request_types import *
+from google3.third_party.icu.source.python.icutools.databuilder import *
+from google3.third_party.icu.source.python.icutools.databuilder import utils
+from google3.third_party.icu.source.python.icutools.databuilder.request_types import *
 
 import os
 import sys
