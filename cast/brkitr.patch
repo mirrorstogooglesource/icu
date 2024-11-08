@@ -6,7 +6,7 @@ index 363a74f6..7ae4b8f6 100644
          line_phrase:process(dependency){"line_phrase_cj.brk"}
          line_strict:process(dependency){"line.brk"}
          line_strict_phrase:process(dependency){"line_phrase_cj.brk"}
-+	word:process(dependency){"word_ja.brk"}
++	    word:process(dependency){"word_ja.brk"}
      }
      extensions{
      }
