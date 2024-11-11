@@ -1,0 +1,27 @@
+diff --git a/source/common/unicode/unistr.h b/source/common/unicode/unistr.h
+index 39d789fd..b545ffcc 100644
+--- a/source/common/unicode/unistr.h
++++ b/source/common/unicode/unistr.h
+@@ -347,7 +347,8 @@ public:
+   inline bool operator==(const S &text) const {
+     std::u16string_view sv(internal::toU16StringView(text));
+     uint32_t len;  // unsigned to avoid a compiler warning
+-    return !isBogus() && (len = length()) == sv.length() && doEquals(sv.data(), len);
++    return !isBogus() && (len = static_cast<uint32_t>(length())) == sv.length() &&
++        doEquals(sv.data(), static_cast<int32_t>(len));
+   }
+ #endif  // U_HIDE_DRAFT_API
+ 
+diff --git a/source/common/unicode/uset.h b/source/common/unicode/uset.h
+index c8f9b559..153b7324 100644
+--- a/source/common/unicode/uset.h
++++ b/source/common/unicode/uset.h
+@@ -1499,7 +1499,7 @@ struct CodePointRange {
+     /** @draft ICU 76 */
+     CodePointRange(const CodePointRange &other) = default;
+     /** @draft ICU 76 */
+-    size_t size() const { return (rangeEnd + 1) - rangeStart; }
++    size_t size() const { return static_cast<size_t>((rangeEnd + 1) - rangeStart); }
+     /** @draft ICU 76 */
+     iterator begin() const { return rangeStart; }
+     /** @draft ICU 76 */
