@@ -1,5 +1,5 @@
 diff --git a/source/i18n/unicode/numberrangeformatter.h b/source/i18n/unicode/numberrangeformatter.h
-index 8ca20f31..64e43bc9 100644
+index b8bbc1ba..7b9d118d 100644
 --- a/source/i18n/unicode/numberrangeformatter.h
 +++ b/source/i18n/unicode/numberrangeformatter.h
 @@ -68,6 +68,9 @@ struct UFormattedNumberRangeImpl;

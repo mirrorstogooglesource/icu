@@ -1,18 +1,18 @@
 Name: icu
 URL: https://github.com/unicode-org/icu
-Version: 74-2
-CPEPrefix: cpe:/a:icu-project:international_components_for_unicode:74.2
+Version: 76-1
+CPEPrefix: cpe:/a:icu-project:international_components_for_unicode:76-1
 License: MIT
 License File: LICENSE
 Security Critical: yes
 Shipped: yes
 
 Description:
-This directory contains the source code of ICU 74.2 for C/C++.
+This directory contains the source code of ICU 76-1 for C/C++.
 
 A. How to update ICU
 
-1. Run "scripts/update.sh <version>" (e.g. 74-2).
+1. Run "scripts/update.sh <version>" (e.g. 76-1).
    This will download ICU from the upstream git repository.
    It does preserve Chrome-specific build files and
    converter files. (see section C)
@@ -259,32 +259,10 @@ D. Local Modifications
   - https://bugs.chromium.org/p/chromium/issues/detail?id=1473422
   - https://unicode-org.atlassian.net/browse/ICU-22541
 
-11. Patch source/common/locid.cpp to resolve crashes in DecimalFormatting.
-    patches/locid.patch
-  - https://issues.chromium.org/issues/333453962
+11. Patch fixes unsigned/signed compiler warnings
+    patches/unsigned_compiler_warnings.patch
 
-12. Patch source/common/messagepattern.ccp/.h to resolve stack overflow.
-    patches/limit_message_pattern.patch
-  - https://issues.chromium.org/343280855
-  - https://unicode-org.atlassian.net/browse/ICU-22798
-
-13. Patch source/common/ubidiwrt.cpp to resolve a bidi buffer overflow.
-    patches/bidi_buffer_overflow.patch
-  - https://issues.chromium.org/u/1/issues/345352978
-  - https://unicode-org.atlassian.net/browse/ICU-22768
-
-14. Patch source/tools/pkgdata/pkgdata.cpp to remove a format-overflow warning.
-    patches/remove_format_overflow_warning.patch
-  - https://unicode-org.atlassian.net/browse/ICU-21589
-  - https://issues.chromium.org/u/1/issues/345352978
-
-15. Patch source/i18n/japancal.cpp to fix an extended year int32 overflow.
-    patches/ja_extended_year_overflow.patch
-  - https://issues.chromium.org/u/1/issues/345352978
-  - https://unicode-org.atlassian.net/browse/ICU-22730
-
-16. Patch an icu:calendar integer overflow by propagating error.
-    patch/propagate_error_avoid_overflow.patch
-  - https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=68895
-  - https://issues.chromium.org/u/1/issues/345352978
-  - https://unicode-org.atlassian.net/browse/ICU-22730
+12. Patch source/data/BUILDRULES.py to use the correct import rules.
+    locale_google modifies BUILDRULES.py to use an internal Google import
+    header. This patch will revert that change.
+    patches/buildrules_import.patch

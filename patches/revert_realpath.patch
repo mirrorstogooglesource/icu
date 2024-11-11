@@ -1,8 +1,8 @@
 diff --git a/source/common/putil.cpp b/source/common/putil.cpp
-index ab25f3b9..d6dcd96c 100644
+index 4cf07797..18d03402 100644
 --- a/source/common/putil.cpp
 +++ b/source/common/putil.cpp
-@@ -1171,31 +1171,16 @@ uprv_tzname(int n)
+@@ -1166,31 +1166,16 @@ uprv_tzname(int n)
          because the tzfile contents is underspecified.
          This isn't guaranteed to work because it may not be a symlink.
          */
