@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dbe1f8a0_62a15392",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-11-12T18:03:34Z",
+      "side": 1,
+      "message": "Hey folks, this was my user error when patching for the first upload and was caught by this UT in Chromium.\nhttps://ci.chromium.org/ui/p/chromium/builders/try/linux-rel/b8731528035551705025/test-results?q\u003dExactID%3Aninja%3A%2F%2Fbase%3Abase_unittests%2FICUStringConversionsTest.ConvertBetweenCodepageAndUTF16+VHash%3A52a01a1d9b78ca3c\u0026clean\u003d\u0026sortby\u003d\u0026groupby\u003d\n\nFixed the patch and the test runs locally.",
+      "revId": "67d532ef188714e977a464b4458dc819d2ea8fd7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
