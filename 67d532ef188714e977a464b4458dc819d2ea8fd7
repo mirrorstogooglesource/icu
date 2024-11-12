@@ -20,6 +20,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "8da32f78_30aeb4bd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-11-12T18:52:40Z",
+      "side": 1,
+      "message": "Yes exactly. In this [CL](https://chromium-review.googlesource.com/c/chromium/deps/icu/+/5989331), I applied iso2022jp incorrectly which resulted in unit test bug failures. [iso2022jp](https://crsrc.org/c/third_party/icu/README.chromium;drc\u003d4239b1559d11d4fa66c100543eda4161e060311e;l\u003d223) is patch we\u0027ve had before 76.",
+      "parentUuid": "d25c32ae_a7f755f2",
+      "revId": "67d532ef188714e977a464b4458dc819d2ea8fd7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "dbe1f8a0_62a15392",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 2
