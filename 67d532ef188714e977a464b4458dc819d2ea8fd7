@@ -38,6 +38,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "77aee05b_d2ba2358",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-11-12T18:54:45Z",
+      "side": 1,
+      "message": "FWIW, I went over the [CL](https://chromium-review.googlesource.com/c/chromium/deps/icu/+/5989331) again to look for any other patch files that were modified and potentially not applied correctly. Everything else looks fine.\n\nOne of the steps during the upgrade process is to update each patch file and you can tell the iso patch was messed up.\n\nhttps://chromium-review.googlesource.com/c/chromium/deps/icu/+/5989331/7/patches/iso2022jp.patch",
+      "parentUuid": "8da32f78_30aeb4bd",
+      "revId": "67d532ef188714e977a464b4458dc819d2ea8fd7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "dbe1f8a0_62a15392",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 2
