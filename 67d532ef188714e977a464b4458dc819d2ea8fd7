@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "d25c32ae_a7f755f2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1362925
+      },
+      "writtenOn": "2024-11-12T18:47:01Z",
+      "side": 1,
+      "message": "Not sure I understand yet. Are you saying iso2022jp.patch is a patch we had before 76 that didn\u0027t apply cleanly in the initial upload?",
+      "revId": "67d532ef188714e977a464b4458dc819d2ea8fd7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "dbe1f8a0_62a15392",
