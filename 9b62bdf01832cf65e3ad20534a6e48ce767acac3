@@ -16,6 +16,23 @@
       "message": "Frank and David, PTAL\n\nWhen ICU resource files (txt) are added or dropped, the current diff_data.sh cannot handle them. This CL takes care of that.",
       "revId": "9b62bdf01832cf65e3ad20534a6e48ce767acac3",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "949462a7_662d2e0b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1552277
+      },
+      "writtenOn": "2024-11-15T18:24:10Z",
+      "side": 1,
+      "message": "Feel free to re-add me again if this CL is active.",
+      "revId": "9b62bdf01832cf65e3ad20534a6e48ce767acac3",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
